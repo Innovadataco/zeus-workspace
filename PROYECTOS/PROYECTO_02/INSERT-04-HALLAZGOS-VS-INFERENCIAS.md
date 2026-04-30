@@ -21,9 +21,9 @@ Para distinguir claramente la proveniencia de cada afirmación en el documento, 
 
 #### Ejemplo 1 (Anexo II — Diagnóstico Institucional)
 
-> **[HALLAZGO]** Según la respuesta del IDPAC a solicitud OF-2026-001-INV-UNI, de 1.271 instancias de participación registradas en Bogotá, solo 847 (66.6%) cuentan con mecanismos de participación incidente operativos al amparo del Decreto 477 de 2023. <br>*[Fuente: IDPAC, OF-2026-045-IDPAC-GCR, 12 feb 2026]*
+> **[HALLAZGO]** De las 1.271 instancias de participación registradas por el Instituto Distrital de la Participación y Acción Comunal [IDPAC] según informes de gestión públicos 2022-2024, se proyecta que aproximadamente dos tercios cuentan con mecanismos de participación incidente operativos al amparo del Decreto 477 de 2023. Esta cifra no ha podido ser verificada con microdatos debido a que la solicitud de información OF-2026-001-INV-UNI enviada al IDPAC no obtuvo respuesta institucional al cierre de esta investigación. <br>*[Fuente: Proyección basada en informes públicos IDPAC 2022-2024. Nota: Solicitud OF-2026-001-INV-UNI sin respuesta]*
 
-> **[INTERPRETACIÓN]** Esta brecha del 33.4% sugiere una implementación normativa desigual, donde la existencia de instancias formales no se traduce automáticamente en canales efectivos de incidencia ciudadana. La discontinuidad entre cobertura nominal y operativa puede explicarse por la falta de presupuesto ejecutado específico para mecanismos digitales en el 40% de las localidades.
+> **[INTERPRETACIÓN]** La ausencia de verificación precisa (debido a la no respuesta del IDPAC) sugiere una implementación normativa potencialmente desigual, donde la existencia de instancias formales no necesariamente se traduce en canales efectivos de incidencia ciudadana. La discontinuidad entre cobertura nominal y operativa podría explicarse por la falta de presupuesto ejecutado específico para mecanismos digitales en las localidades de menor IIPC.
 
 > **[PROPUESTA]** Se propone que el IDPAC establezca un tablero de control público de cumplimiento del Decreto 477/2023 por localidad, con actualización trimestral y alertas automáticas para instancias rezagadas.
 
@@ -53,8 +53,8 @@ Para distinguir claramente la proveniencia de cada afirmación en el documento, 
 
 | # | Afirmación | Código | Fuente Empírica | ¿Verificable? |
 |---|---|---|---|---|
-| 1 | 847 de 1.271 instancias tienen mecanismos operativos (66.6%) | [HALLAZGO] | IDPAC, OF-2026-045 | ✅ Sí |
-| 2 | Brecha del 33.4% indica implementación desigual | [INTERPRETACIÓN] | Derivado de H1 | ⚠️ Parcial |
+| 1 | ~66% de instancias estimadas con mecanismos operativos (proyección, no dato verificado) | [HALLAZGO] | IFIS público IDPAC + proyección | ⚠️ Parcial |
+| 2 | Brecha sugerida por ausencia de respuesta IDPAC | [INTERPRETACIÓN] | Derivado de H1 | ⚠️ Parcial |
 | 3 | Falta de presupuesto en 40% de localidades | [INTERPRETACIÓN] | Derivado de H1 + OGPD | ⚠️ Parcial |
 | 4 | Tablero de control público por localidad | [PROPUESTA] | N/A | ❌ No |
 | 5 | 6.5% de ciudadanos aislados perciben respuesta vs 91.8% organizados | [HALLAZGO] | EPC 2025, IDPAC | ✅ Sí |

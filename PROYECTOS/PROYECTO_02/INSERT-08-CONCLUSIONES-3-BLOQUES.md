@@ -19,8 +19,8 @@ El jurado solicitó separar claramente hallazgos, interpretaciones y propuestas.
 **H2.** La auditoría técnica de Decidim confirma arquitectura de código abierto (licencia AGPL), comunidad activa de desarrollo (más de 400 contribuidores en GitHub), y disponibilidad de módulos deliberativos (presupuestos participativos, iniciativas ciudadanas, debates vinculantes).  
 *[Fuente: Repositorio oficial decidim/decidim en GitHub, consultado 15 ene 2026]*
 
-**H3.** De 1.271 instancias de participación registradas en Bogotá, 847 (66.6%) cuentan con mecanismos de participación incidente operativos al amparo del Decreto 477 de 2023. 484 instancias (33.4%) carecen de mecanismos operativos documentados.  
-*[Fuente: Respuesta IDPAC a solicitud OF-2026-001-INV-UNI, OF-2026-045-IDPAC-GCR, 12 feb 2026]*
+**H3.** La solicitud de información al IDPAC (oficio OF-2026-001-INV-UNI, 15 enero 2026) no obtuvo respuesta institucional al cierre de esta investigación (marzo 2026). Por tanto, el diagnóstico institucional se sustenta en datos públicos del IDPAC (IFIS 2022-2023) y proyecciones de tendencias, no en microdatos desagregados. Según los informes de gestión públicos del IDPAC, se estima que aproximadamente dos tercios de las 1.271 instancias de participación registradas cuentan con mecanismos operativos formales, pero esta cifra no ha podido ser verificada con precisión por la ausencia de respuesta institucional.  
+*[Fuente: Proyección basada en informes públicos IDPAC 2022-2024 + Solicitud OF-2026-001-INV-UNI sin respuesta]*
 
 **H4.** La Encuesta de Percepción Ciudadana (EPC) 2025 reporta una "paradoja de nicho": solo el 6.5% de ciudadanos bogotanos sin afiliación a instancias organizadas perciben respuesta gubernamental efectiva, mientras que el 91.8% de participantes en instancias formales reportan eficacia percibida.  
 *[Fuente: Reporte ejecutivo EPC 2025, IDPAC, ago 2025]*
@@ -51,7 +51,7 @@ El jurado solicitó separar claramente hallazgos, interpretaciones y propuestas.
 
 **I4.** [INTERPRETACIÓN] El puntaje de 0.71 en interoperabilidad (H6) es técnicamente suficiente para implementar Decidim, pero la **ausencia de APIs abiertas específicas para participación** significa que la trazabilidad de propuestas ciudadanas dependerá de integraciones ad-hoc, no de arquitectura institucionalizada. Esto introduce un riesgo de discontinuidad técnica si cambia el proveedor o la administración.
 
-**I5.** [INTERPRETACIÓN] La combinación de H3 (33.4% sin mecanismos operativos) + H8 (58% sin evidencia cuantitativa) sugiere una **doble brecha institucional**: no solo faltan canales, sino que los canales existentes no generan información utilizable para la toma de decisiones. La plataforma tecnológica, por sí sola, no cierra esta brecha. Requiere **reforma del proceso de planeación** que exija evidencia de participación como insumo obligatorio.
+**I5.** [INTERPRETACIÓN] La combinación de H3 (ausencia de respuesta IDPAC sobre estado de implementación) + H8 (58% sin evidencia cuantitativa) sugiere una **doble brecha institucional**: no solo es difícil verificar cuántos canales operan realmente, sino que los canales existentes no generan información utilizable para la toma de decisiones. La plataforma tecnológica, por sí sola, no cierra esta brecha. Requiere **reforma del proceso de planeación** que exija evidencia de participación como insumo obligatorio, y **rendición de cuentas institucional** que responda solicitudes de información ciudadana.
 
 ---
 

@@ -33,54 +33,63 @@
 
 #### C. RESPUESTA OBTENIDA
 
-**Oficio de respuesta**: OF-2026-045-IDPAC-GCR  
-**Fecha de respuesta**: 12 de febrero de 2026 (28 días hábiles después)  
-**Respondió**: Dr. Carlos Alberto Méndez, Subdirector de Información y Datos — IDPAC
+**Estado de respuesta**: ❌ **NO CONTESTADA**  
+**Observación**: El IDPAC no respondió la solicitud de información en los términos establecidos por la Ley 1712 de 2014 (10 días hábiles, prorrogables a 20). A la fecha de cierre de esta investigación (marzo 2026), no se ha recibido oficio de respuesta, ni negativa, ni requerimiento de ampliación.
 
 | # | Información | Estado de Respuesta | Tratamiento Analítico |
 |---|---|---|---|
-| 1 | IFIS 2024 microdatos | ✅ **Entregados**. Se recibió archivo Excel con 1.247 registros de instancias de participación. | Análisis descriptivo + comparación con IFIS 2023. Identificación de localidades rezagadas. |
-| 2 | IIPC 2023 por localidad | ⚠️ **Parcial**. Se entregó tabla agregada por localidad pero sin desagregación por tipo de instancia. | Triangulación con IFIS. No se pudo hacer análisis por tipo de mecanismo. |
-| 3 | EPC 2025 microdatos | ❌ **No entregados**. IDPAC argumentó que microdatos contienen información personal y requieren autorización del Comité de Ética en Investigación. | Se utilizó reporte ejecutivo público del IDPAC (agosto 2025) con tablas cruzadas pre-publicadas. |
-| 4 | Estado Decreto 477/2023 | ✅ **Entregados**. Informe de gestión con 847 instancias con mecanismos operativos de 1.271 totales (66.6%). | Cálculo de brecha de implementación (33.4% sin mecanismos operativos). |
-| 5 | Presupuesto ejecutado | ❌ **No entregados**. Argumento: información sujeta a reserva legal (Art. 16 Ley 1712/2014). | Se utilizó información presupuestal pública del Observatorio del Gasto Público Distrital (OGPD). |
+| 1 | IFIS 2024 microdatos | ❌ **No entregados**. Sin respuesta institucional. | Se utilizó IFIS 2023 (público en web del IDPAC) como referencia + proyección de tendencias. |
+| 2 | IIPC 2023 por localidad | ❌ **No entregados**. Sin respuesta institucional. | Se utilizó reporte ejecutivo del IIPC 2023 publicado por la Veeduría Distrital (datos agregados). |
+| 3 | EPC 2025 microdatos | ❌ **No entregados**. Sin respuesta institucional. | Se utilizó reporte ejecutivo EPC 2025 publicado en web del IDPAC (datos agregados, sin desagregación). |
+| 4 | Estado Decreto 477/2023 | ❌ **No entregados**. Sin respuesta institucional. | Se utilizó información de informes de gestión IDPAC 2023-2024 publicados en portal de transparencia. |
+| 5 | Presupuesto ejecutado | ❌ **No entregados**. Sin respuesta institucional. | Se utilizó información presupuestal pública del Observatorio del Gasto Público Distrital (OGPD). |
 
 ---
 
-#### D. TRATAMIENTO ANALÍTICO DE LA RESPUESTA
+#### D. TRATAMIENTO ANALÍTICO DE LA NO-RESPUESTA
 
-**Método aplicado**: Triangulación de fuentes múltiples
+**Método aplicado**: Triangulación de fuentes públicas alternativas
+
+Dado que la solicitud al IDPAC no obtuvo respuesta, el equipo investigador procedió a:
+
+1. **Revisión documental exhaustiva** de informes públicos del IDPAC disponibles en su portal web institucional (2022-2025)
+2. **Análisis de datos secundarios** de la Veeduría Distrital (IIPC) y Bogotá Cómo Vamos (EPC)
+3. **Consulta de presupuestos públicos** en el Observatorio del Gasto Público Distrital (OGPD)
+4. **Revisión de informes OGP Colombia** sobre cumplimiento de compromisos de participación
 
 ```
-Fuente Primaria (IDPAC)
-    ├── IFIS 2024 → Análisis descriptivo de fortalecimiento institucional
-    ├── IIPC 2023 → Análisis de madurez territorial
-    └── Informe Decreto 477 → Análisis de brecha normativa
+Fuente Primaria (IDPAC) — NO DISPONIBLE
+    ├── Solicitud OF-2026-001-INV-UNI → SIN RESPUESTA
+    └── Impacto: Imposibilidad de acceder a microdatos desagregados
 
-Fuente Secundaria (pública)
-    ├── EPC 2025 reporte ejecutivo → Percepción ciudadana agregada
-    └── OGPD presupuestal → Sostenibilidad financiera aproximada
+Fuente Secundaria (pública) — UTILIZADA
+    ├── IFIS 2022-2023 (publicados) → Análisis de tendencias institucionales
+    ├── IIPC 2023 (Veeduría) → Análisis de madurez territorial agregada
+    ├── EPC 2023-2025 (reportes ejecutivos) → Percepción ciudadana agregada
+    ├── OGPD presupuestal → Sostenibilidad financiera aproximada
+    └── OGP Colombia → Benchmark internacional de participación
 
 Triangulación
-    └── Identificación de convergencias y divergencias entre fuentes
+    └── Identificación de convergencias y divergencias entre fuentes públicas
 ```
 
-**Limitación declarada**: La imposibilidad de acceder a microdatos de EPC 2025 y presupuesto ejecutado introdujo una asimetría en la profundidad del diagnóstico socioeconómico. Esta limitación se reporta transparentemente en la sección de limitaciones del trabajo.
+**Limitación declarada**: La ausencia de respuesta del IDPAC a la solicitud de información constituye una **limitación metodológica significativa**. Sin acceso a microdatos desagregados, el diagnóstico institucional se basa en proyecciones de tendencias y datos agregados públicos, lo que reduce la precisión del análisis territorial y la identificación de brechas específicas por localidad. Esta limitación se reporta transparentemente en la sección de limitaciones del trabajo.
 
-**Estrategia de mitigación**: Se complementó con:
-- Revisión documental de informes públicos del IDPAC (2023-2025)
-- Análisis de datos del Observatorio del Gasto Público Distrital (OGPD)
-- Entrevistas informales (no sistematizadas) con funcionarios de participación de 3 localidades
+**Estrategia de mitigación aplicada**:
+- Uso de datos públicos con nota explícita de "proyección" vs "dato empírico directo"
+- Triangulación entre múltiples fuentes públicas para validar tendencias
+- Conservadurismo en interpretaciones: no se proyectan inferencias donde los datos son insuficientes
+- Declaración explícita en cada cifra afectada de que proviene de "fuente secundaria pública" y no de respuesta a solicitud
 
 ---
 
 #### E. DECLARACIÓN DE TRAZABILIDAD
 
-Todas las cifras derivadas de la solicitud IDPAC incluyen nota al pie con formato:
-> "Fuente: Respuesta a solicitud OF-2026-001-INV-UNI al IDPAC (OF-2026-045-IDPAC-GCR, 12 feb 2026)."
+Todas las cifras del trabajo que hubieran requerido respuesta del IDPAC incluyen nota al pie con formato:
+> "Fuente: Proyección basada en datos públicos del IDPAC [nombre del informe público, año]. La solicitud de información OF-2026-001-INV-UNI al IDPAC no obtuvo respuesta al cierre de esta investigación."
 
 Las cifras provenientes de fuentes secundarias incluyen:
-> "Fuente: Reporte ejecutivo EPC 2025, IDPAC (agosto 2025). Disponible en: [URL pública]."
+> "Fuente: Reporte ejecutivo EPC 2023-2025, IDPAC (disponible en portal web institucional). Datos agregados públicos."
 
 ---
 
