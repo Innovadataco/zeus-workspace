@@ -1,69 +1,93 @@
-# INSERT 01 — MATRIZ DE CONSTRUCCIÓN DEL IMPD
-## Anexo Técnico I, Sección 6.5.2 (Nuevo)
+# INSERT 01 — FÓRMULA Y RESULTADOS DEL IMPD
+## Anexo Técnico I, Sección 6.5.2 (Ampliado)
 
 ---
 
-### A. FÓRMULA MATEMÁTICA DEL ÍNDICE MULTIDIMENSIONAL DE PARTICIPACIÓN DIGITAL (IMPD)
+### 6.5.2 FÓRMULA Y RESULTADOS DEL ÍNDICE DE MADUREZ DE PARTICIPACIÓN DIGITAL (IMPD)
 
-$$IMPD = (DI \times 0.40) + (DIn \times 0.35) + (DT \times 0.25)$$
+El Índice de Madurez de Participación Digital (IMPD) fue calculado en el Anexo Técnico I de este trabajo mediante fórmula de promedio simple (pesos equitativos). A continuación se detalla la metodología, fórmula, cálculo paso a paso y matriz de verificación replicable.
+
+---
+
+#### A. FÓRMULA MATEMÁTICA DEL IMPD
+
+El IMPD se define como el promedio aritmético simple de tres dimensiones:
+
+```
+IMPD = ( DI + DIn + DT ) / 3
+```
 
 Donde:
-- **DI** = Dimensión Institucional (máximo 100 puntos)
-- **DIn** = Dimensión de Innovación (máximo 100 puntos)
-- **DT** = Dimensión Técnica (máximo 100 puntos)
 
-**Rango del IMPD**: 0 — 100 puntos
-
----
-
-### B. JUSTIFICACIÓN DE PONDERACIÓN
-
-| Dimensión | Peso | Justificación Teórica | Fuente |
+| Dimensión | Abreviatura | Fuente | ¿Qué mide? |
 |---|---|---|---|
-| **Institucional (DI)** | 40% | La sostenibilidad de plataformas de participación depende primordialmente del marco normativo, la voluntad política y la capacidad administrativa del Estado. Sin respaldo institucional, la infraestructura tecnológica se vuelve insostenible. | Xifré (2023), OGP (2024), Haro-de-Rosario et al. (2021) |
-| **Innovación (DIn)** | 35% | La capacidad de incidencia ciudadana real —medida por trazabilidad, retroalimentación y cierre de ciclo— es el diferenciador entre plataformas decorativas y plataformas transformadoras. | Macintosh (2004), Castelnovo & Sorrentino (2020) |
-| **Técnica (DT)** | 25% | La arquitectura de código abierto, interoperabilidad y escalabilidad son habilitadores necesarios pero no suficientes para el éxito institucional. | Xifré (2023), Susha & Janssen (2019) |
+| **Dimensión Institucional** | DI | EPI ONU (e-participation index) | Madurez institucional del Estado en gobierno digital y participación |
+| **Dimensión Innovación** | DIn | OGP (Open Government Partnership) | Compromisos de gobierno abierto y evaluación independiente |
+| **Dimensión Técnica** | DT | Auditoría de código fuente (GitHub/GitLab) | Robustez técnica: actividad de repositorio, licencia, módulos deliberativos, trazabilidad |
 
-**Nota metodológica**: La ponderación no es igualitaria (33.3% cada una) porque la evidencia regional muestra que plataformas técnicamente robustas pero institucionalmente huérfanas (como Participa.gob.mx en transiciones gubernamentales) fracasan, mientras que plataformas institucionalmente sólidas pero técnicamente modestas logran mayor continuidad.
-
----
-
-### C. MATRIZ DE VERIFICACIÓN REPLICABLE
-
-| Paso | Acción | Responsable | Fuente de Datos | Verificación |
-|---|---|---|---|---|
-| 1 | Definir variables por dimensión | Equipo investigador | Revisión documental OGP + GitHub | 15 variables identificadas |
-| 2 | Asignar escala Likert 1-5 | Consenso equipo | Literatura de e-participación | Escala validada |
-| 3 | Calificar cada plataforma | Cada autor independientemente | Repositorios oficiales + informes OGP | Calificación ciega |
-| 4 | Reconciliar diferencias >1 punto | Reunión de consenso | Documento de discrepancias | 100% conciliado |
-| 5 | Normalizar a 0-100 | Fórmula estandarizada | Hoja de cálculo compartida | Verificado con 2 métodos |
-| 6 | Aplicar ponderación | Automatizado (fórmula) | Hoja de cálculo | Revisado por 3 autores |
-| 7 | Validar con modelo Macintosh | Comparación cruzada | Tabla Macintosh vs IMPD | Correlación positiva confirmada |
+**Nota**: El documento original del Anexo Técnico I utiliza **pesos equitativos** (1/3 por dimensión). La siguiente tabla muestra los valores REALES extraídos de la Tabla 4 del Anexo Técnico I, página 16.
 
 ---
 
-### D. RESULTADOS CONSOLIDADOS DEL IMPD
+#### B. RESULTADOS CONSOLIDADOS REALES (Tabla 4 Anexo I)
 
-| Plataforma | DI (×0.40) | DIn (×0.35) | DT (×0.25) | IMPD Total |
-|---|---|---|---|---|
-| **Decidim (Chile)** | 85 × 0.40 = 34.0 | 90 × 0.35 = 31.5 | 95 × 0.25 = 23.75 | **89.25** ⭐ |
-| e-Democracia (Brasil) | 80 × 0.40 = 32.0 | 75 × 0.35 = 26.25 | 85 × 0.25 = 21.25 | **79.50** |
-| Uruguay | 75 × 0.40 = 30.0 | 70 × 0.35 = 24.50 | 80 × 0.25 = 20.00 | **74.50** |
-| BA Obras / BA Participa (Argentina) | 70 × 0.40 = 28.0 | 65 × 0.35 = 22.75 | 75 × 0.25 = 18.75 | **69.50** |
-| Participa.gob.mx (México) | 65 × 0.40 = 26.0 | 60 × 0.35 = 21.00 | 70 × 0.25 = 17.50 | **64.50** |
+| Ranking | País / Plataforma | DI (EPI ONU) | DIn (OGP) | DT (Auditoría Técnica) | **IMPD** | Clasificación Macintosh |
+|---|---|---|---|---|---|---|
+| 🥇 1 | **Uruguay** (Portal Participación) | 86.30 | 92.00 | 88.00 | **88.77** | E-Empowering |
+| 🥈 2 | **Brasil** (e-Democracia) | 86.30 | 88.00 | 90.00 | **88.10** | E-Empowering |
+| 🥉 3 | **Chile** (Decidim / Participa) | 83.56 | 85.00 | 95.00 | **87.85** | E-Empowering |
+| 4 | **México** (Participa.gob.mx) | 73.97 | 78.00 | 72.00 | **74.66** | E-Engaging |
+| 5 | **Argentina** (BA Obras / BA Participa) | 63.01 | 70.00 | 65.00 | **66.00** | E-Enabling |
 
-**Interpretación**: Decidim obtiene el puntaje más alto por su combinación de respaldo institucional sostenido (DI=85), capacidad real de cierre de ciclo y trazabilidad (DIn=90), y arquitectura técnica robusta con comunidad activa (DT=95).
+*Fuente: Tabla 4, Matriz de Resultados Consolidados del IMPD, Anexo Técnico I, pág. 16. Elaboración propia.*
 
----
+**Fórmula aplicada**: IMPD = ( DI + DIn + DT ) / 3
 
-### E. NOTA SOBRE REPLICABILIDAD
-
-Para replicar este índice en otros contextos:
-1. Mantener las 3 dimensiones pero ajustar pesos según contexto institucional del país
-2. Documentar cada calificación con URL y fecha de consulta
-3. Usar mínimo 2 evaluadores independientes con reconciliación de discrepancias
-4. Publicar hoja de cálculo con fórmulas visibles en repositorio abierto
+**Ejemplo cálculo Uruguay**: (86.30 + 92.00 + 88.00) / 3 = 266.30 / 3 = **88.77**
 
 ---
 
-*Este insert debe incorporarse en Anexo Técnico I, Sección 6.5.2, páginas 16-17.*
+#### C. MATRIZ DE VERIFICACIÓN REPLICABLE
+
+Para que cualquier investigador pueda replicar el cálculo:
+
+| Paso | Acción | Fuente de Datos | Método |
+|---|---|---|---|
+| 1 | Obtener EPI del país | ONU E-Participation Index [1] | Descargar reporte anual, extraer puntaje e-participation |
+| 2 | Obtener evaluación OGP | OGP Independent Reporting Mechanism [2] | Consultar evaluación de compromisos de participación ciudadana |
+| 3 | Auditar repositorio técnico | GitHub / GitLab oficial de la plataforma | Verificar: licencia OSI-approved, commits últimos 12 meses, módulos deliberativos, issues cerrados, contribuidores activos |
+| 4 | Normalizar cada dimensión | Escala 0-100 | Si la fuente usa escala diferente (ej. 0-1), multiplicar por 100 |
+| 5 | Calcular IMPD | Fórmula: (DI + DIn + DT) / 3 | Promedio simple con 2 decimales |
+| 6 | Clasificar por Macintosh | Rangos del Anexo I, pág. 16 | < 70 = E-Enabling; 70-85 = E-Engaging; > 85 = E-Empowering |
+
+**Fuentes oficiales verificables**:
+1. ONU E-Participation Index: https://publicadministration.un.org/egovkb/en-us/Data-Center
+2. OGP Independent Reporting Mechanism: https://www.opengovpartnership.org/irm_reports/
+3. Repositorios auditados:
+   - Decidim (Chile): https://github.com/decidim/decidim
+   - e-Democracia (Brasil): https://github.com/labhackercd/e-democracia
+   - BA Obras (Argentina): repositorio del Gobierno de la Ciudad de Buenos Aires
+   - Participa.gob.mx (México): https://github.com/participagob/
+
+---
+
+#### D. NOTA IMPORTANTE SOBRE INTERPRETACIÓN
+
+El documento original del Anexo Técnico I señala (pág. 16):
+
+> "A pesar de que el referente de Uruguay se consolida como el estándar de oro en términos de impacto político regional, la rigurosidad técnica de esta auditoría concluye que la infraestructura de Decidim ofrece una superioridad estructural. La diferencia cualitativa de siete puntos en la Dimensión Técnica (95.00 vs. 88.00 de Consul), se traduce en una vitalidad de código superior..."
+
+Esto significa que:
+- **Uruguay lidera en IMPD total** (88.77) por equilibrio institucional
+- **Chile (Decidim) lidera en Dimensión Técnica** (95.00), lo que justifica su selección para Bogotá
+- La selección final no se basó únicamente en puntaje IMPD, sino en **diferenciación técnica** (trazabilidad de código, comunidad activa, licencia AGPL)
+
+---
+
+#### E. DECLARACIÓN DE TRAZABILIDAD
+
+Todas las cifras de esta sección provienen de:
+- **Anexo Técnico I, Tabla 4, pág. 16** del trabajo de grado original
+- Fuentes primarias citadas en dicho anexo (EPI ONU 2024, OGP IRM, auditoría GitHub propia)
+
+No se han modificado puntajes, pesos ni fórmulas respecto al documento original.
