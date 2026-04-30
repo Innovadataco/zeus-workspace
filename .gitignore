@@ -8,3 +8,8 @@ scripts/node_modules/
 /tmp/
 media/
 memorized_media/
+downloads/
+*.xlsx
+*.pdf
+*.docx
+*.pptx
