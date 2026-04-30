@@ -1,0 +1,286 @@
+TRABAJO DE GRADO
+ESTUDIO DE CASO: DEFINICIÓN DE UNA ESTRATEGIA DE APROPIACIÓN DE UNA PLATAFORMA TECNOLÓGICA DE PARTICIPACIÓN CIUDADANA QUE PERMITA LA CONSTRUCCIÓN COLABORATIVA CON LA CIUDADANÍA Y EL SEGUIMIENTO DE LAS POLÍTICAS PÚBLICAS EN LA CIUDAD DE BOGOTÁ
+ANEXO TÉCNICO II
+DIAGNÓSTICO MULTIDIMENSIONAL DE FACTORES DE APROPIACIÓN PARA LA PARTICIPACIÓN CIUDADANA EN BOGOTÁ.
+Nombres de los autores
+Diana Cáceres Valderrama
+Jelkin Carrillo Franco
+Wilmar Otavo Plazas
+Politécnico Gran Colombiano
+Maestría en Gestión Publica
+Colombia
+BOGOTA, MARZO 2026
+Tabla de contenido
+1.INTRODUCCIÓN3
+2.PROPÓSITO Y ALCANCE DEL DOCUMENTO3
+2.1. Propósito del documento3
+2.2. Alcance Multidimensional3
+3.MOTIVACIÓN INVESTIGATIVA4
+4.DELIMITACIÓN DEL ESTUDIO4
+4.1. Delimitación Espacial y Geográfica4
+4.2. Delimitación Temporal4
+4.3. Delimitación Temática y Tecnológica4
+4.4. Delimitación de Fuentes4
+5.MARCO CONCEPTUAL5
+5.1. Evolución Teórica: De la Consulta al Poder Ciudadano5
+5.1.1. La Escalera de Arnstein y la Redistribución del Poder6
+5.1.2. Apropiación Social de la Tecnología (AST) y Soberanía Digital6
+5.2. El Ecosistema Institucional y Social de Bogotá6
+5.3. Factores Determinantes: Motivaciones y Barreras de Acceso7
+5.4.Análisis de resultados IIPC 2023  (Veeduría Distrital [VD])8
+5.5.Análisis de resultados EPC 2025 (Bogotá Cómo Vamos)9
+5.6.Análisis de resultados IFIS 2025 (IDPAC)12
+5.7.Análisis de resultados IIPC – 2023, EPC – 2025 y IFIS 202514
+6.DIMENSIÓN SOCIO-CULTURAL15
+6.1.La Confianza Institucional como Factor Limitante15
+6.2.El Desencanto del "Tokenismo" y la Demanda de Incidencia15
+6.3.Imaginarios Digitales y Canales Emergentes.16
+7.DIMENSIÓN ECONÓMICA Y TERRITORIAL16
+7.1. Estratificación Socioeconómica y la Brecha Digital de Segundo Grado16
+7.2. El Costo de Oportunidad y la Participación en Sectores Vulnerables16
+7.3. Análisis de Clústeres Territoriales y Madurez Organizativa17
+8.DIMENSIÓN TECNOLÓGICA17
+8.1. Auditoría de la Oferta Institucional y Barreras de Navegabilidad17
+8.2. El Índice de Innovación Pública (IIP) y la Respuesta Administrativa18
+8.3. Interoperabilidad y Cierre del Ciclo Tecnológico18
+9.SÍNTESIS DEL DIAGNÓSTICO Y MATRIZ DE HALLAZGOS CRÍTICOS18
+9.1. Matriz de Hallazgos Críticos: Tensiones y Oportunidades19
+9.2. El Perfil del "Ciudadano Incidente" en Bogotá20
+10.CONCLUSIONES20
+11.REFERENCIAS BIBLIOGRÁFICAS21
+INTRODUCCIÓN
+El presente Anexo Técnico II se constituyó como la pieza angular diagnóstica de la investigación, orientada de manera unívoca a la identificación y el análisis exhaustivo de los factores sociales, económicos, culturales y tecnológicos que orbitan la adopción de infraestructuras digitales en el Distrito Capital. Este documento no solo constituye una pieza técnica fundamental para el sustento empírico del trabajo de grado titulado: "Definición de una estrategia de apropiación de una plataforma tecnológica de participación ciudadana de código abierto para la construcción colaborativa y el seguimiento de las políticas públicas", sino que se integra como el soporte metodológico para dar cumplimiento al tercer objetivo específico de la investigación: Identificar factores sociales, económicos, culturales y tecnológicos que inciden en la apropiación de plataformas digitales orientadas a la participación ciudadana.
+El diagnóstico aquí desarrollado trasciende la mera descripción de variables para adentrarse en la comprensión de las tensiones sociotécnicas que definen la relación entre la ciudadanía bogotana y la administración pública. se buscó, en última instancia, proporcionar la evidencia necesaria para transitar hacia modelos de gobernanza donde la tecnología sea el habilitador de una incidencia ciudadana real, enfrentando la desafección política mediante el fortalecimiento de los vínculos digitales de confianza y la trazabilidad institucional.
+PROPÓSITO Y ALCANCE DEL DOCUMENTO
+2.1. Propósito del documento
+El propósito central de este análisis es caracterizar el ecosistema de participación de Bogotá bajo un enfoque de Participación Incidente, conforme al mandato del Decreto 477 de 2023. se pretendió desarticular la visión tradicional de la participación como un ejercicio meramente consultivo —históricamente limitado a la validación de decisiones ya tomadas o a la recolección pasiva de opiniones— para fundamentar un modelo donde el aporte ciudadano se integre orgánicamente en el ciclo de las políticas públicas. El diagnóstico busca identificar las "palancas" críticas que permitan transmutar el uso de herramientas digitales en procesos de decisión vinculante, asegurando que el diálogo entre Estado y sociedad civil resulte en transformaciones materiales de la realidad urbana.
+2.2. Alcance Multidimensional
+El alcance de este estudio es holístico, abarcando la auditoría de barreras estructurales y la detección de catalizadores de éxito en la apropiación social. Se evalúa la arquitectura de participación vigente a la luz de la co-creación de valor público (Castelnovo & Sorrentino, 2020), determinando si las plataformas actuales facilitan una inteligencia colectiva o si presentan asimetrías de información que inhiben la acción ciudadana. El estudio integra de forma holística microdatos de madurez institucional (IFIS), indicadores de percepción subjetiva (EPC 2025) y capacidades de innovación administrativa (IIP), permitiendo una visión de 360 grados sobre la salud democrática de la ciudad.
+MOTIVACIÓN INVESTIGATIVA
+La motivación subyacente a este diagnóstico es enfrentar la paradoja del "fetiche tecnológico", donde la disponibilidad de software no se traduce necesariamente en un incremento de la calidad democrática. En Bogotá, se identifica una brecha crítica: a pesar de contar con una cobertura de internet superior al 76% y un tejido institucional denso, la incidencia percibida por el ciudadano sigue siendo marginal.
+Siguiendo a Haro-de-Rosario et al. (2021), la investigación se fundamenta en la premisa de que la gobernanza digital fracasa cuando ignora la brecha digital de segundo grado. Esta brecha no está determinada por el acceso material al hardware, sino por la carencia de competencias digitales para la incidencia y la desconfianza estructural en los canales oficiales. La motivación investigativa busca, por tanto, evitar que la plataforma tecnológica se convierta en un "elefante blanco digital", garantizando que la estrategia de apropiación final sea una respuesta orgánica a las realidades socioeconómicas y las demandas de transparencia radical de la ciudadanía bogotana.
+DELIMITACIÓN DEL ESTUDIO
+4.1. Delimitación Espacial y Geográfica
+El estudio se circunscribe al territorio de Bogotá D.C. El análisis se focalizó en las 1.271 instancias de participación registradas por el Instituto Distrital de la Participación y Acción Comunal (IDPAC). Se empleo un enfoque territorial que permite identificar disparidades en la madurez organizativa y digital entre las 20 localidades, reconociendo que la apropiación tecnológica está mediada por las particularidades socio-espaciales de cada zona.
+4.2. Delimitación Temporal
+El marco temporal comprendió el análisis de tendencias y datos estadísticos del periodo 2021-2025. Esta ventana permite evaluar la efectividad de las políticas de participación post-pandemia y proyectar la estrategia hacia el año 2026, asegurando su alineación con el actual ciclo de planificación distrital.
+4.3. Delimitación Temática y Tecnológica
+La investigación se restringe a los factores de apropiación social en el marco de la soberanía tecnológica (Xifré, 2023). Tecnológicamente, se centró  en las potencialidades de las plataformas de código abierto, evaluando su capacidad para generar procesos deliberativos que cumplan con estándares de seguridad, transparencia y trazabilidad técnica.
+4.4. Delimitación de Fuentes
+La validez del diagnóstico se sustentó en una triangulación de fuentes oficiales: IFIS (IDPAC), IIPC (Veeduría Distrital [VD]), EPC 2025 (Bogotá Cómo Vamos) y el marco normativo de los Decretos 606 y 477 de 2023.
+FIGURA 1. DIAGRAMA DE FLUJO METODOLÓGICO: PROCESO DE INVESTIGACIÓN
+Figura 1. Representación sistémica de la ruta crítica de investigación aplicada en el Anexo II. El diagrama ilustra la secuencia lógica desde la recolección de microdatos distritales y fuentes cualitativas, pasando por la triangulación analítica y la interpretación bajo marcos teóricos contemporáneos, hasta la identificación de factores de apropiación y la consolidación de la Matriz de Hallazgos Críticos
+MARCO CONCEPTUAL
+5.1. Evolución Teórica: De la Consulta al Poder Ciudadano
+El marco conceptual de este diagnóstico se fundamentó en la premisa de que la tecnología configura relaciones de poder. Para el cumplimiento del Objetivo Específico 3, esta investigación integró el concepto de la plataforma como un espacio de co-creación y co-producción de valor público (Castelnovo & Sorrentino, 2020). Se complementó con la "Escalera de la Participación" de Arnstein (1969) para medir la redistribución del poder, y se sustentó en la importancia de la toma de decisiones basada en datos (Susha & Janssen, 2019) para analizar los microdatos del IFIS y de la Veeduría Distrital [VD].
+La desconfianza estructural por los ciudadanos exige un análisis que trascienda la simple implementación técnica. Como proponen Castelnovo y Sorrentino (2020), la plataforma digital debe concebirse como un espacio de co-producción de valor público y no solo como un canal de recolección de quejas. En este sentido, la superación de la brecha digital de segundo grado —referida por Haro-de-Rosario et al. (2021) como la disparidad en las habilidades para transformar el uso de la red en beneficios políticos y sociales— es el factor determinante para escalar en la Escalera de Arnstein (1969). Solo mediante el aseguramiento del Cierre de Ciclo y la transparencia algorítmica, tal como fundamenta Xifré (2023) desde el software libre, es posible transitar de una participación simbólica hacia un modelo de Empoderamiento (Macintosh, 2004) que garantice la legitimidad sistémica en el Distrito.
+5.1.1. La Escalera de Arnstein y la Redistribución del Poder
+Para diagnosticar la participación en Bogotá, se adoptó la tipología de Sherry Arnstein (1969). Arnstein argumenta que participar sin redistribución de poder es un ejercicio vacío. El diagnóstico identificó que gran parte de la interacción digital en la ciudad se ha estancado en los niveles de "Tokenismo" (Información y Consulta), donde el ciudadano es escuchado pero carece de garantía sobre el impacto de su opinión. La meta de la apropiación tecnológica es el ascenso hacia el "Poder Ciudadano", específicamente hacia la Asociación (donde ciudadanos y administración acuerdan compartir responsabilidades de decisión) y el Control Ciudadano (donde la comunidad garantiza que la ejecución de la política pública sea fiel a lo deliberado). El concepto de "Poder Ciudadano" en este anexo se redefine como la capacidad técnica y política del usuario para auditar el ciclo de la política mediante la plataforma.
+5.1.2. Apropiación Social de la Tecnología (AST) y Soberanía Digital
+Basado en Manuel Castells (2001) y Ramírez-Alujas (2012), la AST se define como el proceso mediante el cual los sujetos dotan de sentido a las herramientas, transformándolas en recursos para la incidencia. No basta con que el ciudadano "sepa usar" la herramienta (alfabetización funcional); se requiere que "se apropie" de ella para la defensa de intereses colectivos. Esto se vincula con la soberanía tecnológica, que asegura que los algoritmos y datos sean públicos y auditables, eliminando la opacidad que tradicionalmente ha caracterizado a los sistemas de gestión cerrada.
+5.2. El Ecosistema Institucional y Social de Bogotá
+La densidad del diagnóstico requiere definir los roles estratégicos de los actores que interactúan en la cadena de valor de la participación:
+El Ciudadano como Sujeto Incidente: Es el actor central y prosumidor de inteligencia colectiva. Su rol trasciende la mera interacción con una interfaz digital; se reconoce como un actor político cuyo compromiso implica una inversión significativa de tiempo, esfuerzo cognitivo y capital intelectual en la deliberación, formulación y seguimiento de la política pública. Su participación constituye un acto de construcción colaborativa de soluciones para el territorio, donde la motivación está intrínsecamente ligada a la convicción de que su presencia en el debate público producirá un cambio material en su entorno social.
+IDPAC (El Tejedor Social): Actúa como el ente rector que fortalece el tejido asociativo. Su aporte conceptual es la transformación de las Instancias de Participación en comunidades de práctica capaces de interlocución técnica. Sin el fortalecimiento del IDPAC, la plataforma digital carecería de una base social organizada.
+Veeduría Distrital [VD] (El Garante del Cierre de Ciclo): Su función es el control preventivo. Es el actor responsable de asegurar que el flujo de participación digital no sea un "camino sin salida". El concepto de "Cierre de Ciclo" es vital: toda propuesta debe tener una respuesta técnica, administrativa y presupuestal por parte de las entidades.
+Bogotá Cómo Vamos (El Termómetro de Legitimidad): Como alianza civil, proporciona los datos de percepción subjetiva que permiten contrastar si los avances tecnológicos del Estado están alineados con el bienestar percibido por el ciudadano.
+Alcaldía Mayor - Secretaría General (El Nodo de Innovación): Es el responsable de la arquitectura administrativa. Su reto es garantizar que la burocracia distrital sea lo suficientemente ágil y abierta para absorber y ejecutar las propuestas que emanan de la participación ciudadana incidente.
+5.3. Factores Determinantes: Motivaciones y Barreras de Acceso
+Para dar cumplimiento al Objetivo N.º 3, se desglosan los factores que condicionan la acción ciudadana:
+Eficacia Política Interna y Externa: La eficacia interna es la confianza del ciudadano en su propia capacidad para entender y navegar los procesos políticos; la externa es la creencia en que las instituciones responderán con honestidad. El diagnóstico analiza cómo una interfaz compleja (burocracia digital) erosiona la eficacia interna, mientras que la falta de respuesta institucional destruye la eficacia externa.
+Costos de Transacción (Cálculo del Esfuerzo): Siguiendo a Haro-de-Rosario (2021), participar tiene un "costo" en términos de tiempo invertido para la construcción de la política pública. La apropiación tecnológica debe reducir estos costos mediante la navegabilidad intuitiva, permitiendo que la incidencia sea accesible para ciudadanos con limitaciones de recursos.
+Confianza Institucional como Capital Social: Basado en la EPC 2025, la confianza es el factor socio-cultural que determina la predisposición al uso. Sin confianza, la plataforma es vista como un mecanismo de vigilancia. La estrategia debe, por tanto, enfocarse en la transparencia algorítmica para revertir la desconfianza histórica.
+Brecha Digital de Segundo Grado: Se analiza no solo el acceso, sino quién posee las habilidades críticas para realizar control social digital. La falta de alfabetización en "participación técnica" es una barrera que excluye a sectores de la población de la toma de decisiones efectiva.
+Análisis de resultados IIPC 2023  (Veeduría Distrital [VD])
+Marco Conceptual y Alcance del IIPC
+El Índice Institucional de Participación Ciudadana (IIPC) es el instrumento técnico desarrollado por la Veeduría Distrital [VD] para monitorear y evaluar el desempeño de la Administración Distrital en la garantía y promoción del derecho a la participación. A diferencia de los instrumentos de percepción, el IIPC audita la capacidad interna de las entidades. El informe de resultados 2023, disponible en el repositorio oficial de la entidad, evalúa un universo de 65 instituciones (45 del sector central/descentralizado y 20 alcaldías locales).
+Arquitectura de Medición y Resultados Consolidados
+El modelo opera sobre una escala de 0 a 100 puntos, situando el promedio global del Distrito en 80,9 puntos, lo que se categoriza como un desempeño en Nivel Alto. No obstante, el análisis dimensional revela asimetrías críticas en la gestión:
+Noción de Participación (85,5%): Refleja una sólida apropiación conceptual y normativa del derecho a participar por parte de los servidores públicos.
+Diseño de la Participación (82,2%): Evidencia la existencia de planes, recursos y estructuras administrativas para operar la participación.
+Articulación para la Participación (82,3%): Valora positivamente la diversidad de canales y estrategias de diálogo dispuestos.
+Gestión de la Participación (73,5%): Se identifica como el componente con el desempeño más bajo, evaluando la incidencia real de los aportes ciudadanos en la toma de decisiones.
+Conclusiones Institucionales de la Veeduría Distrital [VD]
+De acuerdo con el informe oficial del IIPC 2023, se establecen los siguientes hallazgos de manera íntegra:
+Comprensión del fenómeno: El 75,38% de las entidades define la participación como el derecho a incidir en decisiones públicas. Sin embargo, los procesos más ejecutados son la gestión administrativa (33,85%) y el control social (26,15%).
+Formalización administrativa: El 87,69% de las entidades ha elaborado y adoptado formalmente un Plan de Participación Ciudadana.
+Retroalimentación y análisis: Aunque el 95,38% de las entidades afirma analizar los resultados de los diálogos, persiste una debilidad documental para demostrar cómo esos insumos cerraron el ciclo de gestión mediante respuestas efectivas.
+Recomendaciones para el Fortalecimiento Sistémico
+Para superar las brechas identificadas, la Veeduría Distrital [VD] propone las siguientes directrices estratégicas:
+Enfoque en la Incidencia: Se recomienda especialmente a las Alcaldías Locales (promedio 81,3%) fortalecer la sistematización de evidencias que permitan demostrar la incidencia real de la ciudadanía en la ejecución presupuestal.
+Mitigación de la Brecha Digital: Las entidades deben diversificar sus medios, reconociendo que el 21,54% de la ciudadanía enfrenta limitaciones de acceso a canales virtuales.
+Memoria Institucional: Fomentar la estabilidad de los equipos de participación para mitigar los riesgos derivados de la alta rotación de personal contratista.
+Trazabilidad del Cierre de Ciclo: Garantizar que la transparencia no se limite a la publicación de datos, sino a la devolución de información clara al ciudadano sobre el impacto de su intervención.
+Conclusión del Diagnóstico IIPC - 2023
+Este análisis ratifica que, mientras la institucionalidad presenta una madurez procedimental (80,9 pts), el sistema padece una latencia de resultados (73,5 pts), lo que valida la necesidad de transitar hacia un modelo de gobernanza basado en la incidencia verificable.
+Análisis de resultados EPC 2025 (Bogotá Cómo Vamos)
+Marco Metodológico y Representatividad
+El análisis del ecosistema participativo de Bogotá se sustenta en la información pública expuesta en los repositorios de la Encuesta de Percepción Ciudadana (EPC) 2025 del programa Bogotá Cómo Vamos. El estudio utiliza una muestra efectiva de 1.520 ciudadanos la cual, mediante la aplicación de factores de expansión poblacional, proyecta de manera estadísticamente válida las percepciones de los más de 8 millones de habitantes del Distrito. Este análisis se centra en las dimensiones de Democracia y Ciudadanía (DMC) y Gobernanza (GOB), pilares fundamentales para entender la relación actual entre el ciudadano y la administración pública. 
+Para el estudio del caso, se analizó la Dimensión: Democracia y Ciudadanía (DMC), esta dimensión evalúa el nivel de involucramiento real de los habitantes en los procesos de toma de decisiones y acción colectiva. El diagnóstico revela un fenómeno de baja intensidad participativa, donde la mayoría de la población se encuentra en un estado de latencia frente a los mecanismos formales.
+Dimensión: Democracia (DMC) 
+Participación en espacios promovidos por el Estado (DMC_1)
+De acuerdo con los resultados consolidados de la EPC 2025, el primer hallazgo crítico es la desconexión con la oferta institucional. El 86,5% (1.315 personas de la muestra) manifiesta NO haber participado en ningún espacio promovido por el gobierno local u otras entidades públicas. El 13,5% de participación efectiva se distribuye en los siguientes componentes:
+Espacios de participación promovidos por las alcaldías o gobernaciones: Es el componente de mayor recordación con un 6,8% (104 personas).
+Espacios de participación promovidos por las juntas administradoras locales, concejos o asambleas: Registra un 3,2% (49 personas).
+Encuestas o consultas a través de páginas web o aplicaciones: Refleja la incipiente pero limitada transición digital con un 2,2% (33 personas).
+Espacios de rendición de cuentas o asambleas ciudadanas: Presenta un valor marginal del 1,1% (16 personas).
+Participación en espacios promovidos por la comunidad (DMC_4)
+En el ámbito no institucional, la participación presenta niveles similares, con un 84,4% (1.283 personas) de abstención. El 15,6% de ciudadanos activos en este rubro se desglosa según la naturaleza de la organización:
+Juntas de Acción Comunal (JAC): Se mantiene como el núcleo del tejido barrial con un 7,6% (115 personas).
+Organizaciones temáticas (educación, salud, cultura, caridad): Convocan al 3,6% (54 personas).
+Organizaciones Religiosas: Registran el 2,2% (33 personas) de la muestra total.
+Partidos o movimientos políticos: Es el eslabón con menor representatividad, alcanzando solo el 0,2% (3 personas) de la muestra.
+Barreras a la participación (DMC_6)
+El análisis detallado de las razones por las cuales 1.282 ciudadanos deciden no participar en espacios comunitarios es fundamental para entender el desincentivo democrático:
+Falta de tiempo: Es la barrera predominante con un 44,1% (565 personas).
+Desinterés en los temas convocados: El 31% (398 personas) manifiesta una desconexión entre la agenda pública y sus prioridades personales.
+Desconocimiento de los espacios: El 16,6% (213 personas) evidencia fallas en la comunicación y difusión de la oferta participativa.
+Dimensión: Gobernanza (GOB)
+La dimensión de gobernanza complementa el diagnóstico al evaluar la percepción ciudadana sobre el desempeño de la administración en términos de transparencia y respuesta.
+Transparencia de la información (GOB_8)
+Al evaluar si el gobierno adelanta acciones de acceso a la información y datos abiertos, se identifica una crisis de transparencia:
+Nada o Poco transparente: El 56,9% (865 personas) otorga una valoración negativa.
+Bastante o Totalmente transparente: Solo el 8,1% (123 personas) percibe acciones efectivas en este rubro.
+Espacios de interacción y diálogo (GOB_9)
+Este componente mide si la administración promueve el diálogo para la formulación de políticas y rendición de cuentas:
+Nada o Poco efectivo: El 51,4% (781 personas) de la ciudadanía califica negativamente estos espacios.
+Bastante o Totalmente efectivo: Solo el 8,6% (131 personas) valida la utilidad de este diálogo.
+Respuesta efectiva a necesidades y solicitudes (GOB_10)
+Representa el indicador más sensible de la gestión. Al consultar si el gobierno responde de manera efectiva a trámites y necesidades:
+Nada o Poco efectiva: Una mayoría abrumadora del 57,8% (878 personas) percibe inoperancia institucional.
+Bastante o Totalmente efectiva: Únicamente el 6,5% (99 personas) siente que la administración resuelve sus solicitudes.
+Conclusión del Diagnóstico EPC - 2025
+Los resultados de la Encuesta de Percepción Ciudadana 2025 de Bogotá Cómo Vamos, presenta un diagnóstico para la ciudad donde se evidencia una fragilidad democrática estructural. El porcentaje de participación efectiva (13,5%) es proporcional a la percepción de inefectividad de la respuesta gubernamental (6,5%).
+La baja participación no es un síntoma de apatía, sino el resultado de un balance racional del ciudadano frente a un sistema que percibe como poco transparente y, sobre todo, inefectivo. Cuando solo el 6,5% de los ciudadanos siente que sus necesidades son atendidas, la inversión de tiempo y esfuerzo en participar deja de ser atractiva. Este escenario define el reto principal: la transición hacia una gobernanza basada en la incidencia verificable, donde el ciudadano pueda trazar el impacto de su voz en la gestión del territorio.
+Análisis de resultados IFIS 2025 (IDPAC)
+Marco Estratégico: La Política Pública de Participación Incidente
+La gestión del IDPAC se rige por el Decreto Distrital 477 de 2023, que adopta la Política Pública de Participación Incidente 2023-2034. Esta normativa redefine el ejercicio democrático en el Distrito, estableciendo que la participación debe trascender la consulta formal para convertirse en un proceso que genere capital social y humano. Según el marco institucional, la participación se fundamenta en tres pilares: como derecho soberano, como práctica cotidiana transformadora y como condición para el goce efectivo de los derechos en el territorio.
+Niveles de Interacción en el Ciclo de Gestión
+El modelo técnico del IDPAC clasifica la participación a través de una escala de seis niveles de incidencia, los cuales determinan la profundidad del vínculo entre la administración y la ciudadanía:
+Informar: Socialización de la gestión pública.
+Consultar: Recolección de opiniones ciudadanas.
+Co-crear: Diseño conjunto de soluciones y políticas.
+Controlar: Ejercicio de vigilancia y control social.
+Co-ejecutar: Gestión compartida de proyectos.
+Decidir: Nivel máximo donde el resultado es vinculante para la administración.
+Diagnóstico Cuantitativo de la Estructura Participativa
+A partir de la caracterización oficial realizada por el Observatorio de la Participación Ciudadana, se establecen los siguientes datos descriptivos sobre el estado actual del sistema de instancias en Bogotá:
+Censo y Tasa de Actividad: Se encuentran registradas 1.271 instancias de participación, de las cuales el 83% (1.055) se clasifican en estado de actividad vigente. El 9% se reporta como inactivo y un 8% no registra información actualizada.
+Territorialización: La participación en el Distrito es predominantemente local. El 97,6% (1.240 instancias) operan en las localidades, mientras que solo el 2,4% (31 instancias) tienen un alcance distrital.
+Naturaleza de los Espacios: El 72,8% corresponden a instancias formales creadas mediante acto administrativo, frente a un 17,9% de instancias no formales.
+Valoración del Fortalecimiento Organizacional (Índice IFIS)
+El IDPAC implementa el Índice de Fortalecimiento de Instancias de Participación (IFIS) para diagnosticar las capacidades operativas de estos espacios. Los hallazgos técnicos muestran la siguiente distribución:
+Madurez Institucional: El 36,9% de las instancias se encuentran en etapa de Creación, el 39% en Estructuración y el 20,7% han alcanzado la fase de Consolidación.
+Gobernanza: El 82,9% cuenta con una secretaría técnica definida y el 62,2% posee una presidencia o coordinación formalizada.
+Percepción de Impacto: En el análisis interno de estos espacios, el 91,8% de las instancias considera que sus recomendaciones o acuerdos han generado cambios positivos en su entorno o en la gestión pública.
+Movilización Social: El mecanismo de Presupuestos Participativos registró en 2024 la participación de aproximadamente 130.000 ciudadanos, consolidándose como el instrumento de mayor incidencia directa en la decisión presupuestal.
+Hallazgos del Estado de la Participación
+De acuerdo con el diagnóstico oficial del IDPAC, el estado actual de la participación ciudadana se sintetiza en los siguientes puntos técnicos identificados en el informe:
+Predominancia del Sector Seguridad y Gobierno: Es la temática con mayor nivel de organización, representando el 16,4% de las instancias, seguida por Cultura, Recreación y Deporte con el 14,6%.
+Concentración Territorial: Localidades como Kennedy, Ciudad Bolívar y Bosa presentan las mayores densidades de instancias activas, lo que las convierte en los núcleos de mayor dinamismo participativo local.
+Eficacia de los Mecanismos Tecnológicos: La implementación de herramientas como el sistema VOTEC ha permitido la transparencia en procesos de elección de dignatarios, registrando un uso extensivo en las 1.724 Juntas de Acción Comunal (JAC).
+Retos de Sostenibilidad: El diagnóstico identifica que, a pesar de la alta tasa de actividad (83%), persiste el desafío de garantizar el relevo generacional y la sostenibilidad financiera en los espacios de participación no formal.
+Trazabilidad de la Incidencia: El informe subraya que la efectividad del sistema institucional está supeditada a la capacidad de las entidades para reportar resultados concretos, lo que técnicamente se define como el cumplimiento del ciclo de participación incidente.
+Conclusión del Diagnóstico IFIS - 2025
+El diagnóstico institucional del IDPAC presenta una arquitectura participativa territorializada y activa, con un marcado énfasis en el nivel local (97,6%). Los indicadores de madurez (75,9% entre creación y estructuración) y la alta percepción de eficacia interna (91,8%) sugieren un sistema con capacidades operativas en desarrollo, cuya legitimidad se soporta actualmente en mecanismos de decisión directa sobre el presupuesto y el fortalecimiento de la organización social.
+Los Presupuestos Participativos se consolidan como el hito de movilización más significativo, logrando en 2024 la participación de 130.000 ciudadanos en la priorización del gasto local. Este fenómeno demuestra que la ciudadanía responde ante instrumentos de incidencia directa, pero muestra desinterés frente a espacios de carácter meramente informativo o consultivo. Asimismo, el IDPAC reporta que el 91,8% de los participantes en instancias organizadas percibe que su gestión genera cambios positivos, lo que valida la funcionalidad del modelo para el ciudadano que ya posee un alto grado de apropiación asociativa.
+Análisis de resultados IIPC – 2023, EPC – 2025 y IFIS 2025 
+Análisis Comparativo
+Al triangular los hallazgos de la demanda (EPC 2025), la auditoría (Veeduría) y la rectoría (IDPAC), emerge una paradoja técnica fundamental. Mientras que el IDPAC reporta un sistema de instancias vibrante con una percepción interna de éxito del 91,8%, el ciudadano general (EPC 2025) manifiesta una satisfacción de respuesta de apenas el 6,5%. Esta discrepancia sugiere que la participación en Bogotá opera bajo un "efecto nicho": es altamente efectiva y satisfactoria para la élite ciudadana formada y organizada (el 13,5% activo), pero permanece opaca, ineficaz o inexistente para el 86,5% de la población restante. La participación, por tanto, no está logrando permear la base social no organizada.
+Convergencia de los Hallazgos
+Existe un consenso objetivo y transversal entre los tres instrumentos respecto al déficit en la Dimensión de Resultados y Gestión. El punto de ruptura del sistema democrático local se identifica en la incapacidad de la administración para ejecutar el "Cierre de Ciclo":
+Veeduría Distrital [VD] (IIPC): Clasifica la dimensión de "Gestión de la Participación" con el puntaje más bajo (73,5 pts), señalando la falta de trazabilidad de los aportes.
+Bogotá Cómo Vamos (EPC): Registra que solo el 6,5% de los ciudadanos siente que el gobierno responde a sus necesidades, el valor más bajo de toda la encuesta.
+IDPAC: Reconoce que la legitimidad de la nueva política pública 2023-2034 depende estrictamente de garantizar que la deliberación se traduzca en una respuesta institucional verificable.
+Conclusiones 
+El diagnóstico multidimensional permite extraer conclusiones definitivas que orientan la propuesta estratégica de este estudio de caso:
+Crisis de Trazabilidad, no de Información: La crisis de transparencia percibida (8,1% de favorabilidad) no responde a la ausencia de datos públicos, sino a la falta de herramientas de seguimiento en tiempo real. El ciudadano requiere verificar el impacto de su aporte para modificar el balance costo-beneficio de su participación.
+Obsolescencia de los Canales Analógicos: La prevalencia de la falta de tiempo (44,1%) como barrera de acceso primaria indica que los mecanismos tradicionales de "asambleísmo físico" son incompatibles con las dinámicas de una urbe contemporánea. Existe una demanda latente por canales digitales que permitan una participación asincrónica y deslocalizada.
+La Apropiación Tecnológica como Puente: El éxito de los Presupuestos Participativos digitales confirma que el ciudadano bogotano posee las competencias básicas para la participación mediada por TIC, siempre que el incentivo sea la decisión real.
+Necesidad de un Modelo de Gobernanza Colaborativa: La plataforma tecnológica propuesta no debe ser un repositorio de información, sino un ecosistema de co-creación y auditoría. Solo mediante la garantía técnica de que la voz ciudadana es vinculante y rastreable, se podrá romper el ciclo de desconfianza y expandir la participación más allá de los nichos organizados actuales.
+DIMENSIÓN SOCIO-CULTURAL
+La Confianza Institucional como Factor Limitante
+A la luz de la triangulación de resultados del IIPC 2023, la EPC 2025 y el IFIS 2025, se identifica que la confianza en la administración distrital se sitúa en un crítico 17,7%. Desde la perspectiva de Putnam (1994), este déficit de confianza no solo representa una percepción negativa, sino que constituye una erosión directa del capital social, desplazando a la ciudadanía hacia canales de interacción informal o hacia una apatía democrática estructural.
+En este contexto, la apropiación tecnológica no puede entenderse únicamente como un proceso de alfabetización digital, sino como un ejercicio de reconstrucción del vínculo político. La plataforma propuesta debe, por tanto, transitar de la transparencia pasiva hacia una transparencia radical y auditable, donde la verificabilidad de los procesos y la trazabilidad en tiempo real de los aportes ciudadanos funcionen como mecanismos de restitución de la legitimidad institucional.
+El Desencanto del "Tokenismo" y la Demanda de Incidencia
+A pesar de la robustez normativa en materia de participación incidente en el Distrito, persiste en el imaginario colectivo una percepción de "participación simbólica" o tokenismo. Este fenómeno se manifiesta cuando el ciudadano identifica que, si bien existen canales de escucha, estos carecen de una correlación directa con la toma de decisiones administrativas.
+La disparidad entre la oferta de espacios y la eficacia de respuesta (valorada solo en un 6,5% en la EPC) genera una barrera cultural de desconfianza racional: el ciudadano evalúa el costo de oportunidad de su tiempo frente a la nula incidencia percibida. Por consiguiente, la arquitectura de la plataforma tecnológica debe romper con este paradigma cosmético, garantizando que el diseño de interacción asegure una incidencia vinculante. El éxito de la apropiación dependerá de la capacidad del sistema para devolver una respuesta administrativa técnica y verificable, transformando el "acto de participar" en un "acto de decidir"
+Imaginarios Digitales y Canales Emergentes.
+El desplazamiento de la dieta informativa ciudadana es evidente, la encuesta de Percepción Ciudadana (EPC) 2025 informa que el 57,8 % (equivalente a 878 personas que participaron en la encuesta) en Bogotá utiliza las redes sociales como su fuente primaria de información pública. Este dato revela una paradoja: existe una alta alfabetización operativa (uso de interfaces ágiles y sociales) coexistiendo con una fuerte resistencia a la "burocracia digital", caracterizada por plataformas institucionales de alta fricción, interfaces complejas y lenguajes técnicos excluyentes.
+La estrategia de apropiación de la plataforma debe resolver esta tensión mediante una convergencia estética y funcional. Se requiere integrar la rigurosidad de la incidencia formal (trazabilidad legal y técnica) con la agilidad de los entornos digitales contemporáneos (experiencia de usuario, interactividad y asincronía). Solo mediante una interfaz que reduzca la carga cognitiva y elimine la fricción burocrática, será posible fomentar una cultura de participación técnica y deliberativa que trascienda el activismo digital momentáneo hacia un ejercicio de gobernanza colaborativa de largo aliento.
+DIMENSIÓN ECONÓMICA Y TERRITORIAL
+La dimensión económica y territorial analiza cómo las condiciones materiales de vida y la ubicación geográfica de los ciudadanos en el Distrito Capital actúan como determinantes de la capacidad de apropiación tecnológica. En una ciudad caracterizada por una segregación socioespacial marcada, la participación digital no puede entenderse como un proceso homogéneo; está profundamente influenciada por la disponibilidad de recursos, el tiempo y la infraestructura local.
+7.1. Estratificación Socioeconómica y la Brecha Digital de Segundo Grado
+Si bien Bogotá reporta índices de conectividad general elevados, la Encuesta de Percepción Ciudadana (EPC) 2025 revela que la calidad del acceso y el uso estratégico de las TIC están profundamente estratificados. En los estratos 1 y 2, la conexión se realiza predominantemente a través de dispositivos móviles con planes de datos limitados, lo que restringe la navegación en ecosistemas institucionales densos.
+Siguiendo a Haro-de-Rosario et al. (2021), se identifica una brecha digital de segundo grado: mientras que en los estratos 5 y 6 la tecnología se emplea para el ejercicio de derechos y el control social, en los sectores vulnerables la interacción suele ser reactiva o informativa. Para que la estrategia de apropiación sea inclusiva, debe mitigar esta desigualdad material mediante una arquitectura de plataforma de bajo consumo de banda de ancho y procesos de consulta simplificados, evitando que el factor económico se traduzca en una exclusión democrática técnica.
+7.2. El Costo de Oportunidad y la Participación en Sectores Vulnerables
+Desde la perspectiva de la economía política, la participación ciudadana comporta un costo de oportunidad significativo. Para el habitante de sectores populares, el tiempo dedicado a la deliberación pública compite directamente con la generación de ingresos y las tareas de cuidado. El diagnóstico sugiere que la baja participación en estas zonas no es producto de una anomia política, sino de una estructura económica que penaliza el tiempo sustraído a la productividad o al descanso.
+La apropiación digital en estos contextos debe fundamentarse en la eficiencia temporal: la plataforma debe permitir una incidencia asincrónica y ágil que minimice el esfuerzo requerido para influir en las decisiones locales. Sin una herramienta que optimice el tiempo del usuario, la participación incidente corre el riesgo de consolidarse como un privilegio de clase, concentrando el poder decisorio en los sectores con mayor excedente de tiempo y capital cognitivo.
+7.3. Análisis de Clústeres Territoriales y Madurez Organizativa
+El análisis territorial, fundamentado en los microdatos del Índice de Fortalecimiento de Instancias (IFIS) del IDPAC, permite identificar clústeres de participación que trascienden la división administrativa. Sobre un universo de 1.271 instancias registradas (1.271), se observan comportamientos geográficos disímiles:
+Clústeres de Alta Resistencia Organizativa (Sur y Occidente): Localidades como Kennedy, Bosa y Ciudad Bolívar concentran la mayor densidad del tejido asociativo. Aquí, el 83% (1.055 instancias) se mantienen activas, reflejando una madurez en la participación tradicional. No obstante, enfrentan barreras de alfabetización técnica para la transición digital.
+Clústeres de Alta Disponibilidad Tecnológica (Norte y Centro): Localidades como Chapinero, Teusaquillo y Usaquén muestran mayores índices de uso de herramientas digitales para el control social, pero con una participación atomizada y menos articulada a través del sistema formal de instancias, el cual opera mayoritariamente en el nivel local (97,6% o 1.240 instancias).
+Esta geografía de la participación exige que la estrategia de apropiación sea flexible, reconociendo que la plataforma digital debe adaptarse tanto a las necesidades de conectividad del sur como a las demandas de trazabilidad técnica del norte. La incidencia real solo será posible si la tecnología logra integrar estos clústeres, permitiendo un diálogo en las localidades que fortalezca el Sistema Distrital de Participación Ciudadana en su conjunto.
+DIMENSIÓN TECNOLÓGICA
+La dimensión tecnológica trasciende el análisis de la infraestructura para centrarse en la idoneidad de las interfaces y la capacidad de la administración pública para procesar la inteligencia colectiva. La apropiación está condicionada por la arquitectura de los sistemas y la agilidad institucional para transformar datos ciudadanos en actos administrativos vinculantes.
+8.1. Auditoría de la Oferta Institucional y Barreras de Navegabilidad
+Bogotá posee un ecosistema digital diverso (Portal GABO, COLIBRÍ, VOTEC), pero los informes de la Veeduría Distrital [VD] identifican una fragmentación funcional que obstaculiza la apropiación. La dispersión en múltiples portales genera una "burocracia digital", donde el ciudadano debe navegar interfaces heterogéneas con lenguajes técnicos complejos que desestimulan el ejercicio participativo.
+Siguiendo a Susha & Janssen (2019), la efectividad de la gobernanza digital depende de una infraestructura que facilite la toma de decisiones informada. La arquitectura actual presenta retos de usabilidad y diseño centrado en el usuario. Para que la estrategia de apropiación sea exitosa, la plataforma debe operar bajo principios de transparencia radical, eliminando las fricciones técnicas que impiden que el ciudadano identifique lo digital como un canal de incidencia directa.
+8.2. El Índice de Innovación Pública (IIP) y la Respuesta Administrativa
+La eficacia de una plataforma tecnológica es proporcional a la "capacidad de absorción" del Estado. Según los resultados recientes del Índice de Innovación Pública (IIP 2025) reportados por la Veeduría Distrital [VD], el Distrito Capital registra un puntaje de 56/100. Lejos de ser un estancamiento, esta cifra representa un avance histórico de 10,9 puntos porcentuales frente a 2023, consolidando una red de 113 espacios de innovación (laboratorios y observatorios) en la ciudad. Sin embargo, el reto actual no es la creación de más laboratorios, sino lograr que esta madurez institucional se traduzca en agilidad para integrar de manera vinculante los insumos ciudadanos en los procesos de planeación.
+Si la administración pública carece de flujos de trabajo internos para procesar propuestas de manera vinculante, la tecnología se percibe como un repositorio estático de quejas. Por lo tanto, la dimensión tecnológica debe abordar la modernización del back-office institucional, asegurando que la herramienta sea el motor de una administración pública responsiva y abierta.
+8.3. Interoperabilidad y Cierre del Ciclo Tecnológico
+Un factor crítico identificado en el Índice Institucional de Participación Ciudadana (IIPC 2023) es la debilidad en la dimensión de Gestión, la cual obtuvo un puntaje de 73,5/100. La falta de interoperabilidad entre los sistemas de participación e información sectorial impide un "Cierre de Ciclo" efectivo. El ciudadano demanda trazabilidad: conocer quién procesa su aporte, en qué fase de ejecución se encuentra y qué impacto tuvo su decisión.
+La adopción de una plataforma de código abierto (Open Source) permite enfrentar este reto mediante la auditoría pública del código y la transparencia algorítmica. Al garantizar que los procesos de deliberación y votación sean verificables, se reduce la asimetría de información y se fortalece la confianza técnica. La tecnología se consolida así como el habilitador de una democracia digital donde la trazabilidad del dato es la garantía de la incidencia ciudadana en lo público
+SÍNTESIS DEL DIAGNÓSTICO Y MATRIZ DE HALLAZGOS CRÍTICOS
+Figura 2 . Diagrama de flujo de la ruta crítica de investigación para el Anexo Técnico II.
+Nota. Elaboración propia (2026). El diagrama ilustra el proceso sistémico de recolección y análisis, partiendo de la Fase 1 (Microdatos EPC 2025, IFIS e IIP) hasta la consolidación de la Matriz de Hallazgos Críticos. Se destaca la triangulación de fuentes mixtas para garantizar la validez del diagnóstico situacional en Bogotá.
+El cierre de la fase diagnóstica exige una operación de síntesis que trascienda el análisis segmentado de las dimensiones sociales, económicas, culturales y tecnológicas. La apropiación social de una plataforma de participación incidente no debe entenderse como el resultado de una suma lineal de factores, sino como una propiedad emergente de una interdependencia sistémica. En este ecosistema, la recuperación de la confianza institucional (dimensión sociocultural) es inviable sin el soporte de una arquitectura de trazabilidad radical (dimensión tecnológica), la cual a su vez debe responder a la mitigación efectiva de las barreras materiales y de tiempo que condicionan al habitante del Distrito (dimensión económica).
+9.1. Matriz de Hallazgos Críticos: Tensiones y Oportunidades
+La siguiente matriz sistematiza los hallazgos identificados a lo largo de la investigación. Se exponen las barreras que impiden el ejercicio democrático y los catalizadores estratégicos que la plataforma de código abierto (Open Source) debe potenciar para transformar la interacción Estado-ciudadanía:
+Tabla 1 - . Matriz de Hallazgos Críticos: Tensiones y Oportunidades
+Dimensión
+Barrera Crítica 
+Catalizador de Apropiación 
+Socio-Cultural
+Desconfianza estructural y percepción de "participación simbólica".
+Transparencia radical y trazabilidad del aporte ciudadano en tiempo real.
+Económica
+Brecha digital de segundo grado y altos costos de transacción (tiempo y esfuerzo).
+Diseño asincrónico, bajo consumo de datos y simplificación de procesos deliberativos.
+Tecnológica
+Fragmentación de la oferta digital y falta de interoperabilidad entre entidades.
+Soberanía tecnológica (Open Source) y unificación de la experiencia de usuario.
+Institucional
+Debilidad en el "Cierre de Ciclo" y baja capacidad de innovación pública (56/100 IIP).
+Automatización de respuestas y vinculación normativa de los resultados de la plataforma.
+Fuente: El autor.
+9.2. El Perfil del "Ciudadano Incidente" en Bogotá
+A partir de la triangulación de los datos del IFIS (1.271) y la EPC 2025 (1.520), la investigación define al sujeto protagónico de la estrategia no como un mero usuario de software, sino como un Ciudadano Incidente. Este perfil se caracteriza por ser un actor político que reconoce en la co-creación de la política pública un espacio de transformación material de su realidad local.
+El Ciudadano en Bogotá posee una alta alfabetización digital operativa (reflejada en el 59,0% que consume información pública vía redes sociales), pero manifiesta una resistencia estructural hacia la "burocracia digital" que exige altos niveles de registro sin garantía de impacto. Este ciudadano no es apático; es racional en su inversión de tiempo. El hecho de que 130.000 ciudadanos se movilizaran en los Presupuestos Participativos de 2024 demuestra que el habitante de Bogotá participa cuando la herramienta garantiza una incidencia directa sobre el recurso público.
+Por lo tanto, el éxito de la estrategia de apropiación radica en reconocer este esfuerzo, devolviendo al ciudadano el control sobre la trazabilidad de su participación y reduciendo los obstáculos técnicos que desvían su energía de la esencia del debate público: la co-creación de soluciones para el territorio.
+CONCLUSIONES
+El diagnóstico multidimensional desarrollado en este anexo técnico permite concluir que la apropiación social de una plataforma tecnológica de participación ciudadana en Bogotá no depende de una solución puramente técnica, sino de una reconfiguración de la relación de poder entre el Estado y el sujeto político. A través del análisis de las cuatro dimensiones: social, económica, cultural y tecnológica, se evidencia que la ciudad posee una base institucional robusta, pero enfrenta una crisis de legitimidad que solo puede ser revertida mediante la transparencia radical y la garantía de incidencia real en el ciclo de las políticas públicas.
+En primer lugar, se concluye que el principal inhibidor de la apropiación es la desconfianza estructural, la cual es el resultado de una historia de procesos participativos limitados al nivel consultivo o de "tokenismo". La ciudadanía bogotana manifiesta una resistencia a los canales oficiales no por falta de competencia digital, sino por la percepción de ineficacia de sus aportes. Por tanto, la transición del paradigma consultivo al incidente es el requisito sine qua non para que el ciudadano reconozca en la tecnología un canal legítimo de ejercicio democrático.
+En segunda instancia, el diagnóstico identifica que la participación ciudadana incidente exige una inversión de tiempo y capital intelectual por parte del habitante de la ciudad que debe ser valorada como un recurso público. La apropiación efectiva ocurre cuando el ciudadano percibe que su esfuerzo en la construcción colaborativa de la política pública es respetado y procesado técnicamente por la administración. Esto implica reducir los costos de transacción y las barreras de la "burocracia digital", permitiendo que los sectores con mayores limitaciones socioeconómicas (estratos 1 y 2) puedan influir en las decisiones locales sin que su condición material sea un factor de exclusión.
+Finalmente, la soberanía tecnológica, fundamentada en el uso de plataformas de código abierto, se consolida como la única vía técnica para asegurar la trazabilidad y la auditabilidad de la participación. 
+Figura 3 Modelo operativo del cierre de ciclo y la participación incidente en el Distrito
+Nota. Propuesta estratégica de implementación. La infografía detalla las cuatro etapas del ciclo de vida de una propuesta: 1. Captura ciudadana, 2. Análisis mediante Procesamiento de Lenguaje Natural (NLP), 3. Respuesta institucional obligatoria y 4. Verificación de impacto. Este modelo busca reducir la desconfianza mediante la transparencia algorítmica y el sistema de incentivos tributarios propuestos.
+El uso de software libre permite el "Cierre del Ciclo", garantizando que cada propuesta ciudadana tenga un seguimiento público y verificable. En síntesis, este diagnóstico proporciona los insumos críticos para el diseño de una estrategia de apropiación (Objetivo N.º 4) que no se limite a promover una herramienta, sino que busque democratizar el poder de decisión en Bogotá a través de la transparencia algorítmica y la co-producción de valor público.
+REFERENCIAS BIBLIOGRÁFICAS
+Alcaldía Mayor de Bogotá. (2023). Decreto Distrital 477 de 2023: Por el cual se reglamenta la participación incidente en el Distrito Capital. Registro Distrital.
+Alcaldía Mayor de Bogotá. (2023). Decreto Distrital 606 de 2023: Política Pública de Gobierno Abierto, Ciudadanía y Gestión Pública. Registro Distrital.
+Arnstein, S. R. (1969). A ladder of citizen participation. Journal of the American Institute of Planners, 35(4), 216-224. https://doi.org/10.1080/01944366908977225
+Bernat, P., & Ganuza, E. (2022). ¿Cómo votar una política pública? Metodologías para la deliberación ciudadana. Gedisa.
+Bogotá Cómo Vamos. (2025). Encuesta de Percepción Ciudadana (EPC) 2025: Informe de resultados. Fundación Corona.
+Castelnovo, W., & Sorrentino, M. (2020). The digital government as a co-production platform: A framework for analysis. Government Information Quarterly, 35(2), 249-259. https://doi.org/10.1016/j.giq.2017.11.006
+Castells, M. (2001). La galaxia Internet: Reflexiones sobre Internet, empresa y sociedad. Areté.
+Haro-de-Rosario, A., Sáez-Martín, A., & Caba-Pérez, M. D. C. (2021). E-participation and the digital divide: The case of Latin American local governments. Public Administration Review, 81(1), 120-134.
+Instituto Distrital de la Participación y Acción Comunal [IDPAC]. (2025). Manual de mecanismos de participación ciudadana en Bogotá D.C. Alcaldía Mayor de Bogotá.
+Instituto Distrital de la Participación y Acción Comunal [IDPAC]. (2025). Índice de Fortalecimiento de Instancias (IFIS): Microdatos y resultados 2021-2025. Alcaldía Mayor de Bogotá.
+Putnam, R. D. (1994). Para hacer que la democracia funcione: Tradiciones civiles en la Italia moderna. Galaxia Gutenberg.
+Ramírez-Alujas, Á. V. (2012). Gobierno abierto y modernización de la gestión pública: En pos de la confianza ciudadana. Revista Enfoques: Ciencia Política y Administración Pública, 10(16), 13-26.
+Secretaría General de la Alcaldía Mayor de Bogotá. (2025). Índice de Innovación Pública (IIP): Reporte de resultados institucionales. Dirección de Innovación.
+Susha, I., & Janssen, M. (2019). Data-driven decision making in government: An analysis of factors influencing the use of data for policy making. Information Polity, 24(2), 167-183. https://doi.org/10.3233/IP-180104
+Veeduría Distrital [VD]. (2023). Índice Institucional de Participación Ciudadana (IIPC): Seguimiento a la gestión pública en Bogotá. Alcaldía Mayor de Bogotá.
+Xifré, R. (2023). Soberanía tecnológica e innovación pública: El papel del software libre en la gobernanza contemporánea. OECD Publishing.

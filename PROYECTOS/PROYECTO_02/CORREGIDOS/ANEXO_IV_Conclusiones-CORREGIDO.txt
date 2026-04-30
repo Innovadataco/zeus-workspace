@@ -1,0 +1,27 @@
+TRABAJO DE GRADO
+ESTUDIO DE CASO: DEFINICIÓN DE UNA ESTRATEGIA DE APROPIACIÓN DE UNA PLATAFORMA TECNOLÓGICA DE PARTICIPACIÓN CIUDADANA QUE PERMITA LA CONSTRUCCIÓN COLABORATIVA CON LA CIUDADANÍA Y EL SEGUIMIENTO DE LAS POLÍTICAS PÚBLICAS EN LA CIUDAD DE BOGOTÁ
+ANEXO TÉCNICO IV
+ANEXO DE CONCLUSIONES FINALES CONSOLIDADAS: HACIA UN MODELO DE PARTICIPACIÓN CIUDADANA INCIDENTE EN BOGOTÁ
+Nombres de los autores
+Diana Cáceres Valderrama
+Jelkin Carrillo Franco
+Wilmar Otavo Plazas
+Politécnico Gran Colombiano
+Maestría en Gestión Publica
+Colombia
+BOGOTA, MARZO 2026
+INTRODUCCIÓN
+La presente investigación ha permitido estructurar una respuesta técnica, política y social frente al agotamiento de los mecanismos tradicionales de participación ciudadana en el Distrito Capital. A través de una metodología secuencial, se ha logrado validar que la crisis de legitimidad del sistema no responde únicamente a factores de infraestructura, sino a una desconexión estructural entre la captura de la voluntad ciudadana y el procesamiento administrativo de la misma.
+Este anexo consolida la tríada investigativa: la validación de estándares internacionales (Anexo I), la disección de la realidad situada de Bogotá (Anexo II) y la formulación de una arquitectura de intervención operativa (Anexo III).
+INTEGRACIÓN ARGUMENTATIVA DE LOS HALLAZGOS
+2.1. Soberanía Tecnológica como Habilitador de la Confianza (Relación Anexo I - Anexo II)
+El estudio comparado del Anexo I determinó que el éxito de referentes regionales (como Barcelona o Montevideo) no radica en la sofisticación de la interfaz, sino en la Soberanía Tecnológica. Al contrastar esto con el Anexo II, donde se identifica una desconfianza institucional (EPC 2025), se concluye que la adopción de software de código abierto (Decidim) es un imperativo ético. La transparencia algorítmica permite que la ciudadanía audite el código que procesa sus propuestas, transformando la tecnología de una "caja negra" en un "espacio público digital" transparente.
+2.2. Superación de la Brecha de Segundo Grado (Relación Anexo II - Anexo III)
+El diagnóstico del Anexo II fue enfático en señalar que Bogotá padece una Brecha Digital de Segundo Grado. Esto implica que el reto no es la conectividad, sino la capacidad de uso de la tecnología para la incidencia política. En consecuencia, la Estrategia de Apropiación del Anexo III propone una mediación territorial a través de los Líderes Multiplicadores. Se concluye que la tecnología por sí sola es insuficiente; requiere un andamiaje pedagógico que traduzca el saber barrial en datos técnicos procesables por la administración.
+2.3. El "Cierre de Ciclo" como Doctrina de Gestión Pública (Relación Anexo III)
+La conclusión transversal más potente de la investigación es la necesidad del Cierre de Ciclo. Se argumenta que la desafección ciudadana es el resultado de procesos participativos sin trazabilidad. El modelo propuesto garantiza que cada interacción ciudadana genere una respuesta administrativa obligatoria, soportada en analítica de datos (NLP) y dashboards de control. Esto eleva la participación del nivel consultivo al nivel de incidencia vinculante, tal como lo exige el Decreto 477 de 2023.
+CONCLUSIONES 
+Co-producción de Valor Público: La participación debe dejar de ser entendida como un evento administrativo para convertirse en un proceso asincrónico y trazable de co-creación permanente. En este sentido, la adopción de Decidim no es un fin en sí mismo, sino el habilitador tecnológico y político indispensable para ejercer el mandato del Decreto 477 de 2023. Su valor radica en la reducción radical de los "costos de transacción" (tiempo y esfuerzo) para el ciudadano vulnerable, garantizando que el esfuerzo deliberativo se convierta en resoluciones institucionales auditables.
+Incentivación y Reducción del Costo de Oportunidad: Se concluye que para movilizar a la "mayoría silenciosa", la estrategia debe incluir incentivos (Eje Económico del Anexo III) que reconozcan el tiempo ciudadano como un recurso valioso, vinculando la actividad digital con beneficios tangibles en el entorno físico.
+Gobernanza de Datos para la Democracia: La investigación ratifica que la captura masiva de datos ciudadanos a través de la plataforma debe estar orientada a mejorar la toma de decisiones basada en evidencia, permitiendo una planeación distrital más cercana a las necesidades reales de las 20 localidades.
+Se recomienda a las autoridades distritales la institucionalización de la Matriz de Hallazgos Críticos como hoja de ruta para la inversión en cultura digital. Asimismo, se concluye que el despliegue de la plataforma 'Decidim' no debe hacerse de forma abrupta, sino utilizar los ecosistemas de innovación existentes, como el 'Lab Capital' de la Veeduría Distrital [VD] y el 'ParticiLab' del IDPAC, como entornos de prueba controlados (sandboxes). Esto asegurará que cualquier implementación tecnológica escale progresivamente bajo el modelo de Participación Incidente aquí desarrollado, garantizando la sostenibilidad política y técnica del sistema.

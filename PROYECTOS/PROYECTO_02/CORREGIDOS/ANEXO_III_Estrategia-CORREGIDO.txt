@@ -1,0 +1,101 @@
+TRABAJO DE GRADO
+ESTUDIO DE CASO: DEFINICIÓN DE UNA ESTRATEGIA DE APROPIACIÓN DE UNA PLATAFORMA TECNOLÓGICA DE PARTICIPACIÓN CIUDADANA QUE PERMITA LA CONSTRUCCIÓN COLABORATIVA CON LA CIUDADANÍA Y EL SEGUIMIENTO DE LAS POLÍTICAS PÚBLICAS EN LA CIUDAD DE BOGOTÁ
+ANEXO TÉCNICO III
+ESTRATEGIA DE APROPIACIÓN SOCIAL DE LA PLATAFORMA TECNOLÓGICA PARA LA PARTICIPACIÓN CIUDADANA INCIDENTE EN BOGOTÁ
+Nombres de los autores
+Diana Cáceres Valderrama
+Jelkin Carrillo Franco
+Wilmar Otavo Plazas
+Politécnico Gran Colombiano
+Maestría en Gestión Publica
+Colombia
+BOGOTA, MARZO 2026
+Tabla de contenido
+1.INTRODUCCIÓN3
+2.MOTIVACIÓN INVESTIGATIVA3
+3.DELIMITACIÓN DE LA ESTRATEGIA3
+3.1.Delimitación Espacial y Geográfica3
+3.2.Delimitación Temporal3
+3.3.Delimitación Temática y Tecnológica4
+4.FUNDAMENTOS Y FILOSOFÍA DE LA ESTRATEGIA4
+4.1.El Ciudadano como Sujeto de Poder y Co-creador de Valor Público4
+4.2.Superación del Paradigma Consultivo: La Incidencia como Apoyo Institucional4
+5.PILARES ESTRATÉGICOS DE ACTUACIÓN5
+5.1.Pilar Socio-Cultural: La Trazabilidad como Apoyo a la Transparencia5
+5.2.Pilar Económico: Facilitación de la Inclusión y Reducción de Barreras5
+5.3.Pilar Territorial: Soporte al Empoderamiento de la Inteligencia Local6
+5.4.Pilar Tecnológico: Parametrización y Fortalecimiento de la Rendición de Cuentas6
+6.MECANISMOS PARA EL FORTALECIMIENTO DE LA APROPIACIÓN6
+6.1.El Líder Multiplicador como Facilitador de la Gobernanza Colaborativa6
+6.2.Propuesta de Incentivos: Reconocimiento a la Co-producción de Valor Público6
+6.3.Validación de Metas y Protocolos de Calidad7
+7.ANALÍTICA DE DATOS Y DASHBOARDS7
+7.1.Analítica (NLP) para Facilitar el Procesamiento de la Inteligencia Colectiva7
+7.2.Dashboards de Soporte al Liderazgo Ciudadano7
+7.3.Retroalimentación Proactiva para Fortalecer la Certeza Ciudadana8
+8.CONCLUSIONES DE LA ESTRATEGIA8
+9.REFERENCIAS BIBLIOGRÁFICAS8
+INTRODUCCIÓN
+El presente Anexo Técnico III, constituye la propuesta estratégica derivada del cumplimiento del cuarto objetivo del proyecto de investigación, centrada en la definición de una hoja de ruta para la apropiación social de una infraestructura tecnológica de código abierto en Bogotá. Mientras que los análisis previos se ocuparon de la selección de la herramienta y el diagnóstico de las barreras ciudadanas, este Anexo Técnico III se enfoca en facilitar la conexión entre la capacidad técnica de la plataforma y la voluntad política y social de la ciudadanía. La estrategia aquí planteada trasciende la visión tradicional de la alfabetización digital para adentrarse en la construcción de una cultura de participación técnica e incidente, donde el software se propone como un bien público que, tras un proceso necesario de revisión, actualización y parametrización técnica, permita la construcción colaborativa de políticas públicas entre la ciudadanía y la administración distrital.
+MOTIVACIÓN INVESTIGATIVA
+La motivación fundamental de esta estrategia nace de la necesidad de apoyar el cierre de la brecha entre la oferta institucional y la incidencia ciudadana real. La investigación ha identificado que la simple puesta en marcha de una plataforma tecnológica no garantiza su uso significativo ni su legitimidad democrática. Sin una estrategia de apropiación que considere las realidades socioeconómicas y los imaginarios culturales de Bogotá, se corre el riesgo de generar un "fetiche tecnológico" desvinculado de las necesidades del territorio. Siguiendo a Linders (2012) en su concepto de "We-Government", la motivación de este apartado es proponer un modelo donde el Estado actúe como plataforma y el ciudadano como co-creador, reconociendo que su tiempo invertido en lo público es el activo más valioso de la democracia digital. se buscó facilitar una transformación administrativa donde la tecnología apoye el empoderamiento ciudadano a través de resultados tangibles y verificables que impacten la calidad de vida en los barrios.
+DELIMITACIÓN DE LA ESTRATEGIA
+Delimitación Espacial y Geográfica
+La estrategia de apropiación se proyecta para el territorio de Bogotá D.C., con un enfoque diferencial que reconoce las particularidades de las 20 localidades. Se prioriza el despliegue en clústeres de participación identificados por el IDPAC, asegurando que la estrategia tenga capilaridad tanto en los centros urbanos de alta conectividad como en las zonas de mayor resistencia organizativa del sur y occidente, apoyando el fortalecimiento del tejido social territorial.
+Delimitación Temporal
+La implementación de la estrategia se delimita para el periodo 2025-2026, alineándose con el ciclo de planeación distrital vigente. Este marco temporal permite realizar una fase de pilotaje, validación de incidencia y consolidación de la soberanía tecnológica, proyectando la sostenibilidad de la plataforma como un aporte académico a la gobernanza distrital a largo plazo.
+Delimitación Temática y Tecnológica
+Temáticamente, la estrategia se restringe a los procesos de Participación Incidente y Co-producción de Valor Público. Tecnológicamente, el alcance se centra en el ecosistema de Código Abierto (Decidim), aclarando que su implementación definitiva requiere de una revisión y ajuste exhaustivo de sus funcionalidades y requerimientos técnicos, permitiendo su correcta parametrización para los procesos de construcción de políticas públicas en Bogotá.
+FUNDAMENTOS Y FILOSOFÍA DE LA ESTRATEGIA
+La definición de esta estrategia se entiende como la cimentación de un marco de referencia que busca complementar el ecosistema participativo de la ciudad. La filosofía que sustenta esta propuesta se basa en la facilitación de una relación horizontal entre la administración distrital y la ciudadanía. Esta fundamentación abraza una perspectiva sociotécnica, reconociendo que la apropiación ocurre cuando el sujeto político encuentra en la herramienta un soporte para transformar su realidad local.
+El Ciudadano como Sujeto de Poder y Co-creador de Valor Público
+En el marco de esta estrategia, el ciudadano se propone como el eje central de la co-producción de valor público (Castelnovo & Sorrentino, 2020). La apropiación social se fundamenta en el reconocimiento del ciudadano como un experto local cuyo conocimiento resulta necesario para la eficacia de la gestión pública. Bajo esta premisa, el compromiso con la plataforma implica una inversión significativa de tiempo invertido en la construcción de la política pública, un esfuerzo deliberativo que incluye el diagnóstico, la formulación y el seguimiento, el cual debe ser apoyado por el Estado como un recurso de alto valor.
+Superación del Paradigma Consultivo: La Incidencia como Apoyo Institucional
+La estrategia adopta el paradigma de la Participación Incidente (Decreto 477 de 2023), buscando facilitar que la voluntad ciudadana tenga la capacidad de influir de manera efectiva en las políticas públicas. Inspirado en la "Escalera de la Participación" de Arnstein (1969), el objetivo es proponer mecanismos que apoyen el ascenso hacia niveles de "Poder Ciudadano", donde la plataforma digital proporcione la trazabilidad necesaria para verificar el impacto de las propuestas ciudadanas en la planeación del Distrito, pasando de la consulta simbólica a la delegación de poder real.
+PILARES ESTRATÉGICOS DE ACTUACIÓN
+Figura 1. Estrategia de Apropiación Social de la Tecnología (AST) para el Distrito Capital.
+Figura 1. Arquitectura sistémica de la Estrategia de Apropiación Social de la Tecnología (AST) para el Distrito Capital. El modelo ilustra la interdependencia de los cuatro ejes estratégicos (Tecnológico, Socio-cultural, Económico y Territorial) como requisitos habilitantes para garantizar que la participación ciudadana sea vincante, trazable e incidente.
+La propuesta de valor de este trabajo de grado reside en su capacidad para actuar como un marco de referencia complementario y de fortalecimiento para los esfuerzos actuales de Bogotá. Partiendo del concepto de Valor Público (Moore, 1995), la estrategia no pretende sustituir las herramientas existentes, sino facilitar y potenciar la arquitectura de participación ciudadana mediante una transición hacia modelos incidentes y vinculantes apoyados por herramientas tecnológicas.
+Pilar Socio-Cultural: La Trazabilidad como Apoyo a la Transparencia
+Este pilar busca robustecer la confianza mediante la institucionalización de la transparencia activa. Siguiendo a Nabatchi (2012), la participación solo es sostenible si el ciudadano percibe que su esfuerzo tiene un eco en la gestión pública. Se propone la implementación de la Huella Digital de Incidencia, un aporte que busca ofrecer al ciudadano una prueba técnica de su participación, apoyando la reconstrucción del vínculo de confianza mediante la verificabilidad del proceso deliberativo. El valor reside en facilitar que el proceso deje de ser una "caja negra" y se convierta en un flujo de información auditable.
+Pilar Económico: Facilitación de la Inclusión y Reducción de Barreras
+Se propone una arquitectura tecnológica diseñada para la inclusión radical. Esto implica que la plataforma debe ser objeto de una parametrización técnica que priorice el bajo consumo de datos y la compatibilidad con dispositivos diversos. El valor de este pilar es facilitar que el factor económico no sea un determinante de exclusión democrática, apoyando así las políticas de conectividad del Distrito mediante una herramienta que optimiza el esfuerzo ciudadano y democratiza el acceso a los entornos virtuales de decisión pública.
+Pilar Territorial: Soporte al Empoderamiento de la Inteligencia Local
+Esta estrategia busca potenciar el saber barrial integrando herramientas digitales en el tejido asociativo. El valor académico es la propuesta de un modelo de hibridación donde la plataforma sirve de soporte técnico a las Juntas de Acción Comunal (JAC). Al facilitar que estos líderes sistematicen sus demandas históricas en propuestas con mayor rigor técnico, la estrategia apoya una interlocución más simétrica con la administración, fortaleciendo la capacidad argumentativa de la ciudadanía organizada.
+Pilar Tecnológico: Parametrización y Fortalecimiento de la Rendición de Cuentas
+La propuesta tecnológica se centra en la versatilidad del software de código abierto. Es fundamental que la plataforma sea revisada, actualizada y parametrizada. Para resolver la fragmentación institucional diagnosticada, este ajuste exige la interoperabilidad técnica (vía API) con el sistema COLIBRÍ de la Veeduría Distrital [VD]. Esto garantiza el "Cierre de Ciclo": Decidim operará como el entorno de co-creación ciudadana (front-office), mientras que sus resultados alimentarán automáticamente los sistemas de seguimiento institucional para que los entes de control exijan la respuesta administrativa. La transparencia algorítmica se propone como el soporte para reducir la opacidad.
+MECANISMOS PARA EL FORTALECIMIENTO DE LA APROPIACIÓN
+Este capítulo detalla la propuesta operativa orientada a incentivar el compromiso ciudadano de largo aliento mediante el reconocimiento del tiempo invertido en la política pública.
+El Líder Multiplicador como Facilitador de la Gobernanza Colaborativa
+Se propone identificar al líder barrial como un Agente de Apoyo a la Innovación Pública. Inspirado en el modelo de Ansell & Gash (2008), su rol es facilitar la mediación entre la tecnología y el ciudadano. El líder actúa como un pedagogo que traduce la complejidad técnica de la política pública al lenguaje comunitario, complementando la labor de los gestores territoriales actuales y facilitando una mayor penetración de la plataforma en comunidades con brechas de confianza.
+Propuesta de Incentivos: Reconocimiento a la Co-producción de Valor Público
+La estrategia plantea una arquitectura de incentivos que busca reconocer el tiempo y el esfuerzo cognitivo dedicado por el ciudadano a la construcción de lo público. Dado que la creación de exenciones fiscales escapa a la viabilidad administrativa a corto plazo por ser competencia exclusiva del Concejo de Bogotá y la Secretaría de Hacienda, se proponen incentivos cívicos articulados con la oferta del IDPA, se sugiere revisar la viabilidad de beneficios que compensen este servicio de utilidad pública, tales como:
+Deducciones en el Impuesto Predial: Como un mecanismo de reconocimiento al ciudadano que co-crea soluciones para su entorno habitacional.
+Descuentos en Servicios Públicos: Para incentivar la participación sostenida y la penetración de la plataforma. Esta propuesta es complementaria a las acciones de la Secretaría de Hacienda, buscando fomentar una cultura de corresponsabilidad donde el cumplimiento de metas de participación incidente tenga un retorno material directo para el contribuyente.
+Puntuación Adicional en el Fondo Chikaná para aquellas Juntas de Acción Comunal u organizaciones sociales que demuestren alta incidencia y co-creación a través de la plataforma, recibiendo un puntaje preferencial en las convocatorias de dotación y financiación distrital
+Certificación de Control Social validada por la Escuela de Participación, transformando el tiempo invertido en la plataforma en créditos académicos y certificaciones de liderazgo, fomentando una cultura de corresponsabilidad cívica
+Validación de Metas y Protocolos de Calidad
+Para garantizar la integridad de la propuesta, se establece que los incentivos están condicionados a la Efectividad y Calidad del Aporte. El sistema debe ser parametrizado para validar que la participación fue real y que las propuestas generadas cumplen con requisitos técnicos mínimos. Esto garantiza que el aporte académico tenga un retorno social verificable, apoyando la cultura de la excelencia en la participación y evitando el uso meramente transaccional de la herramienta.
+ANALÍTICA DE DATOS Y DASHBOARDS
+La dimensión técnica se centra en transformar el flujo de participación en información estratégica, apoyándose en la ciencia de datos para facilitar la toma de decisiones basada en evidencia.
+Analítica (NLP) para Facilitar el Procesamiento de la Inteligencia Colectiva
+Se propone que la plataforma integre progresivamente motores de Analítica de Datos (NLP). Reconociendo que el Distrito posee un Índice de Innovación Pública (IIP) de nivel intermedio, esta integración no será inmediata, sino bajo un modelo de madurez en tres fases: 1) Parametrización inicial y apropiación por líderes multiplicadores, 2) Integración manual en los flujos de back-office de las alcaldías locales, y 3) Despliegue de IA (NLP) en un entorno de pruebas (sandbox) liderado por el ParticiLab del IDPAC. Una vez validado, el sistema permitirá identificar tendencias territoriales de manera automática, reduciendo sesgos subjetivos.
+Dashboards de Soporte al Liderazgo Ciudadano
+Cada líder multiplicador y funcionario enlace tendrá acceso a un tablero de control (Dashboard). Este instrumento no solo facilita la visualización comunitaria del avance de propuestas, sino que resuelve una falla estructural advertida por la Veeduría Distrital [VD]: la debilidad institucional en la gestión documental y sistematización de evidencias participativas. El Dashboard automatizará la generación de los 'Instrumentos de Verificación' exigidos por el Índice Institucional de Participación Ciudadana (IIPC), garantizando que el esfuerzo ciudadano se traduzca en una rendición de cuentas auditable y transparente.
+Retroalimentación Proactiva para Fortalecer la Certeza Ciudadana
+El fortalecimiento del compromiso depende de la certidumbre sobre los resultados. La plataforma busca facilitar que el ciudadano reciba actualizaciones proactivas sobre las etapas de la política pública (aprobación, asignación de recursos, ejecución). Este flujo informativo es un aporte final diseñado para mitigar la incertidumbre y asegurar que el tiempo invertido por el ciudadano sea respetado mediante una retroalimentación oportuna y transparente.
+CONCLUSIONES DE LA ESTRATEGIA
+La estrategia de apropiación social desarrollada en este anexo concluye que el fortalecimiento de la democracia digital en Bogotá depende de la capacidad de la tecnología para actuar como un soporte real de la voluntad ciudadana. Se concluye que la tecnología debe facilitar que el tiempo invertido en la construcción de política pública sea un activo valorado y verificado. La soberanía tecnológica, apoyada en una plataforma de código abierto debidamente revisada, actualizada y parametrizada, se propone como el soporte necesario para reconstruir la legitimidad institucional. Finalmente, la estrategia demuestra que la participación incidente puede ser potenciada mediante incentivos innovadores y liderazgo territorial, aportando un marco académico robusto que complementa y eleva el ecosistema de innovación ciudadana de Bogotá hacia el futuro.
+REFERENCIAS BIBLIOGRÁFICAS
+Alcaldía Mayor de Bogotá. (2023). Decreto Distrital 477 de 2023: Participación incidente.
+Ansell, C., & Gash, A. (2008). Collaborative governance in theory and practice. Journal of Public Administration Research and Theory, 18(4), 543-571.
+Arnstein, S. R. (1969). A ladder of citizen participation. Journal of the American Institute of Planners, 35(4), 216-224.
+Bovaird, T. (2007). Beyond engagement and participation: User and community coproduction of public services. Public Administration Review, 67(5), 846-860.
+Bogotá Cómo Vamos. (2025). Encuesta de Percepción Ciudadana (EPC) 2025.
+Castelnovo, W., & Sorrentino, M. (2020). The digital government as a co-production platform. Government Information Quarterly, 35(2), 249-259.
+Linders, D. (2012). From e-government to we-government: Defining a typology for citizen coproduction. Government Information Quarterly, 29(4), 446-454.
+Moore, M. H. (1995). Creating public value: Strategic management in government. Harvard University Press.
+Nabatchi, T. (2012). A manager's guide to evaluating citizen participation. IBM Center for the Business of Government.
+OECD. (2020). Innovative Citizen Participation and New Democratic Institutions: Catching the Deliberative Wave. OECD Publishing.
+Susha, I., & Janssen, M. (2019). Data-driven decision making in government. Information Polity, 24(2), 167-183.
+Xifré, R. (2023). Soberanía tecnológica e innovación pública. OECD Publishing.
