@@ -1,0 +1,373 @@
+# CC-07: WIM - Sistema de Pesaje en Movimiento
+
+## 1. Resumen Ejecutivo
+
+El Sistema de Pesaje en Movimiento (WIM - Weigh-in-Motion) representa una tecnología avanzada para el **Control de Carga en Movimiento** que permite monitorear y clasificar vehículos según su peso por eje y peso bruto vehicular, sin requerir que los vehículos detengan su marcha. Esta capacidad es fundamental para la protección de la infraestructura vial, la seguridad del transporte y el cumplimiento de la normativa de pesos y dimensiones.
+
+La capacidad de **Monitorear Pesos Vehiculares por Eje** sin interrumpir la fluidez del tránsito proporciona múltiples beneficios: reduce el tiempo de inspección, minimiza la congestión en puntos de control, aumenta la tasa de cumplimiento normativo y genera datos valiosos para la planificación del mantenimiento de la infraestructura. El sistema WIM constituye una herramienta esencial para la gestión inteligente del transporte de carga.
+
+---
+
+## 2. Identificación del Sistema
+
+| **Atributo** | **Valor** |
+|--------------|-----------|
+| **COD** | CC-07 |
+| **Sigla** | WIM |
+| **Nombre Oficial** | Sistema de Pesaje en Movimiento |
+| **Capacidad** | Control de Carga en Movimiento: Capacidad de monitorear pesos vehiculares por eje sin interrumpir la fluidez del tránsito |
+
+---
+
+## 3. Descripción Funcional y Técnica
+
+### 3.1 Propósito del Sistema
+
+El sistema WIM tiene como propósito fundamental proteger la infraestructura vial y garantizar la seguridad en el transporte de carga mediante:
+
+- **Detección de sobrecarga**: Identificación de vehículos que exceden los límites de peso legal.
+- **Clasificación vehicular**: Categorización automática según configuración de ejes.
+- **Protección de infraestructura**: Prevención de daños prematuros al pavimento y estructuras.
+- **Datos para mantenimiento**: Información para programación de conservación vial.
+- **Cumplimiento normativo**: Soporte para acciones de fiscalización de pesos.
+
+### 3.2 Principio de Funcionamiento
+
+El WIM mide la fuerza dinámica ejercida por los ejes de los vehículos sobre sensores instalados en la calzada. Los componentes fundamentales incluyen:
+
+| **Componente** | **Función** | **Tecnologías** |
+|----------------|-------------|-----------------|
+| **Sensores de Peso** | Detectan la fuerza por eje | Piezoeléctrico, Capacitivo, Strain Gauge, Bending Plate |
+| **Sensores de Velocidad** | Determinan velocidad del vehículo | Inductivo, Radar, Lidar |
+| **Sistema de Clasificación** | Identifica configuración de ejes | Sensor inductivo, Cámara, Láser |
+| **Unidad de Procesamiento** | Calcula pesos y genera datos | Industrial PC, RTU |
+| **Subsistema de Comunicación** | Transmite datos al centro | Fibra, Celular, Radio |
+
+### 3.3 Tipos de Tecnologías WIM
+
+| **Tecnología** | **Principio** | **Precisión** | **Velocidad** | **Aplicación** |
+|----------------|---------------|---------------|---------------|----------------|
+| **Piezoeléctrico (Piezo)** | Cristal genera carga eléctrica por presión | Clase B+ (10%) | 5-120 km/h | Alta velocidad, control de tráfico |
+| **Bending Plate** | Placa flexiona bajo carga, strain gauges miden deformación | Clase A (5%) | 5-100 km/h | Control de peso, aplicación de tarifa |
+| **Capacitivo** | Cambio de capacitancia por carga | Clase B (10%) | 5-80 km/h | Clasificación, volumen |
+| **Strain Gauge (Célula de carga)** | Variación de resistencia eléctrica por deformación | Clase A (5%) | 0-20 km/h | Estaciones fijas de alta precisión |
+| **Puentes de pesaje** | Sistema completo con plataforma integrada | Clase A (5%) | 0-5 km/h | Control de alta precisión |
+
+### 3.4 Arquitectura del Sistema
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                     ESTACIÓN WIM                                │
+├──────────────┬──────────────┬──────────────┬────────────────────┤
+│   Sensores   │   Sensores   │  Unidad de   │  Sistema de        │
+│   de Peso    │  Inductivos  │  Proceso     │  Comunicación      │
+├──────────────┼──────────────┼──────────────┼────────────────────┤
+│ • Piezo      │ • Clasifica- │ • Industrial │ • Fibra óptica     │
+│ • Bending    │   ción ejes  │   PC/RTU     │ • Celular 4G/5G    │
+│   Plate      │ • Detección  │ • Software   │ • Radio UHF        │
+│ • Strain     │   presencia  │   WIM        │ • Satélital        │
+│   Gauge      │              │ • UPS        │                    │
+└──────────────┴──────────────┴──────────────┴────────────────────┘
+                            │
+                            ▼
+┌─────────────────────────────────────────────────────────────────┐
+│                     CENTRO DE CONTROL                           │
+│  • Visualización en tiempo real                                 │
+│  • Alertas de sobrecarga                                        │
+│  • Reportes y estadísticas                                      │
+│  • Integración con sistema de peaje                             │
+│  • Envío a autoridades de fiscalización                         │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+### 3.5 Clasificación de Precisión OIML R134
+
+| **Clase** | **Error Máximo Ejes Individuales** | **Error Máximo Peso Bruto Vehicular** | **Aplicación** |
+|-----------|-----------------------------------|--------------------------------------|----------------|
+| **A (5)** | ± 7% | ± 5% | Control de cumplimiento legal |
+| **B (10)** | ± 10% | ± 10% | Control de tráfico, información |
+| **B+ (10)** | ± 10% | ± 10% | Control de tráfico de alta velocidad |
+| **C (15)** | ± 15% | ± 15% | Monitoreo de tráfico, estadísticas |
+
+### 3.6 Interfaces con Otros Sistemas
+
+- **Sistema de Peaje**: Aplicación de tarifas diferenciadas por peso.
+- **Sistema ALPR (CC-01)**: Identificación de vehículos infractores.
+- **Sistema VMS (CC-10)**: Alertas a vehículos sobrecargados.
+- **Sistema de Fiscalización**: Envío automático de datos a autoridades.
+- **Sistema CCTV (CC-02)**: Captura de imagen del vehículo infractor.
+
+---
+
+## 4. Justificación Estratégica
+
+### 4.1 Importancia para la Protección de Infraestructura
+
+El sobrepeso de vehículos es una de las principales causas de deterioro prematuro de la infraestructura vial. El sistema WIM aborda este problema mediante:
+
+1. **Detección Preventiva**: Identificación de vehículos sobrecargados antes de que causen daño.
+2. **Datos para Diseño**: Información sobre cargas reales para diseño de nuevas infraestructuras.
+3. **Optimización de Mantenimiento**: Programación de intervenciones basada en carga acumulada real.
+4. **Cumplimiento Normativo**: Soporte para aplicación de la normativa de pesos y dimensiones.
+
+### 4.2 Beneficios Cuantificables
+
+| **Beneficio** | **Impacto Estimado** |
+|---------------|----------------------|
+| Extensión de vida útil del pavimento | 25-35% |
+| Reducción de daños en puentes | 40% |
+| Aumento en cumplimiento de pesos | 30-50% |
+| Reducción de accidentes por fallas mecánicas | 15% |
+| Optimización de recaudo por peaje diferenciado | 12% |
+
+### 4.3 Impacto en Seguridad Vial
+
+Los vehículos sobrecargados presentan mayores riesgos:
+- Mayor distancia de frenado (+30%)
+- Mayor probabilidad de falla de neumáticos
+- Reducción de estabilidad en curvas
+- Mayor severidad en caso de accidente
+
+### 4.4 Alineación con Marco Normativo
+
+- **Resolución 4959 de 2018** (MinTransporte Colombia): Pesos y dimensiones
+- **Decreto 2150 de 1991**: Normas técnicas del transporte
+- **OIML R134**: Norma internacional de pesaje dinámico
+- **ASTM E1318**: Standard Specification for Highway Weigh-in-Motion
+
+---
+
+## 5. Especificación Técnica
+
+| **Parámetro** | **Especificación** |
+|---------------|-------------------|
+| **Rango de peso por eje** | 0 - 25,000 kg |
+| **Precisión de peso por eje** | Clase A: ±7%, Clase B: ±10% |
+| **Precisión de peso bruto vehicular** | Clase A: ±5%, Clase B: ±10% |
+| **Rango de velocidad** | 5 - 120 km/h (según tecnología) |
+| **Resolución de peso** | 10 kg |
+| **Rango de distancia entre ejes** | 1.0 - 24.0 metros |
+| **Precisión de distancia entre ejes** | ± 50 mm |
+| **Temperatura de operación** | -20°C a +70°C |
+| **Humedad relativa** | 0% a 95% sin condensación |
+| **Resistencia al agua** | IP68 para sensores empotrados |
+| **Capacidad de tráfico** | Hasta 2,000 vehículos/hora |
+| **MTBF** | ≥ 50,000 horas |
+| **Vida útil estimada** | 10-15 años (sensores 5-7 años) |
+| **Alimentación** | 110-240 VAC / 24 VDC con respaldo |
+| **Protocolos de comunicación** | TCP/IP, MQTT, XML, JSON |
+
+---
+
+## 6. Requerimientos Funcionales (RF)
+
+| **ID** | **Requerimiento** | **Descripción** | **Prioridad** |
+|--------|-------------------|-----------------|---------------|
+| **RF-07-01** | Pesaje de ejes individuales | Medir peso de cada eje del vehículo en movimiento | Crítica |
+| **RF-07-02** | Cálculo de peso bruto vehicular | Sumar pesos de ejes para obtener peso total del vehículo | Crítica |
+| **RF-07-03** | Medición de velocidad | Determinar velocidad del vehículo durante el pesaje | Crítica |
+| **RF-07-04** | Clasificación por ejes | Identificar configuración de ejes (2, 3, 4, 5+ ejes) | Crítica |
+| **RF-07-05** | Detección de sobrecarga | Comparar pesos contra límites legales y generar alertas | Crítica |
+| **RF-07-06** | Corrección por velocidad | Aplicar algoritmos de corrección basados en velocidad | Alta |
+| **RF-07-07** | Registro de datos | Almacenar todos los eventos de pesaje con timestamp | Alta |
+| **RF-07-08** | Integración ALPR | Asociar datos de peso con placa del vehículo | Alta |
+| **RF-07-09** | Calibración remota | Permitir ajuste de factores de calibración desde centro | Media |
+| **RF-07-10** | Reportes de estadísticas | Generar reportes de distribución de pesos, FFE, etc. | Media |
+
+---
+
+## 7. Requisitos No Funcionales (RNF)
+
+| **ID** | **Requisito** | **Descripción** | **Métrica** |
+|--------|---------------|-----------------|-------------|
+| **RNF-07-01** | Precisión de pesaje | Exactitud en medición de pesos | Clase A (±5% PBV) o Clase B (±10% PBV) |
+| **RNF-07-02** | Disponibilidad | Tiempo operativo del sistema | ≥ 99% |
+| **RNF-07-03** | Latencia de datos | Tiempo entre pesaje y disponibilidad | ≤ 3 segundos |
+| **RNF-07-04** | Resistencia ambiental | Operación bajo condiciones climáticas adversas | IP68, -20°C a +70°C |
+| **RNF-07-05** | Resistencia mecánica | Capacidad de soportar tráfico pesado | Hasta 12 toneladas por eje |
+| **RNF-07-06** | Seguridad cibernética | Protección contra manipulación de datos | Cifrado, firmas digitales |
+| **RNF-07-07** | Mantenibilidad | Facilidad de reemplazo de sensores | MTTR ≤ 4 horas |
+
+---
+
+## 8. Indicadores Clave de Desempeño (KPIs)
+
+| **ID** | **Indicador** | **Descripción** | **Fórmula/Métrica** | **Meta** | **Frecuencia** |
+|--------|---------------|-----------------|---------------------|----------|----------------|
+| **KPI-07-01** | Precisión de Pesaje Ejes | Diferencia entre peso WIM y báscula estática de referencia | \|Peso WIM - Peso ref\| / Peso ref | ≤ ±7% (Clase A) | Trimestral |
+| **KPI-07-02** | Precisión de Pesaje PBV | Exactitud en peso bruto vehicular vs. báscula de referencia | \|PBV WIM - PBV ref\| / PBV ref | ≤ ±5% (Clase A) | Trimestral |
+| **KPI-07-03** | Precisión de Velocidad | Diferencia entre velocidad WIM y referencia | \|Vel WIM - Vel ref\| | ≤ ±2 km/h | Trimestral |
+| **KPI-07-04** | Disponibilidad del Sistema | Porcentaje de tiempo operativo | (Tiempo operativo / Tiempo total) × 100 | ≥ 99% | Mensual |
+| **KPI-07-05** | Tasa de Detección de Ejes | Porcentaje de ejes correctamente detectados | (Ejes detectados / Ejes reales) × 100 | ≥ 99% | Mensual |
+| **KPI-07-06** | Tasa de Sobrecargas Detectadas | Porcentaje de vehículos infractores identificados | (Infractores detectados / Infractores reales) × 100 | ≥ 95% | Mensual |
+| **KPI-07-07** | Tiempo de Respuesta a Fallas | Tiempo promedio para restaurar sistema | (Σ Tiempo reparación) / N fallas | ≤ 8 horas | Mensual |
+| **KPI-07-08** | Completitud de Datos | Porcentaje de vehículos con datos completos | (Datos completos / Total vehículos) × 100 | ≥ 98% | Mensual |
+
+---
+
+## 9. Referencias de Mercado Internacional
+
+| **Fabricante** | **País** | **Modelo de Referencia** | **Características Destacadas** | **URL** |
+|----------------|----------|--------------------------|-------------------------------|---------|
+| **Kistler** | Suiza | Lineasens C / WIM Systems | Líder mundial en sensores piezoeléctricos, precisión Clase A | https://www.kistler.com |
+| **International Road Dynamics (IRD)** | Canadá | IRD WIM / iSINC | Sistemas completos integrados, amplia experiencia en Norteamérica | https://www.irdinc.com |
+| **METTLER TOLEDO** | Suiza | WIM Systems | Alta precisión, tecnología de células de carga | https://www.mt.com |
+| **CROSS (Zellner)** | Alemania | WIM 2000 / WIM 3000 | Sensores bending plate de alta durabilidad | https://www.zellner.de |
+| **TECHGONG (Roadcem)** | China | WIM Piezoelectric Sensors | Solución costo-efectiva, alta producción | https://www.roadcem.com |
+| **Q-Free** | Noruega | WIM Integration Module | Integración completa con sistemas de peaje ITS | https://www.q-free.com |
+
+---
+
+## 10. Proveedores en Colombia
+
+| **Empresa** | **Ciudad** | **Experiencia** | **Contacto/Web** |
+|-------------|------------|-----------------|------------------|
+| **Balanzas del Sur** | Bogotá | Distribuidor de Kistler, experiencia en pesaje industrial y vial | https://www.balanzasdelsur.com |
+| **ITS Colombia** | Bogotá | Integración de sistemas WIM con infraestructura de peaje | https://www.itscolombia.com |
+| **Innovadataco** | Girardot | Consultoría e integración de sistemas WIM para concesiones | https://innovadataco.com |
+| **Pesaje y Control Industrial** | Medellín | Sistemas de pesaje dinámico y estático para carreteras | https://www.pesajeycontrol.com |
+
+---
+
+## 11. Casos de Uso
+
+### Caso de Uso 1: Fiscalización de Sobrecarga en Tiempo Real
+
+**Actores**: Sistema WIM, Sistema ALPR, Sistema VMS, Autoridad de Tránsito, Conductor
+
+**Descripción**: Detección y sanción automática de vehículos que exceden límites de peso.
+
+**Flujo de Eventos**:
+1. Vehículo de carga (tractocamión con trailer) transita por estación WIM en km 45+200.
+2. Sensores detectan: Eje 1: 7,500 kg, Eje 2: 11,200 kg, Eje 3: 10,800 kg, Eje 4: 9,500 kg, Eje 5: 9,800 kg.
+3. Sistema calcula: Peso Bruto Vehicular = 48,800 kg (límite legal: 42,000 kg).
+4. Sobrecarga detectada: 6,800 kg (16% sobre límite).
+5. Sistema ALPR captura placa del vehículo.
+6. Se activa alerta al operador del centro de control.
+7. Se activa panel VMS: "VEHÍCULO SOBRECARGADO - DIRÍJASE A BÁSCULA".
+8. Se envía notificación a unidad móvil de fiscalización ubicada 2 km adelante.
+9. Autoridad detiene vehículo para confirmación en báscula estática.
+10. Se genera boleta de comparendo con evidencia fotográfica y datos de pesaje.
+
+**Resultado**: Aumento del 40% en cumplimiento de pesos. Reducción de daños a infraestructura.
+
+---
+
+### Caso de Uso 2: Tarificación Diferenciada por Peso
+
+**Actores**: Sistema WIM, Sistema de Peaje, Sistema ALPR, Conductor, Operador
+
+**Descripción**: Aplicación de tarifas de peaje según peso real del vehículo.
+
+**Flujo de Eventos**:
+1. Vehículo se aproxima a plaza de peaje.
+2. Estación WIM ubicada 500 m antes del peaje mide peso del vehículo.
+3. Sistema clasifica vehículo: Categoría 4 (Camión 3 ejes, PBV: 22,500 kg).
+4. Sistema de peaje recibe clasificación WIM y valida contra categoría declarada.
+5. Si coinciden, se aplica tarifa estándar de categoría 4.
+6. Si WIM detecta categoría mayor, se ajusta tarifa automáticamente.
+7. Sistema ALPR asocia vehículo con cuenta de peaje.
+8. Se genera transacción con tarifa ajustada al peso real.
+9. Conductor recibe comprobante con detalle de pesaje.
+10. Datos se almacenan para análisis de patrones de carga.
+
+**Resultado**: Equidad en tarificación. Incremento en recaudo del 15% por ajustes de categoría.
+
+---
+
+### Caso de Uso 3: Monitoreo de Cargas en Puentes
+
+**Actores**: Sistema WIM en puente, Ingeniero Estructural, Sistema de Monitoreo
+
+**Descripción**: Supervisión continua de cargas sobre estructura de puente crítico.
+
+**Flujo de Eventos**:
+1. Se instala sistema WIM en accesos a puente de gran luz (200 metros).
+2. Sistema registra cada vehículo que transita, incluyendo peso y configuración de ejes.
+3. Se calcula carga equivalente por eje estándar (Carga V8) para cada pasada.
+4. Se acumula daño estructural equivalente utilizando ley de Miner.
+5. Se generan reportes diarios de tráfico ponderado por daño estructural.
+6. Se detectan picos de carga anómalos (vehículos sobre 60 toneladas).
+7. Ingeniero estructural programa inspección detallada basada en acumulación de daño.
+8. Se prioriza mantenimiento de juntas y apoyos según datos de fatiga acumulada.
+9. Se proyecta vida remanente de la estructura con base en tendencias de carga.
+
+**Resultado**: Extensión de vida útil del puente en 15 años. Mantenimiento predictivo efectivo.
+
+---
+
+### Caso de Uso 4: Estudios de Carga para Diseño de Pavimento
+
+**Actores**: Ingeniero de Pavimentos, Sistema WIM, Consultor de Diseño
+
+**Descripción**: Recolección de datos de tráfico real para diseño de nueva infraestructura.
+
+**Flujo de Eventos**:
+1. Se instala estación WIM temporal en corredor existente por 12 meses.
+2. Sistema registra todos los vehículos de carga con sus pesos y configuraciones.
+3. Se clasifican vehículos según clasificación FHWA (F1-F13).
+4. Se calculan Equivalentes de Eje Estándar (EEE) por vehículo.
+5. Se determina Factor de Camión (FC) del corredor.
+6. Se proyecta tráfico futuro considerando crecimiento económico.
+7. Se calcula Número Estructural requerido para nuevo diseño.
+8. Se optimiza espesor de capas considerando carga real vs. supuestos conservadores.
+9. Se diseña pavimento con vida útil de 20 años basado en datos WIM.
+
+**Resultado**: Optimización de 12% en costos de construcción. Diseño basado en datos reales.
+
+---
+
+### Caso de Uso 5: Prevención de Desastres por Sobrecarga en Túneles
+
+**Actores**: Sistema WIM, Operador de Control, Seguridad del Túnel, Conductor
+
+**Descripción**: Protección de infraestructura crítica (túnel) mediante control de peso.
+
+**Flujo de Eventos**:
+1. Se instala WIM en ambos portales del túnel (2 km de longitud).
+2. Vehículo de carga se aproxima a entrada del túnel.
+3. WIM detecta peso bruto vehicular: 52,000 kg (límite del túnel: 45,000 kg).
+4. Sistema activa alerta roja en semáforo de acceso.
+5. Se activa panel VMS: "SOBREPESO - TÚNEL CERRADO PARA SU VEHÍCULO".
+6. Se informa al operador del centro de control.
+7. Barrera de acceso se cierra para impedir ingreso.
+8. Se activa ruta alternativa mediante paneles VMS direccionales.
+9. Se registra evento con placa, peso, y timestamp para seguimiento.
+10. Vehículo es desviado a ruta alterna evitando daño a estructura del túnel.
+
+**Resultado**: Protección efectiva de infraestructura crítica. Cero incidentes por sobrecarga.
+
+---
+
+## 12. Glosario
+
+| **Término** | **Definición** |
+|-------------|----------------|
+| **WIM** | Weigh-in-Motion - Pesaje en Movimiento |
+| **PBV** | Peso Bruto Vehicular - Peso total del vehículo con carga |
+| **OIML** | International Organization of Legal Metrology |
+| **ALPR** | Automatic License Plate Recognition |
+| **Eje** | Conjunto de dos o más ruedas en un mismo extremo del vehículo |
+| **Configuración de ejes** | Disposición de ejes en el vehículo (2, 3, 4, 5+ ejes) |
+| **FFE** | Factor de equivalencia de ejes |
+| **Carga V8** | Carga equivalente de 8.2 toneladas (eje estándar) |
+| **Piezoeléctrico** | Material que genera electricidad al deformarse mecánicamente |
+| **Bending Plate** | Placa que se flexiona bajo carga para medir peso |
+| **Strain Gauge** | Sensor que mide deformación mediante cambio de resistencia eléctrica |
+
+---
+
+## 13. Documentos de Referencia
+
+- OIML R134: Automatic Instruments for Weighing Road Vehicles in Motion
+- ASTM E1318: Standard Specification for Highway Weigh-in-Motion (WIM) Systems
+- FHWA Traffic Monitoring Guide - Chapter 4: Vehicle Classification
+- Resolución 4959 de 2018 - MinTransporte Colombia (Pesos y Dimensiones)
+- NTC 5129: Sistemas de Información Vial
+- Manual de Diseño Geométrico - INVIAS
+
+---
+
+*Documento generado: 2026-04-27*  
+*Versión: 1.0*  
+*Elaborado por: ZEUS Agente IA - Innovadataco*

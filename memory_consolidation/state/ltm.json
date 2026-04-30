@@ -1,0 +1,12 @@
+{
+  "invoke_time": 1,
+  "ltm": {
+    "identity": null,
+    "work_method": "The user appears to work with an \"openclaw\" system or tool, using commands like \"providers add\" — suggesting technical infrastructure or DevOps-style workflows. They expect continuity across sessions and become frustrated when context is lost (noting \"760 middle messages\" forgotten, aborted agent runs). They prefer resuming work without repeating setup, and explicitly reject unnecessary changes with \"No hagas cambio.\"",
+    "communication": "Primarily Spanish-speaking with direct, imperative style — short messages, exclamations (\"espalo !\", \"Estado de proyectos !\"), and repeated greetings when reconnecting after failures. They express frustration through meta-commentary about system failures rather than explicit complaints. Pattern of persistent re-engagement despite aborted sessions suggests patience but low tolerance for redundant work.",
+    "temporal": "Monitoring or managing \"proyectos\" (projects) — requested \"Estado de proyectos\" as a status check. Working with \"openclaw providers\" configuration. Session on 0425 was extremely long and productive before interruption, suggesting deep ongoing work that was lost.",
+    "taste": null
+  },
+  "generated_at": "2026-04-30T03:41:59.890441",
+  "stm_hash": "261c49aef3ad50abcf53eb5a4fe7a0a8"
+}

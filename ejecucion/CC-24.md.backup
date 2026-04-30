@@ -1,0 +1,220 @@
+# 8.24 CC-24: GW (Gateway de Interconexión ITS)
+
+## 8.24.1 Resumen Ejecutivo
+
+El componente **CC-24 GW** constituye el elemento crítico de interconexión y traducción de protocolos que habilita la comunicación bidireccional entre los dispositivos de campo heterogéneos y el Centro de Control y Operaciones (CCO) del corredor Chía–Girardot. Este sistema actúa como el "traductor universal" de la infraestructura ITS, permitiendo que subsistemas con diferentes protocolos, formatos de datos y arquitecturas de comunicación operen de manera integrada y transparente.
+
+El Gateway ITS representa el eje central de la arquitectura de comunicaciones del corredor, situado estratégicamente en la capa de red para interconectar dispositivos de campo (cámaras CCTV, detectores de tráfico, sensores ambientales, paneles VMS, radares de velocidad, entre otros) con las aplicaciones de gestión centralizada. Su función principal es la conversión de protocolos, la normalización de datos, la gestión de seguridad de comunicaciones, y la provisión de redundancia activa.
+
+La implementación del GW permite superar uno de los mayores desafíos en sistemas ITS modernos: la coexistencia de equipos de diferentes fabricantes y generaciones tecnológicas que utilizan protocolos propietarios o estándares diversos. Mediante su capacidad de traducción NTCIP, ONVIF, Modbus, SNMP, y protocolos propietarios, el Gateway convierte datos heterogéneos en un formato estandarizado comprendido por el CCO.
+
+---
+
+## 8.24.2 Identificación Del Componente De Campo
+
+| Campo | Valor |
+|-------|-------|
+| **COD** | CC-24 |
+| **Sigla (Estándar Internacional)** | GW / Gateway |
+| **Nombre del Componente** | Gateway de Interconexión ITS |
+| **Capacidad Operativa Generada** | Interconexión Transparente: Capacidad de integrar subsistemas heterogéneos mediante traducción de protocolos y normalización de datos entre dispositivos de campo y centro de control. |
+
+---
+
+## 8.24.3 Descripción Funcional / Técnica
+
+### Alcance de la Solución
+
+El sistema GW comprende una red de dispositivos gateway distribuidos estratégicamente a lo largo de los 306 km del corredor Chía–Girardot, ubicados en nodos de comunicación cada 5-10 km, interconectados mediante infraestructura de fibra óptica redundante. Cada gateway actúa como concentrador de datos y traductor de protocolos para los dispositivos ITS de su zona de cobertura.
+
+La solución abarca:
+
+- **Infraestructura física**: Dispositivos gateway industriales en gabinetes NEMA/IP65, con redundancia de alimentación, procesadores multicore, interfaces de red múltiples (Ethernet, fibra, 4G/5G)
+- **Capacidad de traducción de protocolos**: NTCIP 1201-1204, ONVIF Profile S/G, Modbus TCP/RTU, SNMP v2c/v3, MQTT, HTTP/REST, CoAP, protocolos propietarios
+- **Procesamiento edge**: Capacidad de pre-procesamiento de datos, filtrado, agregación y toma de decisiones locales
+- **Seguridad de comunicaciones**: Cifrado TLS 1.3, autenticación mutua de dispositivos (mTLS), firewall de aplicación, segmentación de red (VLANs)
+- **Gestión de redundancia**: Conmutación automática por fallo (failover) entre rutas de comunicación, almacenamiento local de datos durante interrupciones
+- **Interfaz de administración**: Consola centralizada para configuración, monitoreo, diagnóstico y gestión de firmware
+
+El sistema GW opera en modo continuo 24/7/365, procesando miles de transacciones de datos por segundo entre campo y centro de control.
+
+---
+
+## 8.24.4 Justificación Estratégica
+
+Los sistemas ITS modernos enfrentan el desafío de la heterogeneidad tecnológica inevitable:
+
+1. **Múltiples fabricantes y generaciones**: Un corredor vial típico incorpora equipos de diferentes proveedores adquiridos en diferentes etapas del proyecto, cada uno con protocolos propios
+2. **Evolución tecnológica**: Los protocolos de comunicación evolucionan; equipos legacy deben coexistir con tecnologías modernas IoT
+3. **Requisitos de interoperabilidad**: La integración con sistemas externos requiere formatos de datos estandarizados
+4. **Ciberseguridad**: La segmentación de redes y la aplicación de controles de seguridad uniformes requieren un punto de interconexión controlado
+
+El Gateway ITS aborda estos problemas mediante:
+
+- **Abstracción de protocolos**: Los desarrolladores del CCO trabajan con APIs estandarizadas, independientes del protocolo nativo de cada dispositivo
+- **Protección de inversión**: Equipos legacy continúan operando mientras se moderniza la infraestructura central
+- **Escalabilidad**: Nuevos dispositivos se integran mediante configuración de adaptadores, sin modificar el CCO
+- **Resiliencia**: Arquitectura distribuida que tolera fallos de comunicación y mantiene operatividad local
+
+---
+
+## 8.24.5 Especificación Técnica
+
+| Parámetro | Especificación Mínima |
+|-----------|----------------------|
+| **Procesador** | CPU ARM o x86 de 4+ núcleos @ ≥ 1.5 GHz, soporte aceleración criptográfica hardware |
+| **Memoria RAM** | ≥ 8 GB DDR4 ECC |
+| **Almacenamiento interno** | ≥ 128 GB SSD industrial, expandible vía SD/mSATA |
+| **Interfaces Ethernet** | Mínimo 4 puertos Gigabit Ethernet (10/100/1000 Mbps), soporte PoE+ en 2+ puertos |
+| **Interfaces seriales** | Mínimo 2 puertos RS-485 / RS-232 para integración legacy |
+| **Conectividad inalámbrica** | Módulo 4G/LTE o 5G opcional con dual-SIM para redundancia |
+| **Rendimiento de procesamiento** | Capacidad para procesar ≥ 5,000 mensajes/segundo con latencia < 10 ms |
+| **Protocolos soportados - Norte (CCO)** | NTCIP 1201/1202/1203/1204, MQTT, HTTP/REST API, SNMP v3, syslog |
+| **Protocolos soportados - Sur (Campo)** | ONVIF Profile S/G, Modbus TCP/RTU, SNMP v2c/v3, HTTP, CoAP, RTSP, RTP |
+| **Cifrado y seguridad** | TLS 1.3, mTLS, firewall stateful, detección de intrusiones (IDS) |
+| **Rango térmico operativo** | -30°C a +60°C con funcionamiento continuo garantizado |
+| **Protección ambiental** | IP65 para gabinete, protección contra sobretensiones (IEC 61643) |
+| **Alimentación** | 24VDC o PoE++ con redundancia, consumo < 30W promedio |
+| **Tiempo de conmutación failover** | < 5 segundos entre rutas primaria y backup |
+| **Capacidad de almacenamiento local** | ≥ 7 días de datos de todos los dispositivos conectados |
+| **Compatibilidad Industrial** | Certificación CE, FCC, IEC 61850-3 para aplicaciones de energía/subestaciones |
+
+---
+
+## 8.24.6 Requerimientos Funcionales (RF)
+
+| ID | Nombre | Descripción Funcional / Técnica | Justificación Estratégica |
+|----|--------|--------------------------------|---------------------------|
+| **RF-01** | Traducción de Protocolos Multiestándar | El gateway debe traducir bidireccionalmente entre protocolos de campo (ONVIF, Modbus, SNMP, propietarios) y protocolos del CCO (NTCIP, MQTT, REST). La traducción debe mantener la semántica completa de los datos, incluyendo metadatos de timestamps y calidad. | La traducción de protocolos es el corazón del gateway, permitiendo que equipos de cualquier fabricante se integren sin modificar el CCO. |
+| **RF-02** | Procesamiento Edge y Filtrado | El gateway debe ejecutar lógica de pre-procesamiento local: filtrado de datos irrelevantes, agregación de lecturas periódicas, validación de rangos, y generación de alertas locales ante condiciones críticas. | El procesamiento edge reduce el ancho de banda hacia el CCO y la latencia de respuesta para eventos que requieren acción inmediata local. |
+| **RF-03** | Gestión de Seguridad de Comunicaciones | El gateway debe implementar cifrado TLS 1.3 para todas las comunicaciones, autenticación mutua de dispositivos mediante certificados X.509, firewall de aplicación con whitelist de direcciones, y detección de anomalías de tráfico. | Los gateways son puntos críticos de seguridad que protegen la infraestructura ITS contra accesos no autorizados y ataques cibernéticos. |
+| **RF-04** | Redundancia y Alta Disponibilidad | El gateway debe soportar redundancia de rutas de comunicación (fibra primaria + 4G backup), conmutación automática ante fallas, y almacenamiento local de datos con sincronización posterior (store-and-forward). | La redundancia garantiza continuidad operativa ante fallos de comunicación, crítica para sistemas de seguridad vial que no pueden detenerse. |
+| **RF-05** | Normalización de Datos | El gateway debe convertir todos los datos entrantes a un modelo semántico unificado (JSON/XML estandarizado) independientemente del protocolo origen, incluyendo metadatos de origen, timestamp, y calidad del dato. | La normalización permite que el CCO procese datos de cualquier fuente mediante un único modelo de datos, simplificando desarrollo y mantenimiento. |
+| **RF-06** | Gestión Remota de Configuración | El gateway debe permitir configuración remota desde el CCO: parámetros de traducción, políticas de filtrado, reglas de enrutamiento, actualizaciones de firmware. Los cambios deben aplicarse sin interrupción del servicio. | La gestión centralizada es esencial cuando se despliegan decenas de gateways a lo largo de 306 km; la visita física a cada sitio sería inviable. |
+| **RF-07** | Monitoreo de Salud y Diagnóstico | El gateway debe reportar continuamente su estado operativo: CPU, memoria, temperatura, estado de interfaces, estadísticas de tráfico, errores de comunicación. Debe generar alertas ante condiciones anormales. | El monitoreo proactivo permite detección temprana de fallas y mantenimiento preventivo antes de que afecten la operación del corredor. |
+| **RF-08** | Buffering y Recuperación de Datos | Ante falla de comunicación con el CCO, el gateway debe almacenar localmente todos los datos y transmitirlos automáticamente al restablecerse la conectividad, manteniendo orden cronológico y sin pérdida de información. | La continuidad de registros históricos es crítica para análisis forense, auditorías y cumplimiento normativo, incluso durante interrupciones. |
+| **RF-09** | Soporte para Protocolos Legacy | El gateway debe incluir adaptadores configurables para protocolos propietarios o discontinuos de fabricantes de equipos legacy, permitiendo la integración de equipos antiguos sin reemplazo físico. | La protección de inversión en equipos legacy es fundamental para la viabilidad económica del proyecto, evitando reemplazos innecesarios. |
+| **RF-10** | Escalabilidad Horizontal | La arquitectura debe permitir agregar nuevos gateways sin reconfigurar los existentes, con auto-descubrimiento de dispositivos y balanceo automático de carga entre gateways redundantes. | La escalabilidad garantiza que el sistema pueda crecer con el corredor sin rediseño arquitectónico mayor. |
+
+---
+
+## 8.24.7 Requisitos No Funcionales (RNF)
+
+| ID | Nombre | Descripción | Justificación |
+|----|--------|-------------|---------------|
+| **RNF-01** | Disponibilidad del Sistema | El gateway debe mantener disponibilidad ≥ 99.9%, considerando indisponibilidad cualquier período donde no pueda procesar datos críticos. El MTBF debe ser ≥ 100,000 horas. | La disponibilidad del gateway impacta directamente en la visibilidad del CCO sobre el corredor. |
+| **RNF-02** | Latencia de Procesamiento | El tiempo de procesamiento gateway (entrada a salida) debe ser < 10 ms para datos críticos y < 100 ms para datos operativos estándar. | La latencia acumulada afecta la capacidad de respuesta del sistema ITS ante incidentes. |
+| **RNF-03** | Ciberseguridad End-to-End | El gateway debe cumplir con estándares IEC 62443 para seguridad industrial, implementar zero-trust networking, y soportar actualizaciones de seguridad sin downtime. | Los gateways son vectores de ataque potenciales hacia el CCO; su seguridad es prioridad máxima. |
+| **RNF-04** | Tolerancia Ambiental | Operación en rango -30°C a +60°C, humedad 5-95% sin condensación, altitud hasta 3,000 msnm, protección contra vibraciones de tráfico pesado. | El corredor atraviesa zonas con condiciones climáticas extremas que deben soportarse sin degración. |
+| **RNF-05** | Ciclo de Vida y Soporte | Ciclo de vida útil ≥ 10 años con garantía de repuestos y soporte técnico del fabricante. Compatibilidad retroactiva de firmware. | La infraestructura ITS es de larga duración; los componentes deben acompañar ese ciclo sin obsolescencia prematura. |
+| **RNF-06** | Eficiencia Energética | Consumo energético < 30W promedio, < 50W pico, con modos de bajo consumo configurable para operación con energía solar/backup. | La eficiencia reduce costos operativos y permite operación en ubicaciones remotas con energía limitada. |
+| **RNF-07** | Interoperabilidad Certificada | Certificación de interoperabilidad con protocolos NTCIP, ONVIF y Modbus mediante laboratorios reconocidos. Compatibilidad verificada con al menos 10 fabricantes de equipos ITS. | La interoperabilidad certificada reduce riesgos de integración y garantiza compatibilidad con equipos de múltiples proveedores. |
+
+---
+
+## 8.24.8 Indicadores Clave De Rendimiento (KPIs)
+
+| ID | Indicador | Descripción | Meta | Frecuencia |
+|----|-----------|-------------|------|------------|
+| **KPI-01** | Disponibilidad del Gateway | Porcentaje de tiempo operativo | ≥ 99.9% | Mensual |
+| **KPI-02** | Latencia de Procesamiento | Tiempo promedio de traducción de mensajes | < 10 ms | Continua |
+| **KPI-03** | Tasa de Pérdida de Datos | Datos no entregados / Total de datos | < 0.01% | Mensual |
+| **KPI-04** | Tiempo de Conmutación Failover | Tiempo de cambio a ruta backup | < 5 segundos | Por evento |
+| **KPI-05** | Tráfico Procesado | Mensajes procesados por segundo | ≥ 5,000 | Continua |
+| **KPI-06** | Eventos de Seguridad | Intentos de acceso no autorizado | 0 permitidos | Mensual |
+| **KPI-07** | Tiempo de Recuperación MTTR | Tiempo medio de reparación | < 2 horas | Por incidente |
+| **KPI-08** | Satisfacción de Integración | Éxito en integración de nuevos dispositivos | ≥ 95% | Trimestral |
+
+---
+
+## 8.24.9 Referencias De Mercado
+
+### Fabricantes Internacionales
+
+| Fabricante | País | Especialidad | Modelos de Referencia | Web |
+|------------|------|--------------|----------------------|-----|
+| **Cisco** | USA | Networking industrial y gateways IoT | Cisco IR829, IC3000 | https://www.cisco.com |
+| **Siemens** | Alemania | Industrial Communication | SCALANCE S615, M876-4 | https://www.siemens.com |
+| **Moxa** | Taiwan | Gateways industriales y protocolos | MGate 5105-MB-EIP, AIG-301 | https://www.moxa.com |
+| **Red Lion** | USA | Protocol conversion y IIoT | DA10D, NT24k-11GXE3 | https://www.redlion.net |
+| **HMS Networks** | Suecia | Protocol gateways y Anybus | Anybus X-Gateway, Ewon Flexy | https://www.hms-networks.com |
+| **Advantech** | Taiwan | Edge gateways industriales | UNO-2271G, ECU-1051 | https://www.advantech.com |
+
+---
+
+## 8.24.10 Proveedores Colombia
+
+| Empresa | Ciudad | Especialidad | Web |
+|---------|--------|--------------|-----|
+| **Indra Colombia** | Bogotá | ITS, Gateways industriales, Integración | https://www.indracompany.com |
+| **Inselcom** | Bogotá | Comunicaciones industriales, Moxa | https://www.inselcom.com.co |
+| **Automatización Industrial** | Medellín | Gateways protocolos, Siemens | https://www.automatizacion.co |
+| **Control y Medición** | Bogotá | Soluciones IIoT, Red Lion | https://www.controlymedicion.com |
+
+---
+
+## 8.24.11 Casos de Uso
+
+### CU-01: Integración de CCTV Multifabricante
+**Actor Principal:** Ingeniero de Sistemas / Operador CCO  
+**Precondición:** Corredor con cámaras de 3 fabricantes diferentes (Hikvision, Axis, Bosch)  
+**Flujo Principal:**
+1. Las cámaras envían streams RTSP y metadata ONVIF en formatos propietarios
+2. El gateway GW traduce ONVIF a NTCIP para el VMS central
+3. El operador del CCO visualiza todas las cámaras desde una única interfaz unificada
+4. Los comandos PTZ del operador se traducen del protocolo del VMS al nativo de cada cámara
+5. Las alertas de detección de movimiento se normalizan y envían al TMS
+
+**Resultado:** Integración exitosa de equipos heterogéneos sin reemplazo, reducción de 70% en costos de integración.
+
+### CU-02: Respaldo de Comunicaciones ante Falla de Fibra
+**Actor Principal:** Gateway ITS / Operador CCO  
+**Precondición:** Falla de fibra óptica primaria en tramo km 150-180  
+**Flujo Principal:**
+1. El gateway detecta pérdida de conectividad por interfaz de fibra
+2. Automáticamente conmuta a interfaz 4G/LTE backup en < 5 segundos
+3. Los datos continuos se almacenan localmente en buffer circular
+4. El CCO recibe notificación de conmutación y continúa operando con datos en tiempo real
+5. Al restaurarse la fibra, los datos almacenados se sincronizan automáticamente
+
+**Resultado:** Cero pérdida de datos críticos durante falla de 2 horas de fibra óptica.
+
+### CU-03: Monitoreo de Sensores Ambientales Legacy
+**Actor Principal:** Gateway ITS / Sistema ESS  
+**Precondición:** Sensores meteorológicos antiguos con protocolo Modbus RTU serial  
+**Flujo Principal:**
+1. Los sensores envían datos por RS-485 usando Modbus RTU
+2. El gateway convierte Modbus RTU a Modbus TCP y luego a MQTT
+3. Los datos normalizados llegan al ESS con timestamps y coordenadas GPS
+4. El ESS procesa la información y genera alertas ante condiciones adversas
+5. Los operadores visualizan datos en tiempo real en el CCO
+
+**Resultado:** Extensión de vida útil de sensores legacy 5 años adicionales sin reemplazo.
+
+### CU-04: Seguridad de Comunicaciones ante Intrusión
+**Actor Principal:** Gateway ITS / Sistema de Seguridad  
+**Precondición:** Intento de acceso no autorizado detectado en red de campo  
+**Flujo Principal:**
+1. El firewall del gateway detecta tráfico anómalo desde dirección IP no autorizada
+2. El IDS bloquea automáticamente el tráfico y genera alerta de seguridad
+3. El gateway aísla el segmento de red afectado mediante VLAN
+4. El CCO recibe notificación de incidente de seguridad con logs detallados
+5. El equipo de ciberseguridad analiza el intento de intrusión
+
+**Resultado:** Prevención de compromiso del CCO, detección temprana de amenaza cibernética.
+
+### CU-05: Escalamiento de Infraestructura sin Interrupción
+**Actor Principal:** Ingeniero de Sistemas / Gateway ITS  
+**Precondición:** Expansión del corredor con 50 nuevos dispositivos en nuevo tramo  
+**Flujo Principal:**
+1. Se instala nuevo gateway en el tramo expandido
+2. El gateway se auto-registra en el sistema de gestión central
+3. Se configuran adaptadores para los nuevos dispositivos mediante plantillas
+4. Los dispositivos comienzan a transmitir sin modificar la configuración del CCO
+5. El balanceador distribuye carga automáticamente entre gateways
+
+**Resultado:** Expansión de 50 km del corredor en tiempo récord, escalabilidad horizontal confirmada.
+
+---
+
+**InnovaDataCO SAS** | **Fecha:** Abril 2026 | Documento generado bajo estándares ITS_CC-01

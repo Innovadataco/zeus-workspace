@@ -1,0 +1,205 @@
+# 8.2 CC-02: AID (Detección de Incidentes)
+
+## 8.2.1 Resumen Ejecutivo
+
+El componente **CC-02 AID** constituye el sistema de detección automática de incidentes del corredor vial Chía–Girardot, proporcionando capacidad de identificación proactiva de peligros y alerta automática sobre eventos disruptivos sin depender del ojo humano. Este subsistema fundamental habilita la capacidad de detectar incidentes en tiempo real, reduciendo drásticamente los tiempos de respuesta y mejorando la seguridad vial a lo largo de los 306 km del corredor.
+
+La detección inteligente de incidentes representa una capa crítica de automatización que complementa la videovigilancia tradicional, utilizando algoritmos de inteligencia artificial y análisis de video para identificar situaciones anómalas: vehículos detenidos, circulación en contravía, congestiones repentinas, pérdida de carga, peatones en la vía, y otros eventos que comprometen la seguridad del tránsito.
+
+El sistema AID se despliega estratégicamente en puntos críticos del corredor, procesando flujos de video de cámaras CCTV mediante motores de análisis de video inteligente (VCA) entrenados con modelos de machine learning específicos para condiciones de tráfico en corredores viales de alta velocidad.
+
+---
+
+## 8.2.2 Identificación Del Componente De Campo
+
+| Campo | Valor |
+|-------|-------|
+| **COD** | CC-02 |
+| **Sigla (Estándar Internacional)** | AID |
+| **Nombre del Componente** | Detección de Incidentes |
+| **Capacidad Operativa Generada** | Identificación Proactiva de Peligros: Capacidad de alertar automáticamente sobre eventos disruptivos sin depender del ojo humano. |
+
+---
+
+## 8.2.3 Descripción Funcional / Técnica
+
+### Alcance de la Solución
+
+El sistema AID comprende una red de sensores virtuales basados en análisis de video desplegados estratégicamente a lo largo del corredor. La solución integra diferentes tipologías de detección según los requerimientos específicos de cada ubicación: detección de vehículos detenidos para identificación de colisiones, detección de flujo contrario para prevención de accidentes frontales, detección de pérdida de carga, detección de peatones en calzada, y análisis de velocidad promedio para identificación de congestiones.
+
+El subsistema opera las 24 horas del día, los 7 días de la semana, analizando video en tiempo real con latencia inferior a 2 segundos desde la ocurrencia del evento hasta la generación de la alerta.
+
+---
+
+## 8.2.4 Justificación Estratégica
+
+La implementación de un sistema de detección automática de incidentes responde a la imposibilidad de mantener vigilancia humana continua sobre 306 km de corredor vial. La capacidad de detección automática permite identificar incidentes en segundos, reduciendo el tiempo de respuesta de minutos (con detección manual por operadores) a segundos (con detección automática).
+
+Estudios de seguridad vial demuestran que cada minuto de reducción en el tiempo de detección de un incidente reduce en un 3% la probabilidad de accidentes secundarios. En un corredor de alta velocidad como Chía-Girardot, la detección temprana es crítica para la seguridad operacional.
+
+---
+
+## 8.2.5 Especificación Técnica
+
+| Parámetro | Especificación Mínima |
+|-----------|----------------------|
+| **Tipos de incidentes detectados** | Vehículo detenido, flujo contrario, pérdida de carga, peatón en calzada, velocidad anómala, congestión repentina |
+| **Tiempo de detección** | < 2 segundos desde ocurrencia hasta alerta |
+| **Tasa de detección** | ≥ 95% para incidentes críticos |
+| **Tasa de falsos positivos** | < 5% |
+| **Algoritmos** | Deep Learning / CNN entrenados con datasets de tráfico vial |
+| **Procesamiento** | Edge computing con aceleradores NVIDIA Jetson o similar |
+| **Entradas de video** | Compatible con streams RTSP de cámaras CCTV CC-01 |
+| **Resolución de entrada** | 1080p mínimo, 4K recomendado |
+| **Interfaces de salida** | API REST, SNMP Traps, mensajería MQTT |
+| **Clasificación de severidad** | Crítica, Mayor, Menor con umbrales configurables |
+| **Georeferenciación** | Coordenadas GPS exactas del punto de detección |
+| **Metadatos de evento** | Timestamp, tipo de incidente, confianza, imagen de evidencia |
+| **Capacidad de procesamiento** | ≥ 4 streams de video simultáneos por nodo de edge |
+| **Redundancia** | Failover automático ante falla de nodo de procesamiento |
+| **Aprendizaje continuo** | Capacidad de reentrenamiento con nuevos casos |
+
+---
+
+## 8.2.6 Requerimientos Funcionales (RF)
+
+| ID | Nombre | Descripción Funcional / Técnica | Justificación Estratégica |
+|----|--------|--------------------------------|---------------------------|
+| **RF-01** | Detección de Vehículo Detenido | El sistema debe detectar automáticamente vehículos detenidos en calzada (velocidad = 0) durante más de 10 segundos en zonas donde el flujo es continuo. La detección debe distinguir entre vehículos detenidos por congestión versus vehículos detenidos por emergencia. | La detección temprana de vehículos detenidos permite activar protocolos de emergencia antes de que se produzcan colisiones secundarias, reduciendo la severidad de los incidentes. |
+| **RF-02** | Detección de Flujo Contrario | El sistema debe detectar vehículos circulando en sentido opuesto al flujo normal del tráfico, generando alerta crítica inmediata. La detección debe operar tanto de día como de noche. | El flujo contrario es uno de los incidentes más peligrosos en corredores de alta velocidad. La detección automática permite cerrar el tramo afectado en segundos, evitando colisiones frontales. |
+| **RF-03** | Detección de Pérdida de Carga | El sistema debe detectar objetos caídos en calzada (carga, escombros, neumáticos) que representen riesgo para los vehículos. La detección debe identificar el tipo de objeto y su ubicación exacta. | La pérdida de carga es frecuente en corredores con alto tráfico de carga. La detección automática permite despachar unidades de limpieza antes de que se produzcan accidentes por evasión. |
+| **RF-04** | Detección de Peatón en Calzada | El sistema debe detectar personas caminando en la calzada o en el hombro de la vía, generando alerta de seguridad. La detección debe distinguir entre peatones en zonas permitidas (áreas de servicio) versus zonas prohibidas (calzada). | Los peatones en calzada representan alto riesgo de fatalidad. La detección automática permite activar alertas a conductores cercanos y despachar unidades de seguridad vial. |
+| **RF-05** | Detección de Congestión Repentina | El sistema debe detectar reducciones abruptas de velocidad promedio en un tramo (< 30 km/h de caída en menos de 5 minutos), identificando la formación de cuellos de botella. | La congestión repentina es precursora de accidentes múltiples. La detección temprana permite activar señalización variable (VSL) para reducir la velocidad del tráfico aproximándose. |
+| **RF-06** | Clasificación por Severidad | El sistema debe clasificar cada incidente detectado en categorías de severidad: Crítica (requiere cierre de tramo), Mayor (requiere despacho inmediato), Menor (requiere monitoreo). La clasificación debe basarse en tipo de incidente, ubicación y condiciones de tráfico. | La clasificación por severidad permite priorizar la respuesta de recursos limitados, asegurando que los incidentes críticos reciban atención inmediata mientras los menores se monitorean. |
+| **RF-07** | Integración con CCTV | El sistema debe integrarse con el subsistema CCTV (CC-01) para presentar automáticamente el video del punto de detección ante alerta. La integración debe permitir al operador verificar visualmente el incidente antes de despachar recursos. | La integración con CCTV reduce falsos positivos y permite a los operadores confirmar la naturaleza del incidente antes de activar protocolos costosos de respuesta de emergencia. |
+| **RF-08** | Georeferenciación Precisa | Cada alerta debe incluir coordenadas GPS exactas del incidente (precisión < 10 metros), identificación del punto kilométrico más cercano, y cámara de referencia. | La georeferenciación precisa reduce el tiempo de llegada de unidades de emergencia, eliminando la búsqueda del punto del incidente en un corredor de 306 km. |
+| **RF-09** | Evidencia Digital | El sistema debe capturar automáticamente imagen/video del incidente detectado, almacenándolo como evidencia. La evidencia debe incluir timestamp certificado, coordenadas GPS, y metadatos del evento. | La evidencia digital es fundamental para investigaciones posteriores de incidentes y para el entrenamiento continuo de los algoritmos de detección. |
+| **RF-10** | Gestión de Falsos Positivos | El sistema debe incluir mecanismos de retroalimentación donde los operadores puedan marcar alertas como falsos positivos, alimentando el algoritmo de aprendizaje para reducir futuras detecciones erróneas. | La gestión activa de falsos positivos permite mejorar continuamente la precisión del sistema, reduciendo la fatiga de alertas en operadores y aumentando la confianza en el sistema. |
+
+---
+
+## 8.2.7 Requisitos No Funcionales (RNF)
+
+| ID | Nombre | Descripción | Justificación |
+|----|--------|-------------|---------------|
+| **RNF-01** | Precisión de Detección | El sistema debe mantener tasa de detección ≥ 95% para incidentes críticos (vehículo detenido, flujo contrario) y ≥ 85% para incidentes menores. | La alta precisión es crítica para la confiabilidad del sistema. Una tasa de detección inferior generaría desconfianza en operadores y reduciría el valor operativo del sistema. |
+| **RNF-02** | Latencia de Procesamiento | El tiempo desde la ocurrencia del incidente hasta la generación de la alerta debe ser < 2 segundos en condiciones normales de red. | La latencia es crítica en incidentes de flujo contrario donde cada segundo cuenta para evitar colisiones frontales. |
+| **RNF-03** | Disponibilidad | El sistema debe mantener disponibilidad ≥ 99.5%, excluyendo mantenimientos programados notificados con 48 horas de anticipación. | La disponibilidad asegura que el corredor esté protegido permanentemente. Una caída del sistema AID durante un incidente podría tener consecuencias fatales. |
+| **RNF-04** | Capacidad de Escalabilidad | La arquitectura debe permitir adición de nuevos puntos de detección sin degradación del rendimiento existente, soportando ≥ 100 nodos de análisis en configuración final. | El corredor puede requerir mayor densidad de detección en el futuro. La escalabilidad garantiza que la inversión inicial no requiera reemplazo ante crecimiento. |
+| **RNF-05** | Ciberseguridad | El sistema debe implementar cifrado TLS 1.3 para comunicaciones, autenticación de dispositivos, y segmentación de red para prevenir accesos no autorizados a los motores de análisis. | Los motores de análisis de video son componentes críticos. Un compromiso podría desactivar la detección de incidentes o generar falsas alertas masivas. |
+| **RNF-06** | Tolerancia Ambiental | Los nodos de edge deben operar en rango térmico -20°C a +60°C con IP65 de protección. | El corredor atraviesa zonas con condiciones climáticas diversas. Los nodos de edge deben operar confiablemente en todas las condiciones. |
+| **RNF-07** | Privacidad y Protección de Datos | El sistema debe cumplir Ley 1581 de 2012, anonimizando rostros de conductores y peatones en las imágenes de evidencia almacenadas. | El cumplimiento normativo es obligatorio. La detección de incidentes no debe comprometer la privacidad de los usuarios de la vía. |
+
+---
+
+## 8.2.8 Indicadores Clave De Rendimiento (KPIs)
+
+| ID | Indicador | Descripción | Meta | Frecuencia |
+|----|-----------|-------------|------|------------|
+| **KPI-01** | Tasa de Detección | Porcentaje de incidentes reales detectados | ≥ 95% | Mensual |
+| **KPI-02** | Tasa de Falsos Positivos | Alertas sin incidente real / Total alertas | < 5% | Mensual |
+| **KPI-03** | Latencia Promedio | Tiempo detección a alerta | < 2 segundos | Continua |
+| **KPI-04** | Disponibilidad del Sistema | Tiempo operativo del sistema AID | ≥ 99.5% | Mensual |
+| **KPI-05** | Precisión Geográfica | Distancia entre detección y ubicación real | < 10 metros | Trimestral |
+| **KPI-06** | Tiempo de Respuesta CCO | Tiempo desde alerta hasta acción del operador | < 30 segundos | Mensual |
+| **KPI-07** | Reducción de Accidentes Secundarios | Comparación año a año en tramos con AID | ≥ 15% | Anual |
+| **KPI-08** | Satisfacción de Operadores | Evaluación de utilidad del sistema | ≥ 4.0/5.0 | Semestral |
+
+---
+
+## 8.2.9 Referencias De Mercado
+
+### Fabricantes Internacionales
+
+| Fabricante | País | Especialidad | Modelos de Referencia | Web |
+|------------|------|--------------|----------------------|-----|
+| **Siemens** | Alemania | ITS y movilidad inteligente | Sicore AID | https://www.mobility.siemens.com |
+| **Kapsch** | Austria | Soluciones ITS | Video AID | https://www.kapsch.net |
+| **Citilog** | Francia | Análisis de video para tráfico | CT-ADL | https://www.citilog.com |
+| **Indra** | España | Sistemas de transporte inteligente | AID Platform | https://www.indracompany.com |
+| **Jenoptik** | Alemania | Soluciones de seguridad vial | VINCI AID | https://www.jenoptik.com |
+| **Autoscope** | USA | Detección de video para tráfico | AID Series | https://www.autoscope.com |
+
+---
+
+## 8.2.10 Proveedores Colombia
+
+| Empresa | Ciudad | Especialidad | Web |
+|---------|--------|--------------|-----|
+| **Indra Colombia** | Bogotá | ITS, AID, Video Analytics | https://www.indracompany.com |
+| **Axis Communications Colombia** | Bogotá | Cámaras con AID integrado | https://www.axis.com/co |
+| **Hikvision Colombia** | Bogotá | Soluciones AID con Deep Learning | https://www.hikvision.com/co |
+| **ID Tec** | Bogotá | Análisis de video para tráfico | Contacto directo |
+
+---
+
+## 8.2.11 Casos de Uso
+
+### CU-01: Detección de Colisión en Curva Peligrosa
+**Actor Principal:** Sistema AID / Operador CCO  
+**Precondición:** Circulación normal en curva del km 45  
+**Flujo Principal:**
+1. Dos vehículos colisionan en curva ciega del km 45
+2. El sistema AID detecta vehículos detenidos y cambio brusco en flujo
+3. Se genera alerta crítica con georeferenciación precisa en 1.5 segundos
+4. El CCO recibe alerta con imagen de evidencia del incidente
+5. El operador verifica visualmente mediante CCTV y confirma colisión
+6. Se activa protocolo de emergencia despachando ambulancia y grúa
+
+**Resultado:** Tiempo de detección 1.5 segundos vs. 3-5 minutos con detección manual. Se evitan colisiones secundarias por vehículos que ingresan a la curva.
+
+### CU-02: Detección de Vehículo en Contravía
+**Actor Principal:** Sistema AID / Operador CCO / Policía de Carreteras  
+**Precondición:** Circulación normal en tramo recto del km 78  
+**Flujo Principal:**
+1. Conductor confundido ingresa al corredor en sentido contrario
+2. El sistema AID detecta vector de movimiento anómalo (flujo contrario)
+3. Se genera alerta crítica con máxima prioridad
+4. El CCO cierra automáticamente el tramo mediante señalización VMS
+5. Se despacha patrulla de carreteras con ubicación exacta
+6. El sistema CCTV (CC-01) activa seguimiento visual del vehículo
+
+**Resultado:** Interceptación del vehículo en 4 minutos, evitando colisión frontal que habría ocurrido en 6 minutos si no se detecta.
+
+### CU-03: Detección de Pérdida de Carga
+**Actor Principal:** Sistema AID / Operador CCO / Equipo de Mantenimiento  
+**Precondición:** Circulación fluida en puente del km 120  
+**Flujo Principal:**
+1. Camión de carga pierde palet de mercancía en calzada
+2. El sistema AID detecta objeto extraño en calzada
+3. Se genera alerta con clasificación "Mayor - Obstáculo en vía"
+4. El CCO activa señalización de velocidad variable (VSL) en el tramo
+5. Se despacha equipo de limpieza con ubicación exacta GPS
+6. El objeto es removido antes de que lleguen vehículos en riesgo
+
+**Resultado:** Evitados 3 accidentes por evasión que habrían ocurrido si el obstáculo permanecía más tiempo.
+
+### CU-04: Detección de Peatón en Calzada
+**Actor Principal:** Sistema AID / Operador CCO / Policía de Carreteras  
+**Precondición:** Tráfico moderado en zona rural del km 200  
+**Flujo Principal:**
+1. Persona camina por el hombro y cruza a calzada para recuperar objeto
+2. El sistema AID detecta peatón en zona prohibida
+3. Se genera alerta con imagen de evidencia
+4. El CCO activa mensaje en VMS cercano: "PRECAUCIÓN - PEATÓN EN VÍA"
+5. Se despacha patrulla para asistir a la persona
+6. El peatón es retirado de la calzada antes de que ocurra accidente
+
+**Resultado:** Potencial fatalidad evitada. El tiempo de detección (2 segundos) permite alertar a conductores a 500m de distancia.
+
+### CU-05: Mejora Continua por Retroalimentación
+**Actor Principal:** Administrador del Sistema AID / Operadores CCO  
+**Precondición:** Alerta generada clasificada como falso positivo por operador  
+**Flujo Principal:**
+1. El sistema AID genera alerta de "vehículo detenido"
+2. El operador verifica mediante CCTV y confirma que es vehículo en fila de peaje
+3. El operador marca la alerta como "Falso Positivo - Peaje"
+4. El sistema registra el falso positivo con contexto (zona de peaje)
+5. El algoritmo de ML incorpora este caso al entrenamiento
+6. Futuras detecciones similares en zona de peaje son filtradas
+
+**Resultado:** Reducción de 12% en falsos positivos en el siguiente trimestre mediante aprendizaje continuo.
+
+---
+
+**InnovaDataCO SAS** | **Fecha:** Abril 2026 | Documento generado bajo estándares ITS_CC-01

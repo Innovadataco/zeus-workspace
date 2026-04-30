@@ -1,0 +1,233 @@
+# 8.26 CC-26: MOB (Aplicaciones Móviles y Portal ITS)
+
+## 8.26.1 Resumen Ejecutivo
+
+El componente **CC-26 MOB** corresponde al ecosistema de aplicaciones móviles y portales web que constituyen la interfaz de usuario final del sistema ITS del corredor Chía–Girardot. Este componente habilita el acceso ciudadano, operativo y administrativo a la información y servicios del corredor inteligente, transformando datos técnicos en experiencias digitales accesibles desde cualquier dispositivo conectado.
+
+Las aplicaciones móviles y portales ITS representan el punto de contacto directo entre la infraestructura inteligente y sus usuarios: conductores que necesitan información de tráfico en tiempo real, operadores de campo que requieren movilidad para gestionar incidentes, y administradores que supervisan el rendimiento del sistema desde cualquier ubicación. Mediante interfaces intuitivas, notificaciones proactivas y funcionalidades contextuales basadas en geolocalización, el componente MOB extiende el alcance del sistema ITS más allá del Centro de Control y Operaciones.
+
+La implementación de un ecosistema MOB robusto responde a la realidad de la movilidad moderna: los usuarios esperan acceso instantáneo a información desde sus smartphones, recepción de alertas relevantes según su ubicación, y capacidad de interacción bidireccional.
+
+---
+
+## 8.26.2 Identificación Del Componente De Campo
+
+| Campo | Valor |
+|-------|-------|
+| **COD** | CC-26 |
+| **Sigla (Estándar Internacional)** | MOB / Mobile Portal |
+| **Nombre del Componente** | Aplicaciones Móviles y Portal ITS |
+| **Capacidad Operativa Generada** | Acceso Universal: Capacidad de proporcionar información y servicios ITS desde cualquier dispositivo conectado, habilitando interacción ciudadana y operación remota. |
+
+---
+
+## 8.26.3 Descripción Funcional / Técnica
+
+### Alcance de la Solución
+
+El sistema MOB comprende un ecosistema de aplicaciones y servicios digitales diseñados para múltiples perfiles de usuario del corredor ITS:
+
+**Aplicación para Ciudadanos:**
+- Visualización en tiempo real de condiciones de tráfico (velocidad, congestión, incidentes)
+- Mapa interactivo del corredor con información de rutas alternativas
+- Notificaciones push contextualizadas según ubicación GPS del usuario
+- Reporte ciudadano de incidentes (accidentes, obstáculos, condiciones adversas)
+- Información de estaciones de servicio, peajes, puntos de emergencia
+- Estimación de tiempos de viaje entre puntos del corredor
+
+**Aplicación para Operadores de Campo:**
+- Acceso móvil al TMS para visualización de alarmas y eventos
+- Confirmación de atención a incidentes con registro georreferenciado
+- Comunicación integrada con CCO (mensajería, fotos, video)
+- Checklist digital para inspecciones de campo
+- Registro de actividades de mantenimiento preventivo y correctivo
+
+**Portal Web Administrativo:**
+- Dashboard de indicadores de desempeño (KPIs) del corredor
+- Acceso a reportes históricos y analítica de datos
+- Gestión de contenido para paneles de mensajes dinámicos
+- Configuración de usuarios, permisos y roles
+
+---
+
+## 8.26.4 Justificación Estratégica
+
+La implementación de un ecosistema MOB responde a transformaciones fundamentales en las expectativas de los usuarios:
+
+1. **Democratización de la información**: Los usuarios del corredor tienen derecho a conocer las condiciones de la vía que utilizan. La transparencia mejora la experiencia del usuario y construye confianza.
+
+2. **Movilidad operativa**: Los operadores de campo no pueden estar sentados en el CCO. Necesitan acceso a información crítica mientras se desplazan por el corredor.
+
+3. **Participación ciudadana**: Los conductores son sensores distribuidos en la vía. Permitirles reportar incidentes amplía drásticamente la cobertura de detección.
+
+4. **Diferenciación de servicio**: Un corredor con información digital accesible se posiciona como moderno y centrado en el usuario, mejorando la percepción pública.
+
+---
+
+## 8.26.5 Especificación Técnica
+
+| Parámetro | Especificación Mínima |
+|-----------|----------------------|
+| **Plataformas móviles** | iOS 14+ y Android 10+ |
+| **Navegadores web** | Chrome, Safari, Firefox, Edge (últimas 2 versiones) |
+| **Arquitectura backend** | APIs RESTful + WebSockets para tiempo real |
+| **Protocolos de comunicación** | HTTPS/TLS 1.3, MQTT para notificaciones push |
+| **Capacidad de usuarios** | ≥ 100,000 usuarios concurrentes |
+| **Tiempo de respuesta API** | < 500 ms para solicitudes estándar |
+| **Disponibilidad del servicio** | ≥ 99.9% |
+| **Notificaciones push** | FCM (Android) y APNs (iOS) con segmentación geográfica |
+| **Geolocalización** | GPS con precisión < 10 metros, geocercas virtuales |
+| **Almacenamiento local** | Cache de datos para funcionalidad offline limitada |
+| **Autenticación** | OAuth 2.0 / OpenID Connect con MFA |
+| **Ciberseguridad** | OWASP MASVS para móviles, cifrado de datos en reposo y tránsito |
+| **Accesibilidad** | Cumplimiento WCAG 2.1 AA para portales web |
+| **Analítica** | Métricas de comportamiento de usuarios, crash reporting |
+| **Lenguajes y frameworks** | Swift/Kotlin para nativo, o React Native/Flutter para cross-platform |
+
+---
+
+## 8.26.6 Requerimientos Funcionales (RF)
+
+| ID | Nombre | Descripción Funcional / Técnica | Justificación Estratégica |
+|----|--------|--------------------------------|---------------------------|
+| **RF-01** | Mapa de Tráfico en Tiempo Real | La app ciudadana debe mostrar un mapa interactivo con estado de tráfico por tramos (colores: verde/amarillo/rojo), incidentes activos, obras, y cierres. Los datos deben actualizarse cada 30 segundos. | El mapa de tráfico es la funcionalidad más valorada por conductores para planificar rutas y evitar congestiones. |
+| **RF-02** | Notificaciones Push Contextuales | El sistema debe enviar notificaciones push según ubicación GPS del usuario: alertas de incidentes en ruta, cambios de condiciones, recordatorios de peajes. Las notificaciones deben ser configurables por el usuario. | Las notificaciones contextuales mantienen informados a usuarios sin requerir que abran la app constantemente. |
+| **RF-03** | Reporte Ciudadano de Incidentes | Los usuarios deben poder reportar incidentes desde la app: seleccionar tipo (accidente, obstáculo, animal en vía), tomar foto, enviar ubicación GPS. El reporte debe llegar al CCO en < 10 segundos. | El reporte ciudadano multiplica la capacidad de detección del corredor, permitiendo identificar problemas antes de que escalen. |
+| **RF-04** | Estimación de Tiempos de Viaje | La app debe calcular y mostrar tiempos estimados de viaje entre origen y destino en el corredor, considerando condiciones actuales y históricas. La precisión debe ser ≥ 85%. | La estimación de tiempos permite a conductores planificar mejor sus viajes, reduciendo ansiedad y mejorando satisfacción. |
+| **RF-05** | Acceso Operativo Móvil | La app para operadores debe mostrar alarmas activas del TMS, permitir confirmar atención a incidentes con timestamp y geolocalización, y comunicarse con el CCO mediante mensajería integrada. | El acceso móvil empodera a operadores de campo para tomar decisiones informadas sin depender de radio o llamadas telefónicas. |
+| **RF-06** | Gestión de Contenido DMS | El portal administrativo debe permitir crear, programar y publicar mensajes en paneles DMS del corredor, con vista previa, aprobación por supervisor, y registro de auditoría. | La gestión centralizada de contenido asegura mensajes coherentes y aprobados antes de publicarse en vía. |
+| **RF-07** | Dashboard de KPIs | El portal debe mostrar dashboard con indicadores clave del corredor: volumen de tráfico, incidentes del día, disponibilidad de sistemas, tiempos de respuesta. Los dashboards deben ser configurables. | El dashboard proporciona visión ejecutiva del estado del corredor sin necesidad de consultar múltiples sistemas. |
+| **RF-08** | Funcionalidad Offline Limitada | Las apps deben mantener funcionalidad básica sin conexión: últimos datos de tráfico cacheados, información de peajes, números de emergencia. La sincronización ocurre al recuperar conectividad. | La funcionalidad offline asegura utilidad básica incluso en zonas sin cobertura celular del corredor. |
+| **RF-09** | Autenticación y Perfiles de Usuario | El sistema debe soportar múltiples perfiles: ciudadano (anónimo o registrado), operador de campo, administrador. Cada perfil tiene acceso a funcionalidades específicas con RBAC. | Los diferentes perfiles aseguran que usuarios accedan solo a información y funciones apropiadas para su rol. |
+| **RF-10** | Integración con Navegadores de Terceros | La app ciudadana debe permitir compartir condiciones de tráfico con Waze y Google Maps mediante APIs estándar, y recibir datos de estos servicios para enriquecer la información. | La integración con navegadores populares amplía el alcance de la información y aprovecha redes existentes de usuarios. |
+
+---
+
+## 8.26.7 Requisitos No Funcionales (RNF)
+
+| ID | Nombre | Descripción | Justificación |
+|----|--------|-------------|---------------|
+| **RNF-01** | Disponibilidad del Servicio | Disponibilidad ≥ 99.9% para APIs y servicios backend. Las apps deben funcionar offline con datos cacheados ante falla de red. | Usuarios dependen de la app para información crítica de viaje; indisponibilidad genera frustración y desconfianza. |
+| **RNF-02** | Rendimiento y Respuesta | Tiempo de carga inicial de app < 3 segundos, respuesta a interacciones < 500 ms, actualización de mapa en tiempo real < 30 segundos. | La lentitud de apps móviles genera abandono; los usuarios esperan respuesta inmediata en interfaces táctiles. |
+| **RNF-03** | Usabilidad y UX | Interfaces intuitivas con curva de aprendizaje < 5 minutos, consistencia con guidelines de iOS/Android, accesibilidad WCAG 2.1 AA. | Apps con mala UX son abandonadas rápidamente; la adopción depende de la facilidad de uso. |
+| **RNF-04** | Ciberseguridad y Privacidad | Cifrado de datos en tránsito (TLS 1.3) y reposo, cumplimiento Ley 1581 de 2012 (protección de datos personales), política clara de privacidad, consentimiento explícito del usuario. | La protección de datos personales es obligatoria legalmente y crítica para la confianza del usuario. |
+| **RNF-05** | Consumo de Recursos del Dispositivo | Uso de batería < 5% por hora de uso activo, consumo de datos < 10 MB por hora de uso, espacio de almacenamiento < 100 MB. | Apps que drenan batería o consumen excesivos datos son desinstaladas por los usuarios. |
+| **RNF-06** | Escalabilidad | Arquitectura backend capaz de escalar horizontalmente para soportar picos de demanda (ej. feriados) de 10x el tráfico normal sin degradación. | Eventos especiales pueden generar picos masivos de usuarios concurrentes que el sistema debe soportar. |
+| **RNF-07** | Compatibilidad Multi-Dispositivo | Funcionamiento en smartphones de gama baja (Android 10, 2GB RAM) y tablets, adaptación responsive a diferentes tamaños de pantalla. | No todos los usuarios tienen dispositivos de gama alta; la app debe ser inclusiva en términos de hardware. |
+
+---
+
+## 8.26.8 Indicadores Clave De Rendimiento (KPIs)
+
+| ID | Indicador | Descripción | Meta | Frecuencia |
+|----|-----------|-------------|------|------------|
+| **KPI-01** | Disponibilidad del Servicio | Tiempo operativo de APIs y backend | ≥ 99.9% | Mensual |
+| **KPI-02** | Usuarios Activos | Usuarios que abren la app al menos 1 vez/semana | ≥ 10,000 | Mensual |
+| **KPI-03** | Tiempo de Respuesta API | Latencia promedio de solicitudes | < 500 ms | Continua |
+| **KPI-04** | Reportes Ciudadanos | Incidentes reportados por usuarios/mes | ≥ 500 | Mensual |
+| **KPI-05** | Calificación en App Stores | Promedio de estrellas (iOS/Android) | ≥ 4.0/5.0 | Mensual |
+| **KPI-06** | Tasa de Retención | Usuarios que retornan después de 30 días | ≥ 40% | Mensual |
+| **KPI-07** | Notificaciones Entregadas | % de push notifications exitosamente entregadas | ≥ 95% | Semanal |
+| **KPI-08** | Satisfacción de Operadores | Evaluación de utilidad de app operativa | ≥ 4.0/5.0 | Semestral |
+
+---
+
+## 8.26.9 Referencias De Mercado
+
+### Fabricantes Internacionales
+
+| Fabricante | País | Especialidad | Modelos de Referencia | Web |
+|------------|------|--------------|----------------------|-----|
+| **Google** | USA | Mobile SDKs, Maps APIs | Google Maps Platform, Firebase | https://developers.google.com |
+| **Apple** | USA | iOS Development | iOS SDK, MapKit, Push Notifications | https://developer.apple.com |
+| **HERE Technologies** | Países Bajos | Mapas y location services | HERE SDK, Traffic API | https://www.here.com |
+| **TomTom** | Países Bajos | Navegación y tráfico | TomTom Traffic, Mobile SDK | https://www.tomtom.com |
+| **Mapbox** | USA | Plataforma de mapas | Mapbox SDK, Navigation | https://www.mapbox.com |
+| **Twilio** | USA | Notificaciones push y SMS | Twilio Notify, Push SDK | https://www.twilio.com |
+
+---
+
+## 8.26.10 Proveedores Colombia
+
+| Empresa | Ciudad | Especialidad | Web |
+|---------|--------|--------------|-----|
+| **Indra Colombia** | Bogotá | Desarrollo de apps y portales ITS | https://www.indracompany.com |
+| **IBM Colombia** | Bogotá | Desarrollo enterprise, mobile | https://www.ibm.com/co-es |
+| **Globant Colombia** | Bogotá | Desarrollo de software, UX/UI | https://www.globant.com |
+| **Mercadolibre Colombia** | Bogotá | Desarrollo mobile, backend scale | https://www.mercadolibre.com.co |
+
+---
+
+## 8.26.11 Casos de Uso
+
+### CU-01: Conductor Evita Congestión mediante App
+**Actor Principal:** Conductor / App Ciudadana  
+**Precondición:** Conductor planea viaje por corredor en hora pico  
+**Flujo Principal:**
+1. El conductor abre la app antes de salir y consulta mapa de tráfico
+2. El mapa muestra congestión severa (rojo) en km 80-100
+3. La app sugiere ruta alternativa por vía paralela, estimando 15 min menos
+4. El conductor toma decisión informada y usa ruta alternativa
+5. Durante el viaje, recibe notificación push: "Tráfico fluido en su ruta"
+6. Llega a destino 20 minutos antes que si hubiera tomado ruta habitual
+
+**Resultado:** Ahorro de tiempo y combustible, menor estrés del conductor, distribución más equilibrada del tráfico.
+
+### CU-02: Reporte Ciudadano Alerta sobre Obstáculo
+**Actor Principal:** Conductor / App Ciudadana / Operador CCO  
+**Precondición:** Conductor detecta neumático desprendido en calzada  
+**Flujo Principal:**
+1. El conductor ve neumático en calzada en km 145, estaciona en zona segura
+2. Abre app, selecciona "Reportar Incidente" → "Obstáculo en vía"
+3. Toma foto del neumático, app captura ubicación GPS automáticamente
+4. Envía reporte con un toque, confirma recepción en 3 segundos
+5. El CCO recibe alerta con foto y ubicación exacta
+6. Operador despacha equipo de limpieza antes de que obstáculo cause accidente
+
+**Resultado:** Obstáculo removido en 12 minutos, potencial accidente evitado, participación ciudadana exitosa.
+
+### CU-03: Operador de Campo Gestiona Incidente desde Terreno
+**Actor Principal:** Operador de Campo / App Operativa / TMS  
+**Precondición:** Accidente reportado en km 200, operador asignado  
+**Flujo Principal:**
+1. El operador recibe notificación en app: "Incidente asignado - Accidente km 200"
+2. Visualiza detalles: tipo, hora, ubicación GPS, cámara cercana
+3. Conduce al punto y confirma llegada con botón "En sitio" (geolocalizado)
+4. Completa checklist digital: heridos, daños, necesidad de grúa/ambulancia
+5. Toma fotos del incidente adjuntadas automáticamente al caso
+6. Solicita grúa mediante app, confirmando tipo de vehículo afectado
+7. Al finalizar, cierra incidente desde app con resumen
+
+**Resultado:** Gestión completa del incidente sin necesidad de radio ni llamadas, registro digital completo, tiempo de respuesta reducido.
+
+### CU-04: Administrador Publica Mensaje de Emergencia
+**Actor Principal:** Administrador / Portal Web / DMS  
+**Precondición:** Emergencia: derrumbe cierra carril en km 180  
+**Flujo Principal:**
+1. Administrador accede al portal desde laptop en reunión
+2. Crea nuevo mensaje: "CARRIL DERECHO CERRADO KM 180 - DESVÍO A 2 KM"
+3. Selecciona paneles DMS afectados en mapa (km 160, 170, 175)
+4. Vista previa muestra exactamente cómo se verá el mensaje
+5. Supervisor aprueba mensaje mediante workflow electrónico
+6. Mensaje se publica en paneles en < 10 segundos
+7. Portal registra: quién publicó, cuándo, qué paneles, con confirmación de recepción
+
+**Resultado:** Comunicación de emergencia efectiva en tiempo récord, registro de auditoría completo, coordinación administrativa transparente.
+
+### CU-05: Análisis de Uso para Mejora de la App
+**Actor Principal:** Equipo de Producto / Analítica / Usuarios  
+**Precondición:** Trimestre de operación de la app completado  
+**Flujo Principal:**
+1. El equipo revisa analítica de uso: 85% de usuarios usan mapa de tráfico
+2. Solo 15% usan función de reporte ciudadano - se detecta fricción en UX
+3. Revisan comentarios en app stores: usuarios piden integración con Waze
+4. Identifican que tiempos de carga en Android gama baja son lentos (> 5s)
+5. Planifican mejoras: simplificar reporte, integrar Waze, optimizar rendimiento
+6. Implementan mejoras y monitorean métricas post-lanzamiento
+7. Tasa de reportes ciudadanos sube de 15% a 35% de usuarios activos
+
+**Resultado:** Mejora continua basada en datos reales de uso, mayor satisfacción de usuarios, funcionalidades más alineadas con necesidades.
+
+---
+
+**InnovaDataCO SAS** | **Fecha:** Abril 2026 | Documento generado bajo estándares ITS_CC-01

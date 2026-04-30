@@ -1,0 +1,339 @@
+# CC-13: SPD - Sistema de Radar Pedagógico
+
+## 1. Resumen Ejecutivo
+
+El Sistema de Radar Pedagógico (SPD - Speed Pedagogical Device) constituye una solución tecnológica avanzada para la **Gestión del Comportamiento Vial** mediante la inducción de hábitos de velocidad segura. Este sistema combina detección de velocidad con retroalimentación visual inmediata al conductor, creando una experiencia educativa que promueve el cumplimiento de límites de velocidad de manera positiva y preventiva.
+
+La capacidad de **Gestión del Comportamiento Vial** mediante interacción visual en tiempo real es fundamental para reducir la velocidad excesiva sin necesidad de sanciones, mejorar la seguridad en zonas críticas y crear una cultura de conducción responsable. El sistema SPD integra radares Doppler, paneles LED dinámicos, análisis de comportamiento y gestión de datos para proporcionar una herramienta efectiva de modificación conductual vial.
+
+---
+
+## 2. Identificación del Sistema
+
+| **Atributo** | **Valor** |
+|--------------|-----------|
+| **COD** | CC-13 |
+| **Sigla** | SPD |
+| **Nombre Oficial** | Sistema de Radar Pedagógico |
+| **Capacidad** | Gestión del Comportamiento Vial: Capacidad de inducir hábitos de velocidad segura mediante interacción visual en tiempo real |
+
+---
+
+## 3. Descripción Funcional y Técnica
+
+### 3.1 Propósito del Sistema
+
+El SPD tiene como propósito fundamental modificar el comportamiento de los conductores para:
+
+- **Reducción de velocidad excesiva**: Retroalimentación inmediata al conductor
+- **Concienciación vial**: Mostrar velocidad real vs. límite permitido
+- **Prevención de accidentes**: Intervención en zonas críticas (escuelas, curvas, obras)
+- **Educación vial continua**: Refuerzo positivo del comportamiento correcto
+- **Recolección de datos**: Información sobre patrones de velocidad
+
+### 3.2 Tipos de Retroalimentación Visual
+
+| **Tipo de Mensaje** | **Descripción** | **Condición de Activación** |
+|---------------------|-----------------|----------------------------|
+| **Velocidad Actual** | Muestra velocidad detectada en números grandes | Siempre visible |
+| **Cara Feliz** | Emoji sonriente o mensaje "GRACIAS" | Velocidad dentro del límite |
+| **Cara Triste** | Emoji triste o mensaje "REDUZCA" | Velocidad excede límite |
+| **Velocidad + Mensaje** | Velocidad con indicador de cumplimiento | Comparación en tiempo real |
+| **Mensaje Educativo** | "ZONA ESCOLAR", "CONDUZCA CON CUIDADO" | Zonas específicas |
+| **Ranking/Estadística** | "80% de conductores cumplen" | Promoción de norma social |
+
+### 3.3 Arquitectura del Sistema
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                      ZONA DE CONTROL                            │
+├──────────────────┬──────────────────┬───────────────────────────┤
+│   DETECCIÓN      │   PROCESAMIENTO  │   RETROALIMENTACIÓN       │
+├──────────────────┼──────────────────┼───────────────────────────┤
+│ • Radar Doppler  │ • Controlador    │ • Panel LED de            │
+│ • Sensor de      │   embebido       │   velocidad               │
+│   presencia      │ • Algoritmo de   │ • Emojis/caras            │
+│ • Cámara         │   suavizado      │   dinámicas               │
+│   (opcional)     │ • Reglas de      │ • Mensajes                │
+│                  │   mensajes       │   educativos              │
+└──────────────────┴──────────────────┴───────────────────────────┘
+           │                  │                    │
+           └──────────────────┼────────────────────┘
+                              │
+                  ┌───────────▼───────────┐
+                  │   Centro de           │
+                  │   Gestión y           │
+                  │   Análisis de Datos   │
+                  └───────────┬───────────┘
+                              │
+            ┌─────────────────┼─────────────────┐
+            ▼                 ▼                 ▼
+   ┌────────────────┐ ┌────────────────┐ ┌────────────────┐
+   │  Base de Datos │ │  Reportes de   │ │  Integración   │
+   │  de Velocidades│ │  Comportamiento│ │  con Sistema   │
+   │  y Conductores │ │  y Efectividad │ │  de Fotodetección│
+   └────────────────┘ └────────────────┘ └────────────────┘
+```
+
+### 3.4 Componentes Principales
+
+| **Componente** | **Función** | **Especificación** |
+|----------------|-------------|-------------------|
+| **Radar Doppler** | Medir velocidad de vehículos | K-band, alcance 200m, precisión ±1 km/h |
+| **Panel LED** | Mostrar velocidad y mensajes | 12-24 pulgadas, visibilidad 200m, RGB |
+| **Controlador** | Procesar señal y controlar display | ARM Cortex, procesamiento < 100ms |
+| **Detector de presencia** | Activar sistema ante vehículo | Inductivo o radar, alcance configurable |
+| **Batería solar** | Alimentación autónoma | Panel 100W, batería LiFePO4 100Ah |
+| **Estructura** | Soporte del equipo | Poste 4-6m, cimentación, resistencia viento |
+| **Software** | Lógica de mensajes y reportes | Configurable, conectividad 4G/WiFi |
+
+### 3.5 Modos de Operación
+
+| **Modo** | **Descripción** | **Aplicación** |
+|----------|-----------------|----------------|
+| **Modo Pedagógico Puro** | Solo muestra velocidad, sin consecuencias | Primera fase de intervención |
+| **Modo Refuerzo Positivo** | Mensajes de agradecimiento al cumplir | Construcción de hábitos |
+| **Modo Alerta** | Advertencia visual al exceder límite | Zonas de alto riesgo |
+| **Modo Ranking** | Muestra porcentaje de cumplimiento | Efecto norma social |
+| **Modo Integrado** | Conectado a sistema de fotodetección | Graduación de intervenciones |
+| **Modo Portátil** | Unidad móvil para ubicaciones variables | Obras, eventos temporales |
+
+### 3.6 Interfaces con Otros Sistemas
+
+| **Sistema** | **Tipo de Interfaz** | **Datos Intercambiados** |
+|-------------|---------------------|-------------------------|
+| **Sistema de Fotodetección** | API REST | Activación de cámara al exceder umbral |
+| **Sistema de Gestión de Tráfico (TMS)** | API REST | Datos de velocidad promedio y cumplimiento |
+| **Panel de Mensajes Variable (VMS)** | Protocolo NTCIP | Coordinación de mensajes |
+| **Plataforma de Análisis** | Base de datos | Estadísticas de comportamiento vial |
+| **Sistema de Alerta Escolar** | Digital I/O | Activación en horarios escolares |
+
+---
+
+## 4. Justificación Estratégica
+
+### 4.1 Problema que Resuelve
+
+La velocidad excesiva es factor principal en accidentes graves:
+- Incremento exponencial de severidad con velocidad (kinetic energy ∝ v²)
+- Resistencia cultural a cumplir límites cuando no hay control visible
+- Efecto limitado de señalización estática de límites
+- Costos políticos y sociales de multas masivas
+- Necesidad de cambiar comportamiento antes de sancionar
+
+### 4.2 Beneficios Esperados
+
+| **Dimensión** | **Beneficio** | **Indicador** |
+|---------------|---------------|---------------|
+| **Seguridad Vial** | Reducción de velocidad promedio | 10-20% reducción |
+| **Aceptación Social** | Percepción positiva de medida | 70% aprobación usuarios |
+| **Económico** | Menor costo que fotodetección | 60% más económico |
+| **Ambiental** | Menor aceleración/frenado | 5-10% reducción emisiones |
+| **Educativo** | Mejora en cultura vial | Cambio sostenido en comportamiento |
+
+### 4.3 Alineación con Objetivos del Proyecto
+
+Este sistema contribuye directamente a:
+- **Seguridad preventiva**: Reducción de velocidad sin sanciones
+- **Cultura vial**: Educación continua de usuarios
+- **Gestión inteligente**: Datos para decisiones de tráfico
+
+---
+
+## 5. Especificación Técnica
+
+| **Parámetro** | **Especificación** |
+|---------------|-------------------|
+| **Tipo de radar** | Doppler K-band (24.125 GHz) |
+| **Rango de velocidad** | 10-250 km/h |
+| **Precisión de velocidad** | ±1 km/h |
+| **Alcance de detección** | 10-200 metros |
+| **Ángulo de detección** | ±15° del eje central |
+| **Tamaño de panel LED** | 12", 15", 18" o 24" (según aplicación) |
+| **Resolución de panel** | 32x32, 48x48, 64x64 pixels |
+| **Visibilidad del panel** | ≥ 200 metros (día), ≥ 400 metros (noche) |
+| **Tiempo de respuesta** | < 500 ms (detección a visualización) |
+| **Alimentación** | Solar + batería, o 110-240 VAC |
+| **Autonomía solar** | 5-7 días sin sol |
+| **Comunicaciones** | 4G/LTE, WiFi, LoRaWAN opcional |
+| **Condiciones ambientales** | IP65, -30°C a +70°C |
+| **Vida útil LED** | ≥ 100,000 horas |
+| **Certificaciones** | CE, FCC, NTC Colombia |
+
+---
+
+## 6. RF - Requerimientos Funcionales
+
+| **ID** | **Requerimiento** | **Descripción** |
+|--------|-------------------|-----------------|
+| **RF-01** | Medición de velocidad | El sistema debe medir velocidad de vehículos individuales con precisión ±1 km/h |
+| **RF-02** | Visualización de velocidad | El sistema debe mostrar velocidad detectada en panel LED visible a ≥ 200m |
+| **RF-03** | Mensajes pedagógicos | El sistema debe mostrar mensajes de refuerzo positivo cuando velocidad ≤ límite |
+| **RF-04** | Mensajes de alerta | El sistema debe mostrar advertencia cuando velocidad > límite configurado |
+| **RF-05** | Configuración de umbrales | El sistema debe permitir configurar límite de velocidad y umbrales de mensajes |
+| **RF-06** | Registro de datos | El sistema debe almacenar velocidades detectadas con timestamp para análisis |
+| **RF-07** | Estadísticas de cumplimiento | El sistema debe calcular y mostrar porcentaje de conductores que cumplen |
+| **RF-08** | Horarios configurables | El sistema debe permitir diferentes límites según horario (ej: escolar) |
+| **RF-09** | Conectividad remota | El sistema debe transmitir datos a central para monitoreo y análisis |
+| **RF-10** | Modo offline | El sistema debe operar autónomamente sin conectividad, almacenando datos localmente |
+
+---
+
+## 7. RNF - Requisitos No Funcionales
+
+| **ID** | **Requisito** | **Especificación** |
+|--------|---------------|-------------------|
+| **RNF-01** | Disponibilidad | El sistema debe tener disponibilidad ≥ 99% en operación 24/7 |
+| **RNF-02** | Precisión de velocidad | Error máximo en medición de velocidad: ±1 km/h |
+| **RNF-03** | Latencia de visualización | Tiempo desde detección hasta mostrar en panel: < 500 ms |
+| **RNF-04** | Visibilidad | Panel LED legible a ≥ 200m en condiciones de sol directo |
+| **RNF-05** | Resistencia ambiental | IP65, operación -30°C a +70°C, resistencia a lluvia y polvo |
+| **RNF-06** | Autonomía energética | Sistemas solares con autonomía ≥ 5 días sin sol |
+| **RNF-07** | Seguridad física | Estructura antivandálica, protección contra impactos |
+
+---
+
+## 8. KPIs - Indicadores de Desempeño
+
+| **ID** | **Indicador** | **Descripción** | **Meta** | **Unidad** |
+|--------|---------------|-----------------|----------|------------|
+| **KPI-01** | Disponibilidad del sistema | Tiempo de operación sin interrupciones | ≥ 99 | % |
+| **KPI-02** | Precisión de velocidad | Error en medición de velocidad | ≤ ±1 | km/h |
+| **KPI-03** | Tiempo de respuesta | Latencia detección-visualización | ≤ 500 | ms |
+| **KPI-04** | Reducción de velocidad | Diferencia de velocidad promedio antes/después | ≥ 10 | % |
+| **KPI-05** | Tasa de cumplimiento | Conductores dentro del límite / Total | ≥ 80 | % |
+| **KPI-06** | Aceptación ciudadana | Usuarios con percepción positiva | ≥ 70 | % |
+| **KPI-07** | Visibilidad del mensaje | Distancia de legibilidad del panel | ≥ 200 | m |
+| **KPI-08** | Efecto persistente | Mantenimiento de reducción de velocidad a 500m | ≥ 70 | % |
+
+---
+
+## 9. Referencias de Mercado
+
+| **Fabricante** | **País** | **Modelos de Referencia** | **Website** |
+|----------------|----------|---------------------------|-------------|
+| **Wanco** | USA | WSD-100, WSD-300, Radar Speed Signs | https://www.wanco.com |
+| **Radarsign** | USA | TC-400, TC-600, Hyper-Alert | https://www.radarsign.com |
+| **TraffiCalm** | USA | Driver Feedback Signs, Canopy | https://www.trafficamsystems.com |
+| **Lamar Technologies** | USA | SpeedCheck, SpeedALERT | https://www.lamartech.com |
+| **Ver-Mac** | Canadá | Speed Trailers, VM-5500 | https://www.ver-mac.com |
+| **DEC signs** | España | RPV-50, RPV-100, Portátiles | https://www.decsigns.es |
+
+---
+
+## 10. Proveedores Colombia
+
+| **Empresa** | **Especialidad** | **Website** |
+|-------------|------------------|-------------|
+| **Señalización Vial de Colombia** | Señalización y radares pedagógicos | https://www.senalizacionvial.com.co |
+| **Seguridad Vial Integral** | Equipos de control de velocidad | https://www.seguridadvialintegral.com |
+| **Tecnovial** | Tecnología para vías y señalización | https://www.tecnovial.com.co |
+| **Ingeniería Vial SAS** | Consultoría y equipos de tráfico | https://www.ingenvial.com |
+
+---
+
+## 11. Casos de Uso
+
+### CASO DE USO 1: Zona Escolar
+
+**Actor Principal:** Coordinador de seguridad escolar
+
+**Flujo Principal:**
+1. SPD se instala en entrada de institución educativa
+2. Se configura límite de 30 km/h en horario escolar (6am-6pm)
+3. Conductores ven su velocidad al aproximarse
+4. Quienes cumplen ven mensaje "GRACIAS" y cara feliz
+5. Quienes exceden ven "REDUZCA VELOCIDAD" en rojo
+6. Se registra reducción del 25% en velocidad promedio
+7. Accidentes en zona escolar disminuyen 40%
+
+**Valor Generado:** Protección de niños, cultura de seguridad
+
+---
+
+### CASO DE USO 2: Curva Peligrosa
+
+**Actor Principal:** Ingeniero de seguridad vial
+
+**Flujo Principal:**
+1. Historial muestra múltiples accidentes por exceso de velocidad en curva
+2. Se instala SPD 200m antes de la curva
+3. Panel muestra velocidad actual y límite de 50 km/h
+4. Conductores reducen velocidad al ver retroalimentación
+5. Se complementa con señalización de curva peligrosa
+6. SPD registra datos de cumplimiento semanal
+7. Accidentes en curva se reducen 60% en 6 meses
+
+**Valor Generado:** Prevención de accidentes, evidencia de efectividad
+
+---
+
+### CASO DE USO 3: Transición a Fotodetección
+
+**Actor Principal:** Gerente de tránsito municipal
+
+**Flujo Principal:**
+1. Zona tiene problemas crónicos de velocidad excesiva
+2. Se instala SPD en modo pedagógico puro (primeros 3 meses)
+3. Conductores se acostumbran a verificar su velocidad
+4. Se muestra ranking: "85% de conductores cumplen"
+5. Después de 3 meses, SPD se integra con cámara de fotodetección
+6. Quien excede umbral recibe advertencia visual
+7. Recidivistas son capturados por sistema de multas
+
+**Valor Generado:** Cambio cultural antes de sanción, mayor aceptación
+
+---
+
+### CASO DE USO 4: Zona de Obras Temporales
+
+**Actor Principal:** Supervisor de obra vial
+
+**Flujo Principal:**
+1. Se inician obras de mantenimiento en tramo de vía
+2. Se instala SPD portátil solar en entrada de zona de obra
+3. Se configura límite de 40 km/h para proteger trabajadores
+4. Panel muestra velocidad y mensaje "ZONA DE OBRAS"
+5. Trabajadores reportan que conductores reducen velocidad
+6. SPD registra datos de cumplimiento diario
+7. Al finalizar obra, se traslada SPD a siguiente ubicación
+
+**Valor Generado:** Protección de trabajadores, flexibilidad operativa
+
+---
+
+### CASO DE USO 5: Análisis de Efectividad
+
+**Actor Principal:** Analista de movilidad
+
+**Flujo Principal:**
+1. SPD lleva 6 meses operando en corredor vial
+2. Sistema ha almacenado datos de velocidad de 500,000 vehículos
+3. Análisis muestra velocidad promedio antes: 72 km/h
+4. Velocidad promedio actual: 58 km/h (19% reducción)
+5. Tasa de cumplimiento aumentó de 45% a 78%
+6. Datos respaldan ampliación de sistema a otras zonas
+7. Informe justifica inversión en seguridad vial
+
+**Valor Generado:** Toma de decisiones basada en datos, rendición de cuentas
+
+---
+
+## 12. Glosario
+
+| **Término** | **Definición** |
+|-------------|----------------|
+| **Radar Doppler** | Tecnología que mide velocidad mediante efecto Doppler de ondas de radio |
+| **K-band** | Banda de frecuencia radar (18-27 GHz), comúnmente 24.125 GHz |
+| **Retroalimentación** | Información devuelta al usuario sobre su comportamiento |
+| **Refuerzo positivo** | Recompensa o reconocimiento por comportamiento deseado |
+| **Norma social** | Comportamiento percibido como común o aceptado en grupo |
+| **Efecto halo** | Influencia de primera impresión en percepción posterior |
+| **LiFePO4** | Tipo de batería de litio-hierro-fosfato, segura y duradera |
+| **Modo portátil** | Unidad móvil que puede reubicarse fácilmente |
+| **Efecto persistente** | Mantenimiento del cambio de comportamiento más allá del punto de intervención |
+| **Recidivista** | Conductor que reincide en infracciones repetidamente |
+
+---
+
+*Documento generado bajo especificaciones técnicas del proyecto APP-CHIA-GIRARDOT*

@@ -1,0 +1,312 @@
+# CC-04: ECS / SOS - Sistema de Llamada de Emergencia
+
+## 1. Resumen Ejecutivo
+
+El Sistema de Llamada de Emergencia (ECS/Emergency Call System), también conocido como SOS, constituye un componente crítico dentro de la infraestructura de sistemas inteligentes de transporte (ITS). Este sistema permite a los usuarios de la vía establecer comunicación de voz bidireccional inmediata con los centros de control en situaciones de emergencia, accidentes, fallas mecánicas o cualquier evento que ponga en riesgo la seguridad vial.
+
+La capacidad de **Auxilio Inmediato al Usuario** garantiza que en momentos de crisis, los usuarios puedan solicitar asistencia médica, mecánica o de seguridad con un tiempo de respuesta mínimo. El sistema integra tecnologías de comunicación robustas, diseñadas para operar en condiciones ambientales adversas, asegurando disponibilidad 24/7/365.
+
+---
+
+## 2. Identificación del Sistema
+
+| **Atributo** | **Valor** |
+|--------------|-----------|
+| **COD** | CC-04 |
+| **Sigla** | ECS / SOS |
+| **Nombre Oficial** | Sistema de Llamada de Emergencia |
+| **Capacidad** | Auxilio Inmediato al Usuario: Capacidad de establecer un canal de voz crítico para asistencia en situaciones de crisis |
+
+---
+
+## 3. Descripción Funcional y Técnica
+
+### 3.1 Propósito del Sistema
+
+El ECS/SOS tiene como propósito fundamental proporcionar un mecanismo confiable y de fácil acceso para que los usuarios de la infraestructura vial puedan comunicarse directamente con el personal de operaciones y control durante emergencias. Este sistema actúa como el primer eslabón en la cadena de respuesta ante incidentes, permitiendo:
+
+- **Comunicación inmediata**: Conexión directa con el centro de control al presionar un botón.
+- **Geolocalización automática**: Identificación precisa del punto de emergencia.
+- **Calidad de audio superior**: Tecnología de cancelación de ruido para comunicación clara.
+- **Registro de eventos**: Almacenamiento de todas las llamadas para análisis posterior.
+
+### 3.2 Componentes Principales
+
+| **Componente** | **Descripción** |
+|----------------|-----------------|
+| **Cabina de Emergencia** | Unidad resistente ubicada en bordillo o arcén, equipada con botón de llamada, altavoz y micrófono |
+| **Unidad de Control Central** | Servidores y equipos de conmutación ubicados en el centro de control |
+| **Red de Comunicaciones** | Infraestructura de fibra óptica/cableado para transmisión de voz y datos |
+| **Software de Gestión** | Plataforma para monitoreo, registro y gestión de llamadas |
+| **Subsistema de Energía** | Baterías de respaldo y paneles solares (opcional) para operación autónoma |
+
+### 3.3 Arquitectura Técnica
+
+```
+┌─────────────────┐     ┌──────────────┐     ┌─────────────────┐
+│   Cabina SOS    │────▶│   Red de     │────▶│ Centro de       │
+│   (Usuario)     │◀────│   Comunic.   │◀────│ Control (PCU)   │
+└─────────────────┘     └──────────────┘     └─────────────────┘
+        │                                              │
+        └──────────────┬───────────────────────────────┘
+                       │
+              ┌────────▼────────┐
+              │  Sistema de     │
+              │  Registro y     │
+              │  Análisis       │
+              └─────────────────┘
+```
+
+### 3.4 Interfaces con Otros Sistemas
+
+- **Sistema de CCTV (CC-02)**: Activación automática de cámara más cercana.
+- **Sistema de Detección de Incidentes (CC-03)**: Correlación de eventos.
+- **Sistema de Gestión de Tráfico (CC-10)**: Información en tiempo real a paneles de mensaje variable.
+
+---
+
+## 4. Justificación Estratégica
+
+### 4.1 Importancia para la Seguridad Vial
+
+El sistema de llamada de emergencia representa una inversión estratégica fundamental en seguridad vial por las siguientes razones:
+
+1. **Reducción del Tiempo de Respuesta**: Disminuye significativamente el tiempo entre la ocurrencia de un incidente y la llegada de ayuda profesional.
+
+2. **Prevención de Fatalidades**: La atención médica temprana en accidentes de tránsito puede reducir la tasa de mortalidad hasta en un 40%.
+
+3. **Cumplimiento Normativo**: Alineación con estándares internacionales de infraestructura vial segura (ISO 14819, EN 12727).
+
+4. **Confianza del Usuario**: Incrementa la percepción de seguridad de los usuarios de la vía, fomentando su uso.
+
+### 4.2 Beneficios Económicos
+
+| **Beneficio** | **Impacto Estimado** |
+|---------------|----------------------|
+| Reducción de severidad de accidentes | 25-35% |
+| Optimización de recursos de emergencia | 20% |
+| Disminución de congestionamientos por incidentes | 30% |
+| Incremento en recaudo por uso de vía | 15% |
+
+### 4.3 Alineación con Objetivos de Desarrollo Sostenible
+
+- **ODS 3**: Salud y bienestar
+- **ODS 9**: Industria, innovación e infraestructura
+- **ODS 11**: Ciudades y comunidades sostenibles
+
+---
+
+## 5. Especificación Técnica
+
+| **Parámetro** | **Especificación** |
+|---------------|-------------------|
+| **Alcance de comunicación** | Hasta 5 km entre cabinas |
+| **Tiempo de establecimiento de llamada** | ≤ 5 segundos |
+| **Calidad de audio** | Ancha banda (WB), 16 kHz |
+| **Nivel de presión sonora** | ≥ 90 dB SPL a 1 metro |
+| **Resistencia al agua** | IP65 mínimo |
+| **Temperatura de operación** | -20°C a +60°C |
+| **Humedad relativa** | 0% a 95% sin condensación |
+| **Tiempo de respaldo de energía** | ≥ 72 horas |
+| **Vida útil estimada** | 10-15 años |
+| **Protocolo de comunicación** | SIP/RTP sobre IP o E1/T1 |
+| **Cumplimiento EMI/EMC** | EN 61000-6-2, EN 61000-6-4 |
+
+---
+
+## 6. Requerimientos Funcionales (RF)
+
+| **ID** | **Requerimiento** | **Descripción** | **Prioridad** |
+|--------|-------------------|-----------------|---------------|
+| **RF-04-01** | Llamada de emergencia | El sistema debe permitir iniciar una llamada de emergencia mediante un botón físico accesible y de fácil identificación | Crítica |
+| **RF-04-02** | Comunicación bidireccional | Debe soportar comunicación de voz full-duplex entre usuario y operador | Crítica |
+| **RF-04-03** | Identificación automática | Cada llamada debe transmitir automáticamente la identificación y ubicación GPS de la cabina | Crítica |
+| **RF-04-04** | Indicadores visuales y sonoros | La cabina debe disponer de LEDs indicadores de estado y tonos de confirmación | Alta |
+| **RF-04-05** | Registro de llamadas | Todas las llamadas deben ser grabadas y almacenadas con metadatos (hora, ubicación, duración) | Alta |
+| **RF-04-06** | Priorización de llamadas | El sistema debe permitir clasificar llamadas por nivel de prioridad (emergencia vs. información) | Media |
+| **RF-04-07** | Transferencia de llamadas | Permitir transferir llamadas entre operadores o a servicios externos (bomberos, policía, ambulance) | Media |
+| **RF-04-08** | Autodiagnóstico | El sistema debe realizar pruebas automáticas de funcionamiento y reportar fallas | Alta |
+| **RF-04-09** | Indicadores de ocupado | Mostrar estado de línea ocupada cuando el centro de control no pueda atender | Media |
+| **RF-04-10** | Accesibilidad | La interfaz debe ser accesible para personas con discapacidad (símbolos universales, audio) | Alta |
+
+---
+
+## 7. Requisitos No Funcionales (RNF)
+
+| **ID** | **Requisito** | **Descripción** | **Métrica** |
+|--------|---------------|-----------------|-------------|
+| **RNF-04-01** | Disponibilidad | El sistema debe estar operativo el 99.9% del tiempo | Uptime ≥ 99.9% |
+| **RNF-04-02** | Latencia | Tiempo máximo de respuesta desde que se presiona el botón | ≤ 3 segundos |
+| **RNF-04-03** | Escalabilidad | Capacidad de agregar nuevas cabinas sin rediseño | Hasta 500 cabinas |
+| **RNF-04-04** | Seguridad | Encriptación de comunicaciones y control de acceso | TLS 1.3 / AES-256 |
+| **RNF-04-05** | Resistencia ambiental | Operación bajo condiciones climáticas adversas | IP65, -20°C a +60°C |
+| **RNF-04-06** | Mantenibilidad | Facilidad para diagnóstico y reparación | MTTR ≤ 4 horas |
+| **RNF-04-07** | Usabilidad | Interfaz intuitiva que no requiera entrenamiento | Tiempo de aprendizaje ≤ 1 min |
+
+---
+
+## 8. Indicadores Clave de Desempeño (KPIs)
+
+| **ID** | **Indicador** | **Descripción** | **Fórmula/Métrica** | **Meta** | **Frecuencia** |
+|--------|---------------|-----------------|---------------------|----------|----------------|
+| **KPI-04-01** | Tiempo de Respuesta Promedio | Tiempo entre solicitud de llamada y atención por operador | (Σ Tiempo atención - Tiempo solicitud) / N llamadas | ≤ 15 segundos | Diario |
+| **KPI-04-02** | Tasa de Llamadas Atendidas | Porcentaje de llamadas exitosamente conectadas | (Llamadas atendidas / Llamadas totales) × 100 | ≥ 98% | Mensual |
+| **KPI-04-03** | Disponibilidad del Sistema | Porcentaje de tiempo operativo de cabinas | (Tiempo operativo / Tiempo total) × 100 | ≥ 99.5% | Mensual |
+| **KPI-04-04** | Tiempo de Resolución de Fallas | Tiempo promedio para restaurar una cabina fuera de servicio | (Σ Tiempo reparación) / N fallas | ≤ 4 horas | Mensual |
+| **KPI-04-05** | Satisfacción del Usuario | Nivel de satisfacción reportado por usuarios que utilizaron el sistema | Encuesta post-servicio (escala 1-5) | ≥ 4.2 | Trimestral |
+| **KPI-04-06** | Precisión de Geolocalización | Exactitud de la ubicación reportada por el sistema | Distancia entre ubicación real vs. reportada | ≤ 10 metros | Mensual |
+| **KPI-04-07** | Calidad de Audio (MOS) | Medida subjetiva de la calidad de la comunicación | Mean Opinion Score (1-5) | ≥ 4.0 | Mensual |
+| **KPI-04-08** | Tasa de Llamadas Falsas | Porcentaje de llamadas no relacionadas con emergencias reales | (Llamadas falsas / Llamadas totales) × 100 | ≤ 5% | Mensual |
+
+---
+
+## 9. Referencias de Mercado Internacional
+
+| **Fabricante** | **País** | **Modelo de Referencia** | **Características Destacadas** | **URL** |
+|----------------|----------|--------------------------|-------------------------------|---------|
+| **Siemens Mobility** | Alemania | SOS-IP Emergency Call | Integración completa con VMS y CCTV, certificación SIL 2 | https://www.mobility.siemens.com/global/en.html |
+| **Kapsch TrafficCom** | Austria | Emergency Call System ECS | Arquitectura IP nativa, geolocalización avanzada | https://www.kapsch.net/traffic |
+| **Indra Sistemas** | España | SICE Emergency Call | Amplia experiencia en LATAM, interfaz multilenguaje | https://www.indracompany.com/en |
+| **TCS (Tata Consultancy Services)** | India | ITS Emergency Response | Solución costo-efectiva, cloud-ready | https://www.tcs.com/ |
+| **Jenoptik** | Alemania | VEOS® Emergency | Tecnología óptica integrada, análisis de video | https://www.jenoptik.com/en |
+| **Efkon AG** | Austria | SOS Highway Emergency | Resistencia extrema a vandalismo, solución solar | https://www.efkon.com/en |
+
+---
+
+## 10. Proveedores en Colombia
+
+| **Empresa** | **Ciudad** | **Experiencia** | **Contacto/Web** |
+|-------------|------------|-----------------|------------------|
+| **Telnet S.A.** | Bogotá | 30+ años en telecomunicaciones y seguridad vial | https://www.telnetgroup.co |
+| **SITS S.A.S.** | Bogotá | Especialistas en ITS, CCTV y sistemas de emergencia | https://www.sits.com.co |
+| **Innovadataco** | Girardot | Consultoría e integración de sistemas ITS | https://innovadataco.com |
+| **IDT Ingeniería** | Medellín | Infraestructura de comunicaciones y centros de control | https://idt.com.co |
+
+---
+
+## 11. Casos de Uso
+
+### Caso de Uso 1: Accidente de Tránsito con Heridos
+
+**Actores**: Conductor lesionado, Operador de Control, Servicios de Emergencia
+
+**Descripción**: Un conductor pierde el control de su vehículo y sufre un accidente en una curva. El vehículo queda inhabilitado y el conductor presenta lesiones.
+
+**Flujo de Eventos**:
+1. El conductor accede a la cabina SOS más cercana (ubicada cada 2 km).
+2. Presiona el botón de emergencia rojo.
+3. El sistema establece conexión inmediata con el centro de control.
+4. Se transmite automáticamente la ubicación GPS (km 45+200).
+5. El operador visualiza la cámara CCTV correspondiente para evaluar la situación.
+6. El operador coordina despacho de ambulancia y grúa.
+7. Se activan paneles de mensaje variable para alertar a otros usuarios.
+8. La llamada queda registrada con audio, ubicación y tiempo exacto.
+
+**Resultado**: Atención médica llega en 12 minutos, reduciendo severidad de lesiones.
+
+---
+
+### Caso de Uso 2: Falla Mecánica en Zona de Alta Peligrosidad
+
+**Actores**: Conductor, Operador de Control, Servicio de Grúa
+
+**Descripción**: Un vehículo presenta falla mecánica en un túnel, generando riesgo de colisión múltiple.
+
+**Flujo de Eventos**:
+1. El conductor detecta humo saliendo del motor dentro del túnel.
+2. Detiene el vehículo en el hombro y activa luces de emergencia.
+3. Accede a la cabina SOS del túnel (instalada cada 250 metros).
+4. Comunica la situación al centro de control.
+5. El operador cierra temporalmente el carril afectado mediante señalización.
+6. Se despacha grúa con prioridad alta.
+7. Se monitorea mediante CCTV hasta la evacuación completa.
+
+**Resultado**: Se evita un accidente secundario. Tiempo de resolución: 45 minutos.
+
+---
+
+### Caso de Uso 3: Emergencia Médica Cardiaca
+
+**Actores**: Pasajero con emergencia médica, Operador de Control, Ambulancia
+
+**Descripción**: Un pasajero sufre un paro cardíaco en medio del corredor vial.
+
+**Flujo de Eventos**:
+1. El acompañante identifica la emergencia y busca ayuda.
+2. Localiza cabina SOS en el km 32+800.
+3. Inicia llamada de emergencia reportando paro cardíaco.
+4. El operador mantiene la línea abierta y proporciona instrucciones de RCP.
+5. Se despacha ambulancia con equipo de reanimación.
+6. Se coordina apertura de carril de contraflujo para ambulancia.
+7. El pasajero es estabilizado antes de la llegada de la ambulancia.
+
+**Resultado**: Sobrevida del paciente gracias a instrucciones telefónicas y respuesta rápida.
+
+---
+
+### Caso de Uso 4: Detección de Obstáculo por Deslizamiento
+
+**Actores**: Usuario de la vía, Operador de Control, Equipo de Mantenimiento
+
+**Descripción**: Un deslizamiento de tierra obstruye parcialmente la calzada durante temporada de lluvias.
+
+**Flujo de Eventos**:
+1. Un conductor transita y detecta material en la vía.
+2. Utiliza cabina SOS para reportar condición peligrosa.
+3. El operador verifica mediante cámaras CCTV el alcance del deslizamiento.
+4. Se cierra el carril afectado mediante señalización dinámica.
+5. Se despacha equipo de mantenimiento vial.
+6. Se emite alerta a usuarios mediante app móvil y VMS.
+7. Se monitorea la zona hasta la limpieza completa.
+
+**Resultado**: Se evitan accidentes por colisión con obstáculos. Tiempo de respuesta: 18 minutos.
+
+---
+
+### Caso de Uso 5: Vandalismo y Botón de Pánico
+
+**Actores**: Usuario en riesgo, Operador de Control, Policía de Carreteras
+
+**Descripción**: Un conductor es interceptado por sujetos sospechosos en el arcén.
+
+**Flujo de Eventos**:
+1. El conductor observa aproximación de vehículo sospechoso.
+2. Accede a cabina SOS y solicita asistencia policial.
+3. El operador mantiene línea abierta sin alertar a los sospechosos.
+4. Se envía patrulla de manera discreta.
+5. Se activa cámara CCTV para documentar la situación.
+6. La patrulla llega y disuade a los sospechosos.
+7. El usuario continúa viaje seguro.
+
+**Resultado**: Prevención de posible asalto o secuestro. Tiempo de respuesta policial: 8 minutos.
+
+---
+
+## 12. Glosario
+
+| **Término** | **Definición** |
+|-------------|----------------|
+| **ECS** | Emergency Call System - Sistema de Llamada de Emergencia |
+| **SOS** | Save Our Souls / Save Our Ship - Señal internacional de socorro |
+| **CCTV** | Closed Circuit Television - Circuito Cerrado de Televisión |
+| **VMS** | Variable Message Sign - Señal de Mensaje Variable |
+| **PCU** | Plaza de Cobro Unificada / Centro de Control |
+| **SIL** | Safety Integrity Level - Nivel de Integridad de Seguridad |
+| **SIP** | Session Initiation Protocol - Protocolo de Iniciación de Sesión |
+| **MTTR** | Mean Time To Repair - Tiempo Medio de Reparación |
+
+---
+
+## 13. Documentos de Referencia
+
+- ISO 14819: Traffic and Travel Information
+- EN 12727: Road transport and traffic telematics
+- NTC 5129: Sistemas de información vial
+- IEEE 1512: Common Traffic Incident Management Message Sets
+- Manual de Carreteras - Instituto Nacional de Vías (INVIAS)
+
+---
+
+*Documento generado: 2026-04-27*  
+*Versión: 1.0*  
+*Elaborado por: ZEUS Agente IA - Innovadataco*

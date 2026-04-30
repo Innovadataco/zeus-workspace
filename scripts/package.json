@@ -1,0 +1,9 @@
+{
+  "name": "zeus-google-connector",
+  "version": "1.0.0",
+  "description": "Google Workspace connector for ZEUS",
+  "main": "google-workspace-connector.js",
+  "dependencies": {
+    "googleapis": "^134.0.0"
+  }
+}

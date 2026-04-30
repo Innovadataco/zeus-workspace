@@ -1,0 +1,4 @@
+correcto en la carpeta están las fichas técnicas y estas fichas
+tienen al 42 deben clupir a estándar y el formato definido en el
+ITC-C-C-01. Esa estructura debe replicarse allá, es decir tenemos
+que usar el documento y llevar a esa nueva estructura, mentiendes.

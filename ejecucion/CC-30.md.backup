@@ -1,0 +1,221 @@
+# 8.1 CC-30: LHD (Detección de Incendio)
+
+## 8.1.1 Resumen Ejecutivo
+
+El componente **CC-30 LHD** constituye el sistema de detección temprana de incendios y condiciones térmicas anómalas del corredor vial Chía–Girardot, proporcionando capacidad de monitoreo continuo de temperatura a lo largo de toda la infraestructura crítica. Este subsistema habilita la detección proactiva de condiciones que pudieran desencadenar o propagar incendios en túneles, galerías, puentes, estaciones de peaje y áreas de servicio, permitiendo respuesta rápida que minimize daños a la infraestructura y garantice la seguridad de usuarios y operadores.
+
+La detección lineal de calor representa una tecnología probada en infraestructura crítica a nivel mundial, superando las limitaciones de los detectores puntuales tradicionales al proporcionar cobertura continua sin puntos ciegos. Mediante cable sensor termosensible distribuido a lo largo de las zonas protegidas, el sistema LHD puede detectar gradientes de temperatura, rate-of-rise (tasa de aumento), y temperaturas absolutas que indiquen condiciones de riesgo incipiente.
+
+La implementación de este sistema es crítica para la protección de activos de alta valor como túneles vehiculares (donde un incendio puede tener consecuencias catastróficas), salas de equipos eléctricos y de telecomunicaciones, estaciones de peaje, y áreas de servicio con alta concentración de usuarios. La integración con el Centro de Control y Operaciones (CCO) permite activación automática de sistemas de supresión, ventilación de emergencia, cierres de tráfico y coordinación con cuerpos de bomberos.
+
+---
+
+## 8.1.2 Identificación Del Componente De Campo
+
+| Campo | Valor |
+|-------|-------|
+| **COD** | CC-30 |
+| **Sigla (Estándar Internacional)** | LHD (Linear Heat Detection) |
+| **Nombre del Componente** | Sistema de Detección Lineal de Calor e Incendios |
+| **Capacidad Operativa Generada** | Detección Temprana de Incendios: Capacidad de monitoreo continuo de temperatura y detección temprana de condiciones de incendio en infraestructura crítica mediante sensores distribuidos, con activación automatizada de sistemas de respuesta y notificación al CCO. |
+
+---
+
+## 8.1.3 Descripción Funcional / Técnica
+
+### Alcance de la Solución
+
+El sistema LHD comprende una red de cables sensores termosensibles desplegados estratégicamente en las zonas de mayor riesgo del corredor: techos y paredes de túneles, ductos de cableado eléctrico, salas de equipos, estaciones de peaje, áreas de servicio, y puentes con infraestructura eléctrica. La solución integra unidades de control inteligentes que procesan las señales térmicas y generan alertas escalonadas según la severidad detectada.
+
+El subsistema opera las 24 horas del día, los 7 días de la semana, monitoreando temperatura a lo largo de cada metro de cable sensor. La tecnología puede ser de tipo analógico (continuous linear temperature sensing) que mide temperatura real en cada punto del cable, o de tipo digital (fixed temperature) que activa al alcanzar un umbral predefinido. Para el corredor Chía–Girardot se recomienda tecnología analógica que proporciona datos de temperatura continua permitiendo análisis de tendencias y detección de anomalías antes de que se conviertan en incendios.
+
+La arquitectura del sistema incluye: cables sensores desplegados en zonas críticas, unidades de control/módulos de interfaz ubicados en gabinetes técnicos, paneles de alarma con indicación visual y sonora, integración con el sistema SCADA del CCO, y conectividad con sistemas de supresión (sprinklers, FM-200), ventilación de emergencia, y señalización dinámica.
+
+---
+
+## 8.1.4 Justificación Estratégica
+
+La implementación de un sistema LHD robusto responde a la necesidad de proteger la infraestructura de alto valor y las vidas humanas en un corredor que incluye túneles de significativa longitud. Los incendios en túneles representan uno de los escenarios de mayor riesgo en infraestructura vial: la propagación rápida del humo, las temperaturas extremas que pueden alcanzar los 1,000°C, y la dificultad de evacuación hacen que la detección temprana sea absolutamente crítica.
+
+Los detectores de humo tradicionales tienen limitaciones severas en entornos de túneles por la ventilación longitudinal que dispersa el humo, la presencia de polvo que genera falsas alarmas, y los puntos ciegos entre detectores. El LHD proporciona cobertura continua sin interrupciones, detecta el calor generado en etapas incipientes de combustión antes de que haya humo visible, y es inmune al polvo y humedad ambiental del túnel.
+
+Además de túneles, el sistema protege salas de equipos eléctricos donde fallas en transformadores, UPS o tableros pueden iniciar incendios; estaciones de peaje con alta concentración de equipos electrónicos y personal; y áreas de servicio donde actividades de mantenimiento vehicular y manejo de combustibles presentan riesgos específicos.
+
+La integración con el CCO permite respuesta coordinada: ante detección de incendio, el sistema puede activar automáticamente sistemas de supresión, encender iluminación de emergencia, cerrar el túnel mediante señalización dinámica (ESS, VMS), iniciar secuencias de ventilación para control de humo, y notificar simultáneamente al operador del CCO y a cuerpos de bomberos. Esta respuesta automatizada reduce drásticamente el tiempo entre la ignición y la intervención, limitando daños y salvando vidas.
+
+---
+
+## 8.1.5 Especificación Técnica
+
+| Parámetro | Especificación Mínima |
+|-----------|----------------------|
+| **Tipo de sensor** | Cable lineal termosensible analógico (distribuido) o digital con múltiples umbrales |
+| **Longitud máxima por canal** | ≥ 4,000 metros (4 km) por unidad de control |
+| **Resolución espacial** | ≤ 1 metro (localización precisa de punto de alarma) |
+| **Rango de temperatura operativo** | -30°C a +85°C (ambiente); detección configurable: 40°C a 85°C |
+| **Precisión de temperatura** | ≤ ±1°C (sistemas analógicos) |
+| **Tasa de aumento (rate-of-rise)** | Detectable: incremento ≥ 2°C/minuto configurable |
+| **Tiempo de respuesta** | Detección de alarmas en ≤ 10 segundos desde condición de umbral |
+| **Niveles de alarma** | Mínimo 4 niveles: Precaución, Alerta, Alarma, Emergencia |
+| **Protección del cable** | Funda de acero inoxidable o polímero reforzado, IP67 mínimo |
+| **Resistencia mecánica** | Resistencia a tracción ≥ 200 N, resistencia a aplastamiento ≥ 500 N/cm |
+| **Compatibilidad electromagnética** | Inmunidad conforme IEC 61000-6-2, emisiones IEC 61000-6-4 |
+| **Alimentación** | 24 VDC con respaldo UPS (autonomía ≥ 2 horas) |
+| **Consumo energético** | ≤ 10W por unidad de control en operación normal |
+| **Comunicación** | Ethernet TCP/IP, Modbus TCP, protocolo estándar para integración CCO |
+| **Interfaces de salida** | Relés secos programables (mínimo 8), 4-20 mA para sistemas legacy |
+| **Ciberseguridad** | Cifrado TLS 1.3 en comunicaciones, autenticación de dispositivos, logging de eventos |
+| **Certificación** | UL 521 (Heat Detectors), EN 54-5 (Fire Detection), FM Approved |
+| **Vida útil del sensor** | ≥ 15 años en condiciones normales de operación |
+| **Mantenimiento** | Autodiagnóstico continuo, calibración automática, monitoreo de integridad del cable |
+| **Instalación** | Soportes cada 300 mm, trayectoria continua sin interrupciones, soportes anti-vibración |
+| **Display local** | Pantalla LCD con temperatura actual por zona, estado de alarmas, y menú de configuración |
+| **Registro histórico** | Almacenamiento local ≥ 1 año de datos de temperatura y eventos |
+
+---
+
+## 8.1.6 Requerimientos Funcionales (RF)
+
+| ID | Nombre | Descripción Funcional / Técnica | Justificación Estratégica |
+|----|--------|--------------------------------|---------------------------|
+| **RF-01** | Detección Continua de Temperatura 24/7 | El sistema debe monitorear temperatura de forma continua a lo largo de todo el cable sensor las 24 horas del día, los 7 días de la semana, sin interrupciones. Cada metro del cable debe reportar temperatura actualizada cada 10 segundos como mínimo. La operación debe incluir autodiagnóstico de integridad del cable (rotura, cortocircuito). | Los incendios pueden iniciar en cualquier momento y propagarse extremadamente rápido. Un sistema que deje puntos sin monitoreo o tenga ventanas de tiempo sin actualización podría fallar en detectar condiciones críticas. La continuidad operativa es mandatoria para sistemas de protección contra incendios. |
+| **RF-02** | Localización Precisa del Evento Térmico | El sistema debe localizar con precisión de ≤ ±1 metro el punto exacto donde se detecta condición de alarma (temperatura umbral excedido o rate-of-rise anómalo). La ubicación debe reportarse en formato de metros desde el inicio del cable, y debe ser visualizable en el mapa GIS del CCO con indicación de zona/túnel/kilómetro. | En túneles de varios kilómetros de longitud o instalaciones extensas, conocer que "hay incendio en el túnel" no es suficiente. La localización precisa permite a equipos de emergencia dirigirse directamente al punto del evento sin perder tiempo valioso en búsqueda, reduciendo drásticamente el tiempo de respuesta. |
+| **RF-03** | Alarma por Temperatura Umbral y Rate-of-Rise | El sistema debe generar alarmas configurables por: (a) temperatura absoluta excediendo umbrales programables (ej. 60°C, 70°C), y (b) tasa de aumento de temperatura excediendo gradiente configurable (ej. 5°C/minuto). Los umbrales deben ser configurables por zonas y horarios. | Diferentes escenarios requieren diferentes estrategias de detección. Un fuego lento (combustión lenta de cableado) genera aumento gradual de temperatura detectable por rate-of-rise. Un incendio rápido supera umbral absoluto rápidamente. La flexibilidad de configuración permite adaptar el sistema a cada zona según su riesgo específico. |
+| **RF-04** | Niveles Escalonados de Alarma | El sistema debe implementar mínimo 4 niveles de alerta: (1) Precaución (temperatura elevada pero dentro de rango), (2) Alerta (aproximación a condición crítica), (3) Alarma (condición de riesgo confirmada), y (4) Emergencia (temperatura extrema, acción inmediata requerida). Cada nivel debe activar acciones específicas programables. | No toda condición térmica anómala es un incendio. Los niveles escalonados permiten respuesta proporcional: una alerta temprana puede activar monitoreo intensivo, mientras que una emergencia activa supresión automática y evacuación. Esto evita respuestas desproporcionadas y costos por falsas alarmas. |
+| **RF-05** | Integración con Sistemas de Supresión | El sistema debe integrarse mediante relés programables y protocolos estándar con sistemas de supresión de incendios: sistemas de rociadores (sprinklers), agentes limpios (FM-200, Novec 1230), espuma, o sistemas de agua nebulizada. Debe permitir configuración de activación automática por nivel de alarma y confirmación manual desde CCO. | La detección sin supresión solo alerta sin controlar el incendio. En túneles y salas de equipos, los primeros minutos son críticos para evitar propagación. La integración permite respuesta automática inmediata mientras llegan equipos de bomberos, conteniendo el fuego en su fase incipiente. |
+| **RF-06** | Integración con Ventilación de Emergencia | El sistema debe integrarse con los sistemas de ventilación de túneles para activar secuencias de control de humo ante detección de incendio. Debe permitir control direccional para mantener humo alejado de zonas de evacuación, y coordinar velocidad de ventilación según ubicación del fuego detectado. | En incendios de túnel, el humo mata más que el fuego. La coordinación LHD-SEM permite estrategias de control de humo que protegen a usuarios en evacuación y a equipos de emergencia. Sin esta integración, la ventilación podría empujar humo hacia zonas ocupadas en lugar de extraerlo. |
+| **RF-07** | Visualización en CCO con Mapa Térmico | El sistema debe transmitir datos de temperatura en tiempo real al CCO, permitiendo visualización en mapa GIS con representación de perfil térmico a lo largo del cable. Debe mostrar temperaturas actuales, tendencias históricas, ubicación de alarmas activas, y estado de integridad del sistema. Debe permitir exportación de datos para análisis. | El operador del CCO necesita situational awareness completa. Un mapa térmico permite identificar patrones anómalos ("hot spots" recurrentes) que podrían indicar problemas incipientes antes de que activen alarmas. La visualización intuitiva reduce tiempo de interpretación y mejora toma de decisiones. |
+| **RF-08** | Comunicación de Alarmas Multi-Canal | El sistema debe generar notificaciones por múltiples canales ante condiciones de alarma: dashboard del CCO con alerta visual/sonora, correo electrónico a operadores y personal de emergencia, SMS a responsables, notificación push a aplicaciones móviles autorizadas, y señales de relé para integración con sistemas de audio/megafonía. | En emergencias, cada segundo cuenta. La redundancia de canales de comunicación asegura que la alerta llegue independientemente de condiciones puntuales (operador no viendo pantalla, falla de un canal). La notificación múltiple permite respuesta simultánea desde diferentes frentes. |
+| **RF-09** | Autodiagnóstico y Supervisión de Integridad | El sistema debe realizar autodiagnóstico continuo que detecte: rotura del cable sensor, cortocircuito, falla de comunicación, falla de alimentación, y desviación de calibración. Debe generar alerta de falla técnica (trouble) diferenciada de alarma de incendio. Debe reportar estado de salud del sistema al CCO periódicamente. | Un sistema de detección de incendios fallido proporciona falsa sensación de seguridad. Sin supervisión de integridad, una rotura del cable podría dejar una zona completamente desprotegida sin que nadie lo sepa. El autodiagnóstico garantiza que el sistema está operativo y alerta ante necesidad de mantenimiento. |
+| **RF-10** | Registro Histórico y Análisis de Tendencias | El sistema debe almacenar histórico de datos de temperatura por punto del cable con resolución temporal de 1 minuto, mínimo por 1 año. Debe permitir generación de gráficos de tendencias, identificación de "hot spots" recurrentes, análisis de comportamiento térmico estacional, y exportación de datos para análisis predictivo de fallas. | Los datos históricos permiten transición de mantenimiento reactivo a predictivo. Un "hot spot" recurrente podría indicar sobrecarga en equipo eléctrico, degradación de aislamiento, o problemas de ventilación. La detección predictiva permite intervención antes de que ocurra un incendio, evitando daños costosos. |
+
+---
+
+## 8.1.7 Requisitos No Funcionales (RNF)
+
+| ID | Nombre | Descripción | Justificación |
+|----|--------|-------------|---------------|
+| **RNF-01** | Disponibilidad ≥ 99.9% | El sistema LHD en su conjunto (sensores, unidades de control, comunicaciones) debe mantener disponibilidad operativa igual o superior al 99.9% medido mensualmente, equivalente a máximo 43 minutos de indisponibilidad por mes. Esto incluye redundancia en componentes críticos y respaldo energético. | La indisponibilidad del sistema de detección de incendios deja la infraestructura crítica sin protección durante ese tiempo. Dado que un incendio puede propagarse de manera catastrófica en minutos, cualquier ventana de tiempo sin cobertura representa riesgo inaceptable para vidas e infraestructura. |
+| **RNF-02** | Tiempo de Respuesta de Detección ≤ 10 Segundos | El tiempo entre el desarrollo de una condición que excede umbrales configurados y la generación de alarma en la unidad de control debe ser menor o igual a 10 segundos. La propagación de la alarma desde el controlador hasta el CCO debe ser adicionalmente menor a 2 segundos. | Los incendios en túneles y salas de equipos se propagan exponencialmente rápido. Un retraso de minutos en detección puede significar la diferencia entre un evento controlable y una catástrofe. Los 10 segundos representan el estándar de la industria para sistemas de misión crítica. |
+| **RNF-03** | Resistencia Ambiental en Túneles | Los cables sensores y unidades de control deben operar en condiciones de túneles vehiculares: temperaturas -10°C a +50°C ambiente, humedad hasta 95% RH, presencia de polvo, vibraciones de tráfico pesado, gases de escape vehicular (NOx, COx, hidrocarburos), y exposición ocasional a salinidad. Cumplimiento IP67 mínimo. | Los túneles son ambientes hostiles para equipos electrónicos. La combinación de humedad, polvo y gases corrosivos puede degradar sensores rápidamente. Sin protección adecuada, el sistema fallaría frecuentemente generando falsas alarmas o pérdida de cobertura, comprometiendo la seguridad. |
+| **RNF-04** | Inmunidad a Falsas Alarmas | El sistema debe implementar algoritmos de filtrado y confirmación que minimicen falsas alarmas por condiciones ambientales normales: variaciones de temperatura estacional, calor de vehículos en tráfico denso, condensación transitoria, o radiación solar en accesos de túneles. Tasa de falsas alarmas objetivo: < 1 por mes por canal. | Las falsas alarmas frecuentes generan fatiga en operadores ("efecto niño que grita lobo"), desconfianza en el sistema, y costos por activación innecesaria de equipos de emergencia. En el peor caso, pueden causar que el operador ignore una alarma real, con consecuencias potencialmente fatales. |
+| **RNF-05** | Ciberseguridad y Protección de Datos | El sistema debe implementar cifrado TLS 1.3 para todas las comunicaciones de red, autenticación multifactor para acceso administrativo, logging de auditoría de todos los cambios de configuración, segmentación VLAN, y mecanismos de detección de intrusiones. Debe cumplir con normativas de ciberseguridad crítica. | Un ataque cibernético al sistema LHD podría desactivar la detección de incendios o generar falsas alarmas masivas para distraer operadores durante otro incidente. La protección de este sistema es tan crítica como la protección física, dado que un incendio desencadenado o no detectado por sabotaje electrónico tiene el mismo efecto devastador. |
+| **RNF-06** | Ciclo de Vida ≥ 15 Años | Los componentes del sistema deben tener vida útil proyectada mínima de 15 años bajo condiciones ambientales del corredor, con soporte técnico, repuestos y actualizaciones de firmware garantizados por el fabricante durante ese período. El cable sensor debe tener garantía de funcionamiento ≥ 10 años. | Los proyectos de infraestructura vial operan en horizontes de 25-30 años. Reemplazos frecuentes del sistema de detección de incendios generan costos recurrentes y requieren cierres parciales de túneles para instalación, afectando operación del corredor. La durabilidad es esencial para ROI del proyecto. |
+| **RNF-07** | Facilidad de Mantenimiento y Calibración | El sistema debe soportar calibración automática sin intervención humana. Las unidades de control deben permitir extracción e instalación en caliente (hot-swap) para mantenimiento sin interrumpir cobertura de zonas críticas. Debe incluir diagnóstico remoto completo para minimizar visitas a campo. | Los túneles y salas de equipos son ubicaciones de difícil acceso. Cada visita de mantenimiento implica coordinación logística compleja y potencialmente cierres parciales. La capacidad de diagnóstico y mantenimiento remoto reduce costos operativos y minimiza interrupciones del servicio. |
+
+---
+
+## 8.1.8 Indicadores Clave De Rendimiento (KPIs)
+
+| ID | Indicador | Descripción | Meta | Frecuencia |
+|----|-----------|-------------|------|------------|
+| **KPI-01** | Disponibilidad | Tiempo operativo del sistema LHD | ≥ 99.9% | Mensual |
+| **KPI-02** | Tiempo de Detección | Latencia entre condición de incendio y alarma activada | ≤ 10 segundos | Continua |
+| **KPI-03** | Exactitud de Localización | Precisión en metros de la ubicación reportada del evento | ≤ ±1 metro | Por evento |
+| **KPI-04** | Falsas Alarmas | Número de alarmas sin condición real de incendio | < 1 por mes | Mensual |
+| **KPI-05** | Cobertura del Sistema | Porcentaje de longitud de túneles/áreas críticas con cobertura LHD | 100% | Trimestral |
+| **KPI-06** | Tiempo de Reparación | Tiempo medio para restaurar servicio ante falla (MTTR) | ≤ 4 horas | Por incidente |
+| **KPI-07** | Detección Temprana | Porcentaje de eventos térmicos detectados en fase incipiente | ≥ 95% | Anual |
+
+---
+
+## 8.1.9 Referencias De Mercado
+
+### Fabricantes Internacionales
+
+| Fabricante | País | Especialidad | Modelos de Referencia | Web |
+|------------|------|--------------|----------------------|-----|
+| **AP Sensing** | Alemania | Sensor distribuido fibra óptica | N45 Series | https://www.apsensing.com |
+| **Siemens** | Alemania | Detección lineal de calor | FDA221 / FDA241 | https://www.siemens.com |
+| **Honeywell** | USA | LHD Digital | HMS Series | https://www.honeywell.com |
+| **Protectowire** | USA | Cable termosensible analógico | PHSC-190-EPC | https://www.protectowire.com |
+| **Bandweaver** | UK | Sensor distribuido fibra óptica | FireLaser II | https://www.bandweaver.com |
+| **NKT Photonics** | Dinamarca | DTS avanzado | HDSI Series | https://www.nktphotonics.com |
+
+---
+
+## 8.1.10 Proveedores Colombia
+
+| Empresa | Ciudad | Especialidad | Web |
+|---------|--------|--------------|-----|
+| **Bosch Security Colombia** | Bogotá | Sistemas de detección de incendio | https://www.boschsecurity.com |
+| **Siemens Colombia** | Bogotá | Detección lineal y sistemas integrados | https://www.siemens.com.co |
+| **Johnson Controls** | Bogotá | Sistemas de supresión y detección | https://www.johnsoncontrols.com |
+| **Grupo CDS** | Medellín | Protección contra incendios industrial | https://www.grupocds.com.co |
+
+---
+
+## 8.1.11 Casos de Uso
+
+### CU-01: Detección Temprana en Túnel
+**Actor Principal:** Operador del CCO / Bomberos  
+**Precondición:** Sistema LHD monitoreando túnel de 3 km de longitud  
+**Flujo Principal:**
+1. Vehículo de carga con sobrecalentamiento de frenos ingresa al túnel
+2. Sistema LHD detecta aumento de temperatura anormal en punto específico (km 1.5)
+3. Se activa alarma de "Precaución" en CCO con ubicación exacta
+4. Temperatura continúa aumentando (rate-of-rise > 5°C/minuto)
+5. Sistema escala a "Alerta" y notifica a operador y bomberos
+6. Se activa señalización de túnel para detener tráfico y evacuar
+7. Bomberos llegan al punto exacto antes de ignición completa
+8. Se controla situación sin daños mayores ni víctimas
+
+**Resultado:** Prevención de incendio catastrófico en túnel mediante detección temprana y localización precisa.
+
+### CU-02: Protección de Sala de Equipos Eléctricos
+**Actor Principal:** Técnico de Mantenimiento / Operador CCO  
+**Precondición:** Sala de equipos con transformadores y UPS protegida por LHD  
+**Flujo Principal:**
+1. Sistema LHD detecta "hot spot" recurrente en área de transformador T3
+2. Datos históricos muestran aumento gradual de temperatura últimas 2 semanas
+3. Se genera alerta de mantenimiento predictivo
+4. Técnico inspecciona y encuentra ventilador obstruido
+5. Se limpia sistema de ventilación y se monitorea comportamiento
+6. Temperatura regresa a niveles normales
+7. Se evita falla catastrófica del transformador
+
+**Resultado:** Prevención de falla eléctrica mayor mediante análisis predictivo de datos térmicos.
+
+### CU-03: Coordinación con Ventilación de Emergencia
+**Actor Principal:** Operador del CCO / Sistema SEM  
+**Precondición:** Incendio de vehículo detectado en túnel  
+**Flujo Principal:**
+1. LHD detecta incendio en km 2.3 del túnel Tubo Norte
+2. Sistema activa automáticamente Alarma Nivel 4 (Emergencia)
+3. Se coordina automáticamente con sistema SEM (ventilación)
+4. Ventilación se activa en modo extracción direccional
+5. Humo es dirigido hacia salida km 3.0, lejos de zonas de evacuación
+6. Señalización de túnel indica rutas de evacuación seguras
+7. Bomberos ingresan por km 1.5 con visibilidad clara
+
+**Resultado:** Control efectivo del humo permitiendo evacuación segura y acceso de emergencia.
+
+### CU-04: Falsa Alarma por Condición Ambiental
+**Actor Principal:** Sistema LHD / Operador CCO  
+**Precondición:** Configuración de algoritmos de filtrado  
+**Flujo Principal:**
+1. Tráfico denso en túnel genera calor acumulado por congestión
+2. Temperatura ambiente aumenta 3°C sobre lo normal
+3. Sistema LHD con algoritmos de filtrado identifica patrón de tráfico
+4. No se genera falsa alarma por calor de vehículos
+5. Sistema registra evento como "condición ambiental normal"
+6. Operador CCO no es interrumpido innecesariamente
+
+**Resultado:** Reducción de falsas alarmas mediante inteligencia del sistema, manteniendo confianza del operador.
+
+### CU-05: Mantenimiento Predictivo basado en Tendencias
+**Actor Principal:** Ingeniero de Mantenimiento / Analista de Datos  
+**Precondición:** Datos históricos de temperatura de 12 meses disponibles  
+**Flujo Principal:**
+1. Análisis de datos revela "hot spot" recurrente en mismo punto de cableado
+2. Tendencia muestra degradación progresiva del aislamiento
+3. Se programa mantenimiento programado antes de falla
+4. Se reemplaza sección de cableado con degradación térmica
+5. Después del reemplazo, temperatura regresa a niveles normales
+6. Se evita incendio eléctrico potencial
+
+**Resultado:** Transición exitosa de mantenimiento reactivo a predictivo, previniendo incendios antes de que ocurran.
+
+---
+
+**InnovaDataCO SAS** | **Fecha:** Abril 2026 | Documento generado bajo estándares ITS_CC-30

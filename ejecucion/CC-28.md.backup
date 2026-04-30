@@ -1,0 +1,211 @@
+# 8.28 CC-28: EMS (Sistema de Gestión Energética)
+
+## 8.28.1 Resumen Ejecutivo
+
+El componente **CC-28 EMS** (Energy Management System) constituye la plataforma inteligente de gestión, monitoreo y optimización energética del corredor vial Chía–Girardot, proporcionando visibilidad integral del consumo eléctrico, generación distribuida y eficiencia operativa de todos los subsistemas ITS. Este sistema habilita la transición hacia una infraestructura sostenible, reduciendo costos operativos y la huella de carbono mediante análisis predictivo y automatización de decisiones energéticas.
+
+La gestión energética inteligente representa un pilar estratégico para la operación sostenible del corredor, permitiendo al Centro de Control y Operaciones (CCO) supervisar en tiempo real el estado energético de 306 km de infraestructura, detectar anomalías de consumo, predecir demandas y coordinar respuestas ante contingencias eléctricas.
+
+La integración de tecnologías como IoT, analítica avanzada, machine learning y automatización garantiza operatividad continua con máxima eficiencia energética.
+
+---
+
+## 8.28.2 Identificación Del Componente De Campo
+
+| Campo | Valor |
+|-------|-------|
+| **COD** | CC-28 |
+| **Sigla (Estándar Internacional)** | EMS |
+| **Nombre del Componente** | Sistema de Gestión Energética |
+| **Capacidad Operativa Generada** | Eficiencia Energética: Capacidad de monitorear, controlar y optimizar el consumo energético del corredor con análisis predictivo y automatización de decisiones. |
+
+---
+
+## 8.28.3 Descripción Funcional / Técnica
+
+### Alcance de la Solución
+
+El sistema EMS comprende una plataforma software desplegada en el Centro de Control y Operaciones, conectada mediante red de comunicaciones a medidores inteligentes, sensores IoT y sistemas de generación distribuida (solar, respaldo) a lo largo del corredor. La solución integra funcionalidades de monitoreo en tiempo real, historización de datos, análisis de patrones de consumo, detección de anomalías, generación de alertas y automatización de respuestas.
+
+El subsistema opera las 24 horas del día, los 7 días de la semana, recolectando datos de consumo eléctrico de cámaras CCTV, paneles de mensajes variables (PMV), controladores semafóricos, sistemas de peaje, iluminación de túneles y equipos de comunicaciones. La plataforma utiliza algoritmos de machine learning para identificar patrones de consumo anómalos, predecir demandas futuras y optimizar la operación de generación distribuida.
+
+La arquitectura permite la integración con sistemas de tarificación eléctrica dinámica, ajustando el consumo de cargas no críticas durante períodos de costos elevados.
+
+---
+
+## 8.28.4 Justificación Estratégica
+
+La implementación de un sistema de gestión energética avanzado responde a la necesidad de controlar y reducir los costos operativos del corredor, donde el consumo eléctrico representa uno de los mayores gastos recurrentes. La visibilidad en tiempo real del consumo energético permite identificar ineficiencias, detectar equipos con fallas incipientes (a través de análisis de firma eléctrica) y tomar decisiones basadas en datos.
+
+La capacidad de monitoreo distribuido reduce los tiempos de detección de fallos eléctricos, optimiza la asignación de recursos de mantenimiento y genera reportes de cumplimiento normativo ambiental. La integración con sistemas de generación solar y baterías permite maximizar el uso de energía renovable.
+
+La arquitectura de EMS garantiza escalabilidad para incorporar nuevos puntos de medición sin rediseño de la infraestructura, interoperabilidad con protocolos estándar de la industria.
+
+---
+
+## 8.28.5 Especificación Técnica
+
+| Parámetro | Especificación Mínima |
+|-----------|----------------------|
+| **Resolución de medición** | Mínimo 0.1% de precisión en medidores de energía |
+| **Frecuencia de muestreo** | Mínimo 1 lectura cada 15 segundos para parámetros críticos |
+| **Retención histórica** | Mínimo 5 años de datos horarios, datos en tiempo real ≥ 90 días |
+| **Capacidad de puntos** | Mínimo 10,000 puntos de medición escalables |
+| **Protocolos de comunicación** | Modbus TCP/RTU, IEC 61850, DNP3, MQTT, REST API |
+| **Interfaz de usuario** | Web responsive, dashboards configurables, mapa GIS integrado |
+| **Algoritmos de análisis** | Machine learning para detección de anomalías y predicción de demanda |
+| **Ciberseguridad** | Cifrado TLS 1.3, autenticación multifactor, roles granulares, audit logs |
+| **Capacidad de integración** | APIs REST/SOAP, webhooks, exportación CSV/JSON/XML |
+| **Arquitectura** | Cloud-native o on-premise con redundancia activa |
+| **Tiempo de respuesta** | Dashboard en tiempo real con latencia < 5 segundos |
+| **Reportes** | Automatizados (PDF, Excel) con scheduling configurable |
+| **Base de datos** | Time-series database optimizada para datos energéticos |
+| **Alertas** | Multi-canal (email, SMS, push, integración SCADA) |
+| **Gestión de activos** | Inventario de equipos con tracking de eficiencia energética |
+| **Tarificación dinámica** | Soporte para múltiples estructuras tarifarias y períodos |
+| **Eficiencia energética** | Identificación automática de oportunidades de ahorro |
+
+---
+
+## 8.28.6 Requerimientos Funcionales (RF)
+
+| ID | Nombre | Descripción Funcional / Técnica | Justificación Estratégica |
+|----|--------|--------------------------------|---------------------------|
+| **RF-01** | Monitoreo en Tiempo Real 24/7 | El sistema debe proporcionar monitoreo continuo del consumo energético de todos los equipos ITS, actualizando dashboards en tiempo real con latencia máxima de 5 segundos entre evento en campo y visualización CCO. | La gestión energética efectiva requiere visibilidad inmediata. Cualquier demora en detección de anomalías puede resultar en costos elevados o fallos operativos. |
+| **RF-02** | Medición Granular por Equipo | El sistema debe permitir medición individualizada de consumo por cada equipo crítico (cámara, PMV, controlador) y agregación por subsistemas con capacidad de drill-down desde vista general hasta dispositivo específico. | La granularidad permite identificar equipos ineficientes o con fallas incipientes, y asignar costos energéticos por subsistema para análisis de rentabilidad. |
+| **RF-03** | Detección de Anomalías con ML | El sistema debe utilizar algoritmos de machine learning para identificar patrones anómalos de consumo: equipos consumiendo más/menos de lo esperado, fugas eléctricas, ciclos de encendido/apagado irregulares. Debe generar alertas con nivel de confianza. | La detección temprana de anomalías permite mantenimiento predictivo, evitando fallas catastróficas y reduciendo consumo por equipos defectuosos. |
+| **RF-04** | Predicción de Demanda | El sistema debe predecir demanda energética futura basada en históricos, patrones estacionales, eventos programados y condiciones climáticas. Las predicciones deben tener horizonte de 24 horas a 1 mes con precisión ≥ 85%. | La predicción de demanda permite negociación de tarifas eléctricas, planificación de mantenimiento en horas valle, y dimensionamiento adecuado de sistemas de respaldo. |
+| **RF-05** | Gestión de Generación Distribuida | El sistema debe monitorear y controlar sistemas de generación distribuida (paneles solares, baterías), optimizando uso de energía renovable, gestionando carga/descarga de baterías, y decidindo automáticamente entre red solar/batería/red eléctrica según costos. | La integración de renovables reduce costos operativos y huella de carbono, alineándose con compromisos de sostenibilidad. |
+| **RF-06** | Tarificación Dinámica y Costos | El sistema debe calcular costos energéticos en tiempo real considerando estructura tarifaria vigente, períodos horarios, cargos por demanda, y generación propia. Debe generar reportes de costos por subsistema, ubicación y período. | La visibilidad de costos en tiempo real permite decisiones operativas informadas y evaluación de ROI de medidas de eficiencia. |
+| **RF-07** | Control Automatizado de Cargas | El sistema debe permitir programar acciones automatizadas: apagar equipos no críticos durante períodos de costo alto, reducir brillo de PMV en horas valle, sincronizar carga de baterías con horas de menor tarifa. Las acciones deben ser reversibles. | La automatización maximiza ahorros sin intervención humana constante, operando 24/7 con lógica predefinida. |
+| **RF-08** | Reportes de Eficiencia y Sostenibilidad | El sistema debe generar reportes de eficiencia energética, huella de carbono, comparativos de consumo período a período, y benchmarking entre ubicaciones. Los reportes deben cumplir estándares de reportes de sostenibilidad (GRI, SASB). | Los reportes de sostenibilidad son requeridos por inversionistas, reguladores y certificaciones ambientales. |
+| **RF-09** | Integración con BMS y Sistemas de Edificio | El sistema debe integrar con Building Management Systems (BMS) de instalaciones del CCO, peajes y túneles, coordinando gestión energética de infraestructura física con equipos ITS. | La coordinación edificio-equipos permite optimización holística del consumo en instalaciones integradas. |
+| **RF-10** | Gestión de Alarmas Energéticas | El sistema debe generar alarmas ante condiciones críticas: falla de alimentación principal, activación de respaldo, consumo excesivo, temperatura anormal en equipos, caída de generación solar. Las alarmas deben clasificar severidad y sugerir acciones. | La gestión proactiva de alarmas evita daños a equipos, asegura continuidad operativa, y minimiza costos por fallas eléctricas. |
+
+---
+
+## 8.28.7 Requisitos No Funcionales (RNF)
+
+| ID | Nombre | Descripción | Justificación |
+|----|--------|-------------|---------------|
+| **RNF-01** | Precisión de Medición | Medidores con precisión ≥ 0.1%, calibración anual, trazabilidad a estándares nacionales de metrología. | La precisión es fundamental para facturación, identificación de pérdidas, y cálculos de eficiencia. |
+| **RNF-02** | Disponibilidad del Sistema | Disponibilidad ≥ 99.9% para plataforma EMS, redundancia de servidores, backup de datos de medición. | La pérdida de visibilidad energética puede resultar en costos no detectados o fallas operativas. |
+| **RNF-03** | Ciberseguridad de Infraestructura Eléctrica | Aislamiento de red de medición eléctrica, cifrado de comunicaciones, autenticación de dispositivos, protección contra manipulación de medidores. | Los sistemas de energía son objetivos de ataques que buscan interrumpir operación o manipular facturación. |
+| **RNF-04** | Escalabilidad de Medición | Capacidad de agregar nuevos puntos de medición sin rediseño, auto-descubrimiento de dispositivos, plantillas de configuración. | El corredor puede expandirse o requerir mayor granularidad de medición; el sistema debe acompañar el crecimiento. |
+| **RNF-05** | Cumplimiento Normativo Eléctrico | Cumplimiento con Código Eléctrico Colombiano (RETIE), regulación de servicios públicos, estándares IEEE para medición. | El incumplimiento puede resultar en sanciones y problemas de legalidad de las mediciones. |
+| **RNF-06** | Interoperabilidad con Utilities | Compatibilidad con protocolos de empresas de energía para telemetría, recepción de señales de demanda respuesta, y facturación electrónica. | La interoperabilidad con utilities habilita programas de demanda respuesta que pueden reducir costos significativamente. |
+| **RNF-07** | Tolerancia Ambiental | Medidores y equipos de campo operando en rango -30°C a +60°C, protección IP65, inmunidad a interferencias electromagnéticas de tráfico. | El corredor atraviesa zonas con condiciones climáticas extremas; los equipos de medición deben operar confiablemente. |
+
+---
+
+## 8.28.8 Indicadores Clave De Rendimiento (KPIs)
+
+| ID | Indicador | Descripción | Meta | Frecuencia |
+|----|-----------|-------------|------|------------|
+| **KPI-01** | Consumo Específico | kWh por km de corredor | Reducir 5% anual | Mensual |
+| **KPI-02** | Factor de Carga | % de uso de capacidad contratada | ≥ 75% | Mensual |
+| **KPI-03** | Energía Renovable | % de consumo cubierto por solar | ≥ 20% | Mensual |
+| **KPI-04** | Anomalías Detectadas | Desviaciones de consumo identificadas por ML | ≥ 95% precisión | Mensual |
+| **KPI-05** | Precisión de Predicción | Error de forecast de demanda | < 10% | Mensual |
+| **KPI-06** | Ahorro Energético | % de reducción vs. línea base | ≥ 10% | Anual |
+| **KPI-07** | Costo por km | Costo energético por km operado | Optimizar | Mensual |
+| **KPI-08** | Huella de Carbono | Toneladas CO2 equivalente | Reducir 10% anual | Anual |
+
+---
+
+## 8.28.9 Referencias De Mercado
+
+### Fabricantes Internacionales
+
+| Fabricante | País | Especialidad | Modelos de Referencia | Web |
+|------------|------|--------------|----------------------|-----|
+| **Schneider Electric** | Francia | Gestión energética y automatización | EcoStruxure, PowerLogic | https://www.se.com |
+| **Siemens** | Alemania | Soluciones de energía y smart grid | SIMATIC Energy Manager | https://www.siemens.com |
+| **Honeywell** | USA | Building energy management | EBI, Forge Energy | https://www.honeywell.com |
+| **Rockwell Automation** | USA | Gestión energética industrial | FactoryTalk Energy | https://www.rockwellautomation.com |
+| **General Electric** | USA | Power management | Proficy Energy | https://www.ge.com |
+| **ABB** | Suiza | Electrification y energy management | Ability Energy Manager | https://www.abb.com |
+
+---
+
+## 8.28.10 Proveedores Colombia
+
+| Empresa | Ciudad | Especialidad | Web |
+|---------|--------|--------------|-----|
+| **Schneider Electric Colombia** | Bogotá | Gestión energética, medidores | https://www.se.com/co/es |
+| **Siemens Colombia** | Bogotá | Soluciones de energía, automatización | https://www.siemens.com.co |
+| **ABB Colombia** | Bogotá | Medidores, sistemas de gestión energética | https://new.abb.com/co |
+| **Ingeteam Colombia** | Bogotá | Energía renovable, gestión energética | https://www.ingeteam.com |
+
+---
+
+## 8.28.11 Casos de Uso
+
+### CU-01: Detección de Equipo con Falla Incipiente
+**Actor Principal:** EMS / Equipo de Mantenimiento / Dispositivo de Campo  
+**Precondición:** Cámara CCTV en km 45 mostrando consumo anómalo  
+**Flujo Principal:**
+1. EMS detecta mediante ML que cámara CC-045 consume 45W vs. 25W nominal
+2. Algoritmo identifica patrón típico de degradación de fuente de poder
+3. Genera alerta: "Anomalía energética - Cámara CC-045 - Probable falla fuente"
+4. Equipo de mantenimiento programa visita preventiva antes de falla total
+5. Al inspeccionar, confirma fuente degradada y la reemplaza
+6. Consumo vuelve a normalidad, falla catastrófica evitada
+
+**Resultado:** Mantenimiento predictivo exitoso, cámara nunca dejó de funcionar, ahorro de costo de emergencia.
+
+### CU-02: Optimización de Generación Solar y Baterías
+**Actor Principal:** EMS / Sistema Solar / Operador CCO  
+**Precondición:** Instalación solar en peaje km 60 con sistema de baterías  
+**Flujo Principal:**
+1. EMS monitorea generación solar (pico 50 kW), estado de baterías (80% carga)
+2. Tarifa eléctrica entra en período de costo alto (6 PM - 8 PM)
+3. EMS automáticamente desconecta carga no crítica y alimenta desde baterías
+4. Evita comprar energía cara de la red durante pico tarifario
+5. A las 8 PM, cuando tarifa baja, EMS recarga baterías desde red
+6. Dashboard muestra ahorro de $150 ese día por gestión inteligente
+
+**Resultado:** Ahorro del 25% en costos energéticos del peaje mediante gestión automatizada de cargas.
+
+### CU-03: Respuesta a Falla Eléctrica en Sitio Remoto
+**Actor Principal:** EMS / Operador CCO / Equipo de Campo  
+**Precondición:** Falla de alimentación eléctrica en gabinete km 180  
+**Flujo Principal:**
+1. EMS detecta pérdida de alimentación principal en gabinete km 180
+2. Genera alerta crítica: "Falla energía - Gabinete km 180 - Respaldos activos"
+3. Muestra estado de UPS: 4 horas de autonomía restante
+4. Operador despacha equipo de mantenimiento con prioridad alta
+5. EMS continúa monitoreando consumo de respaldo hasta restauración
+6. Al reparar falla, EMS registra duración del evento y activación de respaldos
+
+**Resultado:** Respuesta rápida coordinada, respaldos funcionaron correctamente, cero pérdida de servicio ITS.
+
+### CU-04: Reporte de Sostenibilidad para Accionistas
+**Actor Principal:** Dirección / EMS / Sistema de Reportes  
+**Precondición:** Cierre de año fiscal, reporte anual de sostenibilidad  
+**Flujo Principal:**
+1. Sistema EMS genera reporte anual de consumo energético del corredor
+2. Calcula huella de carbono: X toneladas CO2 equivalente
+3. Muestra contribución de energía solar: 22% del consumo total
+4. Compara con año anterior: reducción del 12% en consumo específico
+5. Incluye benchmarking con corredores similares: "Mejor que promedio nacional"
+6. Reporte utilizado en asamblea de accionistas y publicación de sostenibilidad
+
+**Resultado:** Reporte de sostenibilidad verificable con datos precisos, reconocimiento ESG, cumplimiento de compromisos ambientales.
+
+### CU-05: Identificación de Ineficiencias por Comparativo
+**Actor Principal:** Ingeniero de Eficiencia / EMS / Múltiples Ubicaciones  
+**Precondición:** Análisis trimestral de eficiencia energética  
+**Flujo Principal:**
+1. Ingeniero genera reporte comparativo de consumo por km en EMS
+2. Identifica que tramo km 120-140 consume 30% más por km que promedio
+3. Drill-down muestra que gabinetes de comunicaciones son los responsables
+4. Visita de inspección revela equipos legacy sin modo de bajo consumo
+5. Planifica actualización de equipos en próximo mantenimiento
+6. Post-actualización, EMS confirma reducción alineada con promedio del corredor
+
+**Resultado:** Identificación de ineficiencia oculta mediante análisis comparativo, ahorro proyectado de $15,000/año en tramo específico.
+
+---
+
+**InnovaDataCO SAS** | **Fecha:** Abril 2026 | Documento generado bajo estándares ITS_CC-01

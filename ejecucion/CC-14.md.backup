@@ -1,0 +1,167 @@
+# 8.1 CC-14: VSL (Variable Speed Limit)
+
+## 8.1.1 Resumen Ejecutivo
+
+El componente **CC-14 VSL** constituye el sistema de gestión dinámica de velocidad del corredor vial Chía–Girardot, permitiendo ajustar los límites de velocidad en tiempo real según las condiciones operativas del tráfico, el ambiente y los eventos detectados. Este subsistema transforma el concepto estático de señalización de velocidad en una herramienta activa de gestión de tráfico y seguridad vial.
+
+La velocidad variable representa una capacidad estratégica para responder proactivamente a condiciones cambiantes: reducir velocidad ante congestión inminente, adaptar límites según visibilidad reducida por niebla, o incrementar seguridad en zonas de obra. El sistema VSL se integra con el TMS (CC-25) y los detectores de tráfico (CC-05) para implementar algoritmos de control adaptativo.
+
+El componente CC-14 se despliega en segmentos estratégicos del corredor donde la velocidad requiere ajuste dinámico: zonas de transición entre tramos urbanos e interurbanos, sectores con alta variabilidad de condiciones meteorológicas, y áreas con historial de incidentes por exceso de velocidad.
+
+---
+
+## 8.1.2 Identificación Del Componente De Campo
+
+| Campo | Valor |
+|-------|-------|
+| **COD** | CC-14 |
+| **Sigla (Estándar Internacional)** | VSL |
+| **Nombre del Componente** | Variable Speed Limit - Límite de Velocidad Variable |
+| **Capacidad Operativa Generada** | Control Dinámico de Velocidad: Capacidad de ajustar límites de velocidad en tiempo real según condiciones de tráfico, ambiente y seguridad. |
+
+---
+
+## 8.1.3 Descripción Funcional / Técnica
+
+### Alcance de la Solución
+
+El sistema VSL comprende paneles de mensajería variable de alta visibilidad específicamente diseñados para mostrar límites de velocidad dinámicos, ubicados estratégicamente a lo largo del corredor. Cada panel VSL puede desplegar velocidades desde 20 km/h hasta 100 km/h, así como indicadores de estado (velocidad normal, velocidad reducida, cierre).
+
+La solución opera bajo una arquitectura de control centralizado desde el CCO, donde los operadores pueden establecer velocidades manualmente ante eventos específicos, o el sistema puede operar en modo automático basado en algoritmos que procesan datos de detectores de tráfico, sensores ambientales y subsistemas de detección de incidentes.
+
+El subsistema VSL se integra nativamente con el DMS/VMS (CC-03) para presentar mensajes contextuales que expliquen la reducción de velocidad ("CONGESTIÓN A 2 KM", "NEBLINA DENSA", "ZONA DE OBRA"), mejorando la aceptación del usuario y el cumplimiento de las indicaciones.
+
+### Justificación Estratégica
+
+Los límites de velocidad estáticos representan un compromiso entre seguridad y fluidez que no se adapta a las variaciones reales de condiciones. Un límite de 80 km/h puede ser seguro en condiciones normales, pero peligroso con lluvia intensa o niebla. El sistema VSL permite mantener velocidades óptimas para cada condición específica.
+
+La implementación de VSL ha demostrado reducciones de 15-30% en accidentes y 10-20% en emisiones de CO2 en corredores viales con implementación exitosa. La capacidad de "armonizar" velocidades en el flujo de tráfico reduce las diferencias de velocidad entre vehículos, disminuyendo choques por alcance y mejorando la capacidad del corredor.
+
+---
+
+## 8.1.4 Especificación Técnica
+
+| Parámetro | Especificación Mínima |
+|-----------|----------------------|
+| **Tipo de display** | Matriz LED full-matrix monocromática ámbar o tricolor (rojo/ámbar/verde) |
+| **Tamaño de caracteres** | ≥ 300 mm de altura para visibilidad a ≥ 250 m |
+| **Rango de velocidades** | 20-100 km/h en incrementos de 10 km/h |
+| **Ángulo de visibilidad** | ≥ 30° horizontal, ≥ 15° vertical |
+| **Intensidad luminosa** | ≥ 8,000 cd/m² (automático según condiciones de luz ambiente) |
+| **Consumo energético** | ≤ 200 W promedio, ≤ 400 W máximo |
+| **Protección ambiental** | IP66 para gabinete, IP65 para conectores |
+| **Rango térmico** | -30°C a +60°C operación continua |
+| **Viento máximo** | Resistencia a 200 km/h sostenidos |
+| **Comunicación** | Ethernet IP, fibra óptica o radio, protocolo NTCIP 1203 |
+| **Tiempo de cambio** | < 2 segundos desde comando hasta visualización |
+| **Fiabilidad** | MTBF ≥ 50,000 horas |
+| **Alimentación** | 110-240 VAC con respaldo UPS (CC-35) |
+| **Control** | Local (manual) o remoto (CCO vía TMS) |
+| **Sensor ambiental** | Integrado: fotocelda, temperatura, anemómetro opcional |
+| **Estructura** | Poste o pórtico según ubicación, resistencia sísmica zona de alta |
+
+---
+
+## 8.1.5 Requerimientos Funcionales (RF)
+
+| ID | Nombre | Descripción Funcional / Técnica | Justificación Estratégica |
+|----|--------|--------------------------------|---------------------------|
+| **RF-01** | Visualización de Velocidad Variable | El sistema debe desplegar valores de velocidad desde 20 km/h hasta 100 km/h en incrementos de 10 km/h, con caracteres de mínimo 300 mm de altura visibles a 250 m. Debe soportar modos: velocidad numérica, "CERRADO", "—" (sin límite), y mensajes contextuales integrados con DMS. | La flexibilidad en rangos de velocidad permite adaptarse a cualquier escenario operativo del corredor, desde zonas de construcción hasta condiciones meteorológicas adversas. |
+| **RF-02** | Control Remoto desde CCO | Los operadores del CCO deben poder establecer velocidades manualmente para cualquier panel VSL o grupos de paneles mediante interfaz del TMS. El control debe permitir programación por horarios, activación por eventos, y modos automáticos basados en reglas. | El control centralizado permite respuesta coordinada ante incidentes donde múltiples paneles deben cambiar simultáneamente para armarizar el flujo de tráfico antes de llegar a la zona afectada. |
+| **RF-03** | Modo Automático Adaptativo | El sistema debe soportar modo automático donde la velocidad se ajusta según algoritmos que procesan datos de: densidad de tráfico (CC-05), velocidad promedio, condiciones ambientales (CC-06), y detección de incidentes (CC-02). Las reglas deben ser configurables. | La operación automática reduce carga del operador ante condiciones recurrentes (congestión de tarde, niebla matutina) y permite respuesta más rápida (< 30 segundos) que la intervención manual. |
+| **RF-04** | Integración con DMS/VMS | Los paneles VSL deben poder coordinarse con paneles de mensajería variable cercanos para presentar explicaciones contextuales: VSL muestra "60 km/h", DMS muestra "CONGESTIÓN A 3 KM". La integración debe ser bidireccional y sincronizada. | La presentación contextual mejora significativamente el cumplimiento de los conductores, quienes entienden el porqué de la reducción y cooperan mejor que ante restricciones sin explicación. |
+| **RF-05** | Retroalimentación de Estado | El sistema debe reportar al CCO: velocidad actual desplegada, estado operativo (online/offline), fallos de LED, temperatura interna, y estado de alimentación. Los cambios de velocidad deben registrarse con timestamp para auditoría. | La trazabilidad de cambios de velocidad es crítica para análisis post-incidente y auditorías de seguridad. El monitoreo proactivo de fallos permite mantenimiento preventivo. |
+| **RF-06** | Validación de Seguridad | Antes de ejecutar un cambio de velocidad, el sistema debe validar que el nuevo valor sea seguro según condiciones actuales. No debe permitir incrementos bruscos de velocidad (> 20 km/h de un paso) ni velocidades inapropiadas ante condiciones adversas detectadas. | Los cambios de velocidad inseguros pueden generar choques por alcance si el tráfico reduce velocidad abruptamente ante un panel que muestra límite más bajo que el flujo actual. |
+| **RF-07** | Respuesta a Escenarios Operativos | El sistema debe integrarse con los 15 EOV definidos, ejecutando automáticamente perfiles de velocidad predefinidos: EOV-04 (Incendio) → reduce a 40 km/h, EOV-05 (Derrumbe) → reduce a 20 km/h, EOV-11 (Congestión) → reduce progresivamente desde 100 a 60 km/h. | La integración con escenarios operativos estandariza la respuesta y garantiza tiempos de reacción mínimos ante emergencias, reduciendo la dependencia de la toma de decisiones bajo presión. |
+| **RF-08** | Gestión de Zonas de Velocidad | El TMS debe permitir definir "zonas de velocidad" que agrupen múltiples paneles VSL con comportamiento coordinado. Las zonas deben poder solaparse y tener jerarquías de prioridad (ej: zona de obra tiene prioridad sobre zona meteorológica). | La gestión por zonas simplifica la operación de corredores largos donde múltiples condiciones pueden coexistir, permitiendo que el operador gestione grupos lógicos en lugar de paneles individuales. |
+| **RF-09** | Registro Histórico y Auditoría | El sistema debe mantener registro histórico de todas las velocidades desplegadas con: timestamp, valor anterior, valor nuevo, causa (manual/automático/evento), operador (si aplica), y duración. La retención mínima debe ser 2 años. | El registro histórico es requisito legal en muchas jurisdicciones y permite análisis de efectividad: correlacionar configuraciones de velocidad con tasas de incidentes para optimización continua. |
+| **RF-10** | Capacidad de Simulación | El TMS debe permitir simular cambios de velocidad en modo "dry-run" para validar impacto antes de implementar. La simulación debe mostrar: tiempo de recorrido proyectado, impacto en colas, y alertas de configuraciones potencialmente peligrosas. | La capacidad de simular reduce errores operativos y permite entrenamiento de operadores sin afectar tráfico real, validando escenarios complejos antes de implementación. |
+
+---
+
+## 8.1.6 Requisitos No Funcionales (RNF)
+
+| ID | Nombre | Descripción | Justificación |
+|----|--------|-------------|---------------|
+| **RNF-01** | Disponibilidad del Sistema | El sistema VSL debe mantener disponibilidad ≥ 99.5% medida mensualmente por panel. La indisponibilidad se define como imposibilidad de mostrar velocidad válida o comunicar con CCO. Debe incluir respaldo de comunicaciones. | Un panel VSL fuera de servicio en zona crítica puede generar confusión en conductores y aumentar riesgo de incidentes si no hay señalización alternativa. |
+| **RNF-02** | Tiempo de Respuesta | El tiempo desde recepción de comando en CCO hasta visualización actualizada en campo debe ser < 3 segundos para el 95% de los casos, < 5 segundos máximo. Esto incluye latencia de red, procesamiento, y tiempo de refresco de LED. | En condiciones dinámicas (incidente en desarrollo), los retardos en actualización pueden hacer que la señalización sea irrelevante o contraproducente si la situación ya cambió. |
+| **RNF-03** | Visibilidad y Legibilidad | Los caracteres deben ser legibles desde 250 m en condiciones de sol directo, contraluz, lluvia moderada, y niebla con visibilidad ≥ 100 m. Deben cumplir normativa de contraste y ángulos de visibilidad de MUTCD o similar. | La señalización que no es visible no cumple su propósito. Las condiciones climáticas del corredor incluyen lluvia intensa y niebla en zonas altas que deben ser consideradas. |
+| **RNF-04** | Ciberseguridad y Autenticación | Los comandos de cambio de velocidad deben requerir autenticación y autorización. Todas las comunicaciones deben cifrarse (TLS 1.3). El sistema debe registrar todos los intentos de acceso y detectar patrones anómalos de comandos. | La manipulación no autorizada de límites de velocidad puede causar accidentes graves. Un atacante podría establecer velocidades inseguras para causar caos o extorsión. |
+| **RNF-05** | Tolerancia a Fallos | Ante fallo de comunicación con CCO, el panel debe continuar mostrando última velocidad válida o revertir a límite por defecto según configuración. Ante fallo de sensor ambiental integrado, debe asumir condición conservadora (velocidad reducida). | Los fallos deben ser "fail-safe", es decir, favorecer la seguridad sobre la fluidez. Un panel que se apaga completamente ante fallo de red deja a los conductores sin guía. |
+| **RNF-06** | Ciclo de Vida y Mantenimiento | Los componentes LED deben tener vida útil ≥ 100,000 horas con degradación < 30% de intensidad. El diseño debe permitir reemplazo de módulos LED individuales sin desmontar el panel completo. | Los LEDs de alta intensidad degradan con el tiempo. La capacidad de reemplazo modular reduce costos de mantenimiento y tiempo de servicio fuera de operación. |
+| **RNF-07** | Eficiencia Energética | El sistema debe incluir fotocelda para ajuste automático de intensidad según condiciones de luz, reduciendo consumo nocturno. Debe soportar alimentación solar con baterías como alternativa en ubicaciones remotas sin red eléctrica. | Muchas ubicaciones del corredor carecen de infraestructura eléctrica cercana. La eficiencia energética permite despliegue con energía solar, reduciendo costos de instalación. |
+
+---
+
+## 8.1.7 Indicadores Clave De Rendimiento (KPIs)
+
+| ID | Indicador | Meta | Frecuencia de Medición |
+|----|-----------|------|------------------------|
+| **KPI-01** | Disponibilidad del Sistema VSL | ≥ 99.5% | Mensual por panel |
+| **KPI-02** | Tiempo de Respuesta (comando a display) | < 3 segundos (P95) | Continua, alerta si > 5s |
+| **KPI-03** | Cumplimiento de Velocidad por Conductores | Incremento 15% vs. límites estáticos | Trimestral (encuestas y datos de velocidad) |
+| **KPI-04** | Reducción de Incidentes en Zonas VSL | ≥ 20% reducción | Anual, comparación antes/después |
+| **KPI-05** | Precisión de Velocidad Desplegada | 100% coincidencia comando-display | Continua, auditoría semanal |
+| **KPI-06** | Tiempo Medio Entre Fallos (MTBF) | ≥ 50,000 horas | Por panel, acumulado |
+
+---
+
+## 8.1.8 Interfaces Y Dependencias
+
+### Entradas (Inputs)
+| ID | Entrada | Origen | Descripción |
+|----|---------|--------|-------------|
+| **IN-01** | Comando de Velocidad | CCO / TMS | Velocidad objetivo y modo (manual/auto) |
+| **IN-02** | Datos de Tráfico | CC-05 VDS | Velocidad promedio, densidad, ocupación |
+| **IN-03** | Condiciones Ambientales | CC-06 ESS | Visibilidad, precipitación, temperatura |
+| **IN-04** | Alertas de Incidentes | CC-02 AID | Detección de eventos que requieren reducción |
+| **IN-05** | Estado de Zonas de Obra | CC-20 WAR | Ubicación y estado de obras viales |
+
+### Salidas (Outputs)
+| ID | Salida | Destino | Descripción |
+|----|--------|---------|-------------|
+| **OUT-01** | Velocidad Desplegada | Conductores | Valor numérico visible en panel LED |
+| **OUT-02** | Estado Operativo | CCO / TMS | Confirmación de velocidad actual y estado |
+| **OUT-03** | Eventos de Cambio | CCO / Log | Registro de transiciones de velocidad |
+| **OUT-04** | Alertas de Fallo | CCO / Mantenimiento | Notificaciones de mal funcionamiento |
+
+### Dependencias
+| ID | Componente | Tipo | Descripción |
+|----|------------|------|-------------|
+| **DEP-01** | CC-03 DMS/VMS | Fuerte | Coordinación de mensajes contextuales |
+| **DEP-02** | CC-05 VDS | Fuerte | Datos de tráfico para modo automático |
+| **DEP-03** | CC-06 ESS | Fuerte | Condiciones ambientales para ajustes |
+| **DEP-04** | CC-25 TMS | Fuerte | Plataforma de control centralizado |
+| **DEP-05** | CC-23 FOC | Medio | Red de comunicaciones |
+| **DEP-06** | CC-35 UPS | Medio | Respaldo energético |
+
+---
+
+## 8.1.9 Información Adicional
+
+### Referencias de Mercado
+
+| Fabricante | Modelo de Referencia | Características Destacadas |
+|------------|---------------------|---------------------------|
+| **Wanco** | WSD-3000 | Full-matrix LED, NTCIP, solar opcional |
+| **Swarco** | Futurled6 | Alta intensidad, control remoto, fiabilidad |
+| **McCain** | M600V | Matriz configurable, protocolos abiertos |
+| **Siemens** | LED-VMS | Integración SCADA, alta disponibilidad |
+| **Kapsch** | VSL-300 | Integración nativa con ATMS |
+
+### Normativa Aplicable
+- **NTCIP 1203**: Object Definitions for Dynamic Message Signs
+- **MUTCD**: Manual on Uniform Traffic Control Devices (EE.UU.)
+- **Resolución 1090 de 2020**: Sistemas ITS Colombia
+- **IEC 62053**: Medición de consumo energético
+- **RETIE**: Reglamento Técnico de Instalaciones Eléctricas Colombia
+
+### Consideraciones de Instalación
+- Ubicación a 200-400 m antes de zonas donde se requiere cambio de velocidad
+- Altura mínima 5.5 m para evitar obstrucción por vehículos altos
+- Distancia máxima entre paneles VSL en corredor: 2 km
+- Señalización de respaldo estática ante fallo prolongado del VSL
+
+---
+
+*InnovaDataCO | APP-CHIA-GIRARDOT | CC-14 VSL - Variable Speed Limit*

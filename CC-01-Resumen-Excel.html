@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+body { font-family: Calibri, Arial, sans-serif; }
+table { border-collapse: collapse; width: 100%; }
+th { background-color: #1F4E78; color: white; font-weight: bold; padding: 10px; text-align: center; border: 1px solid #000; }
+.subheader { background-color: #2E75B6; color: white; font-weight: bold; padding: 8px; text-align: center; border: 1px solid #000; }
+td { padding: 8px; border: 1px solid #000; text-align: left; vertical-align: middle; }
+.title { font-size: 16pt; font-weight: bold; text-align: center; background-color: #1F4E78; color: white; padding: 15px; }
+.subtitle { font-size: 11pt; font-style: italic; text-align: center; background-color: #D9E1F2; padding: 10px; }
+.section { background-color: #1F4E78; color: white; font-weight: bold; text-align: center; padding: 12px; font-size: 12pt; }
+.field { font-weight: bold; background-color: #E7E6E6; width: 25%; }
+.value { width: 75%; }
+.kpi-id { text-align: center; font-weight: bold; width: 10%; }
+.kpi-ind { width: 40%; }
+.kpi-meta { text-align: center; width: 25%; }
+.kpi-freq { text-align: center; width: 25%; }
+.firma-rol { font-weight: bold; background-color: #E7E6E6; width: 15%; }
+.firma-nom { width: 35%; }
+.firma-fir { width: 25%; }
+.firma-fec { width: 25%; }
+</style>
+</head>
+<body>
+
+<table>
+<tr><td colspan="4" class="title">FICHA TÉCNICA ITS - CC-01: CCTV (Sistema de Videovigilancia)</td></tr>
+<tr><td colspan="4" class="subtitle">Corredor Vial Chía-Girardot - 306 km | InnovaDataCO SAS | Versión 3.0</td></tr>
+</table>
+
+<br>
+
+<table>
+<tr><td colspan="4" class="section">1. IDENTIFICACIÓN DEL COMPONENTE</td></tr>
+<tr>
+<td class="subheader" style="width:25%">CAMPO</td>
+<td class="subheader" colspan="3">VALOR</td>
+</tr>
+<tr><td class="field">Código</td><td colspan="3">CC-01</td></tr>
+<tr><td class="field">Sigla</td><td colspan="3">CCTV</td></tr>
+<tr><td class="field">Nombre Completo</td><td colspan="3">Sistema de Videovigilancia (Closed Circuit Television)</td></tr>
+<tr><td class="field">Categoría</td><td colspan="3">Sistemas de Percepción y Monitoreo Visual</td></tr>
+<tr><td class="field">Versión</td><td colspan="3">V3</td></tr>
+<tr><td class="field">Longitud Corredor</td><td colspan="3">306 km</td></tr>
+<tr><td class="field">Entidad Operadora</td><td colspan="3">InnovaDataCO SAS</td></tr>
+</table>
+
+<br>
+
+<table>
+<tr><td colspan="2" class="section">2. ESPECIFICACIÓN TÉCNICA</td></tr>
+<tr>
+<td class="subheader" style="width:35%">PARÁMETRO</td>
+<td class="subheader">ESPECIFICACIÓN MÍNIMA</td>
+</tr>
+<tr><td>Resolución de captura</td><td>4K UHD (3840×2160) @ 30 fps</td></tr>
+<tr><td>Resolución mínima</td><td>2K (2560×1440) @ 30 fps para cámaras secundarias</td></tr>
+<tr><td>Formato de compresión</td><td>H.265/HEVC primario; H.264/AVC secundario</td></tr>
+<tr><td>Tasa de bits</td><td>8-25 Mbps según resolución</td></tr>
+<tr><td>Latencia de transmisión</td><td>&lt; 500 ms desde captura hasta visualización</td></tr>
+<tr><td>Rango dinámico</td><td>HDR/WDR ≥ 120 dB</td></tr>
+<tr><td>Visión nocturna</td><td>IR inteligente con alcance ≥ 100 m</td></tr>
+<tr><td>Protección ambiental</td><td>IP66/67 para exterior; IP54 para interior</td></tr>
+<tr><td>Rango térmico</td><td>-30°C a +60°C</td></tr>
+<tr><td>Alimentación</td><td>PoE++ (IEEE 802.3bt; 60W) o 24VAC/24VDC con UPS</td></tr>
+<tr><td>Capacidades PTZ</td><td>Pan 360°; Tilt ±90°; Zoom óptico ≥ 30x</td></tr>
+<tr><td>Analítica integrada</td><td>Detección de intrusión; cruce de línea; permanencia; dirección</td></tr>
+<tr><td>Protocolos de red</td><td>ONVIF Profile S/G; RTSP; RTMP; SIP</td></tr>
+<tr><td>Ciberseguridad</td><td>Cifrado TLS 1.3; autenticación IEEE 802.1X</td></tr>
+<tr><td>Almacenamiento local</td><td>Slot para microSD ≥ 256 GB</td></tr>
+<tr><td>Gestión VMS</td><td>Compatible Milestone; Genetec; Honeywell</td></tr>
+<tr><td>Tasa de cuadros</td><td>30 fps configurable; modo 60 fps disponible</td></tr>
+<tr><td>Campo visual</td><td>≥ 90° horizontal para cámaras fijas</td></tr>
+<tr><td>Resistencia impactos</td><td>IK10 para zonas vulnerables</td></tr>
+</table>
+
+<br>
+
+<table>
+<tr><td colspan="4" class="section">3. INDICADORES CLAVE DE RENDIMIENTO (KPIs)</td></tr>
+<tr>
+<td class="subheader kpi-id">ID</td>
+<td class="subheader kpi-ind">INDICADOR</td>
+<td class="subheader kpi-meta">META</td>
+<td class="subheader kpi-freq">FRECUENCIA</td>
+</tr>
+<tr>
+<td class="kpi-id">KPI-01</td>
+<td>Disponibilidad del Sistema</td>
+<td class="kpi-meta">≥ 99.9%</td>
+<td class="kpi-freq">Mensual</td>
+</tr>
+<tr>
+<td class="kpi-id">KPI-02</td>
+<td>Latencia de Video</td>
+<td class="kpi-meta">&lt; 500 ms</td>
+<td class="kpi-freq">Continua</td>
+</tr>
+<tr>
+<td class="kpi-id">KPI-03</td>
+<td>Calidad de Imagen</td>
+<td class="kpi-meta">≥ 95%</td>
+<td class="kpi-freq">Trimestral</td>
+</tr>
+<tr>
+<td class="kpi-id">KPI-04</td>
+<td>Tasa de Falsos Positivos</td>
+<td class="kpi-meta">&lt; 5%</td>
+<td class="kpi-freq">Mensual</td>
+</tr>
+<tr>
+<td class="kpi-id">KPI-05</td>
+<td>Cobertura Operativa</td>
+<td class="kpi-meta">≥ 98%</td>
+<td class="kpi-freq">Diaria</td>
+</tr>
+<tr>
+<td class="kpi-id">KPI-06</td>
+<td>Tiempo de Recuperación MTTR</td>
+<td class="kpi-meta">&lt; 4 horas</td>
+<td class="kpi-freq">Por incidente</td>
+</tr>
+<tr>
+<td class="kpi-id">KPI-07</td>
+<td>Satisfacción de Usuario</td>
+<td class="kpi-meta">≥ 4.0/5.0</td>
+<td class="kpi-freq">Semestral</td>
+</tr>
+<tr>
+<td class="kpi-id">KPI-08</td>
+<td>Eficiencia Energética</td>
+<td class="kpi-meta">&lt; 25W</td>
+<td class="kpi-freq">Mensual</td>
+</tr>
+</table>
+
+<br>
+
+<table>
+<tr><td colspan="3" class="section">4. REFERENCIAS DE MERCADO - FABRICANTES INTERNACIONALES</td></tr>
+<tr>
+<td class="subheader" style="width:30%">FABRICANTE</td>
+<td class="subheader" style="width:20%">PAÍS</td>
+<td class="subheader">WEB</td>
+</tr>
+<tr><td>Hikvision</td><td>China</td><td>https://www.hikvision.com</td></tr>
+<tr><td>Dahua Technology</td><td>China</td><td>https://www.dahuasecurity.com</td></tr>
+<tr><td>Axis Communications</td><td>Suecia</td><td>https://www.axis.com</td></tr>
+<tr><td>Bosch Security</td><td>Alemania</td><td>https://www.boschsecurity.com</td></tr>
+<tr><td>Pelco by Schneider</td><td>USA</td><td>https://www.pelco.com</td></tr>
+<tr><td>Hanwha Techwin</td><td>Corea del Sur</td><td>https://www.hanwhavision.com</td></tr>
+</table>
+
+<br>
+
+<table>
+<tr><td colspan="3" class="section">5. REFERENCIAS DE MERCADO - PROVEEDORES COLOMBIA</td></tr>
+<tr>
+<td class="subheader" style="width:35%">EMPRESA</td>
+<td class="subheader" style="width:20%">CIUDAD</td>
+<td class="subheader">WEB</td>
+</tr>
+<tr><td>Indra Colombia</td><td>Bogotá</td><td>https://www.indracompany.com</td></tr>
+<tr><td>ISV Colombia</td><td>Bogotá</td><td>https://www.isvcolombia.com</td></tr>
+<tr><td>Seguridad Vial S.A.S.</td><td>Medellín</td><td>https://www.seguridadvial.com.co</td></tr>
+<tr><td>CCTV Colombia</td><td>Bogotá</td><td>https://www.cctvcolombia.com.co</td></tr>
+</table>
+
+<br>
+
+<table>
+<tr><td colspan="4" class="section">6. FIRMA Y APROBACIÓN</td></tr>
+<tr>
+<td class="subheader firma-rol">ROL</td>
+<td class="subheader firma-nom">NOMBRE</td>
+<td class="subheader firma-fir">FIRMA</td>
+<td class="subheader firma-fec">FECHA</td>
+</tr>
+<tr>
+<td class="firma-rol">Elaboró</td>
+<td>Equipo de Ingeniería ITS</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="firma-rol">Revisó</td>
+<td>Control de Calidad</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="firma-rol">Aprobó</td>
+<td>Dirección de Proyectos</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+
+<br>
+
+<table>
+<tr><td colspan="4" style="text-align:center; font-size:10pt; padding:10px; background-color:#D9E1F2;">
+<b>InnovaDataCO SAS</b> | Documento generado bajo estándares ITS_CC-01 | Abril 2026
+</td></tr>
+</table>
+
+</body>
+</html>

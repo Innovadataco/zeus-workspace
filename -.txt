@@ -1,0 +1,4 @@
+Antes de ejecutar cualquier acción quiero que primero me confirme si podes entender la siguiente
+estrucción. Uno, todas las 42 fichas deben cumplir estructura en cuanto a la cantidad de capítulo
+que ya están definidas. Dos el estilo de redacción y descritura de ser estandar para todos,
+muy parecido al CC02. Revisalo y me indicame si entiendes la estrucción que estoy dando.

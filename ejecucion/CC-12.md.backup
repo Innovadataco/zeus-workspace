@@ -1,0 +1,339 @@
+# CC-12: ALPR / LPR - Sistema de Reconocimiento de Placas
+
+## 1. Resumen Ejecutivo
+
+El Sistema de Reconocimiento de Placas (ALPR - Automatic License Plate Recognition / LPR - License Plate Recognition) constituye una solución tecnológica avanzada para la **Identificación Vehicular Automática** en infraestructuras de transporte. Este sistema permite capturar, procesar y reconocer placas vehiculares en tiempo real, habilitando aplicaciones de gestión de seguridad, control de multas, trazabilidad de vehículos y automatización de procesos de peaje y acceso.
+
+La capacidad de **Identificación Vehicular Automática** mediante el reconocimiento óptico de caracteres en placas es fundamental para la seguridad vial, el cumplimiento normativo y la optimización de operaciones de tráfico. El sistema ALPR/LPR integra cámaras de alta resolución, iluminación infrarroja, algoritmos de visión por computadora e inteligencia artificial para proporcionar identificación vehicular confiable en condiciones variadas de iluminación, clima y velocidad.
+
+---
+
+## 2. Identificación del Sistema
+
+| **Atributo** | **Valor** |
+|--------------|-----------|
+| **COD** | CC-12 |
+| **Sigla** | ALPR / LPR |
+| **Nombre Oficial** | Sistema de Reconocimiento de Placas |
+| **Capacidad** | Identificación Vehicular Automática: Capacidad de reconocer placas para gestión de seguridad, multas y trazabilidad |
+
+---
+
+## 3. Descripción Funcional y Técnica
+
+### 3.1 Propósito del Sistema
+
+El ALPR/LPR tiene como propósito fundamental identificar vehículos mediante sus placas para:
+
+- **Seguridad vial**: Detección de vehículos robados, implicados en delitos
+- **Control de infracciones**: Soporte a sistemas de fotodetección y control de velocidad
+- **Trazabilidad de tráfico**: Registro de patrones de movimiento vehicular
+- **Automatización de peajes**: Respaldo y verificación de transacciones ETC
+- **Control de acceso**: Gestión de entrada/salida en instalaciones
+
+### 3.2 Tecnologías de Reconocimiento
+
+| **Tecnología** | **Descripción** | **Aplicación** |
+|----------------|-----------------|----------------|
+| **OCR Óptico** | Reconocimiento óptico de caracteres | Lectura de texto en placas |
+| **Deep Learning (CNN)** | Redes neuronales convolucionales | Detección y clasificación de placas |
+| **Procesamiento IR** | Iluminación infrarroja invisible | Operación nocturna sin distracción |
+| **Análisis de Video** | Procesamiento de flujo de video | Seguimiento de vehículos |
+| **Visión Estéreo** | Cámaras duales para profundidad | Clasificación vehicular básica |
+| **Edge AI** | Procesamiento en borde | Baja latencia, independencia de red |
+
+### 3.3 Arquitectura del Sistema
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                    PUNTOS DE CAPTURA                            │
+├──────────────────┬──────────────────┬───────────────────────────┤
+│   PEAJES ETC     │  FOTO DETECCIÓN  │    ACCESOS/FRONTERAS      │
+├──────────────────┼──────────────────┼───────────────────────────┤
+│ • Cámaras ALPR   │ • Cámaras ALPR   │ • Cámaras ALPR            │
+│ • Iluminación IR │ • Radar de       │ • Barreras vehiculares    │
+│ • Triggers de    │   velocidad      │ • Semáforos de acceso     │
+│   lazo/ Radar    │ • Iluminación    │ • Botones de pánico       │
+│                  │   de flash       │                           │
+└──────────────────┴──────────────────┴───────────────────────────┘
+           │                  │                    │
+           └──────────────────┼────────────────────┘
+                              │
+                  ┌───────────▼───────────┐
+                  │   Procesamiento       │
+                  │   Centralizado/Edge   │
+                  └───────────┬───────────┘
+                              │
+            ┌─────────────────┼─────────────────┐
+            ▼                 ▼                 ▼
+   ┌────────────────┐ ┌────────────────┐ ┌────────────────┐
+   │  Base de Datos │ │  Sistema de    │ │  Integración   │
+   │  de Placas     │ │  Alertas y     │ │  con Policía/  │
+   │  y Vehículos   │ │  Notificaciones│ │  Ministerio    │
+   └────────────────┘ └────────────────┘ └────────────────┘
+```
+
+### 3.4 Componentes Principales
+
+| **Componente** | **Función** | **Especificación** |
+|----------------|-------------|-------------------|
+| **Cámara ALPR** | Captura de imagen de alta resolución | 2-5 MP, shutter global, IP67 |
+| **Iluminación IR** | Iluminación nocturna invisible | 850-940 nm, sincronizada |
+| **Procesador Edge** | Procesamiento local de imágenes | GPU NVIDIA Jetson/Intel |
+| **Trigger de Lazo** | Detección de presencia vehicular | Inductivo, precisión 99% |
+| **Radar Doppler** | Detección y velocidad | K-band, alcance 200m |
+| **Servidor ALPR** | Procesamiento central y BD | Xeon, GPU, 64GB RAM |
+| **Software OCR** | Motor de reconocimiento de caracteres | IA propietaria o open source |
+
+### 3.5 Proceso de Reconocimiento
+
+| **Fase** | **Descripción** | **Rendimiento** |
+|----------|-----------------|-----------------|
+| **1. Detección** | El sistema detecta vehículo en zona de interés | < 10 ms |
+| **2. Captura** | Cámara captura imagen de alta resolución | 30-60 fps |
+| **3. Localización** | IA detecta región de placa en imagen | < 20 ms |
+| **4. Normalización** | Corrección de perspectiva y mejora de imagen | < 10 ms |
+| **5. Segmentación** | Separación de caracteres individuales | < 15 ms |
+| **6. OCR** | Reconocimiento de cada carácter | < 30 ms |
+| **7. Validación** | Verificación de formato y confianza | < 10 ms |
+| **8. Almacenamiento** | Registro con imagen, timestamp, ubicación | < 50 ms |
+
+**Tiempo total reconocimiento:** < 150 ms
+
+### 3.6 Interfaces con Otros Sistemas
+
+| **Sistema** | **Tipo de Interfaz** | **Datos Intercambiados** |
+|-------------|---------------------|-------------------------|
+| **Sistema ETC/Peaje** | API REST | Verificación de placa vs. OBU |
+| **Sistema de Fotodetección** | Base de datos | Imágenes de infracciones |
+| **RUNT (Registro Único)** | API gubernamental | Datos de propietario y vehículo |
+| **Base de Datos Policial** | Conexión segura | Consulta de vehículos robados |
+| **Sistema de Videovigilancia** | Video streaming | Integración con cámaras de red |
+| **Plataforma de Análisis** | API REST | Datos de trazabilidad de tráfico |
+
+---
+
+## 4. Justificación Estratégica
+
+### 4.1 Problema que Resuelve
+
+La identificación manual de vehículos presenta limitaciones críticas:
+- Imposibilidad de controlar flujos masivos de tráfico manualmente
+- Dificultad para rastrear vehículos involucrados en incidentes
+- Falta de evidencia objetiva para infracciones de tránsito
+- Limitaciones en la seguridad y prevención del delito
+- Costos operativos elevados para verificación manual
+
+### 4.2 Beneficios Esperados
+
+| **Dimensión** | **Beneficio** | **Indicador** |
+|---------------|---------------|---------------|
+| **Seguridad** | Mayor tasa de recuperación de vehículos robados | +40% recuperaciones |
+| **Normativo** | Evidencia objetiva para infracciones | 100% cobertura fotográfica |
+| **Operativo** | Automatización de verificaciones | 90% reducción tiempo |
+| **Económico** | Recaudación por infracciones documentadas | +25% efectividad |
+| **Forense** | Trazabilidad para investigaciones | Registro completo 24/7 |
+
+### 4.3 Alineación con Objetivos del Proyecto
+
+Este sistema contribuye directamente a:
+- **Seguridad integral**: Capacidad de respuesta ante incidentes
+- **Cumplimiento normativo**: Soporte a autoridades de tránsito
+- **Gestión inteligente**: Datos para planificación de tráfico
+
+---
+
+## 5. Especificación Técnica
+
+| **Parámetro** | **Especificación** |
+|---------------|-------------------|
+| **Resolución de cámara** | 2-5 Megapíxeles |
+| **Velocidad de captura** | 30-60 fps |
+| **Precisión de lectura** | ≥ 98% (día), ≥ 95% (noche) |
+| **Velocidad máxima** | 200 km/h (configurable) |
+| **Ángulo de captura** | Hasta ±30° horizontal, ±15° vertical |
+| **Distancia de lectura** | 5-50 metros |
+| **Iluminación IR** | 850-940 nm, sincronizada con shutter |
+| **Tiempo de procesamiento** | < 150 ms por vehículo |
+| **Formatos de placa soportados** | Mercosur, antiguo, motos, diplomáticas |
+| **Alimentación** | PoE+ (IEEE 802.3bt) o 24VAC |
+| **Condiciones ambientales** | IP67, -40°C a +60°C |
+| **Certificaciones** | ISO 9001, CE, FCC, ANATEL |
+
+---
+
+## 6. RF - Requerimientos Funcionales
+
+| **ID** | **Requerimiento** | **Descripción** |
+|--------|-------------------|-----------------|
+| **RF-01** | Captura de imagen de placa | El sistema debe capturar imagen clara de placa a velocidades hasta 200 km/h |
+| **RF-02** | Reconocimiento de caracteres | El sistema debe reconocer alfanuméricos con precisión ≥ 98% en condiciones normales |
+| **RF-03** | Operación diurna y nocturna | El sistema debe operar 24/7 con iluminación IR invisible |
+| **RF-04** | Soporte múltiples formatos de placa | El sistema debe reconocer placas de automóviles, motos, remolques y especiales |
+| **RF-05** | Detección de dirección | El sistema debe determinar si vehículo circula en sentido correcto o contrario |
+| **RF-06** | Captura de imagen contextual | El sistema debe capturar imagen del vehículo completo junto a la placa |
+| **RF-07** | Integración con lista negra | El sistema debe consultar bases de datos de vehículos robados o buscados |
+| **RF-08** | Generación de alertas | El sistema debe generar alertas en tiempo real ante coincidencias con listas de interés |
+| **RF-09** | Búsqueda histórica | El sistema debe permitir búsqueda de vehículos por placa en registros históricos |
+| **RF-10** | Exportación de evidencia | El sistema debe generar paquetes de evidencia con imagen, video y metadatos |
+
+---
+
+## 7. RNF - Requisitos No Funcionales
+
+| **ID** | **Requisito** | **Especificación** |
+|--------|---------------|-------------------|
+| **RNF-01** | Disponibilidad | El sistema debe tener disponibilidad ≥ 99.5% en operación 24/7 |
+| **RNF-02** | Precisión de OCR | Tasa de reconocimiento correcto ≥ 98% (día), ≥ 95% (noche) |
+| **RNF-03** | Latencia de procesamiento | Tiempo desde captura hasta resultado < 150 ms |
+| **RNF-04** | Resistencia ambiental | Cámaras IP67, operación -40°C a +60°C, resistencia a lluvia y polvo |
+| **RNF-05** | Seguridad de datos | Cifrado de imágenes y datos, control de acceso basado en roles |
+| **RNF-06** | Escalabilidad | Capacidad para procesar ≥ 100,000 vehículos/día por punto |
+| **RNF-07** | Redundancia | Respaldo de datos y equipos críticos, continuidad operativa |
+
+---
+
+## 8. KPIs - Indicadores de Desempeño
+
+| **ID** | **Indicador** | **Descripción** | **Meta** | **Unidad** |
+|--------|---------------|-----------------|----------|------------|
+| **KPI-01** | Disponibilidad del sistema | Tiempo de operación sin interrupciones | ≥ 99.5 | % |
+| **KPI-02** | Precisión de lectura diurna | Tasa de reconocimiento correcto (día) | ≥ 98 | % |
+| **KPI-03** | Precisión de lectura nocturna | Tasa de reconocimiento correcto (noche) | ≥ 95 | % |
+| **KPI-04** | Tiempo de procesamiento | Latencia captura-resultado | ≤ 150 | ms |
+| **KPI-05** | Tasa de captura | Vehículos detectados / Total vehículos | ≥ 99 | % |
+| **KPI-06** | Falsos positivos | Lecturas incorrectas / Total lecturas | ≤ 2 | % |
+| **KPI-07** | Latencia de alerta | Tiempo hasta notificación de coincidencia | ≤ 5 | segundos |
+| **KPI-08** | Almacenamiento disponible | Capacidad de retención de datos | ≥ 90 | días |
+
+---
+
+## 9. Referencias de Mercado
+
+| **Fabricante** | **País** | **Modelos de Referencia** | **Website** |
+|----------------|----------|---------------------------|-------------|
+| **Genetec** | Canadá | AutoVu, SharpV, Cloudrunner | https://www.genetec.com |
+| **Motorola Solutions** | USA | Vigilant LPR, License Plate Reader | https://www.motorolasolutions.com |
+| **Jenoptik** | Alemania | TraffiStar, VECTOR2, VEMO | https://www.jenoptik.com |
+| **Siemens Mobility** | Alemania | Sicore ANPR, SIRIUS | https://www.mobility.siemens.com |
+| **Avigilon (Motorola)** | Canadá | Avigilon LPR, Appearance Search | https://www.avigilon.com |
+| **Tattile** | Italia | Vega Smart, Vision/LPR | https://www.tattile.com |
+
+---
+
+## 10. Proveedores Colombia
+
+| **Empresa** | **Especialidad** | **Website** |
+|-------------|------------------|-------------|
+| **Bosch Security** | Sistemas de videovigilancia y ALPR | https://www.boschsecurity.com/xc/es |
+| **Hikvision Colombia** | Cámaras ANPR y soluciones de seguridad | https://www.hikvision.com/co |
+| **Dahua Technology** | Soluciones ALPR y videovigilancia | https://www.dahuasecurity.com/co |
+| **Hanwha Techwin** | Cámaras especializadas ALPR | https://www.hanwha-security.com |
+
+---
+
+## 11. Casos de Uso
+
+### CASO DE USO 1: Recuperación de Vehículo Robado
+
+**Actor Principal:** Centro de coordinación policial
+
+**Flujo Principal:**
+1. Se reporta robo de vehículo con placa XYZ-123
+2. Placa se registra en lista negra del sistema ALPR
+3. Cámara ALPR en vía principal detecta vehículo
+4. Sistema reconoce placa y consulta lista negra
+5. Se genera alerta inmediata a centro de coordinación
+6. Alerta incluye ubicación, dirección, imagen y timestamp
+7. Unidad policial intercepta vehículo 5 km adelante
+
+**Valor Generado:** Recuperación rápida, reducción de delitos
+
+---
+
+### CASO DE USO 2: Verificación de Infracción de Velocidad
+
+**Actor Principal:** Agente de tránsito / Sistema de fotodetección
+
+**Flujo Principal:**
+1. Radar detecta vehículo excediendo límite de velocidad
+2. Cámara ALPR captura imagen de placa y vehículo
+3. Sistema OCR reconoce caracteres de la placa
+4. Se registra infracción con velocidad, imagen y metadatos
+5. Sistema consulta RUNT para datos del propietario
+6. Se genera notificación de comparendo electrónico
+7. Evidencia se almacena para proceso judicial
+
+**Valor Generado:** Aplicación efectiva de normas, disuasión
+
+---
+
+### CASO DE USO 3: Respaldo de Transacción ETC
+
+**Actor Principal:** Sistema de peaje electrónico
+
+**Flujo Principal:**
+1. Vehículo pasa por carril ETC sin detenerse
+2. Antena DSRC lee OBU pero transacción es dudosa
+3. Cámara ALPR captura placa como respaldo
+4. Sistema compara placa reconocida con placa registrada al OBU
+5. Si coinciden, transacción se confirma
+6. Si no coinciden, se marca para revisión manual
+7. Se previene fraude por uso de OBU en vehículo no autorizado
+
+**Valor Generado:** Seguridad en transacciones, prevención de fraude
+
+---
+
+### CASO DE USO 4: Análisis de Patrones de Tráfico
+
+**Actor Principal:** Analista de transporte y planeación
+
+**Flujo Principal:**
+1. Sistema ALPR registra todas las placas en puntos estratégicos
+2. Se acumulan datos de series temporales por ubicación
+3. Análisis identifica rutas más utilizadas por usuarios recurrentes
+4. Se detectan patrones de horario pico en diferentes tramos
+5. Informe ayuda a planificar ampliaciones de capacidad
+6. Se optimiza ubicación de nuevos puntos de peaje
+7. Se mejoran modelos de pronóstico de demanda
+
+**Valor Generado:** Decisiones basadas en datos, planificación efectiva
+
+---
+
+### CASO DE USO 5: Control de Acceso a Instalaciones
+
+**Actor Principal:** Guardia de seguridad / Sistema de acceso
+
+**Flujo Principal:**
+1. Vehículo se aproxima a entrada de instalación restringida
+2. Cámara ALPR lee placa automáticamente
+3. Sistema consulta lista de vehículos autorizados
+4. Placa está en lista blanca de empleados
+5. Barrera se abre automáticamente sin intervención
+6. Se registra entrada con timestamp y imagen
+7. Si placa no está autorizada, se alerta a guardia
+
+**Valor Generado:** Seguridad, automatización, registro de accesos
+
+---
+
+## 12. Glosario
+
+| **Término** | **Definición** |
+|-------------|----------------|
+| **ALPR** | Automatic License Plate Recognition, reconocimiento automático de placas |
+| **LPR** | License Plate Recognition, sinónimo de ALPR |
+| **OCR** | Optical Character Recognition, reconocimiento óptico de caracteres |
+| **CNN** | Convolutional Neural Network, red neuronal para procesamiento de imágenes |
+| **IR** | Infrarrojo, luz fuera del espectro visible |
+| **Shutter global** | Tipo de obturador de cámara que captura imagen completa simultáneamente |
+| **RUNT** | Registro Único Nacional de Tránsito, base de datos de vehículos Colombia |
+| **Edge AI** | Procesamiento de inteligencia artificial en dispositivo local |
+| **PoE** | Power over Ethernet, alimentación por cable de red |
+| **Trigger** | Señal que activa la captura de imagen |
+
+---
+
+*Documento generado bajo especificaciones técnicas del proyecto APP-CHIA-GIRARDOT*

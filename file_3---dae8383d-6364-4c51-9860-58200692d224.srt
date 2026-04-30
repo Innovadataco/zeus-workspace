@@ -1,0 +1,16 @@
+1
+00:00:00,000 --> 00:00:06,580
+correcto en la carpeta están las fichas técnicas y estas fichas
+
+2
+00:00:06,580 --> 00:00:11,860
+tienen al 42 deben clupir a estándar y el formato definido en el
+
+3
+00:00:11,860 --> 00:00:17,780
+ITC-C-C-01. Esa estructura debe replicarse allá, es decir tenemos
+
+4
+00:00:17,780 --> 00:00:20,940
+que usar el documento y llevar a esa nueva estructura, mentiendes.
+

@@ -1,0 +1,84 @@
+FICHA TÉCNICA ITS - CC-01: CCTV (Sistema de Videovigilancia)
+Corredor Vial Chía-Girardot - 306 km
+
+================================================================================
+1. IDENTIFICACIÓN DEL COMPONENTE
+================================================================================
+CAMPO,VALOR
+Código,CC-01
+Sigla,CCTV
+Nombre Completo,Sistema de Videovigilancia (Closed Circuit Television)
+Categoría,Sistemas de Percepción y Monitoreo Visual
+Versión,V3
+Longitud Corredor,306 km
+Entidad Operadora,InnovaDataCO SAS
+
+================================================================================
+2. ESPECIFICACIÓN TÉCNICA
+================================================================================
+PARÁMETRO,ESPECIFICACIÓN MÍNIMA
+Resolución de captura,4K UHD (3840×2160) @ 30 fps
+Resolución mínima aceptable,2K (2560×1440) @ 30 fps para cámaras secundarias
+Formato de compresión,H.265/HEVC primario; H.264/AVC secundario
+Tasa de bits por cámara,8-25 Mbps según resolución y nivel de actividad
+Latencia de transmisión,< 500 ms desde captura hasta visualización en CCO
+Rango dinámico,HDR/WDR ≥ 120 dB para condiciones de contraluz extremo
+Visión nocturna,IR inteligente con alcance ≥ 100 m para cámaras exteriores
+Protección ambiental,IP66/67 para equipos de exterior; IP54 para interior
+Rango térmico operativo,-30°C a +60°C con funcionamiento continuo garantizado
+Alimentación,PoE++ (IEEE 802.3bt; 60W) o 24VAC/24VDC con respaldo UPS
+Capacidades PTZ,Pan 360°; Tilt ±90°; Zoom óptico ≥ 30x para cámaras motorizadas
+Analítica integrada,Detección de intrusión; cruce de línea; permanencia; dirección
+Protocolos de red,ONVIF Profile S/G; RTSP; RTMP; SIP para integraciones
+Ciberseguridad,Cifrado TLS 1.3; autenticación IEEE 802.1X; certificados X.509
+Almacenamiento local,Slot para microSD ≥ 256 GB como respaldo ante falla de red
+Gestión de VMS,Compatible con plataformas Milestone; Genetec; Honeywell
+Tasa de cuadros,30 fps configurable; con modo 60 fps para cámaras de alta velocidad
+Campo visual,≥ 90° horizontal para cámaras fijas de cobertura general
+Resistencia a impactos,IK10 para zonas vulnerables a vandalismo
+
+================================================================================
+3. INDICADORES CLAVE DE RENDIMIENTO (KPIs)
+================================================================================
+ID,INDICADOR,META,FRECUENCIA
+KPI-01,Disponibilidad del Sistema,≥ 99.9%,Mensual
+KPI-02,Latencia de Video,< 500 ms,Continua
+KPI-03,Calidad de Imagen,≥ 95%,Trimestral
+KPI-04,Tasa de Falsos Positivos,< 5%,Mensual
+KPI-05,Cobertura Operativa,≥ 98%,Diaria
+KPI-06,Tiempo de Recuperación MTTR,< 4 horas,Por incidente
+KPI-07,Satisfacción de Usuario,≥ 4.0/5.0,Semestral
+KPI-08,Eficiencia Energética,< 25W,Mensual
+
+================================================================================
+4. REFERENCIAS DE MERCADO - FABRICANTES INTERNACIONALES
+================================================================================
+FABRICANTE,PAÍS,ESPECIALIDAD,WEB
+Hikvision,China,Videovigilancia completa,https://www.hikvision.com
+Dahua Technology,China,Soluciones de seguridad,https://www.dahuasecurity.com
+Axis Communications,Suecia,Cámaras de red IP,https://www.axis.com
+Bosch Security,Alemania,Sistemas de seguridad premium,https://www.boschsecurity.com
+Pelco by Schneider,USA,Videovigilancia profesional,https://www.pelco.com
+Hanwha Techwin,Corea del Sur,Wisenet series,https://www.hanwhavision.com
+
+================================================================================
+5. REFERENCIAS DE MERCADO - PROVEEDORES COLOMBIA
+================================================================================
+EMPRECIA,CIUDAD,ESPECIALIDAD,WEB
+Indra Colombia,Bogotá,ITS Integrado; Smart Cities,https://www.indracompany.com
+ISV Colombia,Bogotá,Seguridad electrónica,https://www.isvcolombia.com
+Seguridad Vial S.A.S.,Medellín,Sistemas de control vial,https://www.seguridadvial.com.co
+CCTV Colombia,Bogotá,Distribución CCTV,https://www.cctvcolombia.com.co
+
+================================================================================
+6. FIRMA Y APROBACIÓN
+================================================================================
+ROL,NOMBRE,FIRMA,FECHA
+Elaboró,Equipo de Ingeniería ITS,,
+Revisó,Control de Calidad,,
+Aprobó,Dirección de Proyectos,,
+
+================================================================================
+InnovaDataCO SAS | Documento generado bajo estándares ITS_CC-01
+Fecha: Abril 2026 | Versión: 3.0
+================================================================================

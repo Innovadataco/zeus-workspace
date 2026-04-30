@@ -1,0 +1,193 @@
+# CC-37: Estación Meteorológica (RWIS)
+
+## 1. Resumen Ejecutivo
+
+El componente **CC-37 Estación Meteorológica (RWIS - Road Weather Information System)** constituye el sistema de monitorización ambiental diseñado para capturar datos meteorológicos y de condiciones de la superficie de rodadura en puntos estratégicos del corredor vial. Este subsistema proporciona información crítica sobre temperatura, humedad, precipitación, visibilidad, estado del pavimento y viento, habilitando la toma de decisiones informada para gestión de operaciones y seguridad vial.
+
+Las condiciones meteorológicas adversas son factor contribuyente en aproximadamente el 20% de los accidentes de tránsito. La capacidad de detectar condiciones peligrosas (hielo, niebla, aguaceros intensos) antes de que causen incidentes permite activar protocolos de respuesta proactiva: reducción de velocidad, despacho de mantenimiento, alertas a usuarios, y cierre preventivo de vía si es necesario.
+
+El sistema CC-37 opera de forma autónoma en campo, transmitiendo datos en tiempo real al Centro de Control donde se integran con otros subsistemas para generar alertas automáticas y modelos predictivos de condiciones de manejo.
+
+---
+
+## 2. Identificación Del Componente De Campo
+
+| Campo | Valor |
+|-------|-------|
+| **COD** | CC-37 |
+| **Sigla (Estándar Internacional)** | RWIS / Road Weather Information System |
+| **Nombre del Componente** | Estación Meteorológica |
+| **Capacidad Operativa Generada** | Monitorización Ambiental Inteligente: Capacidad de medir parámetros meteorológicos y de estado de pavimento para detección temprana de condiciones adversas y soporte a decisiones operativas. |
+
+---
+
+## 3. Descripción Funcional / Técnica
+
+### Alcance de la Solución
+
+El sistema de estaciones meteorológicas comprende sensores desplegados en ubicaciones representativas del corredor, alimentados por energía solar o red eléctrica con respaldo, y comunicados mediante redes IP o celular. La solución incluye:
+
+- **Sensores atmosféricos**: Temperatura, humedad relativa, presión barométrica, velocidad y dirección del viento, precipitación, radiación solar.
+- **Sensores de pavimento**: Temperatura superficial, estado del pavimento (seco, húmedo, helado, congelado, con sal), nivel de agua/escarcha.
+- **Sensores de visibilidad**: Medición de distancia visual y detección de niebla.
+- **Cámaras de verificación**: Imágenes del entorno para validación visual de condiciones.
+- **Unidad de control**: Datalogger que procesa señales, aplica algoritmos, y gestiona comunicaciones.
+
+Las estaciones operan de forma continua, reportando datos cada 1-10 minutos según configuración y condiciones (frecuencia aumentada ante eventos).
+
+---
+
+## 4. Justificación Estratégica
+
+La variabilidad climática a lo largo del corredor Chía–Girardot, que atraviesa diferentes pisos térmicos y zonas climáticas, hace esencial el monitoreo ambiental para:
+
+**Seguridad vial:**
+1. **Prevención de accidentes**: Alerta temprana de condiciones peligrosas permite activar medidas preventivas.
+2. **Gestión de velocidad**: Información de visibilidad y adherencia permite ajustar límites dinámicamente.
+3. **Cierre informado**: Datos objetivos para decisiones de cierre parcial o total de vía.
+
+**Eficiencia operativa:**
+1. **Mantenimiento predictivo**: Programación de actividades según condiciones meteorológicas.
+2. **Gestión de inventario**: Activación de operaciones de remoción de nieve/hielo.
+3. **Optimización de recursos**: Despacho eficiente de equipos y personal.
+
+---
+
+## 5. Especificación Técnica
+
+| Parámetro | Especificación Mínima |
+|-----------|----------------------|
+| **Temperatura aire** | Rango -40°C a +60°C, precisión ± 0.5°C |
+| **Humedad relativa** | Rango 0-100%, precisión ± 3% |
+| **Presión barométrica** | Rango 500-1100 hPa, precisión ± 1 hPa |
+| **Velocidad del viento** | Rango 0-75 m/s, precisión ± 0.5 m/s |
+| **Dirección del viento** | Rango 0-360°, precisión ± 5° |
+| **Precipitación** | Tipo pluviómetro de balancín o óptico, resolución 0.1 mm |
+| **Visibilidad** | Rango 10 m - 50 km, precisión ± 10% |
+| **Temperatura de pavimento** | Rango -40°C a +80°C, precisión ± 0.5°C |
+| **Estado del pavimento** | Detección: seco, húmedo, húmedo con sal, helado, congelado, nieve |
+| **Nivel de agua/escarcha** | 0-10 mm en superficie |
+| **Frecuencia de muestreo** | 1 minuto (condiciones normales), configurable |
+| **Transmisión de datos** | Cada 1-10 minutos, configurable |
+| **Comunicaciones** | 4G/5G, Ethernet, o radio digital |
+| **Alimentación** | Solar (panel 100W + batería 100Ah) o 110-240 VAC |
+| **Autonomía solar** | ≥ 7 días sin radiación solar |
+| **Protección ambiental** | IP65 como mínimo |
+| **Rango térmico operativo** | -40°C a +60°C |
+| **Resistencia viento** | 150 km/h sin daño estructural |
+| **Certificaciones** | WMO (World Meteorological Organization), NIST traceable |
+
+---
+
+## 6. Requerimientos Funcionales (RF)
+
+| ID | Nombre | Descripción Funcional / Técnica | Justificación Estratégica |
+|----|--------|--------------------------------|---------------------------|
+| **RF-01** | Medición de Temperatura y Humedad | Sensores de temperatura del aire y humedad relativa con protección contra radiación solar (radiation shield). Actualización cada minuto. Detección de punto de rocío calculado. | La temperatura y humedad son parámetros básicos para modelar condiciones de manejo y predecir formación de hielo en pavimento. |
+| **RF-02** | Medición de Viento | Anemómetro de copa o ultrasónico para velocidad, veleta para dirección. Medición de ráfagas y velocidad promedio. Capacidad de detectar condiciones de viento crítico para vehículos altos. | El viento fuerte afecta estabilidad de vehículos pesados y puede causar volcamientos. La detección temprana permite alertas específicas. |
+| **RF-03** | Detección de Precipitación | Pluviómetro que mida intensidad y acumulación de lluvia. Diferenciación entre lluvia, nieve y granizo si es posible. Sensibilidad para detectar inicio de precipitación. | La precipitación afecta adherencia del pavimento y visibilidad. La detección temprana permite activar protocolos de respuesta. |
+| **RF-04** | Medición de Visibilidad | Sensor de visibilidad por dispersión de luz (forward scatter) que mida distancia visual y detecte formación de niebla. Rango 10m - 50km con precisión ±10%. | La niebla es una de las causas principales de accidentes múltiples. La detección automática permite activar alertas y reducción de velocidad. |
+| **RF-05** | Estado del Pavimento | Sensor de estado superficial que detecte: seco, húmedo, húmedo con sal, helado, congelado, con nieve. Medición de temperatura superficial del pavimento. | El estado del pavimento determina adherencia y distancia de frenado. La detección de hielo permite despacho preventivo de saladora. |
+| **RF-06** | Transmisión en Tiempo Real | Envío de datos al Centro de Control cada 1-10 minutos según configuración. Transmisión inmediata ante cambios bruscos o condiciones críticas. Buffer local para 30 días de operación offline. | La información meteorológica pierde valor si no es oportuna. La transmisión en tiempo real permite respuesta inmediata ante eventos. |
+| **RF-07** | Alertas Automáticas | Generación de alertas automáticas ante condiciones críticas: visibilidad < 500m (niebla), temperatura < 3°C con precipitación (riesgo hielo), viento > 80 km/h, temperatura > 45°C. | Las alertas automáticas garantizan que condiciones peligrosas no pasen desapercibidas por operadores, especialmente fuera de horario laboral. |
+| **RF-08** | Cámaras de Verificación | Cámara orientada hacia el pavimento y horizonte para validación visual de condiciones. Captura periódica (cada 15 min) y bajo demanda ante alertas. | La imagen visual proporciona contexto que los sensores numéricos no capturan: tipo de nubosidad, estado de vegetación, tráfico visible. |
+| **RF-09** | Calibración Remota | Capacidad de verificar calibración de sensores remotamente mediante algoritmos de diagnóstico. Indicadores de drift o mal funcionamiento. | La calibración asegura precisión de datos. El diagnóstico remoto reduce necesidad de visitas de mantenimiento. |
+| **RF-10** | Integración con Sistemas ITS | Interfaz API para que otros subsistemas consuman datos meteorológicos: MSV (mensajes de alerta), DMS (límites de velocidad dinámicos), Sistema de Respuesta a Emergencias. | El valor de los datos meteorológicos se multiplica cuando se integran con otros sistemas para respuesta coordinada. |
+
+---
+
+## 7. Requisitos No Funcionales (RNF)
+
+| ID | Nombre | Descripción | Justificación |
+|----|--------|-------------|---------------|
+| **RNF-01** | Precisión y Trazabilidad | Sensores con precisión certificada y trazabilidad a patrones nacionales/internacionales. Certificados de calibración válidos. | La precisión es fundamental para la confiabilidad de alertas y modelos predictivos. Datos erróneos pueden causar falsas alarmas o omisiones peligrosas. |
+| **RNF-02** | Disponibilidad | Estación operativa ≥ 99% del tiempo. Redundancia en componentes críticos. MTTR < 8 horas. | La indisponibilidad deja "zonas ciegas" ante condiciones meteorológicas adversas. |
+| **RNF-03** | Autonomía Energética | Sistemas solares con autonomía ≥ 7 días para operación continua ante fallas de red o periodos de baja radiación (nubosidad persistente). | Las estaciones están en ubicaciones remotas. La autonomía energética garantiza operación continua sin infraestructura eléctrica extensa. |
+| **RNF-04** | Resistencia Ambiental | Operación continua ante: lluvia torrencial, granizo, viento huracanado, temperaturas extremas, radiación UV intensa, humedad > 95%. | La infraestructura está expuesta a condiciones severas. La robustez garantiza vida útil y retorno de inversión. |
+| **RNF-05** | Ciberseguridad | Comunicaciones cifradas, autenticación de dispositivo, protección contra manipulación de datos. Integridad de datos verificable. | La manipulación de datos meteorológicos podría causar decisiones de seguridad incorrectas. La integridad es crítica. |
+| **RNF-06** | Mantenibilidad | Diseño modular que permita sustitución de sensores individuales sin reemplazo completo. Acceso seguro para técnicos. | El mantenimiento en campo es costoso. La modularidad reduce tiempos y costos de intervención. |
+
+---
+
+## 8. Indicadores Clave De Rendimiento (KPIs)
+
+| KPI | Definición | Meta |
+|-----|-----------|------|
+| **KPI-01** | Disponibilidad de Estación | Tiempo operativo de la estación | ≥ 99% |
+| **KPI-02** | Precisión de Temperatura | Desviación respecto a valor real | ± 0.5°C |
+| **KPI-03** | Precisión de Visibilidad | Desviación respecto a valor real | ± 10% |
+| **KPI-04** | Latencia de Datos | Tiempo desde medición hasta recepción en CCO | < 5 minutos |
+| **KPI-05** | Tasa de Alertas Válidas | Alertas generadas que corresponden a condiciones reales | > 95% |
+| **KPI-06** | Tiempo de Respuesta a Fallas | Tiempo desde detección de falla hasta restauración | < 8 horas |
+
+---
+
+## 9. Componentes Del Sistema
+
+| Componente | Descripción | Especificaciones Clave |
+|------------|-------------|------------------------|
+| **Datalogger** | Unidad de adquisición de datos | IP67, múltiples entradas analógicas/digitales |
+| **Sensor de Temperatura/Humedad** | SHT30 o equivalente | ±0.5°C, ±3% RH |
+| **Anemómetro** | Medición de viento | Ultrasónico o de copas, ±0.5 m/s |
+| **Pluviómetro** | Medición de precipitación | Balancín, 0.1 mm resolución |
+| **Sensor de Visibilidad** | Medición de niebla | Forward scatter, 10m-50km |
+| **Sensor de Pavimento** | Estado de superficie | Óptico o activo, múltiples parámetros |
+| **Panel Solar** | Generación de energía | 100W, monocristalino |
+| **Batería** | Almacenamiento energía | 100Ah, gel o litio |
+| **Cámara** | Verificación visual | 2 MP, IR para nocturna |
+| **Mástil** | Soporte de sensores | Aluminio, 6-10 m altura |
+| **Gabinete** | Protección electrónica | IP65, acero inoxidable |
+
+---
+
+## 10. Proveedores en el Mercado (Internacional)
+
+| Fabricante | País | Tecnología Principal | Modelos de Referencia | Sitio Web |
+|------------|------|---------------------|----------------------|-----------|
+| **Vaisala** | Finlandia | Sensores meteorológicos | DSC111, WXT536, PWD52 | www.vaisala.com |
+| **Biral** | UK | Sensores de visibilidad | SWS-100, VPF-730 | www.biral.com |
+| **Lufft** | Alemania | Estaciones meteorológicas | WS200, R2S, VS20k | www.lufft.com |
+| **Campbell Scientific** | USA | Dataloggers, estaciones | CR1000X, CS725 | www.campbellsci.com |
+| **Highway Tech** | USA | RWIS completo | IceSight, AeroTemp | www.highwaytech.com |
+| **Surface Systems** | USA | Sensores de pavimento | SS-1, SSI-Sensor | www.surfacesystems.com |
+
+---
+
+## 11. Proveedores Colombia
+
+| Empresa | Especialidad | Ubicación | Sitio Web |
+|---------|-------------|-----------|-----------|
+| **Geosystems** | Instrumentación meteorológica | Bogotá | www.geosystems.com.co |
+| **Ingetec** | Estaciones meteorológicas | Bogotá | www.ingetec.com.co |
+| **ITS Colombia** | Sistemas integrales ITS | Medellín | www.itscolombia.com |
+| **Hydrotech** | Sensores ambientales | Bogotá | www.hydrotech.com.co |
+
+---
+
+## 12. Casos de Uso
+
+### Caso de Uso 1: Alerta de Formación de Hielo
+**Actor**: Sistema RWIS + Operador CCO
+**Flujo**: RWIS detecta temperatura superficial de pavimento 0.5°C, presencia de precipitación, y estado "riesgo de hielo". Genera alerta automática al CCO. Operador activa mensajes en MSV: "PAVIMENTO RESBALOSO - REDUZCA VELOCIDAD" y despacha unidad de mantenimiento con sal.
+**Resultado**: Prevención de accidentes por pavimento congelado mediante respuesta proactiva.
+
+### Caso de Uso 2: Detección de Niebla Densa
+**Actor**: Sensor de visibilidad + Sistemas ITS
+**Flujo**: Sensor de visibilidad mide 200 m (niebla densa) en km 80. Alerta automática activa mensaje "NIEBLA Densa 1 KM - REDUZCA VELOCIDAD" en paneles MSV 2 km antes. Sistema DMS reduce límite de velocidad a 60 km/h en el sector.
+**Resultado**: Reducción de velocidad coordinada ante visibilidad reducida, previniendo colisiones múltiples.
+
+### Caso de Uso 3: Monitoreo para Mantenimiento Programado
+**Actor**: Coordinador de mantenimiento
+**Flujo**: Coordinador consulta datos meteorológicos de próximas 48 horas antes de programar trabajos de señalización horizontal. Verifica que no hay precipitación pronosticada y temperatura > 10°C para aplicación de pintura termoplástica.
+**Resultado**: Programación óptima de trabajos garantizando condiciones adecuadas y durabilidad.
+
+### Caso de Uso 4: Respuesta a Vientos Fuertes
+**Actor**: Sistema RWIS + Operador CCO
+**Flujo**: RWIS en puente elevado detecta ráfagas de viento > 90 km/h. Alerta automática al CCO. Operador activa mensaje "VIENTOS FUERTES - PRECAUCIÓN VEHÍCULOS ALTOS" y evalúa cierre temporal para vehículos de carga.
+**Resultado**: Protección de usuarios ante condiciones de viento peligroso para vehículos de gran altura.
+
+### Caso de Uso 5: Integración con Modelos Predictivos
+**Actor**: Sistema de gestión de tráfico
+**Flujo**: Datos históricos y en tiempo real de RWIS alimentan modelo predictivo que estima formación de escarcha 6 horas antes. Sistema anticipa alertas a mantenimiento y prepara recursos antes de que condición se materialice.
+**Resultado**: Gestión predictiva del riesgo basada en datos meteorológicos históricos y en tiempo real.
+

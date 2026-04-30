@@ -1,0 +1,13 @@
+8REQUERIMIENTOS FUNCIONALES Y NO FUNCIONALES141
+8.1CC-01:CCTV (Sistema de Videovigilancia)141
+8.1.1Resumen Ejecutivo141
+8.1.2Identificación Del Componente De Campo141
+8.1.3Descripción Funcional / Técnica141
+8.1.4Justificación Estratégica142
+8.1.5Especificación Técnica142
+8.1.6Requerimientos Funcionales (RF)143
+8.1.7Requisitos No Funcionales (RNF)144
+8.1.8Indicadores Clave De Rendimiento (KPIs)144
+8.1.9Referencias De Mercado144
+8.1.10Proveedores Colombia145
+8.1.11Casos de Uso145

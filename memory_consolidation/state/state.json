@@ -1,0 +1,24 @@
+{
+  "stm": {
+    "count": 63,
+    "last_ts": "2026-04-30T16:24:16.478228",
+    "last_sessions": 1,
+    "last_messages": 815,
+    "last_chars": 5528
+  },
+  "diary": {
+    "count": 6,
+    "last_ts": "2026-04-30T03:55:40.061891",
+    "last_skip": "no_sessions_today"
+  },
+  "compact": {
+    "count": 3,
+    "last_ts": "2026-04-30T03:55:40.620125",
+    "last_invoke": 2,
+    "last_sessions": 1,
+    "last_messages": 770,
+    "last_latency_s": 3.5,
+    "last_model": "k2p6",
+    "last_skip": "stm_hash_unchanged"
+  }
+}

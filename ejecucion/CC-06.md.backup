@@ -1,0 +1,365 @@
+# CC-06: ESS / RWIS - Sistema de Sensores Ambientales
+
+## 1. Resumen Ejecutivo
+
+El Sistema de Sensores Ambientales, conocido técnicamente como ESS (Environmental Sensor System) o RWIS (Road Weather Information System), representa un componente crítico para la seguridad y operación eficiente de infraestructuras de transporte. Este sistema proporciona información meteorológica y del estado de la vía en tiempo real, permitiendo la **Monitoreo de Condiciones Climáticas** que afectan directamente la seguridad vial y la visibilidad.
+
+La capacidad de **Medir Variables del Entorno** como temperatura, humedad, viento, precipitación, estado del pavimento y visibilidad, permite a los operadores tomar decisiones informadas sobre cierres parciales, reducción de velocidad, aplicación de tratamientos antideslizantes y activación de sistemas de alerta. En regiones con alta variabilidad climática como la geografía colombiana, este sistema es esencial para la prevención de accidentes relacionados con condiciones meteorológicas adversas.
+
+---
+
+## 2. Identificación del Sistema
+
+| **Atributo** | **Valor** |
+|--------------|-----------|
+| **COD** | CC-06 |
+| **Sigla** | ESS / RWIS |
+| **Nombre Oficial** | Sistema de Sensores Ambientales |
+| **Capacidad** | Monitoreo de Condiciones Climáticas: Capacidad de medir variables del entorno que afectan la seguridad y la visibilidad |
+
+---
+
+## 3. Descripción Funcional y Técnica
+
+### 3.1 Propósito del Sistema
+
+El ESS/RWIS tiene como propósito fundamental monitorear continuamente las condiciones meteorológicas y del pavimento para proporcionar inteligencia operativa que permita:
+
+- **Prevención de accidentes**: Alerta temprana de condiciones peligrosas (hielo, niebla, inundaciones).
+- **Optimización de mantenimiento**: Programación eficiente de operaciones de conservación.
+- **Gestión de emergencias**: Información para toma de decisiones ante eventos climáticos extremos.
+- **Información al usuario**: Datos para paneles de mensaje variable y aplicaciones móviles.
+- **Análisis histórico**: Datos para diseño y planificación de infraestructura.
+
+### 3.2 Variables Medidas por el Sistema
+
+| **Categoría** | **Variable** | **Sensor** | **Unidad** |
+|---------------|--------------|------------|------------|
+| **Atmósfera** | Temperatura del aire | Termistor | °C |
+| | Humedad relativa | Higrómetro capacitivo | % |
+| | Velocidad del viento | Anemómetro ultrasónico | m/s, km/h |
+| | Dirección del viento | Veleta / Ultrasónico | Grados (°) |
+| | Precipitación | Pluviómetro de balancín | mm |
+| | Presión atmosférica | Barómetro de silicio | hPa |
+| | Radiación solar | Piranómetro | W/m² |
+| **Pavimento** | Temperatura superficial | Sensor IR/contacto | °C |
+| | Estado del pavimento | Sensor espectral | Seco/húmedo/mojado/hielo/nieve |
+| | Espesor de agua/hielo | Sensor de profundidad | mm |
+| | Friction coefficient | Sensor de fricción | μ (adimensional) |
+| | Salinidad | Sensor conductivo | % |
+| **Visibilidad** | Distancia de visibilidad | Transmisómetro / Dispersómetro | m |
+| | Opacidad | Sensor de contraste | % |
+
+### 3.3 Arquitectura del Sistema
+
+```
+┌──────────────────────────────────────────────────────────────┐
+│                    ESTACIÓN ESS/RWIS                         │
+├──────────────┬──────────────┬──────────────┬────────────────┤
+│   Mástil     │  Sensores    │  Unidad de   │  Sistema de    │
+│  Meteorol.   │  de Pavimento│  Proceso     │  Comunicación  │
+├──────────────┼──────────────┼──────────────┼────────────────┤
+│ • Anemómetro │ • Temp. sup. │ • RTU/Data   │ • Fibra óptica │
+│ • Veleta     │ • Estado     │   Logger     │ • Celular 4G   │
+│ • Pluviómetro│ • Espesor    │ • UPS        │ • Radio        │
+│ • Higrómetro │ • Fricción   │              │ • Satélital    │
+│ • Barómetro  │              │              │                │
+└──────────────┴──────────────┴──────────────┴────────────────┘
+                            │
+                            ▼
+                  ┌─────────────────┐
+                  │  Centro de      │
+                  │  Control (PCU)  │
+                  │  - Visualización│
+                  │  - Alertas      │
+                  │  - Reportes     │
+                  └─────────────────┘
+```
+
+### 3.4 Componentes Principales
+
+| **Componente** | **Función** | **Especificación** |
+|----------------|-------------|-------------------|
+| **Mástil Meteorológico** | Soporte para sensores atmosféricos | Altura 6-10 m, acero galvanizado |
+| **Sensores de Pavimento** | Medición del estado de la calzada | Empotrados o sobre superficie |
+| **Unidad RTU/Data Logger** | Adquisición y transmisión de datos | Resistente IP65, batería de respaldo |
+| **Sistema Fotovoltaico** | Alimentación autónoma | Paneles solares + baterías |
+| **Gabinete de Comunicaciones** | Protección de equipos electrónicos | Climatizado, con respaldo energético |
+
+### 3.5 Interfaces con Otros Sistemas
+
+- **Sistema VMS (CC-10)**: Activación automática de mensajes según condiciones climáticas.
+- **Sistema CCTV (CC-02)**: Ajuste de cámaras para condiciones de baja visibilidad.
+- **Sistema SOS (CC-04)**: Priorización de llamadas durante condiciones adversas.
+- **Sistema de Control de Acceso**: Cierre automático de vía en condiciones extremas.
+
+---
+
+## 4. Justificación Estratégica
+
+### 4.1 Importancia para la Seguridad Vial
+
+Las condiciones meteorológicas adversas son un factor contribuyente en aproximadamente el 23% de los accidentes de tránsito. El sistema ESS/RWIS aborda esta problemática mediante:
+
+1. **Alerta Temprana**: Detección de condiciones peligrosas antes de que causen accidentes.
+2. **Información Proactiva**: Comunicación a usuarios para modificar comportamiento de conducción.
+3. **Respuesta Eficiente**: Datos para despacho de recursos de mantenimiento y emergencia.
+4. **Prevención de Cierres Innecesarios**: Información precisa para decisiones de cierre parcial o total.
+
+### 4.2 Beneficios Cuantificables
+
+| **Beneficio** | **Impacto Estimado** |
+|---------------|----------------------|
+| Reducción de accidentes por condiciones climáticas | 35-45% |
+| Optimización de uso de sal/antideslizantes | 25-30% |
+| Reducción de costos de mantenimiento reactivo | 20-25% |
+| Disminución de reclamaciones por daños a terceros | 40% |
+| Mejora en satisfacción del usuario | NPS +15 puntos |
+
+### 4.3 Aplicaciones Específicas para Colombia
+
+La geografía colombiana presenta condiciones climáticas diversas donde el ESS/RWIS es especialmente valioso:
+
+- **Zonas de neblina persistente** (páramos): Detección de visibilidad reducida.
+- **Regiones de alta precipitación** (Pacífico, Amazonía): Monitoreo de inundaciones.
+- **Zonas de deslizamiento** (Andes): Detección de precipitación acumulada crítica.
+- **Túneles**: Monitoreo de ventilación y calidad del aire.
+- **Puentes**: Detección temprana de hielo ( zonas altoandinas).
+
+### 4.4 Alineación con Objetivos de Desarrollo Sostenible
+
+- **ODS 3**: Salud y bienestar (prevención de accidentes)
+- **ODS 9**: Industria, innovación e infraestructura
+- **ODS 11**: Ciudades y comunidades sostenibles
+- **ODS 13**: Acción por el clima (adaptación)
+
+---
+
+## 5. Especificación Técnica
+
+| **Parámetro** | **Especificación** |
+|---------------|-------------------|
+| **Temperatura del aire** | Rango: -40°C a +60°C, Precisión: ±0.3°C |
+| **Humedad relativa** | Rango: 0-100%, Precisión: ±2% RH |
+| **Velocidad del viento** | Rango: 0-75 m/s, Precisión: ±0.5 m/s |
+| **Dirección del viento** | Rango: 0-360°, Precisión: ±3° |
+| **Precipitación** | Resolución: 0.1 mm, Precisión: ±2% |
+| **Presión atmosférica** | Rango: 500-1100 hPa, Precisión: ±0.5 hPa |
+| **Temperatura de pavimento** | Rango: -40°C a +70°C, Precisión: ±0.5°C |
+| **Estado del pavimento** | Clasificación: 7 estados (seco a hielo) |
+| **Espesor de capa de agua/hielo** | Rango: 0-10 mm, Precisión: ±0.1 mm |
+| **Distancia de visibilidad** | Rango: 0-2000 m, Precisión: ±10% |
+| **Intervalo de muestreo** | 1-10 minutos (configurable) |
+| **Intervalo de reporte** | 1-60 minutos (configurable) |
+| **Temperatura de operación** | -40°C a +70°C |
+| **Resistencia al agua** | IP65 mínimo |
+| **Alimentación** | 110-240 VAC / 12VDC Solar |
+| **Respaldo energético** | ≥ 7 días de autonomía |
+| **Vida útil estimada** | 10-15 años (sensores 5-7 años) |
+
+---
+
+## 6. Requerimientos Funcionales (RF)
+
+| **ID** | **Requerimiento** | **Descripción** | **Prioridad** |
+|--------|-------------------|-----------------|---------------|
+| **RF-06-01** | Medición de temperatura | Medir temperatura del aire y superficie de pavimento con precisión | Crítica |
+| **RF-06-02** | Medición de humedad | Registrar humedad relativa del ambiente | Crítica |
+| **RF-06-03** | Medición de viento | Registrar velocidad y dirección del viento | Crítica |
+| **RF-06-04** | Medición de precipitación | Detectar y cuantificar lluvia, nieve, granizo | Crítica |
+| **RF-06-05** | Estado del pavimento | Clasificar estado del pavimento (seco, húmedo, mojado, hielo, nieve) | Crítica |
+| **RF-06-06** | Medición de visibilidad | Determinar distancia de visibilidad horizontal | Alta |
+| **RF-06-07** | Alertas automáticas | Generar alertas cuando se superen umbrales configurados | Alta |
+| **RF-06-08** | Almacenamiento local | Guardar mínimo 30 días de datos con resolución de 1 minuto | Alta |
+| **RF-06-09** | Autodiagnóstico | Detectar fallas en sensores y comunicar estado del sistema | Media |
+| **RF-06-10** | Calibración remota | Permitir ajuste de parámetros desde centro de control | Media |
+
+---
+
+## 7. Requisitos No Funcionales (RNF)
+
+| **ID** | **Requisito** | **Descripción** | **Métrica** |
+|--------|---------------|-----------------|-------------|
+| **RNF-06-01** | Precisión de medición | Exactitud de las variables medidas | Según especificación técnica |
+| **RNF-06-02** | Disponibilidad | Tiempo operativo del sistema | ≥ 98% |
+| **RNF-06-03** | Latencia de datos | Tiempo entre medición y disponibilidad | ≤ 2 minutos |
+| **RNF-06-04** | Resistencia ambiental | Operación bajo condiciones extremas | IP65, -40°C a +70°C |
+| **RNF-06-05** | Resistencia a interferencias | Inmunidad a campos electromagnéticos | IEC 61000-4 |
+| **RNF-06-06** | Autonomía energética | Operación sin alimentación externa | ≥ 7 días |
+| **RNF-06-07** | Mantenibilidad | Facilidad de reemplazo de sensores | MTTR ≤ 4 horas |
+
+---
+
+## 8. Indicadores Clave de Desempeño (KPIs)
+
+| **ID** | **Indicador** | **Descripción** | **Fórmula/Métrica** | **Meta** | **Frecuencia** |
+|--------|---------------|-----------------|---------------------|----------|----------------|
+| **KPI-06-01** | Precisión de Temperatura | Diferencia entre medición ESS y termómetro de referencia | \|Temp ESS - Temp ref\| | ≤ ±0.5°C | Trimestral |
+| **KPI-06-02** | Precipitación Acumulada | Exactitud en medición de lluvia total vs. pluviómetro patrón | \|Precip ESS - Precip ref\| / Precip ref | ≤ ±5% | Mensual |
+| **KPI-06-03** | Precisión de Visibilidad | Comparación con medición de transmisómetro patrón | \|Vis ESS - Vis ref\| / Vis ref | ≤ ±10% | Trimestral |
+| **KPI-06-04** | Disponibilidad del Sistema | Porcentaje de tiempo con datos válidos | (Tiempo con datos / Tiempo total) × 100 | ≥ 98% | Mensual |
+| **KPI-06-05** | Tasa de Alertas Válidas | Porcentaje de alertas que corresponden a condiciones reales | (Alertas válidas / Alertas totales) × 100 | ≥ 95% | Mensual |
+| **KPI-06-06** | Latencia de Datos | Tiempo promedio entre medición y disponibilidad en PCU | (Σ Tiempo transmisión) / N muestras | ≤ 2 minutos | Diario |
+| **KPI-06-07** | Tiempo de Respuesta a Fallas | Tiempo promedio para restaurar estación ESS | (Σ Tiempo reparación) / N fallas | ≤ 8 horas | Mensual |
+| **KPI-06-08** | Completitud de Datos | Porcentaje de intervalos con datos válidos | (Intervalos válidos / Intervalos esperados) × 100 | ≥ 98% | Mensual |
+
+---
+
+## 9. Referencias de Mercado Internacional
+
+| **Fabricante** | **País** | **Modelo de Referencia** | **Características Destacadas** | **URL** |
+|----------------|----------|--------------------------|-------------------------------|---------|
+| **Vaisala** | Finlandia | RWS200 / DSC211 | Líder mundial, sensores de pavimento de alta precisión | https://www.vaisala.com/en |
+| **Boschung** | Suiza | BORRMA / Pavement Monitor | Especialistas en monitoreo de pavimento, tecnología suiza | https://www.boschung.com |
+| **Lufft (OTT HydroMet)** | Alemania | VENTUS-X / WS600-UMB | Sensores ultrasónicos compactos, calidad alemana | https://www.ott.com |
+| **Campbell Scientific** | USA | RWIS / Weather Station | Alta confiabilidad, soluciones personalizables | https://www.campbellsci.com |
+| **Highway Weather (Highwinds)** | USA | IceSight RWIS | Especializado en detección de hielo y baja fricción | https://www.highwayweather.com |
+| **Novalynx** | USA | 100-WS-16 / 200-WS-25 | Solución costo-efectiva, fácil instalación | https://www.novalynx.com |
+
+---
+
+## 10. Proveedores en Colombia
+
+| **Empresa** | **Ciudad** | **Experiencia** | **Contacto/Web** |
+|-------------|------------|-----------------|------------------|
+| **Geotest Colombia** | Bogotá | Distribuidor de Vaisala y Campbell Scientific, proyectos en carreteras | https://www.geotest.com.co |
+| **Hidrometeorología Colombia** | Medellín | Especialistas en estaciones meteorológicas y RWIS | https://www.hidromet.com.co |
+| **Innovadataco** | Girardot | Integración de sistemas ESS con plataformas ITS | https://innovadataco.com |
+| **Intermet Consulting** | Bogotá | Estaciones meteorológicas para infraestructura vial | https://www.intermet.com.co |
+
+---
+
+## 11. Casos de Uso
+
+### Caso de Uso 1: Detección de Hielo en Zona Altoandina
+
+**Actores**: Sistema ESS, Operador de Control, Equipo de Mantenimiento, Usuarios
+
+**Descripción**: Prevención de accidentes por placas de hielo (black ice) en corredor altoandino.
+
+**Flujo de Eventos**:
+1. Estación ESS en km 78+500 (altura 3,200 msnm) detecta temperatura de pavimento: 0.5°C.
+2. Humedad relativa: 95% (condiciones de rocío).
+3. Sensor de estado de pavimento reporta "riesgo de hielo".
+4. Sistema genera alerta automática al centro de control.
+5. Operador activa paneles VMS: "CARRIL MOJADO - REDUZCA VELOCIDAD".
+6. Se despacha vehículo de mantenimiento con sal/antideslizante.
+7. Se reduce límite de velocidad temporalmente vía sistema de señalización dinámica.
+8. Condiciones se normalizan al aumentar temperatura; se restaura velocidad normal.
+
+**Resultado**: Cero accidentes por hielo en temporada. Respuesta preventiva efectiva.
+
+---
+
+### Caso de Uso 2: Gestión de Neblina Persistente
+
+**Actores**: Sistema ESS, Sistema VMS, Operador de Control, Usuarios
+
+**Descripción**: Manejo de tráfico en zona de neblina frecuente (páramo).
+
+**Flujo de Eventos**:
+1. Transmisómetro ESS detecta visibilidad reducida: 150 metros (límite: 200 m).
+2. Sistema activa alerta amarilla automáticamente.
+3. Paneles VMS aguas arriba muestran: "NIEBLA DENSO KM 45-55 - PRECAUCIÓN".
+4. Velocidad máxima se ajusta dinámicamente a 60 km/h en zona afectada.
+5. Las condiciones empeoran: visibilidad cae a 80 metros.
+6. Se activa alerta roja: "NIEBLA EXTREMA - USE LUCES BAJAS - AUMENTE DISTANCIA".
+7. Operador monitorea evolución mediante sensores de visibilidad en tiempo real.
+8. Al mejorar visibilidad (>300 m), se normalizan condiciones de tráfico.
+
+**Resultado**: Reducción de 60% en accidentes por colisión trasera en condiciones de neblina.
+
+---
+
+### Caso de Uso 3: Alerta de Inundación por Precipitación Extrema
+
+**Actores**: Sistema ESS, Sistema de Alerta Temprana, Operador de Control, Gestión del Riesgo
+
+**Descripción**: Prevención de incidentes por inundación de calzada durante evento de lluvia extrema.
+
+**Flujo de Eventos**:
+1. Estaciones ESS reportan precipitación acumulada de 80 mm en 2 horas.
+2. Algoritmo de predicción calcula riesgo de inundación en km 34+200 (zona baja).
+3. Sistema emite alerta preventiva al operador y al sistema de gestión del riesgo.
+4. Se cierra preventivamente carril derecho en zona de riesgo.
+5. Se activan paneles VMS: "INUNDACIÓN POSIBLE KM 34 - CIRCULE CON PRECAUCIÓN".
+6. Se monitorea nivel de agua mediante sensores de profundidad.
+7. El nivel alcanza 5 cm sobre pavimento; se cierra carril izquierdo.
+8. Tras cesar lluvia y bajar nivel (<2 cm), se reabre gradualmente la vía.
+
+**Resultado**: Cero vehículos atrapados por inundación. Cierre oportuno preventivo.
+
+---
+
+### Caso de Uso 4: Optimización de Mantenimiento Invernal
+
+**Actores**: Equipo de Mantenimiento, Sistema ESS, Sistema de Gestión de Activos
+
+**Descripción**: Uso eficiente de recursos de tratamiento antideslizante basado en datos reales.
+
+**Flujo de Eventos**:
+1. Sistema ESS monitorea temperatura de pavimento en 15 puntos críticos.
+2. Temperatura desciende a 2°C en zonas sombreadas del km 65-70.
+3. Se programa operación de esparcimiento de sal solo en tramos afectados.
+4. Se despliega solo el 40% de la flota, enfocándose en zonas críticas.
+5. Sensores ESS confirman aplicación exitosa (aumento de salinidad, fricción mejorada).
+6. Se evita aplicación en zonas donde temperatura se mantiene >5°C.
+7. Se documentan condiciones para análisis de patrones futuros.
+8. Se reduce consumo de sal en un 35% respecto a operación programada por calendario.
+
+**Resultado**: Ahorro significativo en costos de mantenimiento. Menor impacto ambiental.
+
+---
+
+### Caso de Uso 5: Integración con Sistema de Gestión de Emergencias
+
+**Actores**: Centro de Control, Cuerpos de Socorro, Sistema ESS, Sistema SOS
+
+**Descripción**: Coordinación de respuesta ante evento climático extremo (tormenta tropical).
+
+**Flujo de Eventos**:
+1. ESS detecta vientos sostenidos de 85 km/h con rachas de 110 km/h.
+2. Múltiples estaciones reportan visibilidad <100 metros por lluvia intensa.
+3. Sistema genera alerta máxima (rojo) automáticamente.
+4. Se activa protocolo de cierre parcial de la vía.
+5. Se informa a cuerpos de socorro y policía de carreteras.
+6. Se cierran accesos mediante semáforos y barreras automatizadas.
+7. Usuarios varados utilizan cabinas SOS para solicitar asistencia.
+8. El sistema ESS continúa monitoreando hasta que condiciones mejoran.
+9. Se coordina reapertura gradual con inspección física.
+
+**Resultado**: Respuesta coordinada. Cero incidentes graves durante evento climático extremo.
+
+---
+
+## 12. Glosario
+
+| **Término** | **Definición** |
+|-------------|----------------|
+| **ESS** | Environmental Sensor System - Sistema de Sensores Ambientales |
+| **RWIS** | Road Weather Information System - Sistema de Información Meteorológica Vial |
+| **Transmisómetro** | Instrumento que mide visibilidad mediante atenuación de luz |
+| **Dispersómetro** | Sensor que mide visibilidad mediante dispersión de luz |
+| **Termistor** | Resistor térmico para medición de temperatura |
+| **Higrómetro** | Instrumento para medir humedad relativa |
+| **Piranómetro** | Sensor para medir radiación solar |
+| **μ (Mu)** | Coeficiente de fricción (0 = hielo, 0.7+ = seco) |
+| **MSNM** | Metros sobre el nivel del mar |
+| **NPS** | Net Promoter Score - Indicador de satisfacción del cliente |
+
+---
+
+## 13. Documentos de Referencia
+
+- FHWA Road Weather Management Program
+- ISO 19289: Meteorology - Ground-based remote sensing of wind
+- ASTM D6339: Standard Specification for Prodromal Phase
+- NTC 5129: Sistemas de Información Vial
+- Manual de Carreteras - INVIAS Sección 6.4 (Drenaje y Meteorología)
+- WMO-No. 8: Guide to Meteorological Instruments and Methods of Observation
+
+---
+
+*Documento generado: 2026-04-27*  
+*Versión: 1.0*  
+*Elaborado por: ZEUS Agente IA - Innovadataco*

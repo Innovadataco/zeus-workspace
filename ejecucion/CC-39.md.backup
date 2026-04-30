@@ -1,0 +1,605 @@
+# Ficha Técnica ITS_CC-01: MSG - Micro-Red Inteligente
+
+## CC-39: Microgrid Smart Grid System
+
+---
+
+## 1. Resumen Ejecutivo
+
+| Atributo | Valor |
+|----------|-------|
+| **Código ITS** | CC-39 |
+| **Nombre Técnico** | Microgrid Smart Grid System (MSG) |
+| **Categoría** | Infraestructura Inteligente - Energía Distribuida |
+| **Nivel de Madurez** | TRL 8-9 (Sistemas desplegados y probados) |
+| **Despliegue** | Infraestructura Vial / Centros de Control / Túneles |
+| **Versión** | 1.0 |
+| **Fecha** | Abril 2026 |
+
+### Descripción Breve
+Sistema de micro-red inteligente que integra generación distribuida renovable (solar, eólica), almacenamiento energético avanzado y gestión inteligente de carga para proporcionar autonomía energética a infraestructuras críticas de transporte. Opera tanto conectado a la red eléctrica principal como en modo isla (islanding), garantizando continuidad de servicio incluso durante fallas prolongadas del suministro externo. Incluye capacidades de demand response, optimización económica y gestión predictiva mediante IA.
+
+### Aplicaciones Principales
+- Autonomía energética de centros de control de tráfico
+- Alimentación resiliente de túneles y puentes inteligentes
+- Electrificación sostenible de estaciones de peaje
+- Respaldo energético de sistemas V2X y comunicaciones ITS
+- Reducción de huella de carbono en infraestructura vial
+- Microrredes comunitarias asociadas a corredores viales
+
+---
+
+## 2. Identificación y Clasificación
+
+### 2.1 Taxonomía
+
+| Campo | Especificación |
+|-------|----------------|
+| **Familia Tecnológica** | Sistemas de Energía Distribuida e Inteligente |
+| **Subfamilia** | Micro-Redes y Gestión Energética Avanzada |
+| **Segmento** | Infraestructura Resiliente y Sostenible |
+| **Tipo** | Sistema Integrado Hardware-Software |
+
+### 2.2 Estándares Aplicables
+
+| Estándar | Descripción |
+|----------|-------------|
+| IEEE 1547 | Interconexión de recursos energéticos distribuidos |
+| IEEE 2030 | Guía para Smart Grid interoperability |
+| IEC 62898 | Microgrids - Requisitos generales |
+| IEC 61850 | Comunicaciones en subestaciones y sistemas de potencia |
+| UL 1741 | Inversores, convertidores y controladores |
+| NFPA 70 (NEC) | Código eléctrico nacional |
+| ASHRAE 90.1 | Estándar de eficiencia energética |
+| ISO 50001 | Sistemas de gestión energética |
+| IEEE 2030.5 | Protocolo Smart Energy Profile 2.0 |
+| NERC CIP | Ciberseguridad para infraestructura crítica |
+
+### 2.3 Clasificación por Arquitectura
+
+| Tipo | Descripción | Aplicación |
+|------|-------------|------------|
+| **AC Microgrid** | Distribución en corriente alterna | Sistemas convencionales, integración fácil |
+| **DC Microgrid** | Distribución en corriente directa | Eficiencia máxima, cargas DC modernas |
+| **Híbrida AC/DC** | Combina ambas topologías | Flexibilidad óptima, instalaciones nuevas |
+| **Nanogrid** | Escala reducida (<100kW) | Postes inteligentes, semáforos autónomos |
+
+### 2.4 Clasificación por Modo de Operación
+
+| Modo | Descripción | Escenario |
+|------|-------------|-----------|
+| **Grid-Connected** | Conectado a red principal | Operación normal, optimización económica |
+| **Island Mode** | Operación aislada autónoma | Falla de red, mantenimiento, autonomía |
+| **Seamless Transition** | Transición suave grid-isla | Continuidad sin interrupción |
+| **Peer-to-Peer** | Intercambio entre micro-redes | Comunidades energéticas, resiliencia |
+
+---
+
+## 3. Descripción Técnica Detallada
+
+### 3.1 Arquitectura del Sistema
+
+```
+┌─────────────────────────────────────────────────────────────────────────┐
+│                    MICRO-RED INTELIGENTE CC-39                          │
+├─────────────────────────────────────────────────────────────────────────┤
+│                                                                         │
+│  ┌─────────────────────────────────────────────────────────────────┐   │
+│  │                    GENERACIÓN DISTRIBUIDA                        │   │
+│  │  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐        │   │
+│  │  │  SOLAR   │  │ EÓLICA   │  │ BIOGÁS   │  │  FUEL    │        │   │
+│  │  │  PV      │  │ SMALL    │  │  CHP     │  │  CELL    │        │   │
+│  │  └────┬─────┘  └────┬─────┘  └────┬─────┘  └────┬─────┘        │   │
+│  └───────┼─────────────┼─────────────┼─────────────┼──────────────┘   │
+│          │             │             │             │                  │
+│          ▼             ▼             ▼             ▼                  │
+│  ┌──────────────────────────────────────────────────────────────┐    │
+│  │              SISTEMA DE ACUMULACIÓN (BESS)                    │    │
+│  │  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐     │    │
+│  │  │   Li-Ion │  │  FLOW    │  │  SUPERC  │  │   H2     │     │    │
+│  │  │  BESS    │  │ BATTERY  │  │   APS    │  │ STORAGE  │     │    │
+│  │  └──────────┘  └──────────┘  └──────────┘  └──────────┘     │    │
+│  └──────────────────────────────────────────────────────────────┘    │
+│                              │                                        │
+│                              ▼                                        │
+│  ┌──────────────────────────────────────────────────────────────┐    │
+│  │                ENERGY MANAGEMENT SYSTEM (EMS)                 │    │
+│  │  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐     │    │
+│  │  │ OPTIMIZE │  │  FORECAST│  │ DEMAND   │  │  MARKET  │     │    │
+│  │  │   rMS    │  │   AI/ML  │  │ RESPONSE │  │  TRADE   │     │    │
+│  │  └──────────┘  └──────────┘  └──────────┘  └──────────┘     │    │
+│  └──────────────────────────────────────────────────────────────┘    │
+│                              │                                        │
+│          ┌───────────────────┼───────────────────┐                   │
+│          ▼                   ▼                   ▼                   │
+│  ┌──────────────┐   ┌──────────────┐   ┌──────────────┐              │
+│  │  CARGAS      │   │   RED        │   │   GRID       │              │
+│  │  CRÍTICAS    │   │   PRINCIPAL  │   │   SERVICES   │              │
+│  │  (ITS/V2X)   │◄─►│   (UTILITY)  │◄─►│   (ANCILLARY)│              │
+│  └──────────────┘   └──────────────┘   └──────────────┘              │
+│                                                                         │
+│  ┌──────────────────────────────────────────────────────────────┐    │
+│  │              SUPERVISORY CONTROL & MONITORING                 │    │
+│  │         (SCADA / IoT Platform / Digital Twin)                 │    │
+│  └──────────────────────────────────────────────────────────────┘    │
+│                                                                         │
+└─────────────────────────────────────────────────────────────────────────┘
+```
+
+### 3.2 Componentes Principales
+
+#### 3.2.1 Sistema de Generación Distribuida (DER)
+
+| Tecnología | Descripción | Ventaja |
+|------------|-------------|---------|
+| **Fotovoltaica (PV)** | Paneles solares monocristalinos PERC | LCOE más bajo, mantenimiento mínimo |
+| **Mini Eólica** | Turbinas horizontales 10-100kW | Complementariedad solar-eólica |
+| **Cogeneración (CHP)** | Motores biogás de relleno sanitario | Residuos a energía, base firme |
+| **Celdas Combustible** | PEM o SOFC con H2 verde | Alta densidad, emisiones cero |
+
+#### 3.2.2 Sistema de Almacenamiento (BESS)
+
+| Tecnología | Capacidad | Uso Principal |
+|------------|-----------|---------------|
+| **Litio-Ion NMC/LFP** | 100kWh - 10MWh | Aplicaciones principales |
+| **Baterías de Flujo** | 500kWh - 100MWh | Almacenamiento larga duración |
+| **Supercapacitores** | 1-100kWh | Potencia rápida, ciclos ilimitados |
+| **Almacenamiento H2** | GWh potencial | Estacional, largo plazo |
+
+#### 3.2.3 Energy Management System (EMS)
+
+| Módulo | Función | Tecnología |
+|--------|---------|------------|
+| **Optimización en Tiempo Real** | Dispatch óptimo de recursos | MPC, Programación Lineal |
+| **Pronóstico Climático** | Predicción solar/eólica | LSTM, Computer Vision |
+| **Demand Response** | Gestión de carga flexible | Algoritmos de agregación |
+| **Trading Energético** | Compra/venta optimizada | Blockchain, Smart Contracts |
+| **Gestión de Activos** | Predictive maintenance | Digital Twin, ML |
+
+### 3.3 Flujo de Operación
+
+```
+┌────────────────────────────────────────────────────────────────┐
+│                   MODO CONECTADO (GRID-TIED)                   │
+├────────────────────────────────────────────────────────────────┤
+│                                                                │
+│  1. GENERACIÓN RENOVABLE → Alimenta cargas prioritarias       │
+│                           → Excedente carga BESS               │
+│                           → Super-excedente a red (export)     │
+│                                                                │
+│  2. CARGAS ITS (V2X, CCTV, etc.) → Prioridad energética       │
+│                                   → Garantía de suministro     │
+│                                                                │
+│  3. EMS OPTIMIZA → Costo mínimo de operación                  │
+│                 → Maximiza autogeneración                     │
+│                 → Peak shaving (reduce demanda punta)         │
+│                 → Arbitrage energético                        │
+│                                                                │
+└────────────────────────────────────────────────────────────────┘
+
+┌────────────────────────────────────────────────────────────────┐
+│                   MODO ISLA (ISLAND MODE)                      │
+├────────────────────────────────────────────────────────────────┤
+│                                                                │
+│  Evento: Falla de red principal detectada                      │
+│                                                                │
+│  1. TRANSICIÓN RÁPIDA (<100ms)                                 │
+│     → Inversores formadores de red asumen control             │
+│     → Cargas no críticas pueden ser sheddeadas                │
+│                                                                │
+│  2. OPERACIÓN AUTÓNOMA                                         │
+│     → BESS provee potencia instantánea                        │
+│     → Generación renovable según disponibilidad               │
+│     → Gestión dinámica de prioridades                         │
+│                                                                │
+│  3. RESTAURACIÓN                                               │
+│     → Sincronización con red principal                        │
+│     → Reconexión suave sin interrupción                       │
+│     → Carga de BESS con excedentes                            │
+│                                                                │
+└────────────────────────────────────────────────────────────────┘
+```
+
+### 3.4 Capacidades Avanzadas
+
+| Capacidad | Descripción | Beneficio |
+|-----------|-------------|-----------|
+| **Black Start** | Arranque sin red externa | Recuperación ante colapso total |
+| **Grid Forming** | Inversores forman voltaje/frecuencia | Estabilidad en modo isla |
+| **Virtual Power Plant** | Agregación de múltiples microrredes | Participación en mercado mayorista |
+| **Peer-to-Peer Trading** | Intercambio directo entre prosumer | Economía circular local |
+| **Carbon Footprint Tracking** | Trazabilidad de emisiones | Cumplimiento ESG |
+
+---
+
+## 4. Especificación Técnica
+
+### 4.1 Parámetros Eléctricos
+
+| Parámetro | Especificación | Unidad |
+|-----------|----------------|--------|
+| **Potencia Nominal** | 100 - 10,000 | kW |
+| **Potencia Pico** | 150% nominal durante 10 | segundos |
+| **Voltaje AC Salida** | 480/400/208 trifásico | V |
+| **Frecuencia** | 50/60 ±0.1 | Hz |
+| **THD Voltaje** | < 3 | % |
+| **THD Corriente** | < 5 | % |
+| **Factor de Potencia** | > 0.99 | - |
+| **Eficiencia Sistema** | 85 - 92 | % |
+| **Tiempo de Respuesta** | < 100 | ms |
+| **Tiempo de Transición** | < 20 | ms (grid-isla) |
+
+### 4.2 Parámetros de Almacenamiento
+
+| Parámetro | Especificación | Unidad |
+|-----------|----------------|--------|
+| **Capacidad BESS** | 200 - 20,000 | kWh |
+| **Potencia BESS** | 100 - 10,000 | kW |
+| **Duración Autonomía** | 2 - 72 | horas |
+| **Ciclos Vida Útil** | 6,000 - 15,000 | ciclos |
+| **DoD Máximo** | 80 - 95 | % |
+| **Eficiencia Round-Trip** | 85 - 95 | % |
+| **Tiempo de Carga Rápida** | 1 - 2 | horas |
+
+### 4.3 Parámetros de Generación
+
+| Parámetro | Solar | Eólica | CHP | Unidad |
+|-----------|-------|--------|-----|--------|
+| **Potencia Instalada** | 50-5,000 | 10-1,000 | 50-2,000 | kW |
+| **Capacidad Factor** | 15-25 | 25-45 | 80-95 | % |
+| **Disponibilidad Anual** | > 98 | > 95 | > 90 | % |
+| **Vida Útil** | 25-30 | 20-25 | 15-20 | años |
+
+### 4.4 Parámetros de Control
+
+| Parámetro | Especificación | Unidad |
+|-----------|----------------|--------|
+| **Tiempo de Muestreo** | 10 - 100 | ms |
+| **Resolución ADC** | 16 - 24 | bits |
+| **Latencia Comunicaciones** | < 50 | ms |
+| **Precisión Pronóstico Solar** | > 90 | % (1h horizonte) |
+| **Precisión Pronóstico Eólico** | > 85 | % (1h horizonte) |
+
+### 4.5 Parámetros Ambientales
+
+| Parámetro | Especificación | Unidad |
+|-----------|----------------|--------|
+| **Temperatura Operación** | -20 a +50 | °C |
+| **Humedad Relativa** | 0 - 95 | % |
+| **Altitud** | < 3,000 | msnm |
+| **IP Protección** | IP54 - IP65 | - |
+| **Resistencia Viento** | 200 | km/h |
+| **Resistencia Sísmica** | Zona IV (Alta) | - |
+
+### 4.6 Parámetros de Comunicación
+
+| Parámetro | Especificación | Protocolo |
+|-----------|----------------|-----------|
+| **Comunicación Local** | Ethernet, RS-485, CAN | Modbus TCP/RTU, IEC 61850 |
+| **Comunicación Remota** | 4G/5G, Fiber, Satellite | DNP3, IEEE 2030.5 |
+| **Ciberseguridad** | AES-256, TLS 1.3 | IEC 62351, NERC CIP |
+| **Sync Temporal** | GPS, PTP, NTP | IEEE 1588 |
+
+---
+
+## 5. Requisitos Funcionales (RF)
+
+### RF-01: Generación Distribuida Integrada
+**El sistema debe integrar múltiples fuentes de generación distribuida** (solar fotovoltaica, eólica, cogeneración, celdas combustible) con gestión unificada del punto de acoplamiento común (PCC), permitiendo priorización dinámica según disponibilidad, costo y criterios de sostenibilidad.
+
+| Aspecto | Detalle |
+|---------|---------|
+| **Prioridad** | Crítica |
+| **Dependencias** | RF-02, RF-03 |
+| **Verificación** | Test de dispatch multi-fuente |
+
+### RF-02: Almacenamiento Energético Avanzado
+**El BESS debe proporcionar servicios múltiples:** respaldo de potencia, regulación de frecuencia, peak shaving, arbitrage energético y soporte de transiciones grid-isla, con gestión avanzada del estado de carga (SOC) y salud de las baterías (SOH).
+
+| Aspecto | Detalle |
+|---------|---------|
+| **Prioridad** | Crítica |
+| **Dependencias** | RF-01 |
+| **Verificación** | Test de ciclado y autonomía |
+
+### RF-03: Gestión Energética Inteligente (EMS)
+**El EMS debe optimizar en tiempo real** la operación de la micro-red usando algoritmos de optimización (MPC, programación lineal) considerando: precios de energía, pronósticos meteorológicos, estado del BESS, demanda prevista y restricciones operativas.
+
+| Aspecto | Detalle |
+|---------|---------|
+| **Prioridad** | Crítica |
+| **Dependencias** | RF-01, RF-02 |
+| **Verificación** | Validación de ahorro >15% vs operación manual |
+
+### RF-04: Operación en Modo Isla
+**El sistema debe operar autónomamente** ante falla de la red principal, manteniendo estable voltaje y frecuencia, gestionando prioridad de cargas (shedding si es necesario), y garantizando alimentación a sistemas críticos ITS por tiempo especificado.
+
+| Aspecto | Detalle |
+|---------|---------|
+| **Prioridad** | Crítica |
+| **Dependencias** | RF-02, RF-05 |
+| **Verificación** | Test de islanding <100ms |
+
+### RF-05: Transición Suave Grid-Isla
+**La transición entre modos conectado e isla debe ser transparente** para cargas críticas, con tiempo de interrupción menor a 20ms, y reconexión a la red con sincronización automática cuando el servicio se restablezca.
+
+| Aspecto | Detalle |
+|---------|---------|
+| **Prioridad** | Alta |
+| **Dependencias** | RF-04 |
+| **Verificación** | Osciloscopio de transiciones |
+
+### RF-06: Pronóstico Climático con IA
+**El sistema debe predecir generación solar y eólica** con precisión >85% en horizonte de 1-6 horas usando modelos de machine learning (LSTM, transformers) alimentados con datos meteorológicos, históricos de producción y imágenes satelitales.
+
+| Aspecto | Detalle |
+|---------|---------|
+| **Prioridad** | Alta |
+| **Dependencias** | RF-03 |
+| **Verificación** | Métricas MAPE/RMSE |
+
+### RF-07: Demand Response Automatizado
+**El EMS debe gestionar cargas flexibles** (V2X, iluminación, HVAC, sistemas no críticos) mediante señales de precio o eventos, reduciendo o desplazando consumo según disponibilidad de generación renovable y estado del BESS.
+
+| Aspecto | Detalle |
+|---------|---------|
+| **Prioridad** | Media |
+| **Dependencias** | RF-03 |
+| **Verificación** | Test de reducción carga >20% |
+
+### RF-08: Monitoreo y Control Remoto
+**El sistema debe proporcionar visibilidad completa** desde centro de control remoto: producción en tiempo real, estado del BESS, alarmas, métricas de desempeño, con capacidad de control manual y automático de todos los activos.
+
+| Aspecto | Detalle |
+|---------|---------|
+| **Prioridad** | Alta |
+| **Dependencias** | - |
+| **Verificación** | Disponibilidad >99.9% del enlace |
+
+### RF-09: Participación en Servicios Auxiliares
+**La micro-red debe poder participar en mercados** de servicios auxiliares: regulación primaria/secundaria, reserva girante, peak shaving, entregando potencia o reduciendo consumo bajo petición del operador de red.
+
+| Aspecto | Detalle |
+|---------|---------|
+| **Prioridad** | Media |
+| **Dependencias** | RF-03, RF-02 |
+| **Verificación** | Certificación por operador de red |
+
+### RF-10: Trazabilidad de Carbono
+**El sistema debe registrar y reportar** las emisiones de CO2 evitadas por uso de generación renovable vs. red convencional, con dashboard de sostenibilidad y certificados de energía renovable verificables.
+
+| Aspecto | Detalle |
+|---------|---------|
+| **Prioridad** | Media |
+| **Dependencias** | RF-03, RF-08 |
+| **Verificación** | Reporte ESG verificable |
+
+---
+
+## 6. Requisitos No Funcionales (RNF)
+
+### RNF-01: Disponibilidad y Confiabilidad
+**El sistema debe garantizar disponibilidad ≥99.99%** para alimentación de cargas críticas ITS, con redundancia N+1 en componentes críticos, y MTTR < 4 horas para fallas mayores.
+
+| Aspecto | Especificación |
+|---------|----------------|
+| **Disponibilidad** | ≥99.99% |
+| **MTBF** | > 50,000 horas |
+| **MTTR** | < 4 horas |
+| **Backup BESS** | 100% carga crítica, 4-72h |
+
+### RNF-02: Escalabilidad Modular
+**La arquitectura debe permitir expansión** de capacidad de generación y almacenamiento en módulos estandarizados (plug-and-play) sin interrumpir operación, soportando crecimiento desde 100kW hasta 10MW+.
+
+| Aspecto | Especificación |
+|---------|----------------|
+| **Módulos BESS** | Contenedor 20'/40' estandarizado |
+| **Expansión PV** | Escalable por strings |
+| **Potencia máxima** | >10 MW sin rediseño |
+
+### RNF-03: Ciberseguridad Avanzada
+**El sistema debe cumplir con estándares de infraestructura crítica:** autenticación multifactor, cifrado end-to-end, segmentación de red, detección de intrusiones, y protocolos de respuesta ante incidentes según NERC CIP.
+
+| Aspecto | Especificación |
+|---------|----------------|
+| **Cifrado** | AES-256, TLS 1.3 |
+| **Autenticación** | MFA, certificados X.509 |
+| **Firewall** | Industrial, IDS/IPS |
+| **Auditoría** | Logs inmutables |
+
+### RNF-04: Eficiencia Energética
+**El sistema debe operar con eficiencia global ≥85%** (incluyendo todas las conversiones), con consumo propio del EMS < 2% de la capacidad, y optimización continua mediante algoritmos de IA.
+
+| Aspecto | Especificación |
+|---------|----------------|
+| **Eficiencia global** | ≥85% |
+| **Consumo propio EMS** | < 2% |
+| **Eficiencia inversores** | > 98% |
+
+### RNF-05: Compatibilidad e Interoperabilidad
+**El sistema debe comunicarse** mediante protocolos estándar (IEC 61850, Modbus, IEEE 2030.5, DNP3), permitir integración con SCADA del operador vial, y soportar interfaces API REST para terceros.
+
+| Aspecto | Especificación |
+|---------|----------------|
+| **Protocolos** | IEC 61850, Modbus TCP/RTU |
+| **API** | RESTful, OpenAPI 3.0 |
+| **Integración SCADA** | Nativa |
+
+### RNF-06: Operación Autónoma Extendida
+**En modo isla, el sistema debe operar** autónomamente por períodos de 24-72 horas (según configuración) garantizando alimentación de cargas críticas ITS, con gestión inteligente de recursos limitados.
+
+| Aspecto | Especificación |
+|---------|----------------|
+| **Autonomía mínima** | 24 horas (críticas) |
+| **Autonomía extendida** | 72 horas (con shedding) |
+| **Priorización** | Automática por criticidad |
+
+### RNF-07: Mantenimiento Predictivo
+**El sistema debe incluir capacidades de diagnóstico** predictivo para baterías (predicción de vida útil remanente), paneles solares (detección de degradación), e inversores (análisis de firmas térmicas/vibración).
+
+| Aspecto | Especificación |
+|---------|----------------|
+| **Predicción SOH** | > 90% precisión |
+| **Detección anomalías** | ML-based, < 1h latencia |
+| **Mantenimiento** | Condición-based, no calendario |
+
+---
+
+## 7. Indicadores Clave de Desempeño (KPI)
+
+### 7.1 KPIs Técnicos
+
+| KPI | Descripción | Meta | Unidad |
+|-----|-------------|------|--------|
+| **KPI-T01** | Disponibilidad suministro crítico | ≥99.99 | % |
+| **KPI-T02** | Tiempo transición grid-isla | <20 | ms |
+| **KPI-T03** | THD voltaje salida | <3 | % |
+| **KPI-T04** | Precisión pronóstico solar (1h) | >90 | % |
+| **KPI-T05** | Precisión pronóstico eólico (1h) | >85 | % |
+| **KPI-T06** | Eficiencia round-trip BESS | >90 | % |
+| **KPI-T07** | Capacidad factor micro-red | >40 | % |
+| **KPI-T08** | Autonomía garantizada | ≥24 | horas |
+
+### 7.2 KPIs Económicos
+
+| KPI | Descripción | Meta | Unidad |
+|-----|-------------|------|--------|
+| **KPI-E01** | Ahorro vs tarifa regulada | >25 | % |
+| **KPI-E02** | LCOE energía generada | <0.08 | USD/kWh |
+| **KPI-E03** | Payback período | <7 | años |
+| **KPI-E04** | Ingresos servicios auxiliares | >5 | % total |
+| **KPI-E05** | Costo O&M/kW-año | <15 | USD/kW |
+
+### 7.3 KPIs Ambientales y Sociales
+
+| KPI | Descripción | Meta | Unidad |
+|-----|-------------|------|--------|
+| **KPI-A01** | % Energía Renovable | >70 | % |
+| **KPI-A02** | Reducción CO2 vs grid | >60 | % |
+| **KPI-A03** | Ton CO2 evitados/año | >100 | tCO2e/MW |
+| **KPI-A04** | Índice de resiliencia energética | >95 | % |
+| **KPI-A05** | Satisfacción usuario | >4.0 | 1-5 escala |
+
+---
+
+## 8. Referencias y Estándares
+
+### 8.1 Referencias Internacionales
+
+| ID | Referencia | Descripción |
+|----|------------|-------------|
+| [1] | IEEE 1547-2018 | Standard for Interconnection and Interoperability of Distributed Energy Resources |
+| [2] | IEEE 2030-2011 | Guide for Smart Grid Interoperability |
+| [3] | IEC 62898-1:2017 | Microgrids - Part 1: General requirements |
+| [4] | IEC 61850-7-420 | Communication networks and systems for power utility automation - DER logical nodes |
+| [5] | UL 1741-SA | Inversores, Convertidores, Controladores para DER - Suplemento Grid Support |
+| [6] | IRENA (2023) | Innovation Landscape Brief: Utility-Scale Batteries |
+| [7] | NREL (2024) | Microgrid Design Toolkit and Standardized Design |
+| [8] | DOE Microgrid Report | The Role of Microgrids in Enhancing Grid Resilience |
+| [9] | EPRI (2023) | Integrated Grid Planning with Distributed Energy Resources |
+| [10] | Rocky Mountain Institute | The Economics of Battery Energy Storage |
+
+### 8.2 Referencias Colombia
+
+| ID | Referencia | Descripción |
+|----|------------|-------------|
+| [CO-1] | UPME (2023) | Plan de Expansión de Generación Eléctrica - Integración de Renovables |
+| [CO-2] | CREG 030 de 2018 | Regulación para generación distribuida y autogeneración |
+| [CO-3] | CREG 038 de 2022 | Establece valor agregado de confiabilidad para sistemas aislados |
+| [CO-4] | MME | Política de transformación energética sostenible 2022-2052 |
+| [CO-5] | ANDI (2023) | Guía para proyectos de almacenamiento de energía en Colombia |
+| [CO-6] | UPME (2022) | Atlas de Energías Renovables No Convencionales |
+| [CO-7] | ISA/IDU/INVIAS | Especificaciones técnicas para infraestructura resiliente vial |
+| [CO-8] | Superservicios | Resolución 0187 de 2020 - Calidad del servicio eléctrico |
+| [CO-9] | CRE Colombia (2024) | Regulación de microrredes en zonas no interconectadas |
+| [CO-10] | Universidad Nacional | Estudios de integración solar en infraestructura vial colombiana |
+
+---
+
+## 9. Casos de Uso
+
+### Caso de Uso 1: Centro de Control de Tráfico Autónomo
+
+| Aspecto | Descripción |
+|---------|-------------|
+| **Escenario** | Centro de control ITS en zona con suministro eléctrico inestable |
+| **Problemática** | Apagones frecuentes afectan monitoreo de carreteras y respuesta a emergencias |
+| **Solución MSG** | Micro-red 500kW solar + 1MWh BESS con EMS inteligente |
+| **Beneficios** | Autonomía 48h, ahorro 40% en energía, cero interrupciones operativas |
+| **Actores** | Operador vial, EMS, DER
+s, red eléctrica |
+| **Flujo** | 1. Operación normal: solar alimenta centro + carga BESS<br>2. Evento falla: transición automática a modo isla <20ms<br>3. BESS mantiene operación hasta restablecimiento<br>4. Generación solar continúa reduciendo consumo BESS |
+
+### Caso de Uso 2: Túnel Vial Resiliente
+
+| Aspecto | Descripción |
+|---------|-------------|
+| **Escenario** | Túnel de 5km en corredor vial montañoso con histórico de fallas eléctricas |
+| **Problemática** | Oscuridad total en túnel durante cortes de energía pone en riesgo vidas |
+| **Solución MSG** | Micro-red 1MW (solar + eólica) + 2MWh BESS + generador diésel backup |
+| **Beneficios** | Iluminación 100% garantizada, operación normal >72h en modo isla, integración V2X |
+| **Actores** | Concesionaria vial, operadores túnel, vehículos V2X |
+| **Flujo** | 1. Energía renovable cubre iluminación diurna<br>2. BESS alimenta iluminación nocturna<br>3. Durante falla: modo isla automático, iluminación de emergencia priorizada<br>4. V2X utiliza energía excedente para recarga EV |
+
+### Caso de Uso 3: Estación de Peaje Sustentable
+
+| Aspecto | Descripción |
+|---------|-------------|
+| **Escenario** | Estación de peaje en carretera interdepartamental con alta demanda energética |
+| **Problemática** | Costos eléctricos elevados, dependencia de red inestable, huella de carbono |
+| **Solución MSG** | 300kW solar en techos/cobertizos + 600kWh BESS + gestión inteligente |
+| **Beneficios** | Ahorro 50% en energía, autonomía 24h, certificación carbono neutro, ingresos por servicios auxiliares |
+| **Actores** | Concesionaria, peajes automatizados, EV chargers, sistema ITS |
+| **Flujo** | 1. Generación solar cubre operación diurna<br>2. BESS almacena excedente para noche<br>3. Peak shaving reduce costos en horas punta<br>4. EV chargers usan energía limpia |
+
+### Caso de Uso 4: Infraestructura V2X en Corredor Rural
+
+| Aspecto | Descripción |
+|---------|-------------|
+| **Escenario** | Corredor vial rural de 100km sin conexión a red eléctrica trifásica |
+| **Problemática** | Cientos de postes ITS (CCTV, sensores, comunicaciones) requieren energía confiable |
+| **Solución MSG** | Nanogrids autónomas por segmento + microrred central cada 25km |
+| **Beneficios** | Autonomía 100% sin conexión a red, mantenimiento remoto, ciberseguridad robusta |
+| **Actores** | INVIAS, postes inteligentes, vehículos conectados, centro de control |
+| **Flujo** | 1. Cada nanogrid opera independientemente<br>2. Paneles solares + batería local por poste/cluster<br>3. Microrred central coordina segmento<br>4. Reporte centralizado vía 4G/satélite |
+
+### Caso de Uso 5: Resiliencia ante Desastres Naturales
+
+| Aspecto | Descripción |
+|---------|-------------|
+| **Escenario** | Región propensa a huracanes/inundaciones con infraestructura vial crítica |
+| **Problemática** | Red eléctrica colapsa durante desastres, cortando comunicaciones y sistemas de emergencia |
+| **Solución MSG** | Micro-red resilientes en puentes clave + capacidad Black Start + redundancia |
+| **Beneficios** | Centro de operaciones de emergencia energizado, comunicaciones activas, apoyo a comunidad afectada |
+| **Actores** | Unidad Nacional Gestión Riesgo, bomberos, policía, comunidad, hospital móvil |
+| **Flujo** | 1. Evento desastre: red principal cae<br>2. MSG arranca en Black Start automáticamente<br>3. Alimenta centro comando, iluminación, comunicaciones<br>4. Extensión a hospital móvil y punto de encuentro<br>5. Restauración gradual del servicio |
+
+---
+
+## 10. Firma y Aprobación
+
+---
+
+**Documento elaborado por:**
+
+### InnovaDataCO SAS
+*Inteligencia Artificial para Infraestructura y Movilidad*
+
+---
+
+**Responsable Técnico:** ___________________  
+**Fecha:** Abril 2026  
+**Versión:** 1.0
+
+---
+
+**Revisado por:**
+
+**Área de Ingeniería ITS:** ___________________  
+**Área de Energías Renovables:** ___________________  
+**Control de Calidad:** ___________________
+
+---
+
+*© InnovaDataCO SAS - Todos los derechos reservados*  
+*Bogotá, Colombia - 2026*

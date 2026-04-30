@@ -1,0 +1,231 @@
+# 8.21 CC-21: GI (Interfaz de Peaje y Control de Acceso)
+
+## 8.21.1 Resumen Ejecutivo
+
+El componente **CC-21 GI** (Gateway Interface) establece el sistema de integración entre el ITS del corredor Chía–Girardot y los subsistemas de peaje electrónico (ETC/AVI) así como los puntos de control de acceso a instalaciones críticas. Este componente actúa como puente de comunicación bidireccional que permite la correlación de datos de peaje con información de tráfico, facilitando análisis de patrones de movilidad, verificación de flujos y control de acceso a zonas restringidas.
+
+El sistema GI habilita la interoperabilidad entre diferentes tecnologías de identificación vehicular (TAGs DSRC, RFID, placas ALPR), consolidando la información en un formato unificado que alimenta el TMS y otros subsistemas del corredor. Su implementación permite que el peaje no sea solo un sistema de cobro, sino una fuente de datos estratégica para la gestión integral del tráfico.
+
+La interfaz de control de acceso gestiona la entrada a instalaciones críticas como el CCO, estaciones de mantenimiento y áreas restringidas del corredor, integrando credenciales físicas, biometría y listas de autorización en tiempo real.
+
+---
+
+## 8.21.2 Identificación Del Componente De Campo
+
+| Campo | Valor |
+|-------|-------|
+| **COD** | CC-21 |
+| **Sigla (Estándar Internacional)** | GI / TCI |
+| **Nombre del Componente** | Interfaz de Peaje y Control de Acceso |
+| **Capacidad Operativa Generada** | Identificación Vehicular Integrada: Capacidad de identificar, clasificar y rastrear vehículos mediante múltiples tecnologías para gestión de peaje y control de acceso. |
+
+---
+
+## 8.21.3 Descripción Funcional / Técnica
+
+### Alcance de la Solución
+
+El sistema GI comprende: gateways de protocolo para integración con sistemas ETC/AVI existentes, interfaces con sistemas de reconocimiento de placas (ALPR/CC-12), controladores de acceso para instalaciones físicas, servidores de correlación de datos vehiculares, y middleware de integración con el TMS central.
+
+La solución incluye hardware de lectura DSRC (Dedicated Short Range Communications) 5.8 GHz compatible con estándares ISO 18000-6C, antenas RFID de largo alcance para identificación sin detención, barreras de acceso inteligentes con detección de bucle inductivo, y terminales de validación biométrica para personal autorizado.
+
+El subsistema opera procesando transacciones de peaje en tiempo real, generando alertas ante anomalías (TAGs inválidos, vehículos sin categoría, accesos no autorizados), y alimentando la base de datos central del corredor con información de flujo vehicular desagregada.
+
+---
+
+## 8.21.4 Justificación Estratégica
+
+El corredor Chía–Girardot requiere interoperabilidad entre múltiples sistemas de peaje operados por diferentes concesionarios. Sin una interfaz unificada, cada sistema operaría como silo de información, impidiendo análisis integrados de movilidad y dificultando la implementación de políticas de gestión de demanda basadas en precios dinámicos.
+
+La interfaz de control de acceso centraliza la seguridad física del corredor, eliminando la gestión fragmentada de credenciales y permitiendo respuestas coordinadas ante intentos de acceso no autorizado. La correlación entre datos de peaje y patrones de tráfico habilita modelos predictivos de congestión y herramientas de planificación de capacidad.
+
+La inversión en GI se justifica por el valor de los datos integrados que genera, habilitando servicios de valor agregado como tiempos de viajo estimados basados en datos reales de peaje, y por la reducción de fraudes en acceso a instalaciones críticas.
+
+---
+
+## 8.21.5 Especificación Técnica
+
+| Parámetro | Especificación Mínima |
+|-----------|----------------------|
+| **Interfaz DSRC** | 5.8 GHz, ISO 18000-6C / EPC Gen2, alcance 8-12 metros |
+| **Tasa de lectura DSRC** | ≥ 99.5% a velocidad hasta 120 km/h |
+| **Interfaz RFID** | 860-960 MHz UHF, alcance 3-10 metros según aplicación |
+| **ALPR integrado** | Reconocimiento de placas Colombia + Mercosur, ≥ 98% precisión día/noche |
+| **Clasificación vehicular** | Automática por perfil (2, 3, 4, 5+ ejes) con precisión ≥ 99% |
+| **Tiempo de transacción** | ≤ 200 ms desde lectura hasta validación |
+| **Capacidad de procesamiento** | ≥ 2,000 vehículos/hora por carril |
+| **Protocolos soportados** | NTCIP, DATEX II, UTMC, XML/JSON APIs |
+| **Control de acceso** | Lector tarjetas + biometrico (huella/iris) para áreas críticas |
+| **Barreras inteligentes** | Apertura ≤ 1.5 segundos, detección de colisión, retorno automático |
+| **Respaldo de datos** | Replicación síncrona con CCO, retención 5 años |
+| **Seguridad** | Cifrado TLS 1.3, autenticación certificados X.509, logs inmutables |
+| **Disponibilidad** | ≥ 99.9% en interfaces de peaje, ≥ 99.5% en control de acceso |
+| **Integración TMS** | API RESTful, actualización en tiempo real ≤ 1 segundo |
+
+---
+
+## 8.21.6 Requerimientos Funcionales (RF)
+
+| ID | Nombre | Descripción Funcional / Técnica | Justificación Estratégica |
+|----|--------|--------------------------------|---------------------------|
+| **RF-01** | Lectura Multitecnología de Identificación | El sistema debe soportar simultáneamente lectura de TAGs DSRC 5.8 GHz (estándar local e internacional), tarjetas RFID UHF, y reconocimiento óptico de placas (ALPR). Debe ser capaz de fusionar identificaciones múltiples del mismo vehículo para mayor confiabilidad. | La multi-tecnología garantiza compatibilidad con diferentes sistemas de peaje y proporciona redundancia ante falla de una tecnología. |
+| **RF-02** | Validación en Tiempo Real | Cada transacción de peaje debe ser validada contra bases de datos centralizadas en ≤ 200 ms. La validación debe verificar: vigencia del TAG, categoría vehicular correcta, lista negra/bloqueos, y saldo suficiente (para prepago). | La validación rápida permite operación de peaje sin detención, manteniendo fluidez del tráfico. |
+| **RF-03** | Clasificación Vehicular Automática | El sistema debe clasificar automáticamente vehículos en categorías tarifarias mediante sensores de perfil (láser/inductivos) o análisis de video. La clasificación debe tener precisión ≥ 99% y ser revisable manualmente ante discrepancias. | La clasificación automática elimina errores humanos y acelera el proceso de peaje. |
+| **RF-04** | Control de Acceso Biométrico | Las instalaciones críticas (CCO, estaciones eléctricas, gabinetes de comunicaciones) deben contar con control de acceso mediante verificación biométrica (huella dactilar o reconocimiento iris) complementada con credencial física. El sistema debe soportar ≥ 10,000 usuarios. | El control biométrico proporciona nivel de seguridad superior a credenciales solas, dificultando accesos no autorizados. |
+| **RF-05** | Gestión de Listas de Control | El sistema debe mantener y actualizar en tiempo real listas de: vehículos autorizados, TAGs bloqueados, personas con acceso a instalaciones, y horarios de acceso permitidos. Las actualizaciones desde CCO deben propagarse en ≤ 5 segundos. | Las listas de control actualizadas permiten reacción inmediata ante robos de TAGs, despidos de personal o alertas de seguridad. |
+| **RF-06** | Correlación con Datos de Tráfico | Los datos de peaje deben correlacionarse automáticamente con información de VDS (CC-05), CCTV (CC-01) y TMS para generar matrices OD (origen-destino), tiempos de viaje por segmento y análisis de flujo desagregado. | La correlación transforma datos de peaje en inteligencia de movilidad estratégica. |
+| **RF-07** | Generación de Alertas de Fraude | El sistema debe detectar y alertar: TAGs inválidos/clonados, categoría declarada incorrecta, vehículos en lista negra, patrones de uso sospechosos, y accesos no autorizados a instalaciones. Las alertas deben escalar al CCO en tiempo real. | La detección temprana de fraude protege ingresos por peaje y seguridad de instalaciones críticas. |
+| **RF-08** | Interoperabilidad Multi-concesionario | La interfaz debe soportar integración con diferentes sistemas de peaje operados por concesionarios del corredor, traduciendo entre formatos de datos propietarios y estándares abiertos. Debe permitir acuerdos de interoperabilidad nacional. | El corredor atraviesa múltiples jurisdicciones concesionadas. La interoperabilidad es esencial para servicio continuo. |
+| **RF-09** | Reportes y Analítica | El sistema debe generar reportes configurables: volumen por categoría, ingresos por tramo, violaciones detectadas, tiempos de servicio, y estadísticas de acceso a instalaciones. Debe soportar exportación a formatas estándar y APIs de Business Intelligence. | Los reportes habilitan gestión comercial del peaje y planificación de mantenimiento basada en uso real. |
+| **RF-10** | Auditoría y Trazabilidad | Todas las transacciones de peaje y eventos de control de acceso deben registrarse con timestamp certificado, identificación del usuario/vehículo, y hash de integridad. Los registros deben ser inmutables y conservarse mínimo 5 años para requerimientos legales. | La trazabilidad completa es requisito legal para disputas de cobro e investigaciones de seguridad. |
+
+---
+
+## 8.21.7 Requisitos No Funcionales (RNF)
+
+| ID | Nombre | Descripción | Justificación |
+|----|--------|-------------|---------------|
+| **RNF-01** | Disponibilidad del Sistema | Las interfaces de peaje deben mantener ≥ 99.9% disponibilidad. El control de acceso a instalaciones críticas debe tener ≥ 99.5% disponibilidad. Las caídas deben activar automáticamente modos degradados con operación manual documentada. | La indisponibilidad de peaje genera congestión severa y pérdida de ingresos. |
+| **RNF-02** | Latencia de Transacciones | El tiempo desde lectura de TAG hasta respuesta de barrera debe ser ≤ 200 ms en condiciones normales, ≤ 500 ms en pico de carga. La latencia al CCO para datos de tráfico debe ser ≤ 1 segundo. | Latencias altas generan colas en plazas de peaje y afectan fluidez del corredor. |
+| **RNF-03** | Precisión de Identificación | La tasa de lectura correcta de TAGs DSRC debe ser ≥ 99.5%. La precisión de ALPR debe ser ≥ 98%. La tasa de falsos negativos en biometría debe ser < 1%. | Errores de identificación generan quejas de usuarios, pérdida de ingresos o fallas de seguridad. |
+| **RNF-04** | Escalabilidad | La arquitectura debe soportar expansión a nuevos puntos de peaje sin modificación del core. Debe permitir integración de nuevas tecnologías de identificación (V2X, futuro) mediante plugins. | El corredor puede expandirse o cambiar tecnología de peaje en el futuro. |
+| **RNF-05** | Ciberseguridad | Todas las comunicaciones deben usar cifrado TLS 1.3. Las credenciales deben almacenarse hasheadas (bcrypt/Argon2). El sistema debe soportar autenticación multifactor para administración. Las actualizaciones de firmware deben ser firmadas digitalmente. | Los sistemas de peaje son objetivos atractivos para ataques financieros y de datos. |
+| **RNF-06** | Cumplimiento Normativo | El sistema debe cumplir: Resolución 1090 de 2020 (ITS Colombia), regulaciones de peaje del Ministerio de Transporte, Ley 1581 de 2012 (protección datos personales de usuarios), y estándares ISO de seguridad electrónica. | El incumplimiento puede resultar en sanciones regulatorias e inhabilitación del sistema. |
+| **RNF-07** | Mantenibilidad | Los componentes de campo deben ser intercambiables en ≤ 30 minutos. El software debe soportar actualización remota (OTA) con rollback automático ante falla. La documentación técnica debe estar disponible en español. | La facilidad de mantenimiento reduce costos operativos y tiempos de indisponibilidad. |
+
+---
+
+## 8.21.8 Indicadores Clave De Rendimiento (KPIs)
+
+| KPI | Descripción | Meta |
+|-----|-------------|------|
+| **KPI-01** | Disponibilidad de interfaces de peaje | ≥ 99.9% mensual |
+| **KPI-02** | Tasa de lectura correcta de TAGs | ≥ 99.5% |
+| **KPI-03** | Tiempo promedio de transacción | ≤ 200 ms |
+| **KPI-04** | Precisión de clasificación vehicular | ≥ 99% |
+| **KPI-05** | Falsos negativos en control de acceso | < 1% |
+| **KPI-06** | Detección de fraudes / alertas confirmadas | ≥ 90% precisión |
+| **KPI-07** | Latencia de sincronización con CCO | ≤ 1 segundo |
+| **KPI-08** | Satisfacción de usuarios con fluidez de peaje | ≥ 4.0/5.0 |
+
+---
+
+## 8.21.9 Fabricantes de Referencia
+
+| Fabricante | País | Modelos de Referencia | Sitio Web |
+|------------|------|----------------------|-----------|
+| **Kapsch** | Austria | Kapsch TrafficCom ETC | www.kapsch.net |
+| **Siemens** | Alemania | Sicore II | www.siemens.com |
+| **Conduent** | EE.UU. | Harmony | www.conduent.com |
+| **Cubic** | EE.UU. | NextTraffic | www.cubic.com |
+| **Thales** | Francia | TMS-PEAJE | www.thalesgroup.com |
+| **HID Global** | EE.UU. | iCLASS / Prox | www.hidglobal.com |
+
+---
+
+## 8.21.10 Proveedores en Colombia
+
+| Empresa | Ciudad | Especialidad | Sitio Web |
+|---------|--------|--------------|-----------|
+| **Atronix Colombia** | Bogotá | Sistemas de peaje ITS | www.atronix.com.co |
+| **INVIAS** | Bogotá | Estándares de peaje Colombia | www.invias.gov.co |
+| **HID Colombia** | Bogotá | Control de acceso físico | www.hidglobal.com |
+| **Identiv** | Bogotá | Credenciales inteligentes | www.identiv.com |
+
+---
+
+## 8.21.11 Casos de Uso
+
+### Caso de Uso 1: Peaje Electrónico sin Detención
+
+**Escenario:** Vehículo con TAG vigente cruza plaza de peaje a 80 km/h.
+
+**Flujo GI:**
+1. Antena DSRC detecta TAG a 12 metros antes de barrera
+2. Sistema lee identificador y categoría del TAG
+3. Consulta en tiempo real base de datos central
+4. Valida: TAG vigente, categoría correcta, saldo suficiente
+5. Barrera permanece abierta (modo free-flow)
+6. Transacción registrada con timestamp, ubicación, categoría
+7. Datos enviados a TMS para análisis de flujo
+8. ALPR captura placa como respaldo/verificación
+9. Si discrepancia TAG-ALPR, marca para revisión manual
+10. Vehículo cruza sin detenerse, tráfico fluido
+
+**Valor generado:** Tiempo de cruce < 1 segundo, sin congestión.
+
+### Caso de Uso 2: Detección de TAG Inválido
+
+**Escenario:** Vehículo intenta cruzar con TAG bloqueado por mora.
+
+**Flujo GI:**
+1. Antena lee TAG bloqueado
+2. Validación consulta lista negra central
+3. Sistema detecta TAG bloqueado en 150 ms
+4. Alerta inmediata al operador de plaza
+5. Barrera permanece cerrada
+6. DMS de plaza muestra: "ACÉRQUESE A VENTANILLA"
+7. ALPR captura placa para identificación
+8. Operador atiende situación según protocolo
+9. Evento registrado en sistema de morosidad
+10. Vehículo atendido manualmente o retirado
+
+**Valor generado:** Prevención de evasión de peaje, recuperación de ingresos.
+
+### Caso de Uso 3: Control de Acceso al CCO
+
+**Escenario:** Ingeniero de sistemas ingresa al Centro de Control a las 22:00.
+
+**Flujo GI:**
+1. Ingeniero presenta credencial en lector de entrada
+2. Sistema verifica ID de tarjeta contra base de datos
+3. Solicita verificación biométrica (huella)
+4. Huella comparada contra plantilla registrada
+5. Sistema valida horario de acceso permitido
+6. Cámara captura imagen del ingresante
+7. Puerta se desbloquea tras validación exitosa
+8. Registro de ingreso: timestamp, ID, ubicación
+9. Alerta silenciosa a supervisor de guardia
+10. Ingeniero accede, puerta se bloquea automáticamente
+
+**Valor generado:** Acceso seguro, trazable y verificable a instalación crítica.
+
+### Caso de Uso 4: Correlación de Datos para Análisis OD
+
+**Escenario:** Planificadores requieren entender patrones de movilidad mensuales.
+
+**Flujo GI:**
+1. GI consolida datos de todas las plazas de peaje del corredor
+2. Correlaciona identificaciones del mismo TAG en diferentes puntos
+3. TMS calcula matrices Origen-Destino por hora/día
+4. Identifica flujos principales y secundarios
+5. Cruza información con datos de VDS (volumen, velocidad)
+6. Genera reporte de tiempos de viaje por segmento
+7. Detecta anomalías: desvíos inusuales, cambios de patrón
+8. Información presentada en dashboard de planificación
+9. Decisiones de mantenimiento programado informadas por datos
+10. Políticas de precio dinámico evaluadas con base real
+
+**Valor generado:** Inteligencia estratégica para gestión del corredor.
+
+### Caso de Uso 5: Respuesta ante Intento de Acceso No Autorizado
+
+**Escenario:** Persona desconocida intenta forzar puerta de gabinete de comunicaciones.
+
+**Flujo GI:**
+1. Sensor de puerta detecta apertura sin credencial válida
+2. Alarma silenciosa activada en CCO y seguridad
+3. Cámara de zona graba y transmite en vivo
+4. Sistema identifica ubicación exacta del incidente
+5. Guardia de seguridad despachado al punto
+6. CCO visualiza situación en tiempo real
+7. Si confirmada intrusión, activa protocolo de seguridad
+8. Puerta puede bloquearse remotamente desde CCO
+9. Evento registrado con video, timestamp, acciones tomadas
+10. Investigación posterior con evidencia documentada
+
+**Valor generado:** Protección de infraestructura crítica ante amenazas físicas.
+
+---
+
+*Documento generado siguiendo estándares técnicos del contrato TC-PS-05-917-2026 | InnovaDataCO PMO IA*

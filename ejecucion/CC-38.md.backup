@@ -1,0 +1,188 @@
+# CC-38: Sistema de Control de Acceso y Seguridad Perimetral
+
+## 1. Resumen Ejecutivo
+
+El componente **CC-38 Sistema de Control de Acceso y Seguridad Perimetral** constituye la infraestructura de seguridad física diseñada para proteger instalaciones críticas del corredor vial, incluyendo el Centro de Control y Operaciones (CCO), estaciones de peaje, centros de mantenimiento, y zonas restringidas de infraestructura. Este subsistema integra tecnologías de control de acceso, detección de intrusión, videovigilancia perimetral y gestión de identidades.
+
+La seguridad física de las instalaciones ITS es crítica porque un compromiso de estas podría afectar la operación del corredor, comprometer información sensible, o poner en riesgo la seguridad de usuarios y personal. El sistema CC-38 establece capas de protección (defensa en profundidad) que detectan, disuaden, retrasan y responden ante intentos de acceso no autorizado.
+
+El sistema opera de forma integrada con el CCTV general (CC-01) y el Centro de Control (CCO), permitiendo la correlación de eventos de seguridad y la respuesta coordinada ante incidentes.
+
+---
+
+## 2. Identificación Del Componente De Campo
+
+| Campo | Valor |
+|-------|-------|
+| **COD** | CC-38 |
+| **Sigla (Estándar Internacional)** | ACS / Access Control System |
+| **Nombre del Componente** | Sistema de Control de Acceso y Seguridad Perimetral |
+| **Capacidad Operativa Generada** | Protección Física de Infraestructura Crítica: Capacidad de controlar, monitorear y registrar el acceso a instalaciones sensibles, detectar intrusiones no autorizadas, y generar respuesta coordinada ante eventos de seguridad. |
+
+---
+
+## 3. Descripción Funcional / Técnica
+
+### Alcance de la Solución
+
+El sistema de control de acceso y seguridad perimetral comprende múltiples capas de protección desplegadas en instalaciones críticas del corredor:
+
+- **Control de acceso físico**: Lectores de tarjetas, biometría (huella, facial), y controladores de puertas/barreras.
+- **Seguridad perimetral**: Cercas electrificadas, sensores de intrusión (volumétricos, perimetrales), y cámaras térmicas/analíticas.
+- **Gestión de identidades**: Base de datos de personas autorizadas, niveles de acceso, y registro de auditoría.
+- **Integración con CCTV**: Correlación de eventos de acceso con video verificable.
+- **Sistema de alarma**: Paneles de alarma, sirenas, y comunicación con CCO y fuerzas de seguridad.
+
+---
+
+## 4. Justificación Estratégica
+
+Las instalaciones ITS son activos críticos de infraestructura cuya protección es esencial:
+
+**Seguridad operacional:**
+1. **Continuidad del servicio**: Protección contra sabotaje o daño intencional a equipos.
+2. **Integridad de datos**: Prevención de manipulación de información de tráfico o transacciones.
+3. **Seguridad de personal**: Protección de trabajadores en instalaciones remotas.
+
+**Cumplimiento y riesgo:**
+1. **Normativa de seguridad**: Cumplimiento de estándares de protección de infraestructura crítica.
+2. **Protección de activos**: Prevención de robo de equipos de alto valor.
+
+---
+
+## 5. Especificación Técnica
+
+| Parámetro | Especificación Mínima |
+|-----------|----------------------|
+| **Tecnología de control de acceso** | RFID 13.56 MHz (MIFARE DESFire), NFC, o BLE |
+| **Biometría** | Lector de huella dactilar (ISO 19794-2) y/o reconocimiento facial (ISO 19794-5) |
+| **Tiempo de respuesta acceso** | < 2 segundos desde presentación de credencial a liberación |
+| **Capacidad de usuarios** | ≥ 10,000 usuarios por controlador |
+| **Registro de eventos** | ≥ 1,000,000 eventos en controlador, con respaldo en servidor |
+| **Tasa de falso rechazo (FRR)** | < 1% para biometrico |
+| **Tasa de falsa aceptación (FAR)** | < 0.001% para biometrico |
+| **Sensores perimetrales** | Cable sensorizado, barreras infrarrojas, o detección por fibra óptica |
+| **Zonas de alarma** | ≥ 128 zonas configurables por panel |
+| **Tiempo de detección intrusión** | < 5 segundos desde cruce de perímetro |
+| **Cámaras térmicas** | Resolución ≥ 320x240, detección humano ≥ 300 m |
+| **Analítica de video** | Detección de intrusión, cruce de línea, permanencia |
+| **Comunicaciones** | TCP/IP primario, GPRS/4G backup para sitios remotos |
+| **Alimentación** | 110-240 VAC con UPS (4 horas) y respaldo de baterías |
+| **Protección ambiental** | IP65 para equipos exteriores |
+| **Rango térmico** | -20°C a +60°C para equipos exteriores |
+| **Cifrado de comunicaciones** | TLS 1.3, AES-256 |
+| **Cumplimiento** | ISO 27001, NIST SP 800-116 |
+
+---
+
+## 6. Requerimientos Funcionales (RF)
+
+| ID | Nombre | Descripción Funcional / Técnica | Justificación Estratégica |
+|----|--------|--------------------------------|---------------------------|
+| **RF-01** | Control de Acceso por Credencial | Sistema de lectura de tarjetas RFID/NFC que permita el acceso según nivel de autorización del portador. Validación online con servidor central y capacidad offline con sincronización posterior. | El control por credencial es el mecanismo base para restringir acceso. La operación offline garantiza continuidad ante fallas de red. |
+| **RF-02** | Control de Acceso Biométrico | Lectores de huella dactilar y/o reconocimiento facial para áreas de alta seguridad (CCO, servidores). Verificación 1:N con algoritmos antispoofing (detección de vida). | La biometría vincula inequívocamente el acceso a una persona, eliminando riesgo de uso de credenciales robadas o prestadas. |
+| **RF-03** | Gestión de Niveles de Acceso | Sistema que permita definir perfiles de acceso (operador, técnico, administrador, visitante) con zonas y horarios permitidos. Política de mínimo privilegio aplicada por defecto. | La segmentación por perfiles reduce superficie de riesgo ante compromiso de credenciales. |
+| **RF-04** | Registro de Auditoría Completo | Logging de todos los eventos de acceso: quién, cuándo, dónde, resultado (éxito/negado). Almacenamiento inmutable durante ≥ 2 años con protección contra borrado. | La auditoría es requisito legal y permite investigación post-incidente. |
+| **RF-05** | Detección Perimetral Inteligente | Sensores de intrusión que detecten intento de ingreso no autorizado a perímetros de instalaciones. Discriminación entre humano, animal y objeto. | La detección temprana permite respuesta antes de que el intruso acceda a edificaciones. |
+| **RF-06** | Videoverificación de Alarmas | Activación automática de cámaras cercanas ante evento de alarma, con presentación en pantalla del operador de CCO para verificación visual antes de despacho. | La videoverificación reduce falsos positivos y permite confirmar la naturaleza de la amenaza. |
+| **RF-07** | Gestión de Visitantes | Proceso de registro de visitantes: identificación, asignación temporal de acceso, escolta si es necesario, y registro de entrada/salida. Credenciales temporales con expiración automática. | Los visitantes representan riesgo si no se controlan adecuadamente. |
+| **RF-08** | Respuesta a Amenazas | Protocolos automáticos ante detección de intrusión: alerta a operador CCO, activación de sirenas e iluminación, notificación a fuerzas de seguridad externas, y bloqueo selectivo de accesos. | La respuesta rápida y coordinada incrementa probabilidad de neutralización de amenaza. |
+| **RF-09** | Monitoreo en Tiempo Real | Interfaz gráfica que muestre estado de todos los puntos de acceso y zonas perimetrales, con indicación visual de estado (normal, alarma, puerta forzada, comunicación perdida). | La visualización en tiempo real permite al operador mantener conciencia situacional de seguridad. |
+| **RF-10** | Integración con Sistemas ITS | Interfaz API para correlacionar eventos de seguridad con otros subsistemas: video CCTV, sistema de emergencias, y sistema de gestión de flotas. | La integración permite respuesta coordinada y contexto completo ante incidentes. |
+
+---
+
+## 7. Requisitos No Funcionales (RNF)
+
+| ID | Nombre | Descripción | Justificación |
+|----|--------|-------------|---------------|
+| **RNF-01** | Disponibilidad | Sistema disponible ≥ 99.9% del tiempo. Redundancia en componentes críticos (servidores, comunicaciones). | La indisponibilidad del sistema de seguridad deja instalaciones desprotegidas. |
+| **RNF-02** | Latencia de Respuesta | Tiempo desde evento de alarma hasta presentación en CCO < 5 segundos. Tiempo de apertura de puerta < 2 segundos. | La velocidad de respuesta es crítica ante eventos de seguridad. |
+| **RNF-03** | Ciberseguridad | Sistema hardenizado contra ataques cibernéticos: autenticación fuerte, cifrado end-to-end, segmentación de red, y monitoreo de intrusiones. | Los sistemas de control de acceso son objetivos de ataques cibernéticos. |
+| **RNF-04** | Resistencia a Manipulación | Equipos con sensores de sabotaje (tamper), protección contra cortes de energía, y comunicación supervisada que detecte interrupciones. | La resistencia a manipulación evita que un atacante desactive el sistema físicamente. |
+| **RNF-05** | Escalabilidad | Arquitectura que permita agregar nuevas instalaciones y puntos de acceso sin rediseño del sistema central. Soporte para ≥ 100 sitios. | El corredor tiene múltiples instalaciones distribuidas. La escalabilidad permite crecimiento orgánico. |
+| **RNF-06** | Cumplimiento Normativo | Cumplimiento de ISO 27001 (seguridad de información), y normativa local de protección de datos (Ley 1581 de 2012). | El cumplimiento normativo es requisito legal y reduce riesgo de sanciones. |
+
+---
+
+## 8. Indicadores Clave De Rendimiento (KPIs)
+
+| KPI | Definición | Meta |
+|-----|-----------|------|
+| **KPI-01** | Disponibilidad del Sistema | Tiempo operativo del sistema de control de acceso | ≥ 99.9% |
+| **KPI-02** | Tiempo de Respuesta de Alarma | Latencia desde detección hasta alerta en CCO | < 5 segundos |
+| **KPI-03** | Tasa de Falsas Alarmas | Alarmas generadas sin amenaza real | < 2% del total |
+| **KPI-04** | Tiempo de Acceso | Desde presentación de credencial hasta liberación | < 2 segundos |
+| **KPI-05** | Precisión Biométrica | Tasa de falsa aceptación (FAR) | < 0.001% |
+| **KPI-06** | Cobertura de Registro | Porcentaje de eventos registrados vs. eventos reales | 100% |
+
+---
+
+## 9. Componentes Del Sistema
+
+| Componente | Descripción | Especificaciones Clave |
+|------------|-------------|------------------------|
+| **Controlador de Acceso** | Unidad de control de puertas | 4-8 puertas, TCP/IP, soporte 10,000 usuarios |
+| **Lector de Tarjetas** | RFID/NFC | 13.56 MHz, MIFARE DESFire, IP65 |
+| **Lector Biométrico** | Huella y/o facial | ISO 19794, antispoofing, < 2s verificación |
+| **Cerradura Eléctrica** | Mecanismo de bloqueo | Fail-secure, con sensor de puerta |
+| **Panel de Alarma** | Gestión de zonas | 128 zonas, IP/GSM, batería respaldo |
+| **Sensor Perimetral** | Detección de intrusión | Cable sensorizado o fibra óptica |
+| **Cámara Térmica** | Detección nocturna | 320x240, detección 300m |
+| **Barrera Vehicular** | Control de acceso vehicular | Tiempo apertura < 3s, detector de bucle |
+| **Sirena y Luz Estroboscópica** | Alerta local | 110 dB, LED alta intensidad |
+| **Servidor de Gestión** | Software central | SQL, redundancia, backup automático |
+
+---
+
+## 10. Proveedores en el Mercado (Internacional)
+
+| Fabricante | País | Tecnología Principal | Modelos de Referencia | Sitio Web |
+|------------|------|---------------------|----------------------|-----------|
+| **HID Global** | USA | Control de acceso, RFID | iCLASS SE, VertX, Aero | www.hidglobal.com |
+| **Bosch** | Alemania | Sistemas de seguridad integrados | B/G Series, Access PE | www.boschsecurity.com |
+| **Axis** | Suecia | Control de acceso IP | A1001, A1601 | www.axis.com |
+| **Genetec** | Canadá | Control de acceso unificado | Synergis, AutoVu | www.genetec.com |
+| **Avigilon** | Canadá | Control de acceso + video | ACM, Unity Access | www.avigilon.com |
+| **Dormakaba** | Suiza | Control de acceso físico | exos, 92 Series | www.dormakaba.com |
+
+---
+
+## 11. Proveedores Colombia
+
+| Empresa | Especialidad | Ubicación | Sitio Web |
+|---------|-------------|-----------|-----------|
+| **Bosch Security Colombia** | Sistemas de seguridad integrados | Bogotá | www.boschsecurity.com.co |
+| **Hikvision Colombia** | CCTV y control de acceso | Bogotá | www.hikvision.com/co |
+| **Dahua Colombia** | Seguridad electrónica | Bogotá | www.dahuasecurity.com/co |
+| **ZKTeco Colombia** | Biometría y control de acceso | Bogotá | www.zkteco.co |
+
+---
+
+## 12. Casos de Uso
+
+### Caso de Uso 1: Acceso de Personal Autorizado
+**Actor**: Técnico de mantenimiento
+**Flujo**: Técnico se aproxima a puerta de CCO, presenta tarjeta RFID en lector. Sistema valida credencial, verifica que técnico tiene acceso autorizado para esa zona y horario. Puerta se desbloquea, técnico ingresa. Evento queda registrado en auditoría con timestamp y foto de verificación.
+**Resultado**: Acceso controlado y registrado de personal autorizado.
+
+### Caso de Uso 2: Intento de Acceso No Autorizado
+**Actor**: Persona sin credenciales válidas
+**Flujo**: Persona intenta forzar puerta lateral de instalación. Sensor de puerta detecta apertura forzada, activa alarma local (sirena y luz), envía alerta inmediata a CCO con video en vivo de cámara cercana. Operador verifica situación y despacha unidad de seguridad.
+**Resultado**: Detección y respuesta inmediata ante intento de intrusión.
+
+### Caso de Uso 3: Detección Perimetral Nocturna
+**Actor**: Intruso en perímetro exterior
+**Flujo**: Persona salta cerca perimetral de estación de peaje a las 02:00. Sistema de cable sensorizado detecta vibración/violación, cámara térmica confirma presencia humana, alarma se activa en CCO. Operador visualiza intruso en tiempo real y coordina respuesta con vigilancia privada.
+**Resultado**: Detección temprana en perímetro permite intervención antes de acceso a edificaciones.
+
+### Caso de Uso 4: Gestión de Visitante
+**Actor**: Contratista de servicios temporales
+**Flujo**: Visitante llega a recepción, presenta documento de identidad. Recepcionista registra en sistema, toma foto, asigna acceso temporal a áreas específicas por 8 horas. Sistema emite credencial temporal con QR. Visitante accede a zonas permitidas utilizando credencial. Al finalizar jornada, acceso expira automáticamente.
+**Resultado**: Control de acceso temporal con registro completo de actividad.
+
+### Caso de Uso 5: Respuesta a Amenaza Confirmada
+**Actor**: Operador CCO + Fuerzas de seguridad
+**Flujo**: Múltiples sensores perimetrales activan alarmas simultáneamente en un sitio remoto. Operador verifica mediante cámaras que hay intrusión coordinada. Activa protocolo de emergencia: bloqueo de accesos, iluminación total del sitio, sirenas, y notificación automática a policía y empresa de vigilancia. Todas las acciones quedan registradas para investigación posterior.
+**Resultado**: Respuesta coordinada y documentada ante amenaza seria contra infraestructura crítica.
+

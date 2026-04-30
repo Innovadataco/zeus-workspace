@@ -1,0 +1,374 @@
+# CC-18: BCS / VRU - Contador de Ciclistas
+
+## 1. Resumen Ejecutivo
+
+El Sistema de Conteo de Ciclistas (BCS/Bicycle Counting System), integrado dentro del marco de Usuarios Vulnerables de la Vía (VRU/Vulnerable Road Users), constituye una solución tecnológica avanzada diseñada para el monitoreo automatizado del flujo ciclista en infraestructura vial. Este sistema utiliza sensores especializados para detectar, contar y clasificar bicicletas en tiempo real, proporcionando datos críticos para la planificación urbana, gestión del tráfico y mejora de la seguridad vial para ciclistas.
+
+La capacidad de **Monitoreo Inteligente de Movilidad Activa** permite a las autoridades de tránsito comprender patrones de uso, identificar corredores de alta demanda, evaluar la efectividad de infraestructura ciclista y fundamentar decisiones basadas en evidencia para la promoción de la movilidad sostenible.
+
+---
+
+## 2. Identificación del Sistema
+
+| **Atributo** | **Valor** |
+|--------------|-----------|
+| **COD** | CC-18 |
+| **Sigla** | BCS / VRU |
+| **Nombre Oficial** | Contador de Ciclistas |
+| **Capacidad** | Monitoreo Inteligente de Movilidad Activa: Capacidad de detectar, contar y clasificar automáticamente bicicletas y usuarios vulnerables de la vía en tiempo real |
+
+---
+
+## 3. Descripción Funcional y Técnica
+
+### 3.1 Propósito del Sistema
+
+El BCS/VRU tiene como propósito fundamental proporcionar datos precisos y en tiempo real sobre el volumen, dirección, velocidad y características del tráfico ciclista. Este sistema habilita:
+
+- **Conteo automatizado**: Detección precisa de bicicletas sin intervención humana.
+- **Clasificación de usuarios**: Diferenciación entre bicicletas tradicionales, eléctricas, scooters y otros VRU.
+- **Análisis de patrones**: Identificación de horas pico, flujos direccionales y variaciones estacionales.
+- **Integración con ITS**: Correlación con semáforos, señalización y otros sistemas de transporte inteligente.
+- **Seguridad vial**: Detección de comportamientos de riesgo y conflictos en intersecciones.
+
+### 3.2 Componentes Principales
+
+| **Componente** | **Descripción** |
+|----------------|-----------------|
+| **Sensores de Detección** | Radares de microondas, cámaras térmicas, sensores inductivos, LiDAR o sensores infrarrojos especializados |
+| **Unidad de Procesamiento** | Edge computer o controlador embebido con algoritmos de IA/ML para clasificación |
+| **Sistema de Comunicaciones** | Módulos celulares (4G/5G), WiFi o fibra óptica para transmisión de datos |
+| **Energía Solar** | Paneles solares y baterías para operación autónoma en ubicaciones remotas |
+| **Estructura de Montaje** | Postes, pórticos o instalación en mobiliario urbano existente |
+| **Plataforma de Visualización** | Dashboard web para análisis de datos, reportes y exportación |
+| **Almacenamiento Local** | Memoria interna para respaldo de datos durante fallas de conectividad |
+
+### 3.3 Arquitectura Técnica
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                        VÍA PÚBLICA                              │
+│  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐        │
+│  │  🚴‍♂️    │  │   🚴‍♀️   │  │   🛴    │  │   🚲    │        │
+│  └────┬─────┘  └────┬─────┘  └────┬─────┘  └────┬─────┘        │
+│       │             │             │             │               │
+│       └─────────────┴─────────────┴─────────────┘               │
+│                         │                                       │
+│              ┌──────────▼──────────┐                           │
+│              │   SENSORES BCS      │                           │
+│              │  (Radar/Cámara/     │                           │
+│              │   Inductivo/LiDAR)  │                           │
+│              └──────────┬──────────┘                           │
+│                         │                                       │
+└─────────────────────────┼───────────────────────────────────────┘
+                          │
+              ┌───────────▼───────────┐
+              │   EDGE COMPUTER       │
+              │  (Procesamiento IA)   │
+              └───────────┬───────────┘
+                          │
+          ┌───────────────┼───────────────┐
+          │               │               │
+   ┌──────▼──────┐ ┌──────▼──────┐ ┌──────▼──────┐
+   │   4G/5G     │ │    WiFi     │ │   LoRaWAN   │
+   └──────┬──────┘ └──────┬──────┘ └──────┬──────┘
+          │               │               │
+          └───────────────┼───────────────┘
+                          │
+     ┌────────────────────┼────────────────────┐
+     │                    │                    │
+┌────▼─────┐      ┌──────▼──────┐      ┌──────▼──────┐
+│  Nube    │      │  Centro de  │      │   App Móvil │
+│ Platform │      │   Control   │      │   Ciudadano │
+└──────────┘      └─────────────┘      └─────────────┘
+```
+
+### 3.4 Tecnologías de Detección
+
+| **Tecnología** | **Principio** | **Ventajas** | **Limitaciones** |
+|----------------|---------------|--------------|------------------|
+| **Radar de Microondas** | Detección por ondas de radio | No afectado por clima, privacidad garantizada | Dificultad con múltiples objetos |
+| **Cámara Térmica** | Detección de calor corporal | Funciona 24/7, privacidad preservada | Costo elevado |
+| **Sensores Inductivos** | Detección de metal (ruedas) | Alta precisión, bajo costo | Requiere instalación en pavimento |
+| **LiDAR** | Escaneo láser 3D | Clasificación detallada, múltiples objetos | Costo elevado, complejidad |
+| **Cámara + IA** | Visión por computador | Clasificación avanzada, datos enriquecidos | Requiere buena iluminación |
+| **Infrarrojo Pasivo** | Detección de movimiento | Bajo costo, fácil instalación | Sensibilidad a condiciones ambientales |
+
+### 3.5 Interfaces con Otros Sistemas
+
+- **Sistema de Semáforos Inteligentes (CC-11)**: Activación de fases preferenciales para ciclistas.
+- **Sistema de Detección de Incidentes (CC-03)**: Detección de conflictos y caídas de ciclistas.
+- **Sistema de Información al Usuario (CC-14)**: Publicación de tiempos de recorrido en paneles VMS.
+- **Plataforma de Movilidad (CC-16)**: Integración con apps de navegación ciclista.
+- **Sistema de Gestión de Tráfico (CC-10)**: Coordinación con flujo vehicular general.
+
+---
+
+## 4. Justificación Estratégica
+
+### 4.1 Importancia para la Movilidad Sostenible
+
+El sistema de conteo de ciclistas representa una inversión estratégica fundamental para ciudades que buscan:
+
+1. **Promoción de la Bicicleta**: Datos objetivos que respaldan inversiones en infraestructura ciclista.
+
+2. **Reducción de Emisiones**: Monitoreo del impacto de la bicicleta en la reducción de CO₂.
+
+3. **Seguridad Vial Mejorada**: Identificación de puntos negros y comportamientos de riesgo.
+
+4. **Planificación Urbana Evidenciada**: Datos reales para diseño de ciclovías y corredores seguros.
+
+5. **Cumplimiento de ODS**: Alineación directa con Objetivos de Desarrollo Sostenible.
+
+### 4.2 Beneficios Económicos
+
+| **Beneficio** | **Impacto Estimado** |
+|---------------|----------------------|
+| Optimización de inversiones en infraestructura | 20-30% |
+| Reducción de costos de salud pública | 15-25% |
+| Incremento en turismo ciclista | 10-15% |
+| Disminución de congestionamientos | 8-12% |
+| Reducción de costos de conteo manual | 70-80% |
+
+### 4.3 Alineación con Objetivos de Desarrollo Sostenible
+
+- **ODS 3**: Salud y bienestar (promoción de actividad física)
+- **ODS 9**: Industria, innovación e infraestructura
+- **ODS 11**: Ciudades y comunidades sostenibles
+- **ODS 13**: Acción por el clima (reducción de emisiones)
+
+---
+
+## 5. Especificación Técnica
+
+| **Parámetro** | **Especificación** |
+|---------------|-------------------|
+| **Precisión de conteo** | ≥ 95% |
+| **Velocidad de detección** | 5 km/h a 60 km/h |
+| **Cobertura de detección** | Hasta 6 metros de ancho |
+| **Clasificación de dirección** | Bidireccional |
+| **Capacidad de procesamiento** | ≥ 10,000 eventos/día |
+| **Tiempo de respuesta** | ≤ 1 segundo |
+| **Resolución de clasificación** | Bicicletas, e-bikes, scooters, patinetes |
+| **Temperatura de operación** | -20°C a +60°C |
+| **Humedad relativa** | 0% a 95% sin condensación |
+| **Resistencia al agua** | IP65 mínimo |
+| **Autonomía energética** | ≥ 7 días (configuración solar) |
+| **Vida útil estimada** | 10-12 años |
+| **Protocolo de comunicación** | MQTT, HTTPS, API REST |
+| **Frecuencia de transmisión** | Configurable: tiempo real, 15 min, 1 hora |
+| **Cumplimiento EMI/EMC** | EN 61000-6-2, EN 61000-6-4 |
+
+---
+
+## 6. Requerimientos Funcionales (RF)
+
+| **ID** | **Requerimiento** | **Descripción** | **Prioridad** |
+|--------|-------------------|-----------------|---------------|
+| **RF-18-01** | Conteo automatizado | El sistema debe contar automáticamente todas las bicicletas que pasan por el punto de detección | Crítica |
+| **RF-18-02** | Clasificación de VRU | Debe diferenciar entre bicicletas tradicionales, bicicletas eléctricas, scooters y patinetes | Alta |
+| **RF-18-03** | Detección bidireccional | Debe detectar y clasificar el sentido de circulación (ascendente/descendente) | Crítica |
+| **RF-18-04** | Medición de velocidad | Calcular y registrar la velocidad de cada usuario detectado | Alta |
+| **RF-18-05** | Registro temporal | Almacenar fecha y hora exacta de cada evento de detección | Crítica |
+| **RF-18-06** | Transmisión de datos | Transmitir datos en tiempo real o en intervalos configurables al centro de control | Crítica |
+| **RF-18-07** | Almacenamiento local | Mantener respaldo local de datos mínimo por 30 días | Alta |
+| **RF-18-08** | Autodiagnóstico | Realizar pruebas automáticas de funcionamiento y reportar fallas | Media |
+| **RF-18-09** | Configuración remota | Permitir configuración y actualización de firmware remotamente | Media |
+| **RF-18-10** | Exportación de datos | Generar reportes exportables en formatos CSV, JSON, Excel | Media |
+| **RF-18-11** | Detección de grupos | Capacidad de contar grupos de ciclistas simultáneamente | Alta |
+| **RF-18-12** | Integración API | Exponer API REST para integración con sistemas externos | Media |
+
+---
+
+## 7. Requisitos No Funcionales (RNF)
+
+| **ID** | **Requisito** | **Descripción** | **Métrica** |
+|--------|---------------|-----------------|-------------|
+| **RNF-18-01** | Precisión | Porcentaje de detecciones correctas vs. totales | ≥ 95% |
+| **RNF-18-02** | Disponibilidad | Tiempo operativo del sistema | Uptime ≥ 99% |
+| **RNF-18-03** | Latencia | Tiempo entre detección y transmisión | ≤ 5 segundos |
+| **RNF-18-04** | Escalabilidad | Capacidad de agregar nuevos puntos de conteo | Hasta 1,000 puntos |
+| **RNF-18-05** | Seguridad | Encriptación de comunicaciones y datos | TLS 1.3 / AES-256 |
+| **RNF-18-06** | Resistencia ambiental | Operación bajo condiciones climáticas adversas | IP65, -20°C a +60°C |
+| **RNF-18-07** | Mantenibilidad | Facilidad para diagnóstico y reparación | MTTR ≤ 8 horas |
+| **RNF-18-08** | Privacidad | Garantizar anonimato de los usuarios detectados | Sin almacenamiento de identidad |
+| **RNF-18-09** | Consumo energético | Bajo consumo para operación solar | ≤ 5W promedio |
+| **RNF-18-10** | Interoperabilidad | Compatibilidad con estándares ITS internacionales | SAE J2735, DATEX II |
+
+---
+
+## 8. Indicadores Clave de Desempeño (KPIs)
+
+| **ID** | **Indicador** | **Descripción** | **Fórmula/Métrica** | **Meta** | **Frecuencia** |
+|--------|---------------|-----------------|---------------------|----------|----------------|
+| **KPI-18-01** | Precisión de Conteo | Porcentaje de ciclistas correctamente contados vs. ground truth | (Detecciones correctas / Total real) × 100 | ≥ 95% | Mensual |
+| **KPI-18-02** | Tasa de Falsos Positivos | Detecciones incorrectas (vehículos contados como ciclistas) | (Falsos positivos / Total detecciones) × 100 | ≤ 3% | Mensual |
+| **KPI-18-03** | Disponibilidad del Sistema | Porcentaje de tiempo operativo | (Tiempo operativo / Tiempo total) × 100 | ≥ 99% | Mensual |
+| **KPI-18-04** | Latencia de Transmisión | Tiempo promedio entre detección y recepción en servidor | (Σ Tiempo transmisión) / N eventos | ≤ 5 segundos | Diario |
+| **KPI-18-05** | Volumen Diario Promedio | Número promedio de ciclistas detectados por día | Σ Ciclistas diarios / N días | Variable | Diario |
+| **KPI-18-06** | Velocidad Promedio | Velocidad media de los ciclistas detectados | Σ Velocidades / N ciclistas | Variable | Semanal |
+| **KPI-18-07** | Precisión de Clasificación | Porcentaje de clasificaciones correctas por tipo de VRU | (Clasificaciones correctas / Total) × 100 | ≥ 90% | Mensual |
+| **KPI-18-08** | Tiempo de Resolución de Fallas | Tiempo promedio para restaurar el sistema | (Σ Tiempo reparación) / N fallas | ≤ 8 horas | Mensual |
+| **KPI-18-09** | Crecimiento de Uso | Variación porcentual del volumen de ciclistas | ((Actual - Anterior) / Anterior) × 100 | Variable | Trimestral |
+| **KPI-18-10** | Horas Pico Identificadas | Franjas horarias con mayor flujo de ciclistas | Ranking de horarios | Identificar top 3 | Semanal |
+
+---
+
+## 9. Referencias de Mercado Internacional
+
+| **Fabricante** | **País** | **Modelo de Referencia** | **Características Destacadas** | **URL** |
+|----------------|----------|--------------------------|-------------------------------|---------|
+| **Eco-Counter** | Francia | PYRO-Box | Tecnología térmica, privacidad garantizada, alta precisión | https://www.eco-counter.com |
+| **Vaisala** | Finlandia | HI-TRAC CMU | Radar Doppler, clasificación multi-modos, integración ITS | https://www.vaisala.com |
+| **Miovision** | Canadá | Scout® Explore | Cámara + IA, análisis de video avanzado | https://www.miovision.com |
+| **Sensys Networks** | EE.UU. | VDS240 Wireless | Sensores inductivos inalámbricos, batería de larga duración | https://sensysnetworks.com |
+| **Velodyne LiDAR** | EE.UU. | Velabit™ | LiDAR compacto, clasificación 3D detallada | https://velodynelidar.com |
+| **Kistler** | Suiza | ComoNeo | Sensores de presión, integración completa ITS | https://www.kistler.com |
+| **FLIR (Teledyne)** | EE.UU. | TrafiCam x-stream | Cámara térmica con análisis embebido | https://www.flir.com |
+
+---
+
+## 10. Proveedores en Colombia
+
+| **Empresa** | **Ciudad** | **Experiencia** | **Contacto/Web** |
+|-------------|------------|-----------------|------------------|
+| **SITS S.A.S.** | Bogotá | Especialistas en ITS, detección vehicular y peatonal | https://www.sits.com.co |
+| **Innovadataco** | Girardot | Consultoría e integración de sistemas ITS, movilidad activa | https://innovadataco.com |
+| **ITD Ingeniería** | Bogotá | Sensores de tráfico y conteo vehicular | https://itd.com.co |
+| **Traffic Solutions Colombia** | Medellín | Sistemas de conteo y clasificación vehicular | https://trafficsolutions.co |
+
+---
+
+## 11. Casos de Uso
+
+### Caso de Uso 1: Evaluación de Infraestructura Ciclista
+
+**Actores**: Secretaría de Movilidad, Planificadores Urbanos, Ciudadanos Ciclistas
+
+**Descripción**: Una ciudad necesita decidir la ampliación de una ciclovía existente basándose en datos reales de demanda.
+
+**Flujo de Eventos**:
+1. Se instalan contadores BCS en los puntos de acceso a la ciclovía actual.
+2. El sistema recolecta datos durante 3 meses de operación continua.
+3. Se identifican horarios pico: 7:00-9:00 AM y 5:00-7:00 PM.
+4. Se detecta un volumen promedio de 2,500 ciclistas/día.
+5. El análisis revela saturación en el tramo norte durante horas pico.
+6. Se identifica demanda no atendida en el corredor sur.
+7. Los datos respaldan la propuesta de ampliación ante el concejo.
+8. Se aprueba inversión de $2.5 millones USD para extensión.
+
+**Resultado**: Decisión de inversión basada en datos objetivos, no percepciones.
+
+---
+
+### Caso de Uso 2: Semáforo Inteligente con Detección de Ciclistas
+
+**Actores**: Sistema de Semáforos, Ciclistas, Conductores de Vehículos
+
+**Descripción**: Intersección congestionada donde ciclistas experimentan largas esperas en semáforos.
+
+**Flujo de Eventos**:
+1. Se instala contador BCS con comunicación bidireccional con el semáforo.
+2. El sistema detecta aproximación de ciclista a 50 metros de la intersección.
+3. El semáforo vehicular recibe señal de solicitud de fase verde ciclista.
+4. Si el tiempo de espera vehicular es bajo, se activa fase preferencial inmediata.
+5. Si hay congestionamiento, se programa activación en el siguiente ciclo.
+6. El ciclista cruza con luz verde dedicada de 15 segundos.
+7. El sistema registra tiempo de espera reducido de 45 a 12 segundos promedio.
+
+**Resultado**: Incremento del 35% en satisfacción de ciclistas, reducción de conflictos en intersección.
+
+---
+
+### Caso de Uso 3: Detección de Comportamientos de Riesgo
+
+**Actores**: Analistas de Seguridad Vial, Ciclistas, Peatones
+
+**Descripción**: Identificación de puntos críticos donde ciclistas circulan a velocidades peligrosas o realizan maniobras riesgosas.
+
+**Flujo de Eventos**:
+1. Se instalan contadores BCS con capacidad de medición de velocidad en zona escolar.
+2. El sistema detecta que 15% de ciclistas exceden los 25 km/h permitidos.
+3. Se identifica horario crítico: salida escolar (2:00-3:30 PM).
+4. Los datos muestran correlación entre alta velocidad y conflictos registrados.
+5. Se implementan reductores de velocidad y señalización dinámica.
+6. Se monitorea impacto post-intervención con contadores BCS.
+7. Se verifica reducción del 40% en excesos de velocidad.
+
+**Resultado**: Intervención focalizada basada en datos, reducción de incidentes en 60%.
+
+---
+
+### Caso de Uso 4: Integración con App de Movilidad Ciudadana
+
+**Actores**: Ciudadanos Ciclistas, Plataforma de Movilidad, Alcaldía
+
+**Descripción**: App móvil que informa a ciclistas sobre rutas más utilizadas y tiempos de recorrido.
+
+**Flujo de Eventos**:
+1. Los contadores BCS transmiten datos en tiempo real a la plataforma cloud.
+2. La app móvil consulta la API del sistema de conteo.
+3. El ciclista solicita ruta recomendada desde punto A a punto B.
+4. La app analiza datos históricos y tiempo real de flujo ciclista.
+5. Se sugiere ruta alternativa menos congestionada (ahorro estimado: 8 min).
+6. Durante el recorrido, la app actualiza tiempo estimado según flujo actual.
+7. Los datos agregados alimentan un heat map de ciclismo urbano público.
+
+**Resultado**: Mejor experiencia del usuario, distribución más equilibrada del tráfico ciclista.
+
+---
+
+### Caso de Uso 5: Medición de Impacto Ambiental
+
+**Actores**: Secretaría de Ambiente, ONGs, Ciudadanía
+
+**Descripción**: Cuantificación de la contribución de la movilidad ciclista en la reducción de emisiones de CO₂.
+
+**Flujo de Eventos**:
+1. Los contadores BCS registran 500,000 desplazamientos ciclistas en un año.
+2. Se estima distancia promedio por viaje: 4.2 km.
+3. Se calcula equivalencia: 2.1 millones de km recorridos en bicicleta.
+4. Se estima CO₂ evitado asumiendo sustitución por vehículo particular (120 g/km).
+5. Total de emisiones evitadas: 252 toneladas de CO₂/año.
+6. Se genera reporte para presentación ante organismos internacionales.
+7. Los datos respaldan aplicación a fondos verdes para expansión ciclista.
+
+**Resultado**: Certificación de proyecto de movilidad sostenible, acceso a financiación internacional.
+
+---
+
+## 12. Glosario
+
+| **Término** | **Definición** |
+|-------------|----------------|
+| **BCS** | Bicycle Counting System - Sistema de Conteo de Bicicletas |
+| **VRU** | Vulnerable Road Users - Usuarios Vulnerables de la Vía (ciclistas, peatones, motociclistas) |
+| **LiDAR** | Light Detection and Ranging - Detección y medición por láser |
+| **IA** | Inteligencia Artificial |
+| **ML** | Machine Learning - Aprendizaje Automático |
+| **Edge Computing** | Procesamiento de datos en el dispositivo local, no en la nube |
+| **MQTT** | Message Queuing Telemetry Transport - Protocolo de mensajería ligero |
+| **API** | Application Programming Interface - Interfaz de Programación de Aplicaciones |
+| **Ground Truth** | Datos de referencia verificados manualmente para validación |
+| **Fase Preferencial** | Período de luz verde dedicado en semáforo para un modo específico |
+| **MTTR** | Mean Time To Repair - Tiempo Medio de Reparación |
+| **IP65** | Grado de protección contra polvo y agua |
+
+---
+
+## 13. Documentos de Referencia
+
+- ISO 14819: Traffic and Travel Information via Traffic Message Channel
+- SAE J2735: Dedicated Short Range Communications (DSRC) Message Set
+- DATEX II: Traffic and Travel Data Exchange
+- NTC 5129: Sistemas de información vial - Colombia
+- Manual de Diseño Geométrico de Carreteras - INVIAS
+- CROW Record 25: Design Manual for Bicycle Traffic
+- NACTO Urban Bikeway Design Guide
+- WHO Global Status Report on Road Safety
+
+---
+
+*Documento generado: 2026-04-27*  
+*Versión: 1.0*  
+*Elaborado por: ZEUS Agente IA - Innovadataco*

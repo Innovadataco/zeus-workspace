@@ -1,0 +1,244 @@
+# 8.1 CC-32: WAR (Sala de Crisis)
+
+## 8.1.1 Resumen Ejecutivo
+
+El componente **CC-32 WAR (Workshop/Watch and Response)** constituye el subsistema de **Sala de Crisis** del Centro de Control y Operaciones (CCO) del corredor vial Chía–Girardot. Este entorno tecnológico especializado está diseñado para la gestión integral de situaciones de emergencia, crisis operativas, incidentes críticos y eventos extraordinarios que requieren coordinación multisectorial, toma de decisiones en tiempo real y comunicación unificada entre todos los actores involucrados en la respuesta.
+
+La Sala de Crisis WAR representa la máxima expresión del comando y control del corredor, activándose cuando las condiciones operativas superan la capacidad de gestión rutinaria del CCO estándar. Este espacio físico e integración de sistemas permite la concentración de información crítica desde múltiples fuentes, la proyección de escenarios, la simulación de contingencias, y la coordinación con entidades externas de respuesta (bomberos, policía, hospitales, Defensa Civil, organismos de gestión de riesgo).
+
+El sistema WAR integra capacidades avanzadas de visualización multinivel, comunicaciones redundantes, gestión documental de emergencias, registro forense de eventos, y herramientas de soporte a la toma de decisiones basadas en análisis predictivo e inteligencia artificial. Su implementación garantiza que el corredor cuente con capacidad de respuesta institucional robusta ante situaciones que comprometan la seguridad de usuarios, la integridad de la infraestructura o la continuidad operativa del servicio.
+
+---
+
+## 8.1.2 Identificación Del Componente De Campo
+
+| Campo | Valor |
+|-------|-------|
+| **COD** | CC-32 |
+| **Sigla (Estándar Internacional)** | WAR (Workshop and Response / Watch and Response) |
+| **Nombre del Componente** | Sala de Crisis / Crisis Management Room |
+| **Capacidad Operativa Generada** | Gestión Integral de Crisis: Capacidad de centralizar información, coordinar respuesta multisectorial, soportar toma de decisiones ejecutivas y mantener registro forense de eventos críticos, garantizando respuesta institucional coordinada ante emergencias de cualquier magnitud. |
+
+---
+
+## 8.1.3 Descripción Funcional / Técnica
+
+### Alcance de la Solución
+
+El sistema WAR comprende un entorno físico y tecnológico integral diseñado para operar como centro de comando durante situaciones de crisis. La solución incluye:
+
+- **Sala de Crisis Física:** Espacio independiente o área restringida dentro del CCO con capacidad para albergar al equipo de comando (15-25 personas), equipada con infraestructura de soporte vital (UPS, generador, climatización independiente, acceso controlado).
+
+- **Sistemas de Visualización Multinivel:** Muros de video LED/LCD de alta resolución (≥4K) con capacidad para mostrar simultáneamente: estado del corredor en GIS, feeds de CCTV de zonas críticas, métricas operativas en tiempo real, canales de comunicación con entidades externas, dashboards de incidentes, y proyección de escenarios.
+
+- **Integración de Sistemas ITS:** Conexión bidireccional con todos los subsistemas del corredor: CCTV (CC-01), AID (CC-02), VMS (CC-14), ESS (CC-06), Metereología (CC-07), y el CCO principal (CC-19), permitiendo control remoto de dispositivos desde la Sala de Crisis.
+
+- **Plataforma de Gestión de Incidentes:** Software especializado para el seguimiento del ciclo de vida de incidentes: detección, clasificación, respuesta, escalamiento, resolución y análisis posterior. Incluye registro cronológico automático de todas las acciones.
+
+- **Sistema de Comunicaciones Unificado:** Integración de múltiples canales: radio UHF/VHF (convencional y trunking), telefonía fija y móvil, videoconferencia, sistemas de mensajería institucional, y enlaces directos con entidades de respuesta externas.
+
+- **Gestión Documental de Emergencias:** Repositorio digital de planes de contingencia, protocolos de respuesta, fichas técnicas de infraestructura, hojas de seguridad de sustancias peligrosas, y documentación regulatoria accesible en segundos.
+
+- **Herramientas de Soporte a Decisiones:** Módulos de análisis predictivo, simulación de escenarios, modelado de evacuaciones, proyección de impacto de incidentes, y recomendaciones basadas en casos históricos similares.
+
+- **Registro Forense y Auditoría:** Capacidad de grabación completa de todas las comunicaciones, decisiones tomadas, acciones ejecutadas y estados del sistema durante la crisis, para análisis posterior y requerimientos legales.
+
+---
+
+## 8.1.4 Justificación Estratégica
+
+La implementación de una Sala de Crisis WAR responde a la necesidad imperiosa de contar con capacidad institucional de respuesta ante situaciones extraordinarias que pueden comprometer vidas, infraestructura y reputación:
+
+1. **Gestión de Incidentes Mayores:** Accidentes múltiples, derrames de sustancias peligrosas, colapsos estructurales, incendios de gran magnitud o eventos naturales (sismos, deslizamientos) requieren coordinación centralizada que excede la capacidad del CCO en operación normal.
+
+2. **Coordinación Multisectorial:** Las emergencias viales involucran múltiples actores: organismos de socorro, autoridades de tránsito, fiscalía, entidades ambientales, medios de comunicación. La Sala de Crisis proporciona punto único de contacto y coordinación.
+
+3. **Continuidad Operativa:** Durante crisis que afecten las instalaciones principales del CCO, la Sala de Crisis puede funcionar como centro de comando alterno, garantizando que la gestión del corredor continúe.
+
+4. **Toma de Decisiones Informada:** La concentración de información en tiempo real desde múltiples fuentes permite a la dirección ejecutiva tomar decisiones fundamentadas con impacto mínimo en usuarios y operación.
+
+5. **Cumplimiento Normativo:** La regulación colombiana de concesiones viales y gestión de riesgo exige la existencia de protocolos y capacidad de respuesta ante emergencias documentada y probada.
+
+6. **Protección de la Reputación:** Una respuesta coordinada y profesional ante crisis minimiza el impacto reputacional, demostrando compromiso con la seguridad de usuarios y la comunidad.
+
+---
+
+## 8.1.5 Especificación Técnica
+
+| Parámetro | Especificación Mínima |
+|-----------|----------------------|
+| **Superficie de la sala** | ≥ 80 m² con configuración flexible de mobiliario |
+| **Muro de video principal** | Pantalla LED ≥ 200 pulgadas (diagonal), resolución ≥ 4K UHD, brillo ≥ 800 nits |
+| **Monitores auxiliares** | ≥ 6 pantallas LCD/LED de 55" Full HD distribuidas estratégicamente |
+| **Estaciones de trabajo** | ≥ 10 puestos operativos con PCs de alto rendimiento (Intel Core i9/Ryzen 9, ≥ 32 GB RAM, SSD ≥ 1 TB) |
+| **Sistema de videoconferencia** | Equipo profesional 4K con cámara PTZ, audio omnidireccional, soporte ≥ 20 participantes simultáneos |
+| **Integración radiofónica** | Gateway de radio IP con soporte UHF/VHF, trunking, y conexión a redes de emergencia |
+| **Sistema de audio** | Sonido ambiental profesional con micrófonos de techo, amplificación y procesamiento DSP |
+| **Control de ambientes** | Sistema de control integrado (iluminación, cortinas, climatización, video) vía tablet/touchpanel |
+| **UPS dedicado** | Capacidad ≥ 20 kVA con autonomía ≥ 2 horas en carga completa |
+| **Generador de respaldo** | Grupo electrógeno automático ≥ 50 kVA con arranque < 30 segundos |
+| **Redundancia de red** | ≥ 2 proveedores de internet independientes + enlace satelital de respaldo |
+| **Control de acceso** | Biometría (huella + facial) + tarjeta de proximidad + registro de visitantes |
+| **Sistema de grabación** | Grabación continua de audio, video y pantallas con retención ≥ 90 días |
+| **Software de gestión de incidentes** | Plataforma especializada con módulos: registro, escalamiento, recursos, comunicaciones, análisis |
+| **GIS avanzado** | Sistema de información geográfica 3D con capas de infraestructura, riesgos y recursos de respuesta |
+| **Simulación de escenarios** | Software de modelado de incidentes, evacuaciones y proyección de impacto |
+| **Gestión documental** | Repositorio digital con búsqueda inteligente, acceso offline a documentos críticos |
+| **Ciberseguridad** | Red aislada del CCO estándar, firewall de última generación, VPN para accesos externos autorizados |
+| **Telefonía** | Sistema IP con ≥ 30 extensiones, grabación de llamadas, mensajería unificada |
+| **Mobiliario ergonómico** | Mesas ajustables en altura, sillas ergonómicas 24/7, pizarras digitales interactivas |
+| **Climatización** | Sistema independiente con filtración HEPA, control de humedad 40-60%, redundancia de equipos |
+| **Iluminación inteligente** | Sistema LED con control de intensidad y temperatura de color según modo de operación |
+| **Resistencia sísmica** | Estructura y equipos con anclaje sísmico, cumplimiento norma NSR-10 |
+
+---
+
+## 8.1.6 Requerimientos Funcionales (RF)
+
+| ID | Nombre | Descripción Funcional / Técnica | Justificación Estratégica |
+|----|--------|--------------------------------|---------------------------|
+| **RF-01** | Activación de Modo Crisis | El sistema debe permitir la activación de la Sala de Crisis en modo crisis mediante un solo comando desde el CCO o desde la propia sala. La activación debe: (1) Configurar automáticamente el muro de video con layout de crisis, (2) Notificar a todo el personal designado de comando, (3) Iniciar registro forense de todas las actividades, (4) Escalar privilegios de acceso a sistemas críticos, (5) Activar protocolos de comunicación de emergencia. El tiempo de activación completa debe ser ≤ 60 segundos. | En situaciones de emergencia, cada segundo cuenta. La activación rápida y automatizada de la Sala de Crisis elimina tiempos de configuración manual, permitiendo que el equipo de comando comience a operar inmediatamente con toda la información y herramientas disponibles. |
+| **RF-02** | Visualización Integrada del Corredor | El sistema debe integrar y mostrar en tiempo real: (1) Mapa GIS del corredor con estado de todos los subsistemas ITS, (2) Feeds de CCTV de zonas de incidente o interés, (3) Métricas operativas (tráfico, incidentes activos, tiempos de respuesta), (4) Estado del clima y alertas meteorológicas, (5) Posición de unidades de respuesta, (6) Estado de comunicaciones con entidades externas. El operador debe poder personalizar layouts y guardar configuraciones para diferentes tipos de incidentes. | La concentración de información en un único espacio de visualización permite al equipo de comando comprender la situación completa sin depender de múltiples pantallas o sistemas separados. Esta visibilidad integral es fundamental para la toma de decisiones coordinada y rápida. |
+| **RF-03** | Gestión del Ciclo de Vida de Incidentes | El sistema debe soportar el ciclo completo de gestión de incidentes: (1) Registro automático de detección, (2) Clasificación por tipo y severidad, (3) Asignación de recursos y personal, (4) Seguimiento de acciones ejecutadas con timestamps, (5) Escalamiento automático según protocolos, (6) Comunicaciones relacionadas al incidente, (7) Cierre con resumen ejecutivo, (8) Archivo para análisis posterior. Debe permitir gestión simultánea de múltiples incidentes. | La gestión estructurada de incidentes garantiza que ninguna acción quede sin registrar, que los protocolos se sigan correctamente, y que exista trazabilidad completa para análisis posterior y requerimientos legales. La capacidad de múltiples incidentes es crítica durante eventos de gran magnitud. |
+| **RF-04** | Comunicaciones Unificadas con Entidades Externas | El sistema debe integrar comunicaciones con todas las entidades de respuesta: (1) Enlaces de radio directos con bomberos, policía, ambulancias, Defensa Civil, (2) Videoconferencia con hospitales y centros de comando externos, (3) Líneas telefónicas prioritarias con autoridades, (4) Mensajería institucional segura, (5) Acceso a redes de emergencia nacionales. Debe permitir conferencias multi-parte y grabación de todas las comunicaciones. | La coordinación efectiva con organismos de respuesta es crítica durante crisis. La integración de múltiples canales de comunicación en un único sistema elimina la fragmentación y garantiza que todas las partes involucradas compartan información en tiempo real. |
+| **RF-05** | Acceso a Documentación Crítica en Tiempo Real | El sistema debe proporcionar acceso inmediato a: (1) Planes de contingencia por tipo de incidente, (2) Protocolos de respuesta actualizados, (3) Fichas técnicas de infraestructura crítica (túneles, puentes, viaductos), (4) Hojas de seguridad de sustancias peligrosas, (5) Directorio de contactos de emergencia, (6) Historial de incidentes similares. La búsqueda debe funcionar con palabras clave y mostrar resultados en ≤ 3 segundos. | Durante una crisis, el personal de comando necesita información específica rápidamente. El acceso instantáneo a documentación crítica evita errores por falta de información y acelera la implementación de protocolos adecuados según el tipo de incidente. |
+| **RF-06** | Soporte a la Toma de Decisiones (DSS) | El sistema debe incluir herramientas de soporte a decisiones: (1) Modelado de escenarios (what-if), (2) Proyección de impacto de cierres viales, (3) Optimización de rutas de evacuación, (4) Análisis de riesgo en tiempo real, (5) Recomendaciones basadas en casos históricos similares, (6) Predicción de evolución de incidentes basada en IA. Las herramientas deben presentar opciones con análisis de pros/contras cuando sea aplicable. | Las decisiones durante crisis tienen consecuencias significativas. Las herramientas de soporte a decisiones proporcionan al equipo de comando análisis objetivos y predicciones basadas en datos, reduciendo la dependencia de juicios subjetivos bajo presión. |
+| **RF-07** | Registro Forense y Reconstrucción de Eventos | El sistema debe registrar de forma inmutable: (1) Todas las comunicaciones de audio y video, (2) Decisiones tomadas con identificación de responsable y timestamp, (3) Acciones ejecutadas en sistemas ITS desde la sala, (4) Estados de todos los subsistemas cada 30 segundos, (5) Entrada y salida de personal. Debe permitir la reconstrucción cronológica completa de cualquier incidente con precisión de segundos para análisis posterior y auditorías. | El registro forense es esencial para análisis post-incidente, identificación de lecciones aprendidas, cumplimiento legal ante investigaciones judiciales, y protección institucional ante posibles reclamaciones. La inmutabilidad garantiza la integridad de la evidencia. |
+| **RF-08** | Simulación y Entrenamiento | El sistema debe incluir modo de simulación que permita: (1) Recrear escenarios de incidentes pasados, (2) Simular nuevos tipos de emergencias, (3) Ejecutar ejercicios de entrenamiento con el equipo de comando, (4) Grabar y evaluar el desempeño durante simulaciones, (5) Generar reportes de lecciones aprendidas. Las simulaciones no deben afectar sistemas operativos reales. | La preparación para crisis requiere práctica. Los ejercicios de simulación permiten que el equipo de comando se familiarice con protocolos, identifique debilidades en procedimientos, y mejore coordinación sin riesgo de afectar operación real del corredor. |
+| **RF-09** | Continuidad ante Fallo del CCO Principal | La Sala de Crisis debe poder operar independientemente como centro de comando alterno si el CCO principal queda inoperativo. Debe tener acceso directo a sistemas de campo (CCTV, VMS, detectores) sin depender de infraestructura del CCO principal, y capacidad de asumir control total del corredor. | En emergencias que dañen el CCO principal (incendio, sismo, ataque), la Sala de Crisis garantiza continuidad de comando. Sin esta capacidad, el corredor quedaría sin gestión centralizada exactamente cuando más se necesita coordinación. |
+| **RF-10** | Control de Acceso y Seguridad Física | El acceso a la Sala de Crisis debe estar restringido a personal autorizado mediante control biométrico (huella + facial) y tarjeta de proximidad. Debe mantenerse registro de todas las entradas y salidas. Durante modo crisis, el acceso debe ser controlado por el Jefe de Crisis designado. | La Sala de Crisis maneja información sensible y toma decisiones críticas. El control de acceso garantiza que solo personal autorizado y entrenado participe en gestión de crisis, y permite auditoría de quién estuvo presente durante decisiones importantes. |
+
+---
+
+## 8.1.7 Requisitos No Funcionales (RNF)
+
+| ID | Nombre | Descripción | Justificación |
+|----|--------|-------------|---------------|
+| **RNF-01** | Disponibilidad 24/7/365 | La Sala de Crisis debe estar operativa y lista para activación las 24 horas, los 365 días del año. Los sistemas deben mantenerse en modo standby continuo con monitoreo de salud. El tiempo de activación desde standby a operación completa debe ser ≤ 60 segundos. | Las crisis no programan su ocurrencia. La Sala de Crisis debe estar siempre lista para activación inmediata, sin importar hora o día. Un tiempo de activación largo podría costar vidas en emergencias donde cada segundo cuenta. |
+| **RNF-02** | Resiliencia y Redundancia | Todos los sistemas críticos deben tener redundancia: doble alimentación eléctrica (UPS + generador), doble conectividad de red, servidores en configuración HA (High Availability), y copias de seguridad de datos en tiempo real. Ningún punto único de fallo debe interrumpir operación. | Durante una crisis, la Sala de Crisis es el centro neurálgico de respuesta. Un fallo técnico en este momento sería catastrófico. La redundancia garantiza que el sistema permanezca operativo incluso ante fallos de componentes individuales. |
+| **RNF-03** | Ciberseguridad de Nivel Crítico | La Sala de Crisis debe implementar las más altas medidas de ciberseguridad: red aislada del CCO estándar, firewall de última generación con IDS/IPS, autenticación multifactor para todos los accesos, cifrado de todas las comunicaciones, segmentación de red por funciones, y monitoreo continuo de amenazas. | Un ataque cibernético a la Sala de Crisis durante una emergencia real podría paralizar la respuesta institucional. La seguridad de este sistema es tan crítica como la de sistemas de control industrial, dado que su compromiso pone en riesgo vidas humanas. |
+| **RNF-04** | Usabilidad Bajo Presión | La interfaz de usuario debe ser intuitiva y operable por personal bajo alta presión y estrés. Debe seguir principios de diseño cognitivo: información jerarquizada por prioridad, alertas visuales y sonoras claras, flujos de trabajo simplificados, y capacidad de operación táctil sin necesidad de teclado/mouse complejos. | Durante una crisis, el personal de comando opera bajo estrés extremo que reduce capacidad cognitiva. Interfaces complejas o confusas aumentan probabilidad de errores operativos en momentos críticos. La usabilidad es un requisito de seguridad operacional. |
+| **RNF-05** | Escalabilidad de Operación | El sistema debe poder escalar desde operación de un solo operador (monitoreo) hasta equipo completo de 25 personas (crisis mayor) sin degradación del rendimiento. Debe soportar incremento repentino de carga (múltiples incidentes simultáneos) manteniendo tiempos de respuesta < 2 segundos. | Las crisis pueden escalar rápidamente desde incidentes menores hasta emergencias complejas. El sistema debe adaptarse a cualquier escenario sin reconfiguración compleja, permitiendo que recursos humanos se concentren en gestión de la crisis, no en manejo de tecnología. |
+| **RNF-06** | Confort Ambiental 24/7 | La sala debe mantener condiciones de confort para operación prolongada (turnos de 12+ horas): temperatura 20-24°C, humedad 40-60%, iluminación ajustable sin reflejos en pantallas, aislamiento acústico externo, y calidad de aire interior con filtración HEPA. El mobiliario debe ser ergonómico para uso intensivo. | Durante crisis prolongadas (ej: emergencia por sismo, huracán), el equipo de comando puede operar por días consecutivos. El confort ambiental es necesario para mantener rendimiento cognitivo y toma de decisiones efectiva durante períodos extendidos de alta carga. |
+| **RNF-07** | Cumplimiento Normativo de Seguridad | La Sala de Crisis debe cumplir con normativas colombianas de seguridad: NSR-10 (resistencia sísmica), RETIE (instalaciones eléctricas), NTC 1669 (sistemas de alarma), y estándares de accesibilidad. Debe contar con certificación de bomberos y cumplimiento de rutas de evacuación. | El cumplimiento normativo es obligatorio legalmente. Además, sería irónico y peligroso que el centro de gestión de crisis no cumpliera con normas de seguridad básicas. La certificación garantiza que la sala es un espacio seguro incluso durante eventos adversos. |
+
+---
+
+## 8.1.8 Indicadores Clave De Rendimiento (KPIs)
+
+| ID | Indicador | Descripción | Meta | Frecuencia |
+|----|-----------|-------------|------|------------|
+| **KPI-01** | Tiempo de Activación | Segundos desde comando hasta operación plena | ≤ 60 segundos | Por activación |
+| **KPI-02** | Disponibilidad | Porcentaje de tiempo en estado operativo listo | ≥ 99.9% | Mensual |
+| **KPI-03** | Tiempo de Respuesta | Latencia de sistemas ante interacción del usuario | < 2 segundos | Continua |
+| **KPI-04** | Cobertura de Comunicaciones | % de entidades externas contactables desde WAR | 100% | Trimestral |
+| **KPI-05** | Satisfacción de Entrenamiento | Evaluación de ejercicios de simulación | ≥ 4.5/5.0 | Por ejercicio |
+| **KPI-06** | Integridad de Registros | % de datos forenses correctamente almacenados | 100% | Continua |
+| **KPI-07** | Tiempo de Recuperación | MTTR ante fallo de componente crítico | < 30 minutos | Por incidente |
+
+---
+
+## 8.1.9 Referencias De Mercado
+
+### Fabricantes Internacionales
+
+| Fabricante | País | Especialidad | Modelos de Referencia | Web |
+|------------|------|--------------|----------------------|-----|
+| **Barco** | Bélgica | Muros de video LED/LCD para control | UniSee, OverView | https://www.barco.com |
+| **Jupiter Systems** | USA | Procesadores de video wall | Pana, Catalyst | https://www.jupiter.com |
+| **Black Box** | USA | KVM y soluciones de control | DKM, Agility | https://www.blackbox.com |
+| **Motorola Solutions** | USA | Comunicaciones críticas | Command Central | https://www.motorolasolutions.com |
+| **Hexagon** | Suecia | Sistemas de gestión de emergencias | ERD, Intergraph | https://www.hexagon.com |
+| **Everbridge** | USA | Notificación masiva y gestión de crisis | Crisis Management | https://www.everbridge.com |
+
+---
+
+## 8.1.10 Proveedores Colombia
+
+| Empresa | Ciudad | Especialidad | Web |
+|---------|--------|--------------|-----|
+| **Indra Colombia** | Bogotá | Centros de control y gestión de emergencias | https://www.indracompany.com |
+| **Sophos Solutions** | Bogotá | Videowall y control de salas | https://www.sophossolutions.com |
+| **Copiosa** | Bogotá | Audio, video y automatización | https://www.copiosa.com.co |
+| **Seguridad Electrónica Integrada** | Bogotá | Comunicaciones críticas y control | https://www.seicolombia.com |
+
+---
+
+## 8.1.11 Casos de Uso
+
+### CU-01: Activación ante Colisión Múltiple
+**Actor Principal:** Jefe de Crisis / Operador CCO  
+**Precondición:** Accidente múltiple en túnel con heridos y riesgo de incendio  
+**Flujo Principal:**
+1. AID detecta colisión múltiple en túnel Tubo Norte km 45
+2. Operador evalúa severidad y activa Sala de Crisis (modo crisis)
+3. En 45 segundos, sala está operativa con: CCTV del túnel, estado de SEM, recursos disponibles
+4. Se notifica automáticamente a bomberos, policía, ambulancias, Defensa Civil
+5. Jefe de Crisis asume comando y coordina respuesta desde WAR
+6. Se establece videoconferencia con hospital para preparar recepción de heridos
+7. Se activa VMS con mensajes de cierre de túnel y rutas alternas
+8. Se documenta cada decisión y acción en sistema de gestión de incidentes
+
+**Resultado:** Coordinación efectiva de respuesta multisectorial, salvamento de vidas, control de crisis sin escalamiento.
+
+### CU-02: Ejercicio de Simulación de Sismo
+**Actor Principal:** Coordinador de Emergencias / Equipo de Crisis  
+**Precondición:** Programación de ejercicio semestral de preparación  
+**Flujo Principal:**
+1. Se programa ejercicio de simulación de sismo magnitud 7.0
+2. Sala de Crisis se activa en modo simulación (sin afectar sistemas operativos)
+3. Se inyectan escenarios: daño en puentes, cortes de comunicación, heridos
+4. Equipo de crisis responde según protocolos, tomando decisiones documentadas
+5. Sistema graba todas las acciones y decisiones para evaluación posterior
+6. Se evalúa desempeño: tiempos de respuesta, calidad de decisiones, coordinación
+7. Se identifican áreas de mejora en protocolos y capacitación
+8. Se actualizan planes de contingencia basados en lecciones aprendidas
+
+**Resultado:** Equipo de crisis preparado y capacitado, protocolos validados y mejorados continúamente.
+
+### CU-03: Derrame de Sustancia Peligrosa
+**Actor Principal:** Jefe de Crisis / Especialista HAZMAT  
+**Precondición:** Accidente de camión cisterna con derrame de producto químico  
+**Flujo Principal:**
+1. Se recibe alerta de accidente con derrame de sustancia desconocida
+2. Se activa Sala de Crisis y se consulta hoja de seguridad por código UN
+3. Se identifica sustancia: ácido clorhídrico - riesgo de vapores tóxicos
+4. Se activa protocolo específico de evacuación y contención
+5. Se coordina con equipo HAZMAT de bomberos mediante videoconferencia
+6. Se cierra tramo afectado y se desvía tráfico mediante VMS
+7. Se monitorea dirección del viento para evaluar dispersión de vapores
+8. Se documenta respuesta completa para autoridades ambientales
+
+**Resultado:** Respuesta especializada y segura ante emergencia química, protección de población y medio ambiente.
+
+### CU-04: Reconstrucción Forense Post-Incidente
+**Actor Principal:** Investigador de Accidentes / Fiscalía  
+**Precondición:** Incidente mayor ocurrido 3 días atrás  
+**Flujo Principal:**
+1. Investigador solicita reconstrucción de evento desde Sala de Crisis
+2. Sistema recupera registro forense completo: comunicaciones, decisiones, estados
+3. Se reproduce cronología exacta del incidente con precisión de segundos
+4. Se visualizan pantallas del momento, comunicaciones de audio, video de CCTV
+5. Se identifica hora exacta de cada decisión tomada y quién la tomó
+6. Se exporta evidencia con hash criptográfico de integridad
+7. Se genera informe forense para proceso judicial
+
+**Resultado:** Evidencia objetiva e irrefutable para investigación judicial y mejora de protocolos.
+
+### CU-05: Coordinación con Autoridades Nacionales
+**Actor Principal:** Director de Operaciones / Ministro de Transporte  
+**Precondición:** Emergencia de magnitud que requiere coordinación nacional  
+**Flujo Principal:**
+1. Se presenta deslizamiento que bloquea corredor completo
+2. Se activa Sala de Crisis y se establece enlace con Centro Nacional de Gestión de Riesgo
+3. Director de Operaciones informa situación a Ministro vía videoconferencia segura
+4. Se coordinan recursos nacionales: maquinaria pesada, helicópteros, personal
+5. Se establece centro de prensa virtual para comunicación oficial
+6. Se monitorea progreso de labores de apertura en tiempo real
+7. Se coordina reapertura gradual del corredor con seguridad
+
+**Resultado:** Coordinación efectiva con autoridades nacionales, gestión transparente de crisis, reapertura segura del corredor.
+
+---
+
+**InnovaDataCO SAS** | **Fecha:** Abril 2026 | Documento generado bajo estándares ITS_CC-32

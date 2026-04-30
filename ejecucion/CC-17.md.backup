@@ -1,0 +1,182 @@
+# 8.1 CC-17: PAS (Public Address System)
+
+## 8.1.1 Resumen Ejecutivo
+
+El componente **CC-17 PAS** constituye el sistema de megafonía inteligente del corredor vial Chía–Girardot, proporcionando capacidad de comunicación de audio bidireccional entre el Centro de Control y Operaciones (CCO) y los usuarios de la vía. Este subsistema es fundamental para la gestión de emergencias, información al usuario y coordinación de respuestas operativas.
+
+La megafonía inteligente trasciende el concepto tradicional de "altavoces" al integrar comunicación puntual, mensajes automáticos basados en eventos, y capacidades de audio bidireccional en puntos específicos. El sistema PAS permite al CCO hablar directamente a conductores en zonas críticas, emitir instrucciones de evacuación, y recibir llamadas de emergencia desde la vía.
+
+El componente PAS se despliega en ubicaciones estratégicas del corredor: zonas de peaje, áreas de servicio, puntos de emergencia, y sectores de alto riesgo. La cobertura sonora está diseñada para superar el ruido del tráfico pesado mientras mantiene inteligibilidad del mensaje.
+
+---
+
+## 8.1.2 Identificación Del Componente De Campo
+
+| Campo | Valor |
+|-------|-------|
+| **COD** | CC-17 |
+| **Sigla (Estándar Internacional)** | PAS |
+| **Nombre del Componente** | Public Address System - Sistema de Megafonía Inteligente |
+| **Capacidad Operativa Generada** | Comunicación de Audio Bidireccional: Capacidad de transmitir mensajes de voz desde el CCO a usuarios de la vía y recibir llamadas de emergencia desde puntos de la infraestructura. |
+
+---
+
+## 8.1.3 Descripción Funcional / Técnica
+
+### Alcance de la Solución
+
+El sistema PAS comprende tres subsistemas integrados:
+
+1. **Megafonía de Emergencia (Highway PAS)**: Altavoces de alta potencia ubicados a lo largo del corredor para mensajes masivos en emergencias
+2. **Intercomunicadores de Emergencia (Call Boxes)**: Puntos fijos de llamada de emergencia con botón SOS y audio bidireccional
+3. **Megafonía Zonificada (Zonal PA)**: Sistema de altavoces en áreas específicas (peajes, servicios, túneles) con capacidad de direccionamiento selectivo
+
+Cada punto PAS incluye:
+- Altavoces de alta potencia (100-200W) con cobertura direccional
+- Micrófonos con cancelación de ruido para recepción en CCO
+- Amplificadores con redundancia
+- Unidad de control con procesamiento digital de audio
+- Conectividad IP para integración con CCO
+- Respaldo energético para operación en emergencias
+
+El sistema opera desde el CCO mediante consola dedicada que permite selección de zonas, transmisión de mensajes pregrabados o en vivo, y recepción de llamadas desde la vía con identificación de ubicación automática.
+
+### Justificación Estratégica
+
+En situaciones de emergencia, la comunicación rápida y clara puede salvar vidas:
+- **Evacuación ordenada**: Instrucciones claras evitan pánico y congestionamiento
+- **Gestión de incidentes**: Informar a conductores sobre desvíos y rutas alternas
+- **Prevención**: Alertas tempranas sobre condiciones peligrosas adelante
+- **Coordinación**: Comunicación con personal de campo en ubicaciones específicas
+
+El PAS complementa la información visual de los DMS (CC-03) con información auditiva que no requiere que el conductor desvíe la vista de la carretera. En situaciones de niebla densa donde visibilidad es nula, el audio se convierte en el principal canal de comunicación.
+
+---
+
+## 8.1.4 Especificación Técnica
+
+| Parámetro | Especificación Mínima |
+|-----------|----------------------|
+| **Potencia de altavoces** | 100-200 W por punto de megafonía |
+| **SPL (Sound Pressure Level)** | ≥ 120 dB @ 1 m, ≥ 90 dB @ 50 m |
+| **Respuesta de frecuencia** | 200 Hz - 8 kHz (optimizado para voz) |
+| **THD (distorsión)** | < 3% a potencia nominal |
+| **Cobertura angular** | 60° - 120° configurable por sector |
+| **Inteligibilidad (STI)** | ≥ 0.5 (good) medido a 50 m |
+| **Procesamiento de audio** | DSP con compresión, ecualización, cancelación de eco |
+| **Comunicación** | IP (SIP/RTP), Ethernet, fibra óptica |
+| **Altavoces** | Line array o horn drivers resistentes a intemperie |
+| **Protección ambiental** | IP66 para altavoces, IP65 para electrónica |
+| **Rango térmico** | -20°C a +60°C |
+| **Respaldo energético** | UPS ≥ 2 horas, baterías en gabinete local |
+| **Intercomunicadores** | Botón SOS, indicador LED, audio bidireccional |
+| **Prioridad de mensajes** | 4 niveles: informativo, atención, emergencia, evacuación |
+| **Enlace de emergencia** | Funcionamiento independiente ante fallo de red |
+
+---
+
+## 8.1.5 Requerimientos Funcionales (RF)
+
+| ID | Nombre | Descripción Funcional / Técnica | Justificación Estratégica |
+|----|--------|--------------------------------|---------------------------|
+| **RF-01** | Transmisión de Mensajes en Vivo | Los operadores del CCO deben poder transmitir mensajes de voz en vivo a cualquier zona o combinación de zonas del corredor. La selección de zonas debe ser posible mediante mapa interactivo o lista jerárquica. El audio debe transmitirse con latencia < 1 segundo. | La comunicación en vivo permite respuesta inmediata ante situaciones imprevistas que no están contempladas en mensajes pregrabados. El operador puede dar instrucciones específicas según evolución del evento. |
+| **RF-02** | Biblioteca de Mensajes Pregrabados | El sistema debe permitir almacenar ≥ 100 mensajes pregrabados multilingües (español, inglés) categorizados por tipo: informativos, emergencia, evacuación, mantenimiento. Los mensajes deben activarse con máximo 2 clics desde interfaz del CCO. | Los mensajes pregrabados aseguran calidad consistente, eliminan errores de comunicación bajo presión, y permiten respuesta inmediata sin necesidad de redactar el mensaje en el momento. |
+| **RF-03** | Activación Automática por Eventos | El sistema debe integrarse con otros subsistemas para activación automática: AID (CC-02) detecta incidente → PAS activa mensaje "REDUZCA VELOCIDAD, INCIDENTE A 2 KM"; LHD (CC-30) detecta humo → PAS activa evacuación en túnel. | La automatización elimina dependencia de operador disponible y reduce tiempo de respuesta a segundos. En emergencias críticas, cada segundo cuenta para la seguridad de los usuarios. |
+| **RF-04** | Zonificación Flexible | El corredor debe poder dividirse en zonas de megafonía configurables (ej: cada 2 km, por segmento administrativo, por condición operativa). Debe permitir superposición de zonas y "all-call" (todo el corredor). Una ubicación puede pertenecer a múltiples zonas. | La zonificación permite mensajes direccionados sin afectar tráfico no involucrado. Un accidente en km 45 no requiere alertar a conductores en km 150, evitando desensibilización por alertas innecesarias. |
+| **RF-05** | Intercomunicadores de Emergencia | Debe haber puntos de llamada de emergencia (call boxes) cada 2 km o en ubicaciones críticas (peajes, servicios). Al presionar botón SOS, se establece llamada bidireccional con CCO, se identifica automáticamente la ubicación, y se activa video cercano (CCTV). | Los usuarios necesitan poder contactar al CCO cuando observan emergencias o cuando ellos mismos están en peligro. La identificación automática de ubicación es crítica cuando el usuario no conoce su posición exacta. |
+| **RF-06** | Priorización de Mensajes | El sistema debe implementar 4 niveles de prioridad: (1) Informativo - no interrumpe, (2) Atención - interrumpe informativo, (3) Emergencia - interrumpe todo excepto emergencia previa, (4) Evacuación - interrumpe absolutamente todo. Un mensaje en curso puede ser interrumpido por otro de mayor prioridad. | Sin priorización, un mensaje informativo rutinario podría bloquear una instrucción de evacuación crítica. La jerarquía asegura que información vital siempre tenga paso inmediato. |
+| **RF-07** | Supervisión y Diagnóstico | El CCO debe poder monitorear estado de cada punto PAS: funcionamiento, nivel de audio, estado de comunicación, temperatura, y estado de respaldo energético. Debe detectar fallos de altavoz o amplificador y generar alarmas de mantenimiento. | Los altavoces expuestos a intemperie pueden dañarse. La supervisión continua asegura que el sistema estará operativo cuando realmente se necesite, evitando sorpresas desagradables en emergencias. |
+| **RF-08** | Integración con CCTV y DMS | Cuando se activa un mensaje de emergencia, el sistema debe: mostrar automáticamente cámara cercana en CCO, activar DMS (CC-03) con mensaje complementario, y registrar todo en log de incidentes. La integración debe ser bidireccional (DMS puede activar PAS). | La integración multi-canal asegura que el mensaje llegue por todos los medios disponibles. Algunos conductores pueden no ver el DMS pero sí escuchar el PAS, y viceversa. |
+| **RF-09** | Simulación y Pruebas Programadas | El sistema debe permitir pruebas automáticas programadas (ej: semanalmente, domingos 3 AM) que verifiquen funcionamiento de cada punto sin transmitir audio externo (audífono o circuito cerrado). Debe generar reporte de pruebas con resultados. | Las pruebas regulares detectan fallos antes de que sean necesarios en emergencia. Programarlas en horas de bajo tráfico minimiza impacto. La documentación de pruebas es requisito para auditorías de seguridad. |
+| **RF-10** | Respuesta ante Fallos de Infraestructura | Ante fallo de red principal, los puntos PAS deben poder operar en modo local con mensajes pregrabados almacenados localmente. Ante fallo de energía, deben operar con baterías ≥ 2 horas. Ante fallo de CCO, deben poder controlarse desde ubicación alterna. | Los fallos de infraestructura frecuentemente coinciden con emergencias (tormentas, terremotos). El sistema PAS debe ser resilientemente funcional cuando más se necesita, sin depender de sistemas que pueden estar caídos. |
+
+---
+
+## 8.1.6 Requisitos No Funcionales (RNF)
+
+| ID | Nombre | Descripción | Justificación |
+|----|--------|-------------|---------------|
+| **RNF-01** | Disponibilidad del Sistema | El sistema PAS debe mantener disponibilidad ≥ 99% para función de megafonía de emergencia, medida mensualmente. Los intercomunicadores de emergencia deben tener disponibilidad ≥ 99.5%. | En emergencias, el PAS es canal crítico de comunicación. Un sistema fuera de servicio cuando se necesita puede tener consecuencias fatales si no hay alternativa de comunicación con usuarios. |
+| **RNF-02** | Inteligibilidad en Condiciones Adversas | El audio debe ser claramente inteligible (STI ≥ 0.5) con ruido de fondo de tráfico pesado (> 85 dB), viento de 50 km/h, y a distancia de 50 m. El sistema debe incluir procesamiento de audio que optimice inteligibilidad sobre volumen absoluto. | Un mensaje que no se entiende es tan inútil como ningún mensaje. El ruido del tráfico en corredores viales es elevado y el sistema debe superarlo sin distorsión. |
+| **RNF-03** | Latencia de Audio | La latencia desde que el operador habla en CCO hasta que el audio sale por altavoces debe ser < 1 segundo. La latencia en llamadas de intercomunicador debe ser < 500 ms para conversación natural. | Latencias superiores a 1 segundo generan desconexión percibida entre operador y situación. En intercomunicación bidireccional, latencias altas dificultan la conversación natural. |
+| **RNF-04** | Resistencia Ambiental | Los altavoces deben resistir lluvia intensa, granizo, polvo, radiación UV, y temperaturas extremas (-20°C a +60°C). Los gabinetes de electrónica deben ser IP65 mínimo con ventilación controlada. | El sistema está expuesto a todo el rango de condiciones climáticas del corredor. La humedad, polvo y vibraciones son enemigos de la electrónica de audio. |
+| **RNF-05** | Ciberseguridad | Las comunicaciones IP deben cifrarse (SRTP). El acceso a configuración debe requerir autenticación. El sistema debe protegerse contra ataques de denegación de servicio y secuestro de señal. Los mensajes de emergencia deben requerir autorización. | Un ataque que tome control del PAS podría transmitir mensajes de pánico o instrucciones peligrosas. La protección de comunicaciones evita interceptación de llamadas de emergencia. |
+| **RNF-06** | Inmunidad a Interferencias | El sistema debe operar sin degradación ante interferencias electromagnéticas de radiofrecuencia, líneas de alta tensión cercanas, y transmisores de comunicaciones. Debe cumplir normas EMC (Electromagnetic Compatibility). | Las instalaciones de carreteras incluyen múltiples fuentes de interferencia. El audio debe mantenerse limpio sin ruido inducido que afecte inteligibilidad. |
+| **RNF-07** | Escalabilidad | La arquitectura debe permitir agregar nuevos puntos PAS sin rediseño del sistema. La adición de una nueva zona debe requerir solo configuración, sin desarrollo adicional de software. | El corredor puede expandirse o requerir mayor densidad de cobertura. La escalabilidad permite crecimiento sin inversión adicional en plataforma central. |
+
+---
+
+## 8.1.7 Indicadores Clave De Rendimiento (KPIs)
+
+| ID | Indicador | Meta | Frecuencia de Medición |
+|----|-----------|------|------------------------|
+| **KPI-01** | Disponibilidad del Sistema | ≥ 99% | Mensual |
+| **KPI-02** | Tiempo de Respuesta (activación) | < 5 segundos | Por evento |
+| **KPI-03** | Inteligibilidad (STI) | ≥ 0.5 | Trimestral (medición) |
+| **KPI-04** | Tiempo Medio Entre Fallos (MTBF) | ≥ 20,000 horas | Por punto |
+| **KPI-05** | Cobertura del Corredor | 100% de zonas críticas | Anual (auditoría) |
+| **KPI-06** | Éxito de Llamadas de Emergencia | ≥ 95% conectan correctamente | Mensual |
+
+---
+
+## 8.1.8 Interfaces Y Dependencias
+
+### Entradas (Inputs)
+| ID | Entrada | Origen | Descripción |
+|----|---------|--------|-------------|
+| **IN-01** | Comandos de Transmisión | CCO | Mensajes a transmitir, zonas objetivo |
+| **IN-02** | Llamadas de Emergencia | Call Boxes | Solicitudes de ayuda desde la vía |
+| **IN-03** | Eventos de Subsistemas | AID, LHD, ESS | Activadores automáticos de mensajes |
+| **IN-04** | Comandos de DMS | CC-03 DMS | Activación coordinada de mensajes |
+| **IN-05** | Señalización Prioridad | Sistema Prioridad | Nivel de urgencia del mensaje |
+
+### Salidas (Outputs)
+| ID | Salida | Destino | Descripción |
+|----|--------|---------|-------------|
+| **OUT-01** | Audio a Usuarios | Altavoces | Mensajes de voz en corredor |
+| **OUT-02** | Audio a CCO | Consola | Llamadas desde intercomunicadores |
+| **OUT-03** | Estado del Sistema | CCO | Disponibilidad, fallos, alarmas |
+| **OUT-04** | Registro de Eventos | Log | Historial de transmisiones y llamadas |
+| **OUT-05** | Activación DMS | CC-03 DMS | Mensajes complementarios visuales |
+
+### Dependencias
+| ID | Componente | Tipo | Descripción |
+|----|------------|------|-------------|
+| **DEP-01** | CC-01 CCTV | Fuerte | Video asociado a llamadas de emergencia |
+| **DEP-02** | CC-02 AID | Medio | Activación automática por incidentes |
+| **DEP-03** | CC-03 DMS | Fuerte | Coordinación mensajes visuales |
+| **DEP-04** | CC-23 FOC | Fuerte | Red de comunicaciones |
+| **DEP-05** | CC-35 UPS | Fuerte | Respaldo energético |
+| **DEP-06** | CC-15 TCS | Medio | Integración en túneles |
+
+---
+
+## 8.1.9 Información Adicional
+
+### Referencias de Mercado
+
+| Fabricante | Sistema de Referencia | Características Destacadas |
+|------------|----------------------|---------------------------|
+| **Bosch** | Praesideo | DSP avanzado, redundancia, alta fiabilidad |
+| **TOA** | SX-2000 | Integración IP, fácil configuración |
+| **AtlasIED** | GLOBALCOM | Plataforma unificada, escalable |
+| **Siemens** | CCPAS | Integración con control de tráfico |
+| **Harman** | BSS Soundweb | Procesamiento audio profesional |
+
+### Normativa Aplicable
+- **IEC 60849**: Sistemas de sonorización para emergencias
+- **ISO 7240-16**: Sistemas de alarma por voz
+- **BS 5839-8**: Sistemas de megafonía para emergencias
+- **Resolución 1090 de 2020**: Sistemas ITS Colombia
+- **NFPA 72**: National Fire Alarm and Signaling Code
+
+### Consideraciones de Diseño
+- Altura de montaje de altavoces: 6-10 m para óptima cobertura
+- Distancia entre puntos PAS en corredor: máximo 500 m para solapamiento
+- Call boxes: cada 2 km en corredor, cada 200 m en túneles
+- Redundancia de amplificadores: N+1 por zona
+- Protección contra rayos y sobretensiones en todos los equipos de campo
+
+---
+
+*InnovaDataCO | APP-CHIA-GIRARDOT | CC-17 PAS - Public Address System*

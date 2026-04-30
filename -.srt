@@ -1,0 +1,16 @@
+1
+00:00:00,000 --> 00:00:05,120
+Antes de ejecutar cualquier acción quiero que primero me confirme si podes entender la siguiente
+
+2
+00:00:05,120 --> 00:00:13,360
+estrucción. Uno, todas las 42 fichas deben cumplir estructura en cuanto a la cantidad de capítulo
+
+3
+00:00:13,360 --> 00:00:21,160
+que ya están definidas. Dos el estilo de redacción y descritura de ser estandar para todos,
+
+4
+00:00:21,160 --> 00:00:29,960
+muy parecido al CC02. Revisalo y me indicame si entiendes la estrucción que estoy dando.
+
