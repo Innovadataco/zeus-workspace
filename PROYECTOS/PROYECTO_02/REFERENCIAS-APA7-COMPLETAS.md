@@ -1,0 +1,64 @@
+## REFERENCIAS BIBLIOGRÁFICAS (APA 7) — Listas para copiar y pegar
+
+Copiá este bloque completo y reemplazá toda tu sección de Referencias Bibliográficas.
+
+---
+
+**Fuentes Normativas Nacionales**
+
+Alcaldía Mayor de Bogotá. (2023, 19 de octubre). *Decreto Distrital 477 de 2023: Por medio del cual se adopta la Política Pública de Participación Incidente del Distrito Capital 2023-2034*. Recuperado el 3 de mayo de 2026, de https://www.participacionbogota.gov.co/sites/default/files/normativa/decreto-477-de-2023.pdf
+
+Alcaldía Mayor de Bogotá. (2023, 19 de diciembre). *Decreto Distrital 606 de 2023: Por el cual se actualiza el Sistema Distrital de Participación Ciudadana*. Recuperado el 3 de mayo de 2026, de https://www.participacionbogota.gov.co/sites/default/files/normativa/decreto-606-de-2023.pdf
+
+Congreso de la República de Colombia. (2015, 6 de julio). *Ley Estatutaria 1757 de 2015: Por la cual se dictan disposiciones en materia de promoción y protección del derecho a la participación democrática*. Recuperado el 3 de mayo de 2026, de https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=57699
+
+---
+
+**Fuentes Institucionales Nacionales**
+
+Bogotá Cómo Vamos. (2025). *Encuesta de Percepción Ciudadana (EPC) 2025: Informe de resultados*. Recuperado el 3 de mayo de 2026, de https://bogotacomovamos.org/wp-content/uploads/2025/05/Boletin-de-Prensa-EPC-2025.pdf
+
+Instituto Distrital de la Participación y Acción Comunal (IDPAC). (2025). *Instancias de participación ciudadana en Bogotá 2021-2025: Diagnóstico y perspectivas*. Observatorio de la Participación Ciudadana. Recuperado el 3 de mayo de 2026, de https://www.participacionbogota.gov.co/
+
+Instituto Distrital de la Participación y Acción Comunal (IDPAC). (2025). *Manual de mecanismos de participación ciudadana en Bogotá 2025*. Escuela de la Participación Ciudadana. Recuperado el 3 de mayo de 2026, de https://www.participacionbogota.gov.co/
+
+Instituto Distrital de la Participación y Acción Comunal (IDPAC). (2025). *Resultados del Índice de Fortalecimiento de Instancias (IFIS)* [Conjunto de datos]. Subdirección de Fortalecimiento a Organizaciones Sociales. Recuperado el 3 de mayo de 2026, de https://www.participacionbogota.gov.co/
+
+Veeduría Distrital de Bogotá. (2023). *Índice Institucional de Participación Ciudadana (IIPC): Seguimiento a la gestión pública en Bogotá*. Recuperado el 3 de mayo de 2026, de https://www.veeduriadistrital.gov.co/es/publicaciones/iipc-2023
+
+---
+
+**Fuentes Internacionales y Organismos Multilaterales**
+
+Banco Interamericano de Desarrollo (BID). (2021). *Gobierno digital en América Latina y el Caribe: Avances y herramientas para su implementación*. Recuperado el 3 de mayo de 2026, de https://publications.iadb.org/es/publicaciones/spanish/document/Gobierno-digital-en-America-Latina-y-el-Caribe-Avances-y-herramientas-para-su-implementacion.pdf
+
+Naciones Unidas. (2024). *United Nations E-Government Survey 2024: Accelerating digital transformation in the age of AI*. Department of Economic and Social Affairs. Recuperado el 3 de mayo de 2026, de https://desapublications.un.org/publications/united-nations-e-government-survey-2024
+
+Organización para la Cooperación y el Desarrollo Económicos (OCDE). (2022). *Gobierno digital en América Latina: Enfoques estratégicos y gobernanza institucional*. OCDE Publishing. https://doi.org/10.1787/7583d218-en
+
+---
+
+**Fuentes Académicas**
+
+Arnstein, S. R. (1969). A ladder of citizen participation. *Journal of the American Institute of Planners, 35*(4), 216–224. https://doi.org/10.1080/01944366908977225
+
+Bernat, P., & Ganuza, E. (2022). *¿Cómo votar una política pública? Guía metodológica para la participación ciudadana en la era digital*. Editorial Gedisa.
+
+Castelnovo, W., & Sorrentino, M. (2020). The digital government as a co-production platform. *Government Information Quarterly, 35*(2), 249–259. https://doi.org/10.1016/j.giq.2020.101473
+
+Haro-de-Rosario, A., Sáez-Martín, A., & Caba-Pérez, M. D. C. (2021). E-participation and digital divide: The gap between infrastructure and citizen engagement in Latin American cities. *Public Administration Review, 81*(1), 120–134. https://doi.org/10.1111/puar.13291
+
+Macintosh, A. (2004). Characterizing e-participation in policy-making. *Proceedings of the 37th Annual Hawaii International Conference on System Sciences*. IEEE. https://doi.org/10.1109/HICSS.2004.1265303
+
+Putnam, R. D. (1994). *Para hacer que la democracia funcione: Tradiciones civiles en la Italia moderna*. Galaxia Gutenberg.
+
+Susha, I., & Janssen, M. (2019). Data-driven public policy making: A systematic literature review. *Information Polity, 24*(2), 167–183. https://doi.org/10.3233/IP-190175
+
+Xifré, X. (2023). Open Government and Public Innovation: The role of open source platforms. *OECD Digital Economy Papers*.
+
+---
+
+**Fuentes Técnicas y Plataformas**
+
+Decidim. (s.f.). *Decidim: Free Open-Source participatory democracy for cities and organizations (Versión 0.28)* [Código fuente]. Recuperado el 3 de mayo de 2026, de https://decidim.org/
+

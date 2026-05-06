@@ -120,27 +120,33 @@
 ---
 
 ## OBSERVACIÓN #5 — Diferenciar hallazgos vs inferencias vs propuestas
-**Prioridad:** 🔴 Crítica | **Dónde:** Anexo II, III y IV (secciones analíticas)
+**Prioridad:** 🔴 Crítica | **Dónde:** RESULTADOS del Estudio de Caso (págs. 7-8)
 
-**Texto sugerido (copiar-pegar como sistema de codificación):**
+**Problema:** El jurado detecta que los párrafos de Resultados mezclan tres cosas sin avisar al lector: (a) datos que se midieron, (b) conclusiones del equipo, (c) recomendaciones futuras.
 
-> ### Sistema de Codificación de Afirmaciones
->
-> Para distinguir la proveniencia de cada afirmación, se adopta el siguiente código:
->
-> | Código | Tipo | Definición | ¿Verificable por otro investigador? |
-> |---|---|---|---|
-> | **[HALLAZGO]** | Hallazgo empírico verificado | Dato estadístico, cifra oficial, resultado de encuesta | ✅ Sí, con acceso a la misma fuente |
-> | **[INTERPRETACIÓN]** | Interpretación analítica del equipo | Análisis, síntesis, correlación elaborada por los autores | ⚠️ Parcialmente, con la misma base |
-> | **[PROPUESTA]** | Propuesta estratégica del equipo | Recomendación, modelo o intervención sugerida | ❌ No, es normativa |
->
-> **Ejemplo aplicado al texto:**
->
-> **[HALLAZGO]** De las 1.271 instancias de participación registradas por el IDPAC según informes públicos 2022-2024, se proyecta que aproximadamente dos tercios cuentan con mecanismos operativos formales. *Nota: cifra no verificada con microdatos por ausencia de respuesta del IDPAC.*
->
-> **[INTERPRETACIÓN]** La ausencia de verificación precisa sugiere una implementación normativa potencialmente desigual, donde la existencia de instancias formales no necesariamente se traduce en canales efectivos de incidencia ciudadana.
->
-> **[PROPUESTA]** Se propone que el IDPAC establezca un tablero de control público de cumplimiento del Decreto 477/2023 por localidad, con actualización trimestral.
+**Ejemplo del problema en tu texto actual:**
+
+❌ **Mezclado (confunde al lector):**
+> "El diagnóstico multidimensional arrojó resultados críticos..." [dato]
+> "Se identificó que la baja confianza... fue el síntoma de una desconexión estructural..." [ya es tu interpretación, no un dato]
+> "La investigación argumentó que este déficit..." [interpretación]
+> "En consecuencia, se determinó que cualquier esfuerzo sería infructuoso..." [propuesta disfrazada de resultado]
+
+✅ **Separado (claro para el lector):**
+
+> **Hallazgos verificados**
+> El diagnóstico multidimensional arrojó los siguientes datos empíricos: la baja confianza institucional correlaciona con una percepción de ineficacia del 57,8% (EPC 2025); el 86,5% de la ciudadanía no ha participado en instancias formales (IFIS 2022-2023); entre quienes sí participan, el 91,8% percibe eficacia (EPC 2025).
+
+> **Lectura analítica**
+> A partir de estos datos, se sostiene que la desconexión estructural entre captura de voluntad ciudadana y procesamiento administrativo opera como un "impuesto a la participación". El ciudadano, de manera racional, opta por no invertir capital social en procesos que percibe como inoperantes. Esta lectura sitúa el problema no en la alfabetización digital —cuya cobertura es amplia— sino en la percepción de utilidad política.
+
+> **Corolario estratégico**
+> En consecuencia, la estrategia de apropiación debe incorporar, como condición necesaria pero no suficiente, una reforma en la capacidad de absorción institucional de los aportes ciudadanos. Sin esta reforma, los esfuerzos tecnológicos enfrentan una alta probabilidad de insuficiencia.
+
+**Regla de oro:**
+- **Pretérito + fuente citada** = Hallazgo empírico ("se constató", "los datos arrojaron", "la auditoría verificó")
+- **Presente + juicio del equipo** = Interpretación ("se sostiene que", "la lectura analítica sugiere")
+- **Condicional / deber ser** = Propuesta ("debe incorporar", "es necesario", "la estrategia plantea")
 
 ---
 
