@@ -6,8 +6,8 @@ Este proyecto es **personal y académico** de Jelkin Zair Carrillo Franco, como 
 **NO forma parte de INNOVADATACO** ni de sus operaciones corporativas. Este repositorio (zeus-workspace) aloja documentación de soporte generada por ZEUS como asistente personal del CEO, pero el contenido académico es responsabilidad exclusiva del autor.
 
 **Autores del trabajo de grado:**
-- Diana Cáceres Valderrama
-- Jelkin Carrillo Franco  
+- Diana Cáceres Valderrama *(también cofundadora de INNOVADATACO — participa en ambos roles)*
+- Jelkin Carrillo Franco *(CEO y cofundador de INNOVADATACO)*
 - Wilmar Otavo Plazas
 
 **Asesores:**
