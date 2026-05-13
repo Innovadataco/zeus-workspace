@@ -7,8 +7,8 @@
     "last_chars": 10080
   },
   "diary": {
-    "count": 34,
-    "last_ts": "2026-05-12T03:45:22.250139",
+    "count": 38,
+    "last_ts": "2026-05-13T03:58:14.636475",
     "last_skip": "no_sessions_today",
     "last_messages": 4,
     "last_day": 11,
@@ -17,12 +17,12 @@
     "last_latency_s": 8.5
   },
   "compact": {
-    "count": 31,
-    "last_ts": "2026-05-12T03:45:22.484499",
-    "last_invoke": 13,
+    "count": 35,
+    "last_ts": "2026-05-13T03:58:22.928906",
+    "last_invoke": 14,
     "last_sessions": 2,
-    "last_messages": 10,
-    "last_latency_s": 5.4,
+    "last_messages": 30,
+    "last_latency_s": 8.1,
     "last_model": "k2p6",
     "last_skip": "stm_hash_unchanged"
   }
