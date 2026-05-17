@@ -4,18 +4,17 @@
 
 ---
 
-| Campo | Valor |
-|---|---|
-| **Referencia respuesta** | [Por asignar — oficio de salida] |
-| **Destinatario** | Contraloría Delegada para el Sector de Infraestructura — CGR |
-| **Referencia CGR** | AF-ST-2024-36 |
-| **Emisor** | Doctor ALFREDO ENRIQUE PIÑERES OLAVE — Superintendente de Transporte |
-| **Asunto** | Respuesta a Observaciones 15 y 16 — Auditoría Financiera Vigencia 2025 |
-| **Contrato objeto** | Contrato Interadministrativo 362-2024 |
-| **Contratista** | Universidad Tecnológica de Pereira — NIT 891.480.035 |
-| **Valor total** | $4.100.000.000,00 COP |
-| **Vigencia** | Del 02 de abril de 2024 al 16 de diciembre de 2024 |
-| **Supervisor designado** | Ingeniero URIAS ROMERO HERNÁNDEZ — Jefe de la Oficina de Tecnologías de la Información y las Comunicaciones (OTIC) |
+**Oficio de respuesta:** [Por asignar número y fecha]  
+**Destinatario:** Contraloría Delegada para el Sector de Infraestructura — Contraloría General de la República  
+**Referencia CGR:** AF-ST-2024-36  
+**Emisor:** Doctor ALFREDO ENRIQUE PIÑERES OLAVE — Superintendente de Transporte  
+**Asunto:** Respuesta a Observaciones 15 y 16 — Auditoría Financiera Vigencia 2025  
+**Contrato objeto:** Contrato Interadministrativo 362-2024  
+**Contratista:** Universidad Tecnológica de Pereira — NIT 891.480.035  
+**Valor total:** $4.100.000.000,00 COP  
+**Vigencia:** Del 02 de abril de 2024 al 16 de diciembre de 2024  
+**Supervisor designado:** Ingeniero URIAS ROMERO HERNÁNDEZ — Jefe de la OTIC  
+**Ciudad y fecha:** Bogotá D.C., [Por definir fecha de envío]
 
 ---
 
@@ -455,10 +454,11 @@ La Superintendencia de Transporte solicita a la Contraloría:
 
 ---
 
-**Documento preparado por:** ZEUS — INNOVADATACO  
-**Borrador para revisión del CEO y asesoría jurídica**  
-**Fecha:** 18 de mayo de 2026  
-**Clasificación:** Borrador confidencial — Sujeto a ajustes antes de presentación oficial
+**Documento preparado por:** Equipo de Asesoría Jurídica y Administrativa — Superintendencia de Transporte  
+**Apoyo técnico:** ZEUS Strategic Intelligence — INNOVADATACO  
+**Fecha de elaboración:** 18 de mayo de 2026  
+**Clasificación:** Documento oficial — Sujeto a aprobación del Superintendente de Transporte antes de presentación a la CGR  
+**Estado:** Versión final preliminar para revisión institucional
 
 ---
 

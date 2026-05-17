@@ -1,0 +1,161 @@
+{
+  "version": 1,
+  "updatedAt": "2026-05-17T04:05:55.526Z",
+  "entries": {
+    "memory:memory/2026-05-13.md:31:73": {
+      "key": "memory:memory/2026-05-13.md:31:73",
+      "path": "memory/2026-05-13.md",
+      "startLine": 31,
+      "endLine": 73,
+      "source": "memory",
+      "snippet": "• APP-CHIA-GIRARDOT — 28 abr 2026 | Fichas técnicas ITS Lote 8 FINAL Open Issues: 0 Open PRs: 0 5. ESTADO APIs Y SERVICIOS -------------------------- • OpenClaw Gateway: ✅ Running (pid 1222034, active) • Kimi API: ✅ Operativa (modelo k2p6 activo) • GitHub API: ✅ Operativa • Google Workspace API: ❌ No operativa (config plugin rota) 6. WORKSPACE LOCAL ------------------ • zeus-workspace: Cambios sin commit detectados — M ZEUS-CONFIG/PM2-DOCUMENTOS • Último commit: 4f137ba (12 may) — post-sustentación PROYECTO_02 7. MEMORIA EMPRESARIAL ---------------------- ⚠️ STALE: Último archivo de memoria diaria: 2026-05-07.md Han pasado ~5 días sin registro de memoria Última actividad documen",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4140764206647873,
+      "maxScore": 0.4140764206647873,
+      "firstRecalledAt": "2026-05-15T02:49:05.214Z",
+      "lastRecalledAt": "2026-05-15T02:49:05.214Z",
+      "queryHashes": [
+        "cb9ec9a6275c"
+      ],
+      "recallDays": [
+        "2026-05-15"
+      ],
+      "conceptTags": [
+        "gateway",
+        "app-chia-girardot",
+        "zeus-workspace",
+        "zeus-config/pm2-documentos",
+        "post-sustentación",
+        "proyecto-02",
+        "app",
+        "chia"
+      ]
+    },
+    "memory:memory/2026-04-26.md:98:140": {
+      "key": "memory:memory/2026-04-26.md:98:140",
+      "path": "memory/2026-04-26.md",
+      "startLine": 98,
+      "endLine": 140,
+      "source": "memory",
+      "snippet": "#### ✅ Entregables Completados | Entregable | Cantidad | Estado | |------------|----------|--------| | Fichas técnicas CC-02 a CC-42 | 41 fichas | ✅ Completadas (97.8% cumplimiento) | | Formato estándar | ITS_CC-01 v2.0 | ✅ Aplicado | | Correcciones QA | 12 fichas | ✅ Corregidas y subidas | | Informes de calidad | 4 reportes | ✅ En qa-reports/ | | CC-01 adaptada | 1 ficha | 🔄 En progreso | #### 🔧 Integraciones Configuradas - ✅ Google Drive (acceso a documentos del corredor) - ✅ GitHub (repositorio APP-CHIA-GIRARDOT) - ✅ Telegram (@ZEUS_IDCBOT) #### 📊 Infraestructura del Corredor Identificada - 308 km de longitud - 78 sitios geotécnicos inestables - 4 estaciones de peaje - Múltiples pue",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.40949979722499846,
+      "maxScore": 0.40949979722499846,
+      "firstRecalledAt": "2026-05-15T02:49:05.214Z",
+      "lastRecalledAt": "2026-05-15T02:49:05.214Z",
+      "queryHashes": [
+        "cb9ec9a6275c"
+      ],
+      "recallDays": [
+        "2026-05-15"
+      ],
+      "conceptTags": [
+        "cc-02",
+        "cc-42",
+        "97.8",
+        "its-cc-01",
+        "v2.0",
+        "qa-reports",
+        "cc-01",
+        "app-chia-girardot"
+      ]
+    },
+    "memory:memory/2026-05-13.md:103:132": {
+      "key": "memory:memory/2026-05-13.md:103:132",
+      "path": "memory/2026-05-13.md",
+      "startLine": 103,
+      "endLine": 132,
+      "source": "memory",
+      "snippet": "- Proyecto IDC_2026_01, contrato TC-PS-05-917-2026, cliente TransConsult/IFC - Estado: Fase 1 completada, Fases 2-3 en curso - 53 fichas CC generadas (excede meta de 42) - Documento Maestro ITS completo: 85 unidades, 634 dispositivos, 15 EOV, 10 gaps críticos - Inversión estimada: $11.5M-$19.3M USD - 17 preguntas pendientes validación con TransConsult - Carpeta Drive del proyecto: vacía o sin permisos de lectura ### PROYECTO SICOM — DESCUBIERTO - Cliente: Ministerio de Minas y Energía (MME) — Colombia - Contrato: arrendamiento solución tecnológica nube privada - Periodo empalme: 4 mayo → 30 junio 2026 - Inicio operación: 1 julio 2026 (5 meses) - Documentos encontrados en Drive: - `ANEXO_A",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.3636555194854736,
+      "maxScore": 0.3636555194854736,
+      "firstRecalledAt": "2026-05-15T02:49:05.214Z",
+      "lastRecalledAt": "2026-05-15T02:49:05.214Z",
+      "queryHashes": [
+        "cb9ec9a6275c"
+      ],
+      "recallDays": [
+        "2026-05-15"
+      ],
+      "conceptTags": [
+        "idc-2026-01",
+        "tc-ps-05-917-2026",
+        "transconsult/ifc",
+        "2-3",
+        "11.5m",
+        "19.3m",
+        "anexo-a",
+        "proyecto"
+      ]
+    },
+    "memory:memory/2026-05-13.md:81:108": {
+      "key": "memory:memory/2026-05-13.md:81:108",
+      "path": "memory/2026-05-13.md",
+      "startLine": 81,
+      "endLine": 108,
+      "source": "memory",
+      "snippet": "- Token funcional: `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` - Cuenta: Innovadataco - Push exitoso: commit `c8c02d0` con 38 archivos (+570/-4711 líneas) - Repos activos: zeus-workspace, ODIN, IDC_2026_01, APP-CHIA-GIRARDOT ### PROYECTOS CERRADOS - **PROYECTO_02** (Maestría): Sustentación completada, archivos limpiados, commit `4f137ba` - **PROYECTO_MAESTRÍA**: Cerrado formalmente por orden del CEO Jelkin Zair Carrillo Franco ### ODIN — CONFIGURACIÓN Y DESCUBRIMIENTO - **Bot Telegram:** `@ODIN_IDCBOT` (token: `8745164598:AAG_Wn3YWhThlGlm3aA1q1Ghd7SKcCFeVD8`) - **Enviado:** 20 respuestas de perfil del CEO + mandato de identidad completo (2 partes) - **Descubrimiento crítico:** El bot de Tel",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.35440399348735807,
+      "maxScore": 0.35440399348735807,
+      "firstRecalledAt": "2026-05-15T02:49:05.214Z",
+      "lastRecalledAt": "2026-05-15T02:49:05.214Z",
+      "queryHashes": [
+        "cb9ec9a6275c"
+      ],
+      "recallDays": [
+        "2026-05-15"
+      ],
+      "conceptTags": [
+        "configuración",
+        "zeus-workspace",
+        "idc-2026-01",
+        "app-chia-girardot",
+        "proyecto-02",
+        "proyecto-maestría",
+        "odin-idcbot",
+        "token"
+      ]
+    },
+    "memory:memory/2026-05-17.md:1:27": {
+      "key": "memory:memory/2026-05-17.md:1:27",
+      "path": "memory/2026-05-17.md",
+      "startLine": 1,
+      "endLine": 27,
+      "source": "memory",
+      "snippet": "# Memoria del día — 2026-05-17 ## Nuevo proyecto: análisis de carpeta Google Drive (REQUERIMIENTO 36.pdf) - CEO solicita análisis riguroso de documentación en: https://drive.google.com/drive/folders/1pF9J8vvd5TZhFvgcjNKB6RZDr9m5-WpC?usp=share_link - Prioridad absoluta: archivo **REQUERIMIENTO 36.pdf** - Objetivo: elaborar **respuesta completa en defensa** del proyecto - Requisitos del CEO: 1. Revisar TODA la documentación de la carpeta 2. Identificar **contratos** mencionados en los documentos 3. Identificar **grabaciones** y **actas** relacionadas con el proyecto 4. Análisis **argumentado, sustentado, con máxima rigurosidad** 5. **NO alucinar, NO inventar** datos 6. Primero ge",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.39721355140209197,
+      "maxScore": 0.39721355140209197,
+      "firstRecalledAt": "2026-05-17T04:05:55.526Z",
+      "lastRecalledAt": "2026-05-17T04:05:55.526Z",
+      "queryHashes": [
+        "a9ea2283a604"
+      ],
+      "recallDays": [
+        "2026-05-17"
+      ],
+      "conceptTags": [
+        "36.pdf",
+        "share-link",
+        "memoria",
+        "día",
+        "nuevo",
+        "proyecto",
+        "análisis",
+        "carpeta"
+      ]
+    }
+  }
+}

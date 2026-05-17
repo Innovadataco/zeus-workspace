@@ -1,14 +1,14 @@
 {
   "stm": {
-    "count": 64,
-    "last_ts": "2026-05-09T13:55:54.857800",
-    "last_sessions": 1,
-    "last_messages": 8,
-    "last_chars": 10080
+    "count": 65,
+    "last_ts": "2026-05-18T00:39:33.753757",
+    "last_sessions": 12,
+    "last_messages": 595,
+    "last_chars": 14309
   },
   "diary": {
-    "count": 38,
-    "last_ts": "2026-05-13T03:58:14.636475",
+    "count": 48,
+    "last_ts": "2026-05-17T03:53:49.620260",
     "last_skip": "no_sessions_today",
     "last_messages": 4,
     "last_day": 11,
@@ -17,12 +17,12 @@
     "last_latency_s": 8.5
   },
   "compact": {
-    "count": 35,
-    "last_ts": "2026-05-13T03:58:22.928906",
-    "last_invoke": 14,
-    "last_sessions": 2,
-    "last_messages": 30,
-    "last_latency_s": 8.1,
+    "count": 45,
+    "last_ts": "2026-05-17T03:53:49.958083",
+    "last_invoke": 19,
+    "last_sessions": 6,
+    "last_messages": 182,
+    "last_latency_s": 9.4,
     "last_model": "k2p6",
     "last_skip": "stm_hash_unchanged"
   }

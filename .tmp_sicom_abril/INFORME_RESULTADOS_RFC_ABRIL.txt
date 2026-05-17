@@ -1,0 +1,165 @@
+INFORME DE RESULTADOS RFC ABRIL
+Número RFC
+Fecha Programada
+Hora Inicio Programada
+Hora Fin Programada
+Hora Real Inicio
+Hora Real Fin
+08/09/2025
+7:50 p.m.
+8:50 p.m.
+7:00 p.m.
+8:30 p.m.
+Objetivo del Cambio: Realizar actualización del Sistema Operativo del servidor 192.168.76.247 de acuerdo con las actualizaciones liberadas por el fabricante.
+Activos Relacionados en el Cambio: 
+Servidor Datawarehouse 192.168.76.247
+Resultado Final: Se realizó la actualización de manera exitosa, pudiendo aplicar los parches del sistema operativo según las actualizaciones disponibles. Se realizaron los reinicios de la máquina virtual sin novedades y la aplicación recuperó servicio de manera normal.  
+Causó Indisponibilidad de los Servicios: No, dado que el reinicio del servidor se realizó en la franja en la que no existía ejecución de las ETL que alimentan el Datawarehouse.
+Requirió Rollback: Si
+Medición de Indisponibilidad: la ventana de actividades tuvo una duración de 50 minutos y la ejecución de las ETL continuó sin novedad.
+Número RFC
+Fecha Programada
+Hora Inicio Programada
+Hora Fin Programada
+Hora Real Inicio
+Hora Real Fin
+225
+10/09/2025
+8:30 a.m.
+9:30 a.m.
+8:30 a.m.
+10:20 a.m.
+Objetivo del Cambio: Realizar la desinstalación de las actualizaciones del sistema operativo del servidor 192.168.76.247 de la base de datos del Datawarehouse, dado que se presentaron errores en la ejecución de las ETL y se identificaron incompatibilidades de las actualizaciones instaladas y el desarrollo de los procesos de ETL
+Activos Relacionados en el Cambio: 
+Servidor Datawarehouse 192.168.76.247
+Resultado Final: Se realizó la desinstalación de los paquetes instalados del sistema operativo en la fecha del 08/09/2025 identificando lo instalado en la ventana de mantenimiento descrita en el RFC 224, se realiza el reinició de la máquina luego de deshabilitar la aplicación automática de actualizaciones
+Causó Indisponibilidad de los Servicios: Sí, se presentó falla en la ejecución de las ETL de líquidos en la ejecución de las 3:00 a.m., la ejecución programada de las 9:00 a.m. se ejecutó de manera manual para la actualización de los datos.
+Requirió Rollback: No. 
+Medición de Indisponibilidad: La ventana de actividades tuvo una duración de 90 minutos y se traslapo con la ejecución de las 9:00 a.m. por lo que la ejecución se hizo de manera manual una vez el servidor subió y quedo disponible.
+Número RFC
+Fecha Programada
+Hora Inicio Programada
+Hora Fin Programada
+Hora Real Inicio
+Hora Real Fin
+226
+13/08/2025
+11:50 p.m.
+4:30 a.m.
+4:30 a.m.
+8:50 a.m.
+Objetivo del Cambio: Se realiza el mantenimiento de emergencia para realizar depuración de la zona de los Archives en el rack de la base de datos, con el fin de liberar los espacios para que los procesos se ejecuten de manera normal y se garantice la disponibilidad de los servicios de GNCV.
+Activos Relacionados en el Cambio: 
+Servicios Web GNCV y Aplicación GNCV
+https://gncv.sicom.gov.co/
+Resultado Final: Se realizó la depuración de los espacios del Rack, liberando la zona de los Archives, con el fin de dar disponibilidad a la operación de las aplicaciones de GNCV.
+Se realiza el análisis de la causa raíz del llenado de los Archives, identificando que debido a unos envíos recurrentes y masivos de parte de los agentes de GAS, en los que se enviaron volúmenes de 400.000 peticiones de vehículos inactivos o inexistentes.
+Causó Indisponibilidad de los Servicios: Sí, durante el llenado se presentó indisponibilidad del servicio de Gas y la ejecución de las ETL.
+Requirió Rollback: No. 
+Medición de Indisponibilidad: se tuvo una indisponibilidad aproximada de 70 minutos del sitio de GNCV y la ejecución manual de las 6:00 a.m.
+Número RFC
+Fecha Programada
+Hora Inicio Programada
+Hora Fin Programada
+Hora Real Inicio
+Hora Real Fin
+227 
+15/09/2025
+10:00 a.m.
+11:00 a.m.
+10:00 p.m.
+11:00 p.m.
+Objetivo del Cambio: Se requiere realizar una adición de espacio en Disco de 500 GB sobre el servidor 192.168.76.120, que corresponde al servidor de contingencia de la Base de Datos.
+Activos Relacionados en el Cambio: 
+192.168.76.120
+Base de datos contingencia
+Resultado Final: Se realizó la actualización requerida del espacio en Disco
+Causó Indisponibilidad de los Servicios: No.
+Requirió Rollback: No. 
+Medición de Indisponibilidad: N/A 
+Número RFC
+Fecha Programada
+Hora Inicio Programada
+Hora Fin Programada
+Hora Real Inicio
+Hora Real Fin
+228 
+16/09/2025
+4:30 a.m.
+7:30 p.m.
+4:30 a.m.
+6:55 a.m.
+Objetivo del Cambio: Se realiza el mantenimiento de emergencia para realizar depuración de la zona de los Archives en el rack de la base de datos, con el fin de liberar los espacios para que los procesos se ejecuten de manera normal y se garantice la disponibilidad de los servicios de GNCV.
+Activos Relacionados en el Cambio: 
+Servicios Web GNCV y Aplicación GNCV
+https://gncv.sicom.gov.co/
+Resultado Final: Se realizó la depuración de los espacios del Rack, liberando la zona de los Archives, con el fin de dar disponibilidad a la operación de las aplicaciones de GNCV.
+Se realiza el análisis de la causa raíz del llenado de los Archives, identificando que debido a unos envíos recurrentes y masivos de parte de los agentes de GAS, en los que se enviaron volúmenes de 400.000 peticiones de vehículos inactivos o inexistentes.
+Causó Indisponibilidad de los Servicios: Sí, durante el llenado se presentó indisponibilidad del servicio de Gas y la ejecución de las ETL.
+Requirió Rollback: No. 
+Medición de Indisponibilidad: se tuvo una indisponibilidad aproximada de 30 minutos del sitio de GNCV y Web services de Gas.
+Número RFC
+Fecha Programada
+Hora Inicio Programada
+Hora Fin Programada
+Hora Real Inicio
+Hora Real Fin
+229
+19/08/2025
+8:30 a.m.
+9:30 a.m.
+8:30 a.m.
+22:30 p.m.
+Objetivo del Cambio: Se realiza el mantenimiento de emergencia para realizar depuración de espacio en el almacenamiento de la base de datos, con el fin de liberar los espacios para que los procesos se ejecuten de manera normal y se garantice la disponibilidad de la plataforma Nuevo SICOM.
+Activos Relacionados en el Cambio: 
+Nuevo SICOM
+https://portal.sicom.gov.co/SICOM/
+Base de Datos de Nuevo SICOM
+BPMSICOM
+Resultado Final: Se realizó la depuración de los espacios en el almacenamiento del rack de base de datos y se garantiza la disponibilidad de los servicios de Nuevo SICOM.
+Se realiza el análisis de la causa raíz del llenado de los Archives, identificando que, debido a unos envíos recurrentes y masivos de parte de los agentes de GAS, en los que se enviaron volúmenes de 400.000 peticiones de vehículos inactivos o inexistentes se genero la saturación de la base de datos.
+Causó Indisponibilidad de los Servicios: Sí, durante el llenado se presentó indisponibilidad del servicio de Nuevo SICOM
+Requirió Rollback: No. 
+Medición de Indisponibilidad: se tuvo una indisponibilidad aproximada de 45 minutos del sitio de https://portal.sicom.gov.co/SICOM/
+Número RFC
+Fecha Programada
+Hora Inicio Programada
+Hora Fin Programada
+Hora Real Inicio
+Hora Real Fin
+230
+19/09/2025
+7:00 p.m.
+8:00 p.m.
+7:00 p.m.
+7:35 p.m.
+Objetivo del Cambio: Se realizan cambios de parámetros en la configuración del aplicativo de GNCV para que la cantidad máxima de conexiones desde la aplicación hacia la base de datos pase de 1000 a 500 peticiones con el fin de no saturar la base de datos.
+Activos Relacionados en el Cambio: 
+https://eds.sicom.gov.co/eds
+Servidor 192.168.76.131 
+Resultado Final: Se aplicaron los cambios de conexiones concurrentes a la base de datos desde la aplicación de web services de GNCV.
+Causó Indisponibilidad de los Servicios: No
+Requirió Rollback: No. 
+Medición de Indisponibilidad: el mantenimiento se realizó en aproximadamente 20 minutos. 
+Número RFC
+Fecha Programada
+Hora Inicio Programada
+Hora Fin Programada
+Hora Real Inicio
+Hora Real Fin
+232
+27/09/2025
+8:00 a.m.
+9:00 a.m.
+8:45 a.m.
+11:00 a.m.
+Objetivo del Cambio: dar solución a los inconvenientes de conexión entre el sistema de DWH de SICOM con las bases de datos transaccionales Oracle que se presentaron durante el día afectando las ejecuciones de jos de las ETLS de líquidos. 
+Se ejecutó el desbloqueo del usuario BISA, se relanzaron los procesos de ETL de manera manual, haciendo seguimiento a la correcta ejecución y finalización de cada uno de los pasos.
+Activos Relacionados en el Cambio: 
+ETL BI Líquidos
+Bases de Datos Oracle RAC
+Resultado Final: se realizó la detención de la tarea programada de actualización del ambiente pre productivo configurado para Nuevo SICOM y se realizaron las depuraciones requeridas. Con los ajustes, se solucionaron los inconvenientes de error de conexión presentados en las ejecuciones de actualización de las ETLS. 
+Se realizaron ejecuciones manuales para las ETL de BI durante las ocasiones que fue necesario y realizamos monitoreo a las siguientes automáticas programadas en los Jobs de cada una. 
+Causó Indisponibilidad de los Servicios: Sí, durante el bloqueo del usuario se presentó indisponibilidad en la ejecución programada de las ETL de líquidos que fueron ejecutadas de manera manual.
+Requirió Rollback: No. 
+Medición de Indisponibilidad: La indisponibilidad en la ejecución de las 6 horas de las ETL de líquidos se subsana con el módulo de consultas que se mantuvo activo y actualizado durante el bloqueo y ventana de mantenimiento de emergencia.
