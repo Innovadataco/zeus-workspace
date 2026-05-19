@@ -81,15 +81,15 @@
 | Atributo | Descripción |
 |----------|-------------|
 | **Rol** | Nuevo operador del SICOM, contratista entrante |
-| **Gerente de Proyecto CI2** | Ludi Felipe Herrera |
+| **Gerente de Proyecto CI2** | Luis Felipe Herrera |
 | **Director de Empalme / PM Ejecutivo** | Jelkin Zair Carrillo Franco (Innovadataco, contratado por IND TECH) |
 | **Equipo Técnico** | Especialistas en Seguridad, Infra, BD, Apps, Operación (Innovadataco/CI2) |
 | **Interés** | Alto — Recibir sistema funcional, establecer operación, cumplir contrato |
 | **Influencia** | Alta — Ejecuta el empalme, valida entregas, decide Go/No-Go |
 | **Expectativas** | Documentación completa, accesos oportunos, soporte de INTERNEXA, reportes claros de Jelkin |
-| **Estrategia** | Gestionar activamente — Liderar empalme, documentar todo, mitigar riesgos, reportar a Ludi Herrera |
+| **Estrategia** | Gestionar activamente — Liderar empalme, documentar todo, mitigar riesgos, reportar a Luis Herrera |
 | **Comunicación** | Mesa técnica diaria interna + Informes semanales a Ludi + Actas semanales |
-| **Responsable Relación** | Jelkin Zair Carrillo Franco (reporta a Ludi Herrera) |
+| **Responsable Relación** | Jelkin Zair Carrillo Franco (reporta a Luis Herrera) |
 
 ---
 
@@ -232,7 +232,7 @@
 
 ---
 
-**Ludi Felipe Herrera**  
+**Luis Felipe Herrera**  
 *Gerente de Proyecto CI2 — IND TECH / CI2*
 
 **Jelkin Zair Carrillo Franco**  

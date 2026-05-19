@@ -4,7 +4,7 @@
 ---
 
 **Empalme:** EMP-SICOM-2026-01  
-**Gerente de Proyecto CI2:** Ludi Felipe Herrera (CI2 / IND TECH)  
+**Gerente de Proyecto CI2:** Luis Felipe Herrera (CI2 / IND TECH)  
 **Director de Empalme / PM Ejecutivo:** Jelkin Zair Carrillo Franco (Innovadataco)  
 **Versión:** 1.0  
 **Fecha:** 20 de Mayo de 2026  
@@ -47,7 +47,7 @@
 | **Estrategia** | Mitigar + Transferir |
 | **Plan de Acción** | 1) Formalizar TODOS los requerimientos por escrito (matriz de entregables)<br>2) Invocar cláusulas contractuales de entrega y cesión (Contrato GGC-2034-2025)<br>3) Escalar a Elizabeth (MME) en máximo 24h si hay resistencia<br>4) Documentar cada solicitud y respuesta (trazabilidad legal)<br>5) Preparar plan legal de contingencia con Diana Cáceres<br>6) Establecer consecuencias contractuales por incumplimiento |
 | **Responsable** | Jelkin Carrillo (Innovadataco) + Elizabeth (MME) |
-| **Reporte a** | Ludi Herrera (CI2) — Alerta inmediata si hay resistencia |
+| **Reporte a** | Luis Herrera (CI2) — Alerta inmediata si hay resistencia |
 | **Fecha Límite** | Continuo — Semana 1 (instalación gobierno) |
 | **Estado** | 🔄 En tratamiento |
 | **Indicador** | % de entregables recibidos vs solicitados (meta: 100%) |
@@ -226,7 +226,7 @@
 
 ---
 
-**Ludi Felipe Herrera**  
+**Luis Felipe Herrera**  
 *Gerente de Proyecto CI2 — IND TECH / CI2*
 
 **Jelkin Zair Carrillo Franco**  

@@ -4,7 +4,7 @@
 ---
 
 **Empalme:** EMP-SICOM-2026-01  
-**Gerente de Proyecto CI2:** Ludi Felipe Herrera (CI2 / IND TECH)  
+**Gerente de Proyecto CI2:** Luis Felipe Herrera (CI2 / IND TECH)  
 **Director de Empalme / PM Ejecutivo:** Jelkin Zair Carrillo Franco (Innovadataco)  
 **Fecha Inicio:** 19 de Mayo de 2026  
 **Fecha Fin:** 30 de Junio de 2026  
@@ -277,7 +277,7 @@ DIAS RESTANTES: 40 días
 
 ---
 
-**Ludi Felipe Herrera**  
+**Luis Felipe Herrera**  
 *Gerente de Proyecto CI2 — IND TECH / CI2*
 
 **Jelkin Zair Carrillo Franco**  

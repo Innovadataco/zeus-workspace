@@ -26,7 +26,7 @@
 
 | Stakeholder | Información Requerida | Frecuencia | Formato | Canal |
 |-------------|----------------------|------------|---------|-----|
-| **Ludi Herrera (CI2)** | Avance empalme, hitos, riesgos, decisiones estratégicas | Semanal + Eventos | Informe formal + Reuniones | Email + Videollamada |
+| **Luis Herrera (CI2)** | Avance empalme, hitos, riesgos, decisiones estratégicas | Semanal + Eventos | Informe formal + Reuniones | Email + Videollamada |
 | **Elizabeth (MME)** | Supervisión contractual, aceptaciones, pagos | Quincenal + Eventos | Informe formal + Actas | Email + Reuniones |
 | **Jelkin Carrillo (Innovadataco)** | Ejecución técnica, operativa, calidad | Diaria + Eventos | Dashboard + Actas | Telegram + Email |
 | **Diana Cáceres (Legal)** | Aspectos legales, actas, contratos | Según necesidad | Resumen legal | Email + Telegram |
@@ -76,12 +76,12 @@
 
 ### 3.2 Comunicaciones Externas (MME / INTERNEXA)
 
-#### Reuniones de Seguimiento con Ludi Herrera (CI2)
+#### Reuniones de Seguimiento con Luis Herrera (CI2)
 
 | Aspecto | Descripción |
 |---------|-------------|
 | **Frecuencia** | Semanal (cada martes 2:00 PM) |
-| **Participantes** | Jelkin Carrillo (Innovadataco) + Ludi Felipe Herrera (CI2) |
+| **Participantes** | Jelkin Carrillo (Innovadataco) + Luis Felipe Herrera (CI2) |
 | **Duración** | 30-45 minutos |
 | **Formato** | Videollamada (Meet/Teams) |
 | **Agenda** | Avance %, hitos, riesgos, decisiones requeridas, próximos pasos, reporte al MME |
@@ -93,12 +93,12 @@
 | Aspecto | Descripción |
 |---------|-------------|
 | **Frecuencia** | Quincenal (cada 15 días) |
-| **Participantes** | Ludi Herrera (CI2) + Elizabeth (MME) — Jelkin acompaña si es necesario |
+| **Participantes** | Luis Herrera (CI2) + Elizabeth (MME) — Jelkin acompaña si es necesario |
 | **Duración** | 30-45 minutos |
 | **Formato** | Videollamada (Meet/Teams) |
 | **Agenda** | Avance % contractual, hitos, aceptaciones, pagos, riesgos, decisiones requeridas |
 | **Registro** | Acta enviada en 24h |
-| **Responsable** | Ludi Herrera (CI2) genera, Jelkin apoya con datos técnicos |
+| **Responsable** | Luis Herrera (CI2) genera, Jelkin apoya con datos técnicos |
 
 #### Informes Quincenales al MME
 
@@ -340,7 +340,7 @@ CI2
 
 ---
 
-**Ludi Felipe Herrera**  
+**Luis Felipe Herrera**  
 *Gerente de Proyecto CI2 — IND TECH / CI2*
 
 **Jelkin Zair Carrillo Franco**  
