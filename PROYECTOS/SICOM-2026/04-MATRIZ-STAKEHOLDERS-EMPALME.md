@@ -76,19 +76,20 @@
 
 ---
 
-### S003: CI2 (Operador Entrante)
+### S003: CI2 / IND TECH (Operador Entrante)
 
 | Atributo | Descripción |
 |----------|-------------|
 | **Rol** | Nuevo operador del SICOM, contratista entrante |
-| **Gerente de Proyecto** | Jelkin Zair Carrillo Franco |
-| **Equipo Técnico** | Especialistas en Seguridad, Infra, BD, Apps, Operación |
+| **Gerente de Proyecto CI2** | Ludi Felipe Herrera |
+| **Director de Empalme / PM Ejecutivo** | Jelkin Zair Carrillo Franco (Innovadataco, contratado por IND TECH) |
+| **Equipo Técnico** | Especialistas en Seguridad, Infra, BD, Apps, Operación (Innovadataco/CI2) |
 | **Interés** | Alto — Recibir sistema funcional, establecer operación, cumplir contrato |
 | **Influencia** | Alta — Ejecuta el empalme, valida entregas, decide Go/No-Go |
-| **Expectativas** | Documentación completa, accesos oportunos, soporte de INTERNEXA |
-| **Estrategia** | Gestionar activamente — Liderar empalme, documentar todo, mitigar riesgos |
-| **Comunicación** | Mesa técnica diaria interna + Informes al MME + Actas semanales |
-| **Responsable Relación** | Jelkin Zair Carrillo Franco (CI2) |
+| **Expectativas** | Documentación completa, accesos oportunos, soporte de INTERNEXA, reportes claros de Jelkin |
+| **Estrategia** | Gestionar activamente — Liderar empalme, documentar todo, mitigar riesgos, reportar a Ludi Herrera |
+| **Comunicación** | Mesa técnica diaria interna + Informes semanales a Ludi + Actas semanales |
+| **Responsable Relación** | Jelkin Zair Carrillo Franco (reporta a Ludi Herrera) |
 
 ---
 
@@ -231,8 +232,11 @@
 
 ---
 
+**Ludi Felipe Herrera**  
+*Gerente de Proyecto CI2 — IND TECH / CI2*
+
 **Jelkin Zair Carrillo Franco**  
-*Gerente de Proyecto del Empalme SICOM — CI2*
+*Director de Empalme / PM Ejecutivo — Innovadataco*
 
 **ZEUS - Agente IA InnovaDataCo**  
 *Soporte PM2 y Gestión Documental*

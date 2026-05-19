@@ -26,10 +26,9 @@
 
 | Stakeholder | Información Requerida | Frecuencia | Formato | Canal |
 |-------------|----------------------|------------|---------|-----|
-| **Elizabeth (MME)** | Avance empalme, hitos, riesgos, decisiones | Semanal + Eventos | Informe formal + Reuniones | Email + Videollamada |
-| **INTERNEXA (Saliente)** | Solicitudes de entrega, actas, validaciones | Diaria + Eventos | Matriz de entregables + Actas | Email + Reuniones técnicas |
-| **Equipo CI2 (Técnicos)** | Tareas, prioridades, hallazgos, dependencias | Diaria | Mesa técnica + Grupo de trabajo | Presencial / Teams |
-| **Jelkin Carrillo (PM)** | Todo: operativo, estratégico, contractual | Diario + A demanda | Dashboard + Mensajes | Telegram + Llamada |
+| **Ludi Herrera (CI2)** | Avance empalme, hitos, riesgos, decisiones estratégicas | Semanal + Eventos | Informe formal + Reuniones | Email + Videollamada |
+| **Elizabeth (MME)** | Supervisión contractual, aceptaciones, pagos | Quincenal + Eventos | Informe formal + Actas | Email + Reuniones |
+| **Jelkin Carrillo (Innovadataco)** | Ejecución técnica, operativa, calidad | Diaria + Eventos | Dashboard + Actas | Telegram + Email |
 | **Diana Cáceres (Legal)** | Aspectos legales, actas, contratos | Según necesidad | Resumen legal | Email + Telegram |
 | **Proveedores Telecom** | Avance instalación, incidencias | Diaria (durante instalación) | Reporte de avance | Email + Llamada |
 
@@ -77,17 +76,29 @@
 
 ### 3.2 Comunicaciones Externas (MME / INTERNEXA)
 
-#### Reuniones de Seguimiento con Elizabeth (MME)
+#### Reuniones de Seguimiento con Ludi Herrera (CI2)
 
 | Aspecto | Descripción |
 |---------|-------------|
 | **Frecuencia** | Semanal (cada martes 2:00 PM) |
-| **Participantes** | Jelkin Carrillo (PM) + Elizabeth (MME) |
+| **Participantes** | Jelkin Carrillo (Innovadataco) + Ludi Felipe Herrera (CI2) |
 | **Duración** | 30-45 minutos |
 | **Formato** | Videollamada (Meet/Teams) |
-| **Agenda** | Avance %, hitos, riesgos, decisiones requeridas, próximos pasos |
+| **Agenda** | Avance %, hitos, riesgos, decisiones requeridas, próximos pasos, reporte al MME |
 | **Registro** | Acta enviada en 24h |
 | **Responsable** | Jelkin Carrillo (genera contenido, ZEUS documenta) |
+
+#### Reuniones de Seguimiento con Elizabeth (MME)
+
+| Aspecto | Descripción |
+|---------|-------------|
+| **Frecuencia** | Quincenal (cada 15 días) |
+| **Participantes** | Ludi Herrera (CI2) + Elizabeth (MME) — Jelkin acompaña si es necesario |
+| **Duración** | 30-45 minutos |
+| **Formato** | Videollamada (Meet/Teams) |
+| **Agenda** | Avance % contractual, hitos, aceptaciones, pagos, riesgos, decisiones requeridas |
+| **Registro** | Acta enviada en 24h |
+| **Responsable** | Ludi Herrera (CI2) genera, Jelkin apoya con datos técnicos |
 
 #### Informes Quincenales al MME
 
@@ -329,8 +340,11 @@ CI2
 
 ---
 
+**Ludi Felipe Herrera**  
+*Gerente de Proyecto CI2 — IND TECH / CI2*
+
 **Jelkin Zair Carrillo Franco**  
-*Gerente de Proyecto del Empalme SICOM — CI2*
+*Director de Empalme / PM Ejecutivo — Innovadataco*
 
 **ZEUS - Agente IA InnovaDataCo**  
 *Soporte PM2 y Gestión Documental*

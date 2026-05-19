@@ -37,7 +37,8 @@ Recibir el sistema SICOM sin interrupción del servicio, con dominio técnico m�
 
 | Rol | Nombre | Entidad | Responsabilidad |
 |-----|--------|---------|-----------------|
-| **Gerente de Proyecto** | Jelkin Zair Carrillo Franco | CI2 (Entrante) | Dirección técnica, cronograma, riesgos, calidad, cierre |
+| **Gerente de Proyecto CI2** | Ludi Felipe Herrera | CI2 / IND TECH | Dirección estratégica, aprobación de hitos, reporte al MME, decisiones ejecutivas |
+| **Director de Empalme / PM Ejecutivo** | Jelkin Zair Carrillo Franco | Innovadataco (contratado por IND TECH) | Ejecución técnica del empalme, coordinación operativa, reporte a Ludi Herrera, validación de entregas, control de calidad |
 | **Supervisora MME** | Elizabeth | Ministerio de Minas y Energía | Supervisión contractual, aceptación formal, pagos, resolución conflictos |
 | **Representante Saliente** | [Por designar] | INTERNEXA S.A. | Entrega de activos, transferencia conocimiento, soporte durante empalme |
 | **Especialista Seguridad** | [Por designar] | CI2 | Hardening, RBAC, MFA, SIEM, vulnerabilidades |
@@ -47,7 +48,8 @@ Recibir el sistema SICOM sin interrupción del servicio, con dominio técnico m�
 
 | Rol | Nombre | Asignación | Función |
 |-----|--------|------------|---------|
-| Gerente de Proyecto | Jelkin Zair Carrillo Franco | 100% | Gestión PM2, coordinación técnica, control de calidad |
+| **Gerente de Proyecto CI2** | Ludi Felipe Herrera | CI2 / IND TECH | 100% | Dirección estratégica, aprobación de hitos, reporte al MME, decisiones ejecutivas |
+| **Director de Empalme / PM Ejecutivo** | Jelkin Zair Carrillo Franco | Innovadataco (contratado por IND TECH) | 100% | Ejecución técnica del empalme, coordinación operativa, reporte a Ludi Herrera, validación de entregas, control de calidad PM2 |
 | Especialista Seguridad | [Por asignar] | 100% | Seguridad, credenciales, hardening |
 | Especialista Infraestructura | [Por asignar] | 100% | VMs, redes, almacenamiento, backups |
 | Especialista Base de Datos | [Por asignar] | 100% | Restore, integridad, replicación |
@@ -179,7 +181,8 @@ Este Acta de Constitución establece la forma oficial del Empalme SICOM y autori
 
 | Rol | Nombre | Entidad | Firma | Fecha |
 |-----|--------|---------|-------|-------|
-| Gerente de Proyecto | Jelkin Zair Carrillo Franco | CI2 | _________________ | 20/05/2026 |
+| Gerente de Proyecto CI2 | Ludi Felipe Herrera | CI2 / IND TECH | _________________ | 20/05/2026 |
+| Director de Empalme / PM Ejecutivo | Jelkin Zair Carrillo Franco | Innovadataco | _________________ | 20/05/2026 |
 | Supervisora MME | Elizabeth | Ministerio de Minas y Energía | _________________ | 20/05/2026 |
 | Representante Saliente | [Por designar] | INTERNEXA S.A. | _________________ | 20/05/2026 |
 
@@ -193,8 +196,11 @@ Este Acta de Constitución establece la forma oficial del Empalme SICOM y autori
 
 ---
 
+**Ludi Felipe Herrera**  
+*Gerente de Proyecto CI2 — IND TECH / CI2*
+
 **Jelkin Zair Carrillo Franco**  
-*Gerente de Proyecto del Empalme SICOM — CI2*
+*Director de Empalme / PM Ejecutivo — Innovadataco*
 
 **ZEUS - Agente IA InnovaDataCo**  
 *Soporte PM2 y Gestión Documental*
