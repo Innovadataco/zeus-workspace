@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-17T04:05:55.526Z",
+  "updatedAt": "2026-05-20T17:06:25.477Z",
   "entries": {
     "memory:memory/2026-05-13.md:31:73": {
       "key": "memory:memory/2026-05-13.md:31:73",
@@ -71,18 +71,20 @@
       "endLine": 132,
       "source": "memory",
       "snippet": "- Proyecto IDC_2026_01, contrato TC-PS-05-917-2026, cliente TransConsult/IFC - Estado: Fase 1 completada, Fases 2-3 en curso - 53 fichas CC generadas (excede meta de 42) - Documento Maestro ITS completo: 85 unidades, 634 dispositivos, 15 EOV, 10 gaps críticos - Inversión estimada: $11.5M-$19.3M USD - 17 preguntas pendientes validación con TransConsult - Carpeta Drive del proyecto: vacía o sin permisos de lectura ### PROYECTO SICOM — DESCUBIERTO - Cliente: Ministerio de Minas y Energía (MME) — Colombia - Contrato: arrendamiento solución tecnológica nube privada - Periodo empalme: 4 mayo → 30 junio 2026 - Inicio operación: 1 julio 2026 (5 meses) - Documentos encontrados en Drive: - `ANEXO_A",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.3636555194854736,
-      "maxScore": 0.3636555194854736,
+      "totalScore": 0.7785514682531356,
+      "maxScore": 0.414895948767662,
       "firstRecalledAt": "2026-05-15T02:49:05.214Z",
-      "lastRecalledAt": "2026-05-15T02:49:05.214Z",
+      "lastRecalledAt": "2026-05-20T17:06:25.477Z",
       "queryHashes": [
-        "cb9ec9a6275c"
+        "cb9ec9a6275c",
+        "eea3fd3386d9"
       ],
       "recallDays": [
-        "2026-05-15"
+        "2026-05-15",
+        "2026-05-21"
       ],
       "conceptTags": [
         "idc-2026-01",
@@ -102,18 +104,22 @@
       "endLine": 108,
       "source": "memory",
       "snippet": "- Token funcional: `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` - Cuenta: Innovadataco - Push exitoso: commit `c8c02d0` con 38 archivos (+570/-4711 líneas) - Repos activos: zeus-workspace, ODIN, IDC_2026_01, APP-CHIA-GIRARDOT ### PROYECTOS CERRADOS - **PROYECTO_02** (Maestría): Sustentación completada, archivos limpiados, commit `4f137ba` - **PROYECTO_MAESTRÍA**: Cerrado formalmente por orden del CEO Jelkin Zair Carrillo Franco ### ODIN — CONFIGURACIÓN Y DESCUBRIMIENTO - **Bot Telegram:** `@ODIN_IDCBOT` (token: `8745164598:AAG_Wn3YWhThlGlm3aA1q1Ghd7SKcCFeVD8`) - **Enviado:** 20 respuestas de perfil del CEO + mandato de identidad completo (2 partes) - **Descubrimiento crítico:** El bot de Tel",
-      "recallCount": 1,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.35440399348735807,
-      "maxScore": 0.35440399348735807,
+      "totalScore": 1.097807627916336,
+      "maxScore": 0.39151113033294677,
       "firstRecalledAt": "2026-05-15T02:49:05.214Z",
-      "lastRecalledAt": "2026-05-15T02:49:05.214Z",
+      "lastRecalledAt": "2026-05-20T17:06:25.477Z",
       "queryHashes": [
-        "cb9ec9a6275c"
+        "cb9ec9a6275c",
+        "f8a6193b19d9",
+        "eea3fd3386d9"
       ],
       "recallDays": [
-        "2026-05-15"
+        "2026-05-15",
+        "2026-05-20",
+        "2026-05-21"
       ],
       "conceptTags": [
         "configuración",
@@ -155,6 +161,285 @@
         "proyecto",
         "análisis",
         "carpeta"
+      ]
+    },
+    "memory:memory/2026-04-26.md:47:105": {
+      "key": "memory:memory/2026-04-26.md:47:105",
+      "path": "memory/2026-04-26.md",
+      "startLine": 47,
+      "endLine": 105,
+      "source": "memory",
+      "snippet": "**ODIN NO PUEDE sin aprobación explícita:** - Enviar correos electrónicos - Programar reuniones - Crear/editar/eliminar documentos en Drive - Tomar decisiones empresariales finales **ODIN SÍ PUEDE:** - Proponer acciones - Analizar datos - Redactar documentos para revisión - Coordinar ejecución post-aprobación --- ## Ritual Operativo Empresarial - **Diario:** Brief estratégico, alertas, prioridades - **Semanal:** Estado de proyectos, oportunidades, riesgos - **Mensual:** Evolución empresarial, métricas, nuevas iniciativas --- ## Principios AI Native 1. No inventar información 2. No alucinar datos 3. Basar decisiones en evidencia verificable 4. Priorizar eficiencia inteligente 5. Aprend",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.36126842796802516,
+      "maxScore": 0.36126842796802516,
+      "firstRecalledAt": "2026-05-20T02:52:38.202Z",
+      "lastRecalledAt": "2026-05-20T02:52:38.202Z",
+      "queryHashes": [
+        "f8a6193b19d9"
+      ],
+      "recallDays": [
+        "2026-05-20"
+      ],
+      "conceptTags": [
+        "crear/editar/eliminar",
+        "post-aprobación",
+        "odin",
+        "puede",
+        "aprobación",
+        "explícita",
+        "enviar",
+        "correos"
+      ]
+    },
+    "memory:memory/2026-05-20.md:447:484": {
+      "key": "memory:memory/2026-05-20.md:447:484",
+      "path": "memory/2026-05-20.md",
+      "startLine": 447,
+      "endLine": 484,
+      "source": "memory",
+      "snippet": "1. ✅ 23 documentos generados para empalme SICOM 2. ✅ Plan de contratación express (31 personas, 15 días) 3. ✅ Priorización basada en ANS (5 niveles) 4. ✅ Presentación lista para reunión con Luis 5. ✅ Diagnóstico completo de ODIN (identificado problema de conectividad) **Bloqueos identificados:** 1. ⚠️ Bot de Telegram ODIN caído (requiere fix local en Mac) 2. ⚠️ Contrato IND TECH vence 14 jun (necesita prórroga) 3. ⚠️ 16 días sin cobertura contractual (15-30 junio) **Próxima acción crítica:** Reunión con Luis mañana 9 AM — aprobación de plan de contratación y recursos. **ZEUS offline temporalmente. La empresa sigue operando.** ⚡ # 2026-05-20 - Análisis de ODIN-CORE v6.3.5 ## Contexto Jelk",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.3952053904533386,
+      "maxScore": 0.3952053904533386,
+      "firstRecalledAt": "2026-05-20T17:06:25.477Z",
+      "lastRecalledAt": "2026-05-20T17:06:25.477Z",
+      "queryHashes": [
+        "eea3fd3386d9"
+      ],
+      "recallDays": [
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "15-30",
+        "odin-core",
+        "v6.3.5",
+        "documentos",
+        "generados",
+        "empalme",
+        "sicom",
+        "plan"
+      ]
+    },
+    "memory:memory/2026-05-20.md:62:95": {
+      "key": "memory:memory/2026-05-20.md:62:95",
+      "path": "memory/2026-05-20.md",
+      "startLine": 62,
+      "endLine": 95,
+      "source": "memory",
+      "snippet": "- Sistema de Información de Combustibles Minerales (SICOM) - Módulo de Monitoreo de Precios - Módulo de Estadísticas y Reportes - Módulo de Alertas y Notificaciones - Módulo de Integración con Entidades - Módulo de Administración y Configuración **Plan de Empalme SICOM:** - Documento técnico de 368KB con plan detallado de empalme del sistema - Incluye cronograma, recursos, riesgos y dependencias **Preguntas Adicionales SICOM:** - 17 preguntas técnicas sobre arquitectura, funcionalidad, integración, seguridad y operación del sistema ### Estado del Análisis - Documentos descargados al workspace: 3 archivos principales analizados - Pendiente: Análisis detallado por partes si el C",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.38656045794487,
+      "maxScore": 0.38656045794487,
+      "firstRecalledAt": "2026-05-20T17:06:25.477Z",
+      "lastRecalledAt": "2026-05-20T17:06:25.477Z",
+      "queryHashes": [
+        "eea3fd3386d9"
+      ],
+      "recallDays": [
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "configuración",
+        "sistema",
+        "información",
+        "combustibles",
+        "minerales",
+        "sicom",
+        "módulo",
+        "monitoreo"
+      ]
+    },
+    "memory:memory/2026-05-20.md:17:44": {
+      "key": "memory:memory/2026-05-20.md:17:44",
+      "path": "memory/2026-05-20.md",
+      "startLine": 17,
+      "endLine": 44,
+      "source": "memory",
+      "snippet": "- Carpeta compartida: `https://drive.google.com/drive/folders/1O_im-IYkpsFljf11CgLA8f9RthOnvKLe` ## Pendientes de la Defensa - Integrar documentos de la carpeta Drive si el usuario facilita acceso o descarga - Validar si los 30 indicadores del Observatorio y los 10 reportes tienen actas de aceptación firmadas para descontar valor del detrimento - Confirmar si existen actas de cierre o terminación del contrato 362-2024 - Profundizar argumento de planeación desde 2023 con citas exactas de PETI, PAI, PES, Matriz Riesgo - Verificar si existen grabaciones de sesiones de seguimiento de octubre 2024 para incorporarlas como prueba de supervisión activa ## Documentos Clave Generados - `RESPUESTA-CG",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.36169686317443844,
+      "maxScore": 0.36169686317443844,
+      "firstRecalledAt": "2026-05-20T17:06:25.477Z",
+      "lastRecalledAt": "2026-05-20T17:06:25.477Z",
+      "queryHashes": [
+        "eea3fd3386d9"
+      ],
+      "recallDays": [
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "362-2024",
+        "respuesta-cg",
+        "carpeta",
+        "compartida",
+        "https",
+        "drive.google.com",
+        "drive",
+        "folders"
+      ]
+    },
+    "memory:memory/2026-05-20.md:473:515": {
+      "key": "memory:memory/2026-05-20.md:473:515",
+      "path": "memory/2026-05-20.md",
+      "startLine": 473,
+      "endLine": 515,
+      "source": "memory",
+      "snippet": "## Evaluación del Studio (4.9/10) | Dimensión | Puntuación | |-----------|------------| | Percepción | 6/10 | | Memoria | 4/10 | | Razonamiento | 5/10 | | Actuación | 6/10 | | Aprendizaje | 3/10 | ## Fallas Críticas Identificadas 1. Catálogo estático (no detecta nuevos proyectos en caliente) 2. LIMIT 1 en SQL (pierde información relacionada) 3. Solo 1 tabla SQL consultada (ignora pm2, sicom) 4. Sin filtro sectorial en Qdrant 5. Sin memoria conversacional 6. Sin fallback \"No sé\" (inventa respuestas) 7. Sin fecha/hora 8. Sin cache 9. Sin paralelización 10. Sin circuit breaker ## Propuesta v7.0 (ODIN REBORN) - Memoria jerárquica: Redis + PostgreSQL + Qdrant - Razonamiento multi-nivel: Percepc",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.359679439663887,
+      "maxScore": 0.359679439663887,
+      "firstRecalledAt": "2026-05-20T17:06:25.477Z",
+      "lastRecalledAt": "2026-05-20T17:06:25.477Z",
+      "queryHashes": [
+        "eea3fd3386d9"
+      ],
+      "recallDays": [
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "4.9/10",
+        "6/10",
+        "4/10",
+        "5/10",
+        "3/10",
+        "fecha/hora",
+        "v7.0",
+        "multi-nivel"
+      ]
+    },
+    "memory:memory/2026-05-20.md:38:70": {
+      "key": "memory:memory/2026-05-20.md:38:70",
+      "path": "memory/2026-05-20.md",
+      "startLine": 38,
+      "endLine": 70,
+      "source": "memory",
+      "snippet": "**Contexto:** El CEO compartió una nueva carpeta de Google Drive para el proyecto SICOM y solicitó análisis inmediato. Se trata de un proyecto nuevo, independiente de la defensa CGR. **Carpeta analizada:** `https://drive.google.com/drive/folders/1S_of-8iz3qFPEGntVizqXAZWQdRGZHd9?usp=share_link` ### Estructura de la Carpeta **Archivos principales (raíz):** 1. `Preguntas_Adicionales_SICOM__15_05_2026.pdf` (120KB) — 17 preguntas técnicas sobre el sistema SICOM 2. `Plan_empalme_SICOM_AJUSTADO_COMPLETO__15_05_2026.pdf` (368KB) — Plan de empalme del sistema **Subcarpeta \"Base\" con 7 subcarpetas:** - ARCHIVOS OFICIALES: Contrato ITX-MME (PDF, 5MB), Plan de Acción (XLSX, 30KB) - CONTRATO ITX-MME",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.3593526631593704,
+      "maxScore": 0.3593526631593704,
+      "firstRecalledAt": "2026-05-20T17:06:25.477Z",
+      "lastRecalledAt": "2026-05-20T17:06:25.477Z",
+      "queryHashes": [
+        "eea3fd3386d9"
+      ],
+      "recallDays": [
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "share-link",
+        "preguntas-adicionales-sicom",
+        "15-05-2026.pdf",
+        "itx-mme",
+        "contexto",
+        "ceo",
+        "compartió",
+        "nueva"
+      ]
+    },
+    "memory:memory/2026-05-20.md:388:422": {
+      "key": "memory:memory/2026-05-20.md:388:422",
+      "path": "memory/2026-05-20.md",
+      "startLine": 388,
+      "endLine": 422,
+      "source": "memory",
+      "snippet": "5. Asegurar que Mac y servidor estén en misma red VPN o Tailscale ### Nota Importante **ZEUS no debe modificar la configuración de ODIN sin autorización explícita del CEO.** El bot de Telegram es responsabilidad del CEO y su configuración debe manejarse localmente en la Mac Studio. --- ## Cierre de Trabajo — 2026-05-20 **Hora cierre:** 11:30 AM (aproximado) **Proyecto activo:** SICOM Empalme **Estado:** Documentación completa, reunión con Luis mañana 9 AM ### Documentos Entregados Hoy (23 archivos) | Categoría | Documentos | Estado | |-----------|-----------|--------| | PM2 Base | 15 documentos (Fases 1-4) | ✅ Completos | | Documento Maestro | Arquitectura + GAPs + Acciones | ✅ Complet",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.35921649932861327,
+      "maxScore": 0.35921649932861327,
+      "firstRecalledAt": "2026-05-20T17:06:25.477Z",
+      "lastRecalledAt": "2026-05-20T17:06:25.477Z",
+      "queryHashes": [
+        "eea3fd3386d9"
+      ],
+      "recallDays": [
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "configuración",
+        "1-4",
+        "asegurar",
+        "mac",
+        "servidor",
+        "estén",
+        "misma",
+        "red"
+      ]
+    },
+    "memory:memory/2026-05-20.md:158:199": {
+      "key": "memory:memory/2026-05-20.md:158:199",
+      "path": "memory/2026-05-20.md",
+      "startLine": 158,
+      "endLine": 199,
+      "source": "memory",
+      "snippet": "## Análisis Contrato SICOM — Anexo Técnico (2026-05-20) **Contexto:** El CEO adjuntó el Anexo Técnico del Contrato SICOM (`ANEXO_Mayo_8_ContratoSICOM_REV_ULTIMO.docx`). Se extrajo y analizó el contenido completo. ### Hallazgos Clave del Contrato **Plazo y Vigencia:** - Contrato: 5 meses (01 julio 2026 — 30 noviembre 2026) - Empalme: último mes del contrato (noviembre 2026) concurrente con operación - Inicio operación CI2: 01 julio 2026 **ANS Críticos (24 acuerdos):** - Disponibilidad: 99.90% en TODAS las plataformas (Líquidos, Gas, Canales, Web, BI, Apps, Portal) - Multa: 0.5% facturación mensual por cada 0.1% debajo de 99.90% - Multa máxima acumulable: 5% mensual - RPO <30 minutos | RTO",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.35762256681919097,
+      "maxScore": 0.35762256681919097,
+      "firstRecalledAt": "2026-05-20T17:06:25.477Z",
+      "lastRecalledAt": "2026-05-20T17:06:25.477Z",
+      "queryHashes": [
+        "eea3fd3386d9"
+      ],
+      "recallDays": [
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "99.90",
+        "0.5",
+        "0.1",
+        "análisis",
+        "contrato",
+        "sicom",
+        "anexo",
+        "técnico"
+      ]
+    },
+    "memory:memory/2026-04-28.md:40:83": {
+      "key": "memory:memory/2026-04-28.md:40:83",
+      "path": "memory/2026-04-28.md",
+      "startLine": 40,
+      "endLine": 83,
+      "source": "memory",
+      "snippet": "- **Nombre:** ZEUS - Agente IA InnovaDataCo - **Rol:** Sistema Operativo Empresarial - **Confirmado por:** CEO Jelkin Zair Carrillo Franco - **Actualizado en:** Repositorio IDC_2026_01 ### Repositorio GitHub Actualizado ✅ - **Commit:** fd707df5a1a16ae286e4706b23cb299bd5431998 - **Cambio:** README.md con nombre oficial ZEUS - **Branch:** master (cambiado de main) - **Documentos PM2 visibles:** 5 archivos .md ### Estado del Proyecto IDC_2026_01 **Entregables:** - E4/E5: Validados 100% - Listos para entrega 28 Abril - E1/E2/E3: Completados pero pendientes de aprobación (Riesgo R001 crítico) - E6/E7/E8: Pendientes (0%) **Contactos TARConsultores:** - Líder Operativo: Daniel Duarte (+57 320",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.3516041964292526,
+      "maxScore": 0.3516041964292526,
+      "firstRecalledAt": "2026-05-20T17:06:25.477Z",
+      "lastRecalledAt": "2026-05-20T17:06:25.477Z",
+      "queryHashes": [
+        "eea3fd3386d9"
+      ],
+      "recallDays": [
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "idc-2026-01",
+        "readme.md",
+        "e4/e5",
+        "e1/e2/e3",
+        "e6/e7/e8",
+        "nombre",
+        "zeus",
+        "agente"
       ]
     }
   }
